@@ -1,0 +1,90 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Probability 1}
+\author{Fengyang Wang}
+
+\begin{document}
+\maketitle
+
+\section{Review of Fractions}
+\begin{enumerate}
+ \item \(
+        \frac{3}{8} \times \frac{2}{7} = \frac{6}{56} = \frac{3}{28}
+       \)
+ \item \(\frac{5}{9} \times \frac{2}{5} = \frac{10}{45} = \frac{2}{9}\)
+
+\end{enumerate}
+
+\section{Simple Probability}
+
+We can list all possible outcomes and generate the probability of one
+particular outcome happening.
+
+\begin{equation}
+ P(A) = \frac{\text{Possibilities where $A$ occurs}}{\text{Total possible possibilities}}
+\end{equation}
+
+\subsection{Examples}
+
+\begin{enumerate}
+ \item What's the probability of flipping a fair coin and seeing heads?
+ \item What's the probability of rolling a fair 6-sided die and seeing an odd number?
+ \item What's the probability of picking a red marble from a bag that has $5$ red marbles and $7$ blue marbles?
+\end{enumerate}
+
+\section{Independent Events}
+
+Sometimes we have more than one event, and the outcome of one event does not change the next. These events
+would be called ``independent''.
+
+\subsection{Examples}
+
+\begin{enumerate}
+ \item I have two rabbits and a dog. I pick a pet at random; then I pick a different pet at random.
+ \item I roll two six-sided dice.
+ \item I roll one six-sided die twice.
+\end{enumerate}
+
+\section{Joint Probabilities}
+
+When two events $A$ and $B$ are independent, we have the following rule for the chances that both happen:
+
+\begin{equation}
+ P(A \cap B) = P(A) \times P(B)
+\end{equation}
+
+We can see this identity by drawing a tree and counting the number of possibilities where both events come
+true.
+
+\subsection{Examples}
+
+\begin{enumerate}
+ \item A bag contains $5$ red marbles and $7$ blue marbles. I draw a marble from the bag and then
+ flip a coin. What's the chance of flipping heads and drawing a red marble?
+ \item A bag contains $10$ red marbles and $5$ blue marbles. I draw a marble from the bag at random, then I put
+ it back. Then I draw another marble from the bag at random. What's the probability of drawing two blue marbles?
+\end{enumerate}
+
+\section{Dependent Events}
+
+When two events $A$ and $B$ are not independent, we can still calculate the probability nevertheless. We just
+need to be careful to update the probability.
+
+\subsection{Examples}
+\begin{enumerate}
+ \item A deck of cards (without jokers) has $13$ cards of each of the $4$ suits ($52$ cards total). What's
+ the probability of drawing two spades without replacement?
+ $\frac{13}{52} \times \frac{12}{51} = \frac{1}{4} \times \frac{12}{51} = \frac{12}{204} = \frac{1}{17}$
+ \item What about the probability of drawing two aces?
+ $\frac{4}{52} \times \frac{3}{51} = \frac{1}{13} \times \frac{1}{17} = \frac{1}{221}$
+\end{enumerate}
+
+\section{Expected Value}
+
+The expected value is the mean of all possibilities. For instance, the expected value of rolling a six-sided
+die is $3.5$.
+
+\end{document}

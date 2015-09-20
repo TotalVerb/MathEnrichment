@@ -1,0 +1,108 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Propositional Calculus 1: Logical Thinking}
+\author{Fengyang Wang}
+
+\begin{document}
+\maketitle
+
+Logical thinking is the ability to make logical and correct conclusions
+from givens.
+
+\section{Propositions}
+
+A proposition is any statement. Example: ``It is sunny outside.''
+
+\subsection{Negation}
+
+We can negate this proposition like this: ``It is not sunny outside.''
+
+\subsection{Conjunction}
+
+We can create a proposition that is true only when both components
+are true by using the word ``and''. For example: ``It is sunny outside
+and it is warm outside.''
+
+\subsection{Disjunction}
+
+We can create a proposition that is true when either component is
+true, or if both components are true. For example: ``It is sunny outside
+or it is warm outside.''
+
+\section{Arguments}
+
+An argument is a list of propositions ending in a statement that is
+a logical conclusion of the other propositions. For instance:
+
+\begin{align*}
+ 1.~&\text{It is daytime.} \\
+ 2.~&\text{There are no clouds.} \\
+ 3.~&\text{If it is daytime and there are no clouds, then it is sunny.} \\
+ \hline
+ 4.~&(1), (2) \to \text{It is daytime and there are no clouds.} \\
+ \hline
+ \therefore~&(4), (3) \to \text{It is sunny.}
+\end{align*}
+
+\section{Rules}
+
+There are rules to make sure all statements are logical. We'll cover them
+below.
+
+\subsection{Double negative}
+\begin{equation*}
+ \lnot\lnot p \implies p
+\end{equation*}
+
+\subsection{Conditional elimination}
+\begin{equation*}
+ \{p, p \implies q\} \implies q
+\end{equation*}
+
+\subsection{Conjunction introduction}
+
+\begin{equation*}
+ \{p, q\} \implies p \land q
+\end{equation*}
+
+\subsection{Conjunction elimination}
+
+\begin{equation*}
+ p \land q \implies p \\
+ p \land q \implies q
+\end{equation*}
+
+\subsection{Disjunction introduction}
+
+\begin{equation*}
+ p \implies p \lor q \\
+ q \implies p \lor q
+\end{equation*}
+
+\subsection{Disjunction elimination}
+
+\begin{equation*}
+ \{p \implies r, q \implies r, p \lor r\} \implies r
+\end{equation*}
+
+\subsection{Modus tollens}
+
+Denying the consequent.
+
+\begin{equation*}
+ \{p \implies q, \not q\} \implies \not p
+\end{equation*}
+
+\section{Not logical}
+These are not rules:
+
+\begin{itemize}
+ \item Denying the antecedent.
+ \item Affirming the consequent.
+\end{itemize}
+
+
+\end{document}\grid

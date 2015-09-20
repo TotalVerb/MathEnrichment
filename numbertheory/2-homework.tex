@@ -1,0 +1,145 @@
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+
+\usepackage{amssymb,amsmath,amsthm}
+\usepackage{enumerate}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{graphicx,ctable,booktabs}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+
+\makeatletter
+\newenvironment{problem}{\@startsection
+       {section}
+       {1}
+       {-.2em}
+       {-3.5ex plus -1ex minus -.2ex}
+       {2.3ex plus .2ex}
+       {\pagebreak[3]
+       \large\bf\noindent{Problem }
+       }
+       }
+\makeatother
+
+\title{Factors \& Multiples}
+\author{Name: \underline{\hspace{5cm}}}
+\date{February 21, 2015}
+
+\pagestyle{fancy}
+\lhead{Factors \& Multiples}
+\chead{} 
+\rhead{\thepage} 
+\lfoot{\small\scshape Grade 4 Olympic Math} 
+\cfoot{} 
+\rfoot{} 
+\renewcommand{\headrulewidth}{.3pt} 
+\renewcommand{\footrulewidth}{.3pt}
+\setlength\voffset{-0.25in}
+\setlength\textheight{648pt}
+\setlength\headheight{15pt}
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{empty}
+
+The symbol $\mid$ means ``divides''. If $A$ and $B$ are
+two numbers, then $A$ divides $B$ when $B \div A$ has
+no remainder.
+
+A number is a \emph{factor} of another number if it divides
+that number. For example, $3$ is a \emph{factor} of $9$
+because $3 \mid 9$. A number is a \emph{multiple} of
+another number if the other number divides it. For example,
+$9$ is a \emph{multiple} of $3$.
+
+$1$ is a \emph{factor} of every whole number, and $0$ is
+a \emph{multiple} of every whole number.
+
+\begin{problem}{Missing Entry}
+Fill in the correct term in the blanks, choosing from
+``divides'', ``factor'', and ``multiple''.
+
+\begin{itemize}
+ \item $3$ is a \underline{\hspace{10em}} of $12$
+ \item $2$ is a \underline{\hspace{10em}} of all even
+ numbers.
+ \item $5$ \underline{\hspace{10em}} $100$.
+ \item $100$ is a \underline{\hspace{10em}} of $5$.
+ \item A number is always a \underline{\hspace{10em}} of
+ itself. It's also always a \underline{\hspace{10em}} of
+ itself!
+\end{itemize}
+\end{problem}
+
+\begin{problem}{Multiples of $3$ and $6$}
+
+ \begin{itemize}
+  \item 
+ Complete this list of multiples of $3$: 
+ $0$, $3$, $6$, \underline{\hspace{2em}},
+ \underline{\hspace{2em}}, \underline{\hspace{2em}},
+ $18$, \ldots
+
+ \item
+ Complete this list of multiples of $6$: 
+ $0$, $6$, $12$, \underline{\hspace{2em}},
+ \underline{\hspace{2em}}, \underline{\hspace{2em}},
+ $36$, \ldots
+ \end{itemize}
+\end{problem}
+
+\begin{problem}{Rectangle 2}
+ Look at the diagram below. Each small square is one square
+ unit.
+ 
+ \begin{center}
+ \begin{tikzpicture}
+  \draw[step=0.5] (0,0) grid (5,3.5);
+ \end{tikzpicture}
+ \end{center}
+ 
+ \begin{enumerate}
+  \item The rectangle has area \underline{\hspace{4em}}
+  square units.
+  \item $7$ is a \underline{\hspace{10em}} of the
+  rectangle's area.
+  \item The rectangle's area is a \underline{\hspace{10em}}
+  of $10$.
+ \end{enumerate}
+\end{problem}
+
+\begin{problem}{Factors of $20$}
+ List all the factors of $20$:
+ \underline{\hspace{2em}}, \underline{\hspace{2em}},
+ \underline{\hspace{2em}}, \underline{\hspace{2em}},
+ \underline{\hspace{2em}}, \underline{\hspace{2em}}
+\end{problem}
+
+\begin{problem}{Perfect Number}
+ A number is \emph{perfect} if the sum of its factors is
+ equal to twice the number itself. For example, $6$ is
+ perfect because $1+2+3+6=12=6\times2$. Which of the
+ following is a perfect number: $10$, $17$, $28$?
+\end{problem}
+
+\begin{problem}{Challenge}
+ \begin{enumerate}
+  \item How many factors does $1$ have?
+  \item How many factors does $2$ have?
+  \item How many factors does $4$ have?
+  \item How many factors does $8$ have?
+  \item The notation $2^{10}$ means $\underbrace{ 
+  2\times2\times2\times
+  \ldots\times2}_\text{$10$ twos}$; that is, $10$ twos multiplied together.
+  $2^{10}=1024$. How many factors does $1024$ have?
+ \end{enumerate}
+
+\end{problem}
+
+
+
+\end{document}
