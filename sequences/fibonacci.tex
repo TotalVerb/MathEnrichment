@@ -1,0 +1,95 @@
+\documentclass[12pt,letterpaper]{article}
+
+\input{../hmwk-template.tex}
+
+\title{The Fibonacci Sequence}
+\author{Name: \underline{\hspace{5cm}}}
+\date{January 9, 2016}
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{empty}
+
+\textbf{Recall}: Each term in the Fibonacci sequence is the sum of the previous
+two terms. We can write this like: \[
+ F_n = F_{n-1} + F_{n-2}
+\]
+
+The Fibonacci sequence begins with $F_1 = 1$ and $F_2 = 1$.
+
+\begin{problem}{Continue the sequence}
+ Write the next three terms of the Fibonacci sequence.
+
+ \[
+  1, 1, 2, 3, 5, \underline{\hspace{2em}}, \underline{\hspace{2em}},
+  \underline{\hspace{2em}}
+ \]
+\end{problem}
+
+\begin{problem}{Going forwards}
+ The 11th Fibonacci number is $89$ and the 12th Fibonacci number is $144$.
+ What's the 13th Fibonacci number? \hfill Answer: \underline{\hspace{4em}}
+\end{problem}
+
+\begin{problem}{Going backwards}
+ The 15th Fibonacci number is $610$ and the 16th Fibonacci number is $987$.
+ What's the 14th Fibonacci number? \hfill Answer: \underline{\hspace{4em}}
+\end{problem}
+
+\begin{problem}{Monkey in the middle}
+ The 17th Fibonacci number is $1597$ and the 19th Fibonacci number is $4181$.
+ What's the 18th Fibonacci number?
+\end{problem}
+
+\begin{problem}{Odd or even?}
+ Recall $F_1 = 1$ and $F_2 = 1$. Is $F_{20}$ odd or even? \hfill Circle the
+ answer: Odd\hspace{1em}Even
+\end{problem}
+
+\begin{problem}{A curious pattern}
+ Below is a list of Fibonacci numbers. Fill in the empty row with the square of
+ each Fibonacci number (the first few and last few are done for you). The square
+ of a number is the number multiplied by itself. For example, the square of $3$
+ (denoted $3^2$) is $9$ because $3 \times 3=9$.
+
+ \begin{center}
+ \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+ \hline
+  Term \# & $F_1$ & $F_2$ & $F_3$ & $F_4$ & $F_5$ & $F_6$ & $F_7$ & $F_8$ &
+  $F_9$ & $F_{10}$ & $\ldots$ \\
+  \hline Value & $1$ & $1$ & $2$ & $3$ & $5$ & $8$ & $13$ & $21$ & $34$ & $55$ &
+  $\ldots$ \\
+  \hline Square & $1$ & $1$ & $4$ & & & & & & $1156$ & $3025$ & $\ldots$ \\
+  \hline
+ \end{tabular}
+ \end{center}
+
+ Using this table, compute or look up the following:
+
+ \begin{enumerate}
+  \item $\left(F_3\right)^2$ (square of third Fibonacci number) \hfill Answer:
+  \underline{\hspace{4em}}
+  \item $F_2 \times F_4$ (product of 2nd and 4th Fibonacci numbers) \hfill
+  Answer: \underline{\hspace{4em}}
+  \item $\left(F_4\right)^2$ \hfill Answer: \underline{\hspace{4em}}
+  \item $F_3 \times F_5$ \hfill Answer: \underline{\hspace{4em}}
+  \item $\left(F_5\right)^2$ \hfill Answer: \underline{\hspace{4em}}
+  \item $F_4 \times F_6$ \hfill Answer: \underline{\hspace{4em}}
+  \item $\left(F_6\right)^2$ \hfill Answer: \underline{\hspace{4em}}
+  \item $F_5 \times F_7$ \hfill Answer: \underline{\hspace{4em}}
+ \end{enumerate}
+
+ Do you notice a pattern? This is known as ``Cassini's Identity''.
+
+ Mathematician Jean-Dominique Cassini (1625--1712) was the first to discover
+ this interesting property of these squares. A Fibonacci number's square is
+ really close to the product of the Fibonacci numbers to its left and to its
+ right. In fact, it is always exactly one off: either bigger by $1$ or smaller
+ by $1$! This is true for all Fibonacci numbers. For example, consider
+ $\left(F_9\right)^2=1156$, which is just one greater than $F_8 \times F_{10} =
+ 21 \times 55 = 1155$.
+\end{problem}
+
+\end{document}
