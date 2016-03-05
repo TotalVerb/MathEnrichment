@@ -14,17 +14,70 @@ For Saturday Sessions}
 \thispagestyle{empty}
 
 \begin{problem}{Proof by Cases I}
+ Prove each statement. Where one exists, an algebraic solution may be quicker.
+
+ \begin{enumerate}[\hspace{.5cm}a.]
+  \item For all $x\in\mathbb{R}$, $1 + x + x^2 > 0$
+  \item For all $a\in\mathbb{Z}$, $2^a \ge a + 1$
+ \end{enumerate}
+\end{problem}
+
+\begin{problem}{Proof by Cases II}
+ Prove the following statements regarding the set $\mathbb{Z}_2=\{0, 1\}$ under
+ some operations with special properties.
+
+ \begin{enumerate}[\hspace{.5cm}a.]
+  \item Let's define the following binary operations for all $\alpha$, $\beta$
+  in the set $\mathbb{Z}_2=\{0, 1\}$: \[
+    \alpha \lor \beta = \begin{cases}
+     0 & \text{if }\alpha=\beta=0 \\
+     1 & \text{otherwise}
+    \end{cases}
+   \] and \[
+    \alpha \land \beta = \begin{cases}
+     1 & \text{if }\alpha=\beta=1 \\
+     0 & \text{otherwise}
+    \end{cases}
+   \]
+
+   Prove for all $\alpha$, $\beta$, $\gamma\in\mathbb{Z}_2$, the following
+   identity holds: \[
+    \alpha \lor \left(\beta \land \gamma\right) = \left( \alpha \lor \beta
+    \right) \land \left( \alpha \lor \gamma \right)
+   \]
+  \item Let's use the same definitions as in the last problem. Additionally
+  define the following unary operation for $\alpha\in\mathbb{Z}_2$: \[
+   \lnot\alpha = \begin{cases}
+    0 & \text{if }\alpha=1 \\
+    1 & \text{otherwise}
+   \end{cases}
+  \]
+  Prove for all $\alpha$, $\beta\in\mathbb{Z}_2$, the following
+  identity holds: \hfill (De Morgan's) \[
+   \lnot \left(\alpha \land \beta\right) = \lnot\alpha \lor \lnot\beta
+  \]
+ \end{enumerate}
+
+ The set $\mathbb{Z}_2$ under the operations $\land$, $\lor$, and $\lnot$ is
+ very useful in logic and computer science. The above two identities are two
+ important logical principles. Combined with several others, they form the
+ foundation of a topic known as ``propositional logic''. In computer science,
+ the set $\mathbb{Z}_2$ and the operations defined above form the basis for what
+ are called ``booleans''.
+\end{problem}
+
+\begin{problem}{Proof by Cases III}
  Prove each statement.
 
  \begin{enumerate}[\hspace{.5cm}a.]
   \item For all $a\in\mathbb{Z}$, $a^2\ge 0$
-  \item For all $x\in\mathbb{R}$, if $x^3-x=0$, then $x^4=x^2$
+  \item For all $x\in\mathbb{R}$, if $x^3-x=0$, then $\left|x\right|=x^2$
   \item For all $n\in\mathbb{Z}$, if $2^{18} - 2^9 = 2^{10}n - n - n^2$,
   then $n$ is composite
  \end{enumerate}
 \end{problem}
 
-\begin{problem}{Proof by Cases II}
+\begin{problem}{Proof by Cases IV}
  Prove each statement.
 
  \begin{enumerate}[\hspace{.5cm}a.]
@@ -40,7 +93,7 @@ For Saturday Sessions}
  \end{enumerate}
 \end{problem}
 
-\begin{problem}{Proof by Cases III}
+\begin{problem}{Proof by Cases V}
  Prove each statement.
 
  \begin{enumerate}[\hspace{.5cm}a.]
