@@ -1,42 +1,9 @@
 \documentclass[12pt,letterpaper]{article}
 
-\usepackage{extsizes}
-
-\usepackage{amssymb,amsmath,amsthm}
-\usepackage{enumerate}
-\usepackage[margin=1.25in]{geometry}
-\usepackage{graphicx,ctable,booktabs}
-\usepackage{fancyhdr}
-\usepackage[utf8]{inputenc}
-
-\makeatletter
-\newenvironment{problem}{\@startsection
-       {section}
-       {1}
-       {-.2em}
-       {-3.5ex plus -1ex minus -.2ex}
-       {2.3ex plus .2ex}
-       {\pagebreak[3]
-       \large\bf\noindent{Problem }
-       }
-       }
-\makeatother
+\input{../hmwk-template.tex}
 
 \title{Function Golf}
 \author{Name: \underline{\hspace{5cm}}}
-
-\pagestyle{fancy}
-\lhead{Verbal Arithmetic}
-\chead{} 
-\rhead{\thepage} 
-\lfoot{\small\scshape Grade 4 Olympic Math} 
-\cfoot{} 
-\rfoot{} 
-\renewcommand{\headrulewidth}{.3pt} 
-\renewcommand{\footrulewidth}{.3pt}
-\setlength\voffset{-0.25in}
-\setlength\textheight{648pt}
-\setlength\headheight{15pt}
 
 \begin{document}
 
@@ -44,10 +11,9 @@
 
 \thispagestyle{empty}
 
-In function golf, the objective is simple.
-Given a list of functions, and two numbers
-$n$ and $m$, apply functions to $n$ until
-you reach $m$. For example, if:
+In function golf, the objective is simple. Given a list of functions, and two
+numbers $n$ and $m$, apply functions to $n$ until you reach $m$. For example,
+if:
 \begin{align*}
  A(x) &= x^2 \\
  B(x) &= x-1 \\
@@ -59,30 +25,22 @@ then one solution is:
  m = n \rhd B \rhd B \rhd B \rhd B \rhd A
 \end{align*}
 
-\begin{problem}{Fool}
-Solve the verbal arithmetic puzzle below. Each letter represents a unique digit.
-
-\begin{center}
- \begin{tabular}{rr}
-  & \tt ELF \\
-  + & \tt ELF \\
-  \hline
-  & \tt FOOL
- \end{tabular}
-\end{center}
+\begin{problem}{Function Golf I}
+ Solve the following puzzle.
+ \begin{align*}
+  A(x) &= x + 3 \\
+  n &= 10 \\
+  m &= 21 && \text{golf for $m$ starting with $n$}
+ \end{align*}
 \end{problem}
 
-\begin{problem}{Number Puzzle}
-Solve the verbal arithmetic puzzle below. Each letter represents a unique digit.
-
-\begin{center}
- \begin{tabular}{rr}
-  & \tt NUMBER \\
-  + & \tt NUMBER \\
-  \hline
-  & \tt PUZZLE
- \end{tabular}
-\end{center}
+\begin{problem}{Function Golf II}
+ Solve the following puzzle.
+ \begin{align*}
+  A(x) &= x \times 2 \\
+  n &= 3 \\
+  m &= 24 && \text{golf for $m$ starting with $n$}
+ \end{align*}
 \end{problem}
 
 \begin{problem}{Warning}
