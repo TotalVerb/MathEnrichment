@@ -1,16 +1,36 @@
-# Grade 4 Olympic Math curriculum
+# Mathematics Enrichment
 
 This curriculum covers in detail Logic, Probability, Geometry, Sequences, and
-Number Theory. It was developed for the Grand River Chinese School interest
-course in mathematics, at the Grade 4 level.
+Number Theory. Most of it was developed for the Grand River Chinese School
+interest course in mathematics, at the Grade 4 level, but some of the content is
+appropriate for a more advanced audience.
 
 ## Subjects
 
 ### Diagnostic
 
-This subject covers more advanced material, perhaps so advanced that it is not
+This folder contains more advanced material, perhaps so advanced that it is not
 normally taught to fourth graders. This material may be suitable for a more
-advanced audience, or for particularly advanced fourth graders.
+advanced audience.
+
+#### Digit sums
+
+This subject covers an interesting subject that comes up often when looking at
+whole numbers in base 10: the sum of the digits. Currently contains two lessons,
+both interactive notebooks, but both incomplete.
+
+#### Operations
+
+This subject is planned to be a gentle introduction to analysis, covering basic
+concepts such as rational exponents at a non-rigorous level but also introducing
+some rigorous concepts. It currently contains only one worksheet (with answers)
+on numbers and operations. It is aimed at about the Grade 6 level.
+
+#### Proof
+
+This subject is planned to introduce techniques for mathematical proof, and is
+aimed at the high school level. It currently contains only one worksheet on
+proof by cases.
 
 ### Functions
 
