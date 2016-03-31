@@ -6,7 +6,6 @@
 
 \usepackage{amssymb,amsmath,amsthm}
 \usepackage{enumerate}
-\usepackage[margin=0.8in]{geometry}
 \usepackage{graphicx,ctable,booktabs}
 \usepackage{fancyhdr}
 \usepackage[utf8]{inputenc}
@@ -29,7 +28,7 @@
 \lhead{\thetitle}
 \chead{}
 \rhead{\thepage}
-\lfoot{\small\scshape Olympic Math}
+\lfoot{\small\scshape \ProjectName}
 \cfoot{}
 \rfoot{}
 \renewcommand{\headrulewidth}{.3pt}
@@ -38,8 +37,4 @@
 \setlength\textheight{648pt}
 \setlength\headheight{15pt}
 
-\newcommand{\blankA}{\underline{\hspace{1em}}}
-\newcommand{\blankB}{\underline{\hspace{2em}}}
-\newcommand{\blankC}{\underline{\hspace{3em}}}
-\newcommand{\blankD}{\underline{\hspace{4em}}}
-\newcommand{\blankE}{\underline{\hspace{5em}}}
+\input{\IncludePath/blanks.tex}

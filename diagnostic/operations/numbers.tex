@@ -1,25 +1,73 @@
-\documentclass[12pt,letterpaper]{article}
+\documentclass[12pt,a4paper]{article}
 
-\input{../hmwk-template.tex}
+\newcommand{\IncludePath}{../../include}
+\newcommand{\ProjectName}{Enrichment Math}
+\input{\IncludePath/book-template.tex}
 
-\title{Numbers \& Operations}
-\author{Name: \underline{\hspace{5cm}}}
-\date{December 22, 2015}
+\title{Operations}
+\author{Name: \underline{\hspace{6cm}}}
+\date{March 24, 2016}
 
 \begin{document}
 
 \maketitle
 
-\thispagestyle{empty}
+\section{Algebra}
+
+Various forms of numbers arise from the desire to solve algebraic equations. But
+contrary to popular belief, this desire was not to be able to solve equations
+that have no solution, but rather to solve equations that do have a solution,
+but whose solution can be arrived at easier by introducing a new kind of number.
+
+The first kinds of numbers discovered were the (positive) natural numbers: \[ 1,
+2, 3, 4, 5, 6, 7, 8, 9, 10, \dots \]
+
+There are many positive natural numbers, and there are many things that we can
+do with them. For example, we can add any two positive natural numbers to obtain
+another. It does not matter how big the numbers become: their sum is always
+still a natural number.
+
+We may also multiply two positive natural numbers to obtain another. Again, it
+does not matter how big or small the numbers are: multiplication is something
+we can do with \emph{any} positive natural numbers.
+
+Positive natural numbers are great for representing ``things''. In particular,
+they're great for representing ``some things''. But they fall short when we want
+to represent ``no things'' (or ``nothing''). Even worse, they fall apart
+completely when we want to represent \emph{less} than nothing. But why would we
+ever want that?
+
+The desire for a more general kind of number comes from the desire to represent
+\emph{change}. If yesterday there were $20$ students in attendance, and today
+there are $24$ students in attendance, then we can say $4$ more people attended
+today than did yesterday. But what if tomorrow there will again be $24$ students
+in attendance? Then how many more students will have attended? Even worse, what
+if the day after tomorrow, there will be $20$ students in attendance again. Then
+what is the change in the number of students?
+
+It is not that these problems cannot be solved with positive natural numbers. In
+fact, they certainly can. The number of students could increase by $4$, and we
+have a number for that. The number of students could also remain unchanged. We
+don't need a number to express lack of change. Finally, the number of students
+could \emph{decrease} by $4$. We already have a number for that.
+
+So to express a change in a quantity, we must convey several pieces of
+information: firstly, whether there is a change at all; secondly, in what
+direction is the change; and thirdly, by how much the quantity is changed. This
+seems quite complicated. It would be simpler to introduce a new kind of
+quantity that could represent these changes more conveniently and more
+compactly.
+
+\section{Exponents}
 
 \begin{problem}{Discrete Exponents}
  Evaluate each expression. Write your answer as an integer in simplest form
  using the place value system.
 
  \begin{enumerate}[\hspace{.5cm}a.]
-  \item $2^4=$ \hfill\underline{\hspace{3em}}
-  \item $3^2=$ \hfill\underline{\hspace{3em}}
-  \item $10^6=$ \hfill\underline{\hspace{6em}}
+  \item $2^4=$ \hfill\blankC
+  \item $3^2=$ \hfill\blankC
+  \item $10^6=$ \hfill\blankF
  \end{enumerate}
 \end{problem}
 
@@ -27,8 +75,8 @@
  Express in scientific notation.
 
  \begin{enumerate}[\hspace{.5cm}a.]
-  \item $1234=$ \hfill\underline{\hspace{6em}}
-  \item $0.000987=$ \hfill\underline{\hspace{6em}}
+  \item $1234=$ \hfill\blankF
+  \item $0.000987=$ \hfill\blankF
  \end{enumerate}
 \end{problem}
 
@@ -37,11 +85,11 @@
  as an integer using the place value system.
 
  \begin{enumerate}[\hspace{.5cm}a.]
-  \item $4^{\frac{1}{2}}=$ \hfill\underline{\hspace{3em}}
-  \item $9^{\frac{3}{2}}=$ \hfill\underline{\hspace{3em}}
-  \item ${\left(\frac{2}{3}\right)}^3=$ \hfill\underline{\hspace{3em}}
-  \item $\sqrt{\frac{16}{25}}=$ \hfill\underline{\hspace{3em}}
-  \item $\sqrt[4]{\frac{256}{81}}=$ \hfill\underline{\hspace{3em}}
+  \item $4^{\frac{1}{2}}=$ \hfill\blankC
+  \item $9^{\frac{3}{2}}=$ \hfill\blankC
+  \item ${\left(\frac{2}{3}\right)}^3=$ \hfill\blankC
+  \item $\sqrt{\frac{16}{25}}=$ \hfill\blankC
+  \item $\sqrt[4]{\frac{256}{81}}=$ \hfill\blankC
  \end{enumerate}
 \end{problem}
 
@@ -61,10 +109,10 @@
  as an integer using the place value system.
 
  \begin{enumerate}[\hspace{.5cm}a.]
-  \item ${-1}^{-1}=$ \hfill\underline{\hspace{3em}}
-  \item $4^{-2}=$ \hfill\underline{\hspace{3em}}
-  \item ${999}^0=$ \hfill\underline{\hspace{3em}}
-  \item ${\left(\frac{-17}{4}\right)}^0=$ \hfill\underline{\hspace{3em}}
+  \item ${-1}^{-1}=$ \hfill\blankC
+  \item $4^{-2}=$ \hfill\blankC
+  \item ${999}^0=$ \hfill\blankC
+  \item ${\left(\frac{-17}{4}\right)}^0=$ \hfill\blankC
  \end{enumerate}
 \end{problem}
 

@@ -1,0 +1,41 @@
+\usepackage{extsizes}
+\usepackage{titling}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+
+\usepackage{amssymb,amsmath,amsthm}
+\usepackage{enumerate}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{graphicx,ctable,booktabs}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage{gensymb}
+
+\makeatletter
+\newenvironment{problem}{\@startsection
+       {section}
+       {1}
+       {-.2em}
+       {-3.5ex plus -1ex minus -.2ex}
+       {2.3ex plus .2ex}
+       {\pagebreak[3]
+       \large\bf\noindent{Problem }
+       }
+       }
+\makeatother
+
+\pagestyle{fancy}
+\lhead{\thetitle}
+\chead{}
+\rhead{\thepage}
+\lfoot{\small\scshape Olympic Math}
+\cfoot{}
+\rfoot{}
+\renewcommand{\headrulewidth}{.3pt}
+\renewcommand{\footrulewidth}{.3pt}
+\setlength\voffset{-0.25in}
+\setlength\textheight{648pt}
+\setlength\headheight{15pt}
+
+\input{\IncludePath/blanks.tex}

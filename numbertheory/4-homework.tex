@@ -1,44 +1,11 @@
 \documentclass[12pt,letterpaper]{article}
 
-\usepackage{tikz}
-\usetikzlibrary{shapes}
+\newcommand{\IncludePath}{../include}
+\input{\IncludePath/hmwk-template.tex}
 
-\usepackage{amssymb,amsmath,amsthm}
-\usepackage{enumerate}
-\usepackage[margin=1.25in]{geometry}
-\usepackage{graphicx,ctable,booktabs}
-\usepackage{fancyhdr}
-\usepackage[utf8]{inputenc}
-
-\makeatletter
-\newenvironment{problem}{\@startsection
-       {section}
-       {1}
-       {-.2em}
-       {-3.5ex plus -1ex minus -.2ex}
-       {2.3ex plus .2ex}
-       {\pagebreak[3]
-       \large\bf\noindent{Problem }
-       }
-       }
-\makeatother
-
-\title{Review: Prime Numbers}
+\title{Primes \& Remainders}
 \author{Name: \underline{\hspace{5cm}}}
-\date{March 14, 2015}
-
-\pagestyle{fancy}
-\lhead{Review: Prime Numbers}
-\chead{} 
-\rhead{\thepage} 
-\lfoot{\small\scshape Grade 4 Olympic Math} 
-\cfoot{} 
-\rfoot{}
-\renewcommand{\headrulewidth}{.3pt} 
-\renewcommand{\footrulewidth}{.3pt}
-\setlength\voffset{-0.25in}
-\setlength\textheight{648pt}
-\setlength\headheight{15pt}
+\date{March 12, 2016}
 
 \begin{document}
 
@@ -46,108 +13,96 @@
 
 \thispagestyle{empty}
 
-A list of all prime numbers less than $100$: $2$, $3$,
-$5$, $7$, $11$, $13$, $17$, $19$, $23$, $29$, $31$,
-$37$, $41$, $43$, $47$, $53$, $59$, $61$, $67$,
+The first page is about remainders. The back page is a review of prime numbers.
+
+\begin{problem}{Fill in the Blanks I}
+ When we divide $20$ by $4$, we count how many groups of $4$ are needed to make
+ $20$. We know that $5 \times 4 = 20$. This means that it takes \blankC\ groups of
+ $4$ to make $20$. So $20 \div 4 = \blankC$.
+
+ When we divide $26$ by $13$, we count how many groups of \blankC\ are needed to make
+ \blankC. Therefore, $26 \div 13 = \blankC$.
+\end{problem}
+
+\begin{problem}{Fill in the Blanks II}
+ Sometimes the numbers might not work out perfectly. Let's try dividing $20$ by
+ $3$. If we make $7$ groups of $3$, the total number would be $7 \times 3 = 21$.
+ But this is too big. If we make $6$ groups of $3$, the total number would be
+ $\blankC \times 3 = 18$. But this is too small. So we can make six groups, but
+ we'd then have $20 - 18 = \blankC$ left over!
+
+ We say that when we divide $20$ by $3$, our \emph{quotient} is $6$ because we
+ can make \blankC\ groups of $3$ in total. And then we say that our
+ \emph{remainder} is $2$ because after making $6$ groups of $3$, we have \blankC\
+ left over. We can also write this as $20 \div 3 = 6 \operatorname{R} 2$. The
+ ``R'' stands for ``remainder''.
+
+ When we can't make any groups, the quotient is zero ($0$). So $4 \div 10 = \blankC
+ \operatorname{R} \blankC$. When there isn't anything left over, the remainder is zero
+ ($0$). So $22 \div 2 = \blankC \operatorname{R} \blankC$.
+
+ Complete the following: \begin{itemize}
+  \item $17 \div 5 = \blankC \operatorname{R} \blankC$.
+  \item $16 \div 5 = \blankC \operatorname{R} \blankC$.
+ \end{itemize}
+\end{problem}
+
+\begin{problem}{Fill in the Blanks III}
+ Suppose we didn't care what the quotient was; only the remainder is important. Then
+ we can write that as $16 \bmod 5 = 1$. We don't care how many groups we made, but we
+ do care that one was left over after making those groups. Complete the following:
+ \begin{itemize}
+  \item $75 \bmod 7 = \blankC$.
+  \item $24 \bmod 3 = \blankC$.
+ \end{itemize}
+\end{problem}
+
+\pagebreak
+
+Here is a list of all prime numbers less than $100$: $2$, $3$, $5$, $7$, $11$, $13$,
+$17$, $19$, $23$, $29$, $31$, $37$, $41$, $43$, $47$, $53$, $59$, $61$, $67$,
 $71$, $73$, $79$, $83$, $89$ and $97$.
-
-\begin{problem}{Composite}
- Complete the factor pairs.
- 
- \begin{itemize}
-  \item $12 = 1 \times \underline{\hspace{2em}}$
-  \item $12 = 2 \times \underline{\hspace{2em}}$
-  \item $12 = 3 \times \underline{\hspace{2em}}$
-  \item $12 = 4 \times \underline{\hspace{2em}}$
-  \item $12 = 6 \times \underline{\hspace{2em}}$
-  \item $12 = 12 \times \underline{\hspace{2em}}$
- \end{itemize}
-
-\end{problem}
-
-\begin{problem}{Prime Factor}
- Find one (no need to find all) prime factor for each number.
- 
- \begin{itemize}
-  \item $99959386$ \hfill Factor: \underline{\hspace{2em}}
-  \item $521976505$ \hfill Factor: \underline{\hspace{2em}}
- \end{itemize}
-
-\end{problem}
-
 
 \begin{problem}{Factorize}
  Find the unique prime factorization of each number.
 
  \begin{itemize}
-  \item $20$ \hfill $\underline{\hspace{2em}} \times
-  \underline{\hspace{2em}} \times \underline{\hspace{2em}}$
-  \item $4$ \hfill $\underline{\hspace{2em}} \times
-  \underline{\hspace{2em}}$
-  \item $81$ \hfill $\underline{\hspace{2em}} \times
-  \underline{\hspace{2em}} \times \underline{\hspace{2em}}
-  \times \underline{\hspace{2em}}$
-  \item $84$ \hfill $\underline{\hspace{2em}} \times
-  \underline{\hspace{2em}} \times \underline{\hspace{2em}}
-  \times \underline{\hspace{2em}}$
- \end{itemize}
-\end{problem}
-
-\begin{problem}{Factors and Multiples}
- Use the word ``factor'' or ``multiple'' to complete each blank.
- 
- \begin{itemize}
-  \item $1$ is a \underline{\hspace{6em}} of every whole number.
-  \item $0$ is a \underline{\hspace{6em}} of every whole number.
-  \item $3$ is a \underline{\hspace{6em}} of $9$.
-  \item All even numbers are \underline{\hspace{6em}}s of $2$.
- \end{itemize}
-
-\end{problem}
-
-\begin{problem}{Divisibility}
- Circle factors of each number. More than one factor may be circled.
- 
- \begin{itemize}
-  \item $25$ \hfill $1$~~~$2$~~~$5$~~~$10$~~~$100$
-  \item $172$ \hfill $1$~~~$2$~~~$5$~~~$10$~~~$100$
-  \item $1793$ \hfill $1$~~~$2$~~~$5$~~~$10$~~~$100$
-  \item $2000$ \hfill $1$~~~$2$~~~$5$~~~$10$~~~$100$
+  \item $20$ \hfill $\blankB \times \blankB \times \blankB$
+  \item $4$ \hfill $\blankB \times \blankB$
+  \item $81$ \hfill $\blankB \times \blankB \times \blankB \times \blankB$
+  \item $84$ \hfill $\blankB \times \blankB \times \blankB \times \blankB$
  \end{itemize}
 \end{problem}
 
 \begin{problem}{Factor sum}
  The sum of all factors of $28$ is:
- 
- $\underline{\hspace{2em}} + 
- \underline{\hspace{2em}} + 
- \underline{\hspace{2em}} + 
- \underline{\hspace{2em}} + 
- \underline{\hspace{2em}} + 
- \underline{\hspace{2em}} = \underline{\hspace{3em}}$
+
+ $\blankB +
+ \blankB +
+ \blankB +
+ \blankB +
+ \blankB +
+ \blankB = \underline{\hspace{3em}}$
 \end{problem}
 
 
-\begin{problem}{Challenge}
-A \emph{palindrome} is a number that reads the same forwards and backwards
-in decimal notation.
-For example, $12321$ is a palindrome, as is $7227$ or $888888$.
+\begin{problem}{Challenge I}
+ A \emph{palindrome} is a number that reads the same forwards and backwards in
+ decimal notation. For example, $12321$ is a palindrome, as is $7227$ or
+ $888888$.
 
-\begin{itemize}
- \item What five-digit palindrome starts with $728$? \underline{\hspace{5em}}
- \item $11$ and $55$ are two examples of two-digit palindromes.
- How many two-digit palindromes are there? ($00=0$ does not have two digits.)
- \item What two numbers are factors of all two-digit palindromes?
- \item $1221$ and $9999$ are two examples of four-digit palindromes.
- How many four-digit palindromes are there? (Do not include palindromes starting
- with $0$.)
- \item How many four-digit palindromes are even?
- \item How many four-digit palindromes are divisible by $11$?
-\end{itemize}
-
-
+ \begin{itemize}
+  \item What five-digit palindrome starts with $728$? \underline{\hspace{5em}}
+  \item $11$ and $55$ are two examples of two-digit palindromes.
+  How many two-digit palindromes are there? ($00=0$ does not have two digits.)
+  \item What two numbers are factors of all two-digit palindromes?
+  \item $1221$ and $9999$ are two examples of four-digit palindromes. How many
+  four-digit palindromes are there? (Do not include palindromes starting with
+  $0$.)
+  \item How many four-digit palindromes are even?
+  \item How many four-digit palindromes are divisible by $11$?
+ \end{itemize}
 \end{problem}
-
 
 
 \end{document}
