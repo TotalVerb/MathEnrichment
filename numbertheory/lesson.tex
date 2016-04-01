@@ -1,0 +1,245 @@
+\documentclass[a4paper,10pt]{report}
+
+\newcommand{\IncludePath}{../include}
+\newcommand{\ProjectName}{Grade 4 Olympic Math}
+\input{\IncludePath/book-template.tex}
+
+\title{Number Theory}
+\author{Fengyang Wang}
+
+\begin{document}
+\maketitle
+
+\chapter{Introduction to Number Theory \& Parity}
+
+Number Theory is the study of whole numbers. That means $0$, $1$, $2$, and so
+on. Number Theory also studies negative whole numbers, such as $-1$, $-2$, and
+so on. Positive and negative whole numbers, and $0$, are together called
+``integers''.
+
+\section{Parity}
+
+``Parity'' is the term used for odd and even numbers. Today, we will study their
+differences and several properties. We will approach the problem algebraically.
+
+An even number is a number of the form $2n$, where $n$ is any integer. The
+expression $2n$ means $2\times n$; we omit the $\times$ so that it is faster to
+read and write.
+
+An odd number is a number of the form $2n+1$, where $n$ is any integer. The
+expression $2n+1$ means $(2\times n) + 1$. We perform the multiplication first
+because of the order of operations.
+
+\section{Determining Parity}
+It is easy to determine whether a number is even or odd. Let's start with small
+examples first. We know $4=2\times2$, so it's even. We know $7=2\times3+1$, so
+it's odd. A number is either even or odd, but it's never both. We only need to
+divide by $2$: if it evenly divides, then it's even, and otherwise, it's odd.
+
+\begin{problem}{Even or Odd?}
+ Are each of the following numbers even or odd?
+
+ \begin{itemize}
+  \item $10$ \hfill \AnsT{Even}~~~Odd
+  \item $0$ \hfill \AnsT{Even}~~~Odd
+  \item $19$ \hfill Even~~~\AnsT{Odd}
+  \item $-1$ \hfill Even~~~\AnsT{Odd}
+ \end{itemize}
+\end{problem}
+
+If the numbers are very big, it is convenient to simply observe the last digit.
+If the last digit is even, then the whole number is even. If the last digit is
+odd, then the whole number is odd. Why does this work? We will see very soon.
+
+\section{Sums \& Differences}
+What happens if we add two odd numbers? Two even numbers? Let's find out. Say
+$2n+1$ and $2m+1$ are two odd numbers. We're using letters here as placeholders;
+$n$ and $m$ can both take the value of any integer. Then \[
+ (2n+1) + (2m+1) = 2n + 2m + 1 + 1 = 2n + 2m + 2 = 2(n+m+1)
+\] but $n+m+1$ is an integer, and therefore the sum is even.
+
+We can use a very similar strategy to find the sum of two even numbers. This is
+even easier. Say $2n$ and $2m$ are two even numbers. Then \[
+ 2n + 2m = 2(n+m)
+\] but $n+m$ is an integer, and therefore the sum is even.
+
+Say $2n$ is an even number, and $2m+1$ is an odd number. Then \[
+ 2n + 2m + 1 = 2(n+m) + 1
+\] which is an odd number. So the sum of an even number and an odd number is
+odd. And because we can rearrange the order of addition, therefore the sum of an
+odd number and a even number is also odd.
+
+The rules for subtracting are exactly the same. The difference of two odds is
+even. The difference of two evens is even. The difference of an odd and an even
+is odd. Feel free to work these out yourself.
+
+\begin{problem}{Even or Odd?}
+ Are each of the following numbers even or odd?
+
+ \begin{itemize}
+  \item $100 + 200$ \hfill \AnsT{Even}~~~Odd
+  \item $1273 + 19023$ \hfill \AnsT{Even}~~~Odd
+  \item $19082 - 1911$ \hfill Even~~~\AnsT{Odd}
+  \item $109291 + 8329 + 9107$ \hfill Even~~~\AnsT{Odd}
+ \end{itemize}
+\end{problem}
+
+\section{Products}
+We can use a similar technique to develop rules for the product of even and odd
+numbers. It turns out that the product of two odd numbers is odd. Say $2n+1$
+and $2m+1$ are two odd numbers. Observe: \begin{align*}
+ (2n+1)(2m+1)
+ &= 2n(2m+1) + (2m+1) \\
+ &= 4nm+2n+2m+1 \\
+ &= 2(2nm+n+m) + 1
+\end{align*} which is odd.
+
+But the product of an even number with any integer is even. Say $2n$ is an
+even number, and $k$ is any integer. Then: \[
+ (2n)k = 2(nk)
+\] which is even.
+
+\chapter{Divisibility}
+
+We will begin today's topic with a few definitions.
+
+The symbol $\mid$ means ``divides''. If $A$ and $B$ are two numbers, then $A$
+divides $B$ when $B \div A$ has no remainder.
+
+A number is a \emph{factor} of another number if it divides that number. For
+example, $3$ is a \emph{factor} of $9$ because $3 \mid 9$. A number is a
+\emph{multiple} of another number if the other number divides it. For example,
+$9$ is a \emph{multiple} of $3$. Another word for factor, which we will see
+later on, is \emph{divisor}.
+
+Observe that $1$ is a \emph{factor} of every whole number, and $0$ is a
+\emph{multiple} of every whole number.
+
+\section{Parity \& Divisibility}
+
+Using our new definitions, we see that the topic we covered last class---even
+and odd numbers---is really just the study of numbers that are and aren't
+divisible by $2$.
+
+\section{Transitivity}
+
+The \emph{transitivity} principle says that if $a$, $b$, and $c$ are integers,
+and if $a \mid b$ and $b \mid c$, then $a \mid c$. Let's do an example. We know
+that $3 \mid 12$, and that $12 \mid 36$. Then by transitivity, $3 \mid 36$. Here
+is a simple exercise that is easily done using transitivity:
+
+\begin{problem}{True or False}
+ Does $3$ divide \emph{every} multiple of $12$? \hfill \AnsT{True}~~~False
+\end{problem}
+
+\chapter{Prime Numbers \& The Fundamental Theorem of Arithmetic}
+
+Today's topic is prime numbers, and a very useful and important statement about
+factorizing numbers.
+
+\section{Primes}
+A \emph{prime number} is a positive integer that has exactly two positive
+factors: $1$ and itself. We can easily check whether small numbers are prime.
+First, note $1$ is not prime, because it has just one factor. However, $2$ is
+prime, because it has exactly two factors: $1$ and itself.
+
+\begin{problem}{Prime}
+ Is each number prime or not prime?
+
+ \begin{itemize}
+  \item $3$ \hfill \AnsT{Prime}~~~Not Prime
+  \item $4$ \hfill Prime~~~\AnsT{Not Prime}
+  \item $5$ \hfill \AnsT{Prime}~~~Not Prime
+  \item $6$ \hfill Prime~~~\AnsT{Not Prime}
+  \item $7$ \hfill \AnsT{Prime}~~~Not Prime
+  \item $8$ \hfill Prime~~~\AnsT{Not Prime}
+  \item $9$ \hfill Prime~~~\AnsT{Not Prime}
+  \item $10$ \hfill Prime~~~\AnsT{Not Prime}
+ \end{itemize}
+\end{problem}
+
+Don't get caught in the trap that every odd number is prime! $9=3\times3$ is
+not. Neither are $15$, $21$, $25$, and many others. In fact, as the numbers get
+bigger and bigger, prime numbers get rarer and rarer.
+
+However, do note that there is only one even prime: $2$.
+
+\chapter{Quiz, More Primes, \& Remainders}
+
+\section{Quiz Review}
+
+There will be a quiz today on parity and divisibility. Three review questions
+follow. Quiz questions will be very similar in nature.
+
+\begin{problem}{Factor Pairs}
+ Complete the factor pairs.
+
+ \begin{itemize}
+  \item $6 = 1 \times \Ans{6}$
+  \item $6 = 2 \times \Ans{3}$
+  \item $6 = 3 \times \Ans{2}$
+  \item $6 = 6 \times \Ans{1}$
+ \end{itemize}
+\end{problem}
+
+\begin{problem}{Factors and Multiples}
+ Use the word ``factor'' or ``multiple'' to complete each blank.
+
+ \begin{itemize}
+  \item $1$ is a \AnsT{factor} of every whole number.
+  \item $0$ is a \AnsT{multiple} of every whole number.
+  \item $3$ is a \AnsT{factor} of $9$.
+  \item All even numbers are \AnsT{factor}s of $2$.
+ \end{itemize}
+\end{problem}
+
+\begin{problem}{Divisibility}
+ Circle factors of each number. More than one factor may be circled.
+
+ \begin{itemize}
+  \item $25$ \hfill $\Ans{1}$~~~$2$~~~$\Ans{5}$~~~$10$~~~$100$
+  \item $172$ \hfill $\Ans{1}$~~~$\Ans{2}$~~~$5$~~~$10$~~~$100$
+  \item $1793$ \hfill $\Ans{1}$~~~$2$~~~$5$~~~$10$~~~$100$
+  \item $2000$ \hfill $\Ans{1}$~~~$\Ans{2}$~~~$\Ans{5}$~~~$\Ans{10}$
+  ~~~$\Ans{100}$
+ \end{itemize}
+\end{problem}
+
+\section{QUIZ}
+There is a quiz today (Quiz 3: Parity and Divisibility). The allocated length
+for the quiz is $15$ minutes.
+
+\section{Divisors \& Primes}
+We will talk some more about primes today, and also about divisors.
+
+\begin{problem}{Prime Factors}
+ Find one (no need to find all) prime factor for each number.
+
+ \begin{itemize}
+  \item $99959386$ \hfill Factor: \Ans{2}
+  \item $521976505$ \hfill Factor: \Ans{5}
+ \end{itemize}
+\end{problem}
+
+\subsection{Greatest Common Divisor}
+Given two positive integers, we define their GCD (greatest common divisor) to be
+the largest positive integer that's a factor for both those numbers. For
+instance, the factors of $24$ are $1$, $2$, $3$, $4$, $6$, $8$, $12$, $24$, and
+the factors of $36$ are $1$, $2$, $3$, $4$, $6$, $9$, $12$, $18$, $36$. The
+greatest factor that these have in common is $12$. Therefore we denote \[
+ \gcd(24, 36) = 12
+\]
+
+\begin{problem}{GCD Examples}
+ \begin{itemize}
+  \item $\gcd(10, 20) = \Ans{10}$
+  \item $\gcd(15, 25) = \Ans{5}$
+  \item $\gcd(7, 11) = \Ans{1}$
+ \end{itemize}
+\end{problem}
+
+\section{Homework}
+Today's homework contains an investigation about remainders, and some additional
+questions about prime numbers and GCD.
+
+\end{document}
