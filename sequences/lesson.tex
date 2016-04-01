@@ -1,0 +1,83 @@
+\documentclass[a4paper,10pt]{report}
+
+\newcommand{\IncludePath}{../include}
+\newcommand{\ProjectName}{Grade 4 Olympic Math}
+\input{\IncludePath/book-template.tex}
+
+\title{Sequences}
+\author{Fengyang Wang}
+
+\begin{document}
+\maketitle
+
+\chapter{The Fibonacci Sequence}
+
+We'll begin with an introduction by means of rabbits. Start with one young
+rabbit. Every generation, each mature rabbit has one kid, who becomes a new
+young rabbit. Every year, young rabbits grow into mature rabbits. Rabbits never
+die. Keep track of the total rabbit population every month.
+
+\begin{center}
+ \begin{tabular}{|c|c|c|c|}
+  \hline
+  Month \# & Young rabbits & Mature rabbits & Total rabbits \\
+  \hline
+  1 & 1 & 0 & 1 \\
+  2 & 0 & 1 & 1 \\
+  3 & 1 & 1 & 2 \\
+  4 & 1 & 2 & 3 \\
+  5 & 2 & 3 & 5 \\
+  6 & 3 & 5 & 8 \\
+  \vdots & \vdots & \vdots & \vdots \\
+  \hline
+ \end{tabular}
+\end{center}
+
+The sequence of numbers at the right hand side is interesting, not least because
+it occurs in the other sequences written down also. It was discovered by the
+Italian mathematician \textsc{Leonardo~Bonacci} (c. 1170 -- c. 1250), and this
+sequence is therefore called the ``Fibonacci sequence''.
+
+There is a so-called recurrence relation for the Fibonacci numbers. Each
+Fibonacci number is the sum of the last two Fibonacci numbers. We use the
+notation $F_n$ for the $n$th Fibonacci number.
+
+\section{Example Problems}
+
+\begin{problem}{Find $F_{23}$}
+ Given $F_{21}=10946$ and $F_{22}=17711$, find $F_{23}=\Ans{28657}$.
+\end{problem}
+
+\begin{problem}{Find $F_6$}
+ Given $F_8=21$ and $F_7=13$ find $F_6=\Ans{8}$.
+\end{problem}
+
+\begin{problem}{Find $F_4$}
+ Given $F_5=5$ and $F_3=2$ find $F_4=\Ans{3}$.
+\end{problem}
+
+\section{Patterns}
+
+There is an interesting odd-even parity pattern of the Fibonacci numbers. Think
+about whether the $1000$th Fibonacci number is odd or even.
+
+\section{Partial Sums}
+
+Observe the partial sums of the Fibonacci sequence:
+
+\begin{center}
+ \begin{tabular}{|c|c|c|c|}
+  \hline
+  $n$ & $\displaystyle \sum_{k=1}^n F_n$ & Value & $F_{n+2}$ \\
+  \hline
+  $1$ & $1$ & $1$ & $2$ \\
+  $2$ & $1+1$ & $2$ & $3$ \\
+  $3$ & $1+1+2$ & $4$ & $5$ \\
+  $4$ & $1+1+2+3$ & $7$ & $8$ \\
+  $5$ & $1+1+2+3+5$ & $12$ & $13$ \\
+  \vdots & \vdots & \vdots & \vdots \\
+  \hline
+ \end{tabular}
+\end{center}
+
+\end{document}

@@ -63,13 +63,14 @@ This subject is planned but not yet started. Stay tuned!
 
 ### Number Theory
 
-This subject covers divisibility and primes. It is complete, but significant
-expansion is planned.
+This subject covers divisibility and primes. It is complete, but some
+significant expansion is planned, so that it will also cover remainders and
+factorization.
 
 ### Sequences
 
 This subject covers arithmetic, geometric, and Fibonacci sequences. It is
-complete but somewhat rough on the edges.
+mostly complete but somewhat rough on the edges.
 
 ### Skills
 
