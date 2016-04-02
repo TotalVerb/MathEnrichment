@@ -10,7 +10,7 @@
 \begin{document}
 \maketitle
 
-\chapter{Introduction to Number Theory \& Parity}
+\chapter{Parity}
 
 Number Theory is the study of whole numbers. That means $0$, $1$, $2$, and so
 on. Number Theory also studies negative whole numbers, such as $-1$, $-2$, and
@@ -132,10 +132,51 @@ is a simple exercise that is easily done using transitivity:
  Does $3$ divide \emph{every} multiple of $12$? \hfill \AnsT{True}~~~False
 \end{problem}
 
-\chapter{Prime Numbers \& The Fundamental Theorem of Arithmetic}
+\chapter{Quiz: Parity \& Divisibility}
 
-Today's topic is prime numbers, and a very useful and important statement about
-factorizing numbers.
+\section{Quiz Review}
+
+There is a quiz today (Quiz 3: Parity and Divisibility). The allocated length
+for the quiz is $15$ minutes. Three review questions follow. Quiz questions will
+be very similar in nature.
+
+\begin{problem}{Factor Pairs}
+ Complete the factor pairs.
+
+ \begin{itemize}
+  \item $6 = 1 \times \Ans{6}$
+  \item $6 = 2 \times \Ans{3}$
+  \item $6 = 3 \times \Ans{2}$
+  \item $6 = 6 \times \Ans{1}$
+ \end{itemize}
+\end{problem}
+
+\begin{problem}{Factors and Multiples}
+ Use the word ``factor'' or ``multiple'' to complete each blank.
+
+ \begin{itemize}
+  \item $1$ is a \AnsT{factor} of every whole number.
+  \item $0$ is a \AnsT{multiple} of every whole number.
+  \item $3$ is a \AnsT{factor} of $9$.
+  \item All even numbers are \AnsT{multiples}s of $2$.
+ \end{itemize}
+\end{problem}
+
+\begin{problem}{Divisibility}
+ Circle factors of each number. More than one factor may be circled.
+
+ \begin{itemize}
+  \item $25$ \hfill $\Ans{1}$~~~$2$~~~$\Ans{5}$~~~$10$~~~$100$
+  \item $172$ \hfill $\Ans{1}$~~~$\Ans{2}$~~~$5$~~~$10$~~~$100$
+  \item $1793$ \hfill $\Ans{1}$~~~$2$~~~$5$~~~$10$~~~$100$
+  \item $2000$ \hfill $\Ans{1}$~~~$\Ans{2}$~~~$\Ans{5}$~~~$\Ans{10}$
+  ~~~$\Ans{100}$
+ \end{itemize}
+\end{problem}
+
+\chapter{Prime Numbers}
+
+Today's topic is prime numbers.
 
 \section{Primes}
 A \emph{prime number} is a positive integer that has exactly two positive
@@ -164,53 +205,38 @@ bigger and bigger, prime numbers get rarer and rarer.
 
 However, do note that there is only one even prime: $2$.
 
-\chapter{Quiz, Primes, GCD, \& Remainders}
+\section{Composite Numbers}
+A \emph{composite} number is a number that can be written as the product of two
+smaller positive numbers. Thus $4=2\times2$ is composite. It turns out that
+every non-prime positive whole number except $1$ is composite.
 
-\section{Quiz Review}
+\chapter{The Fundamental Theorem of Arithmetic}
 
-There will be a quiz today on parity and divisibility. Three review questions
-follow. Quiz questions will be very similar in nature.
+One of the most important facts about whole numbers, one that forms the basis
+for much of number theory, is the Fundamental Theorem of Arithmetic. This
+theorem is a result that states that every positive whole number can be factored
+uniquely into primes. What does that mean?
 
-\begin{problem}{Factor Pairs}
- Complete the factor pairs.
+If we have a whole number, say, $70$, we see that we can write it as
+$7\times10$. Furthermore, $10=2\times5$. So we can factor $70=7\times2\times5$.
+Each of these numbers is now prime, and so we cannot factor this further, except
+by introducing copies of $1$, which is pointless.
 
- \begin{itemize}
-  \item $6 = 1 \times \Ans{6}$
-  \item $6 = 2 \times \Ans{3}$
-  \item $6 = 3 \times \Ans{2}$
-  \item $6 = 6 \times \Ans{1}$
- \end{itemize}
-\end{problem}
+But what if we had factored it a different way, first writing $70=5\times14$?
+Then we notice that $14=2\times7$, so we can change to $70=5\times2\times7$. The
+important thing is that this is the same factorization as last time, except in a
+different order. In fact, no matter, how we factor $70$, we will always arrive
+at the same prime factorization (with possibly a different order).
 
-\begin{problem}{Factors and Multiples}
- Use the word ``factor'' or ``multiple'' to complete each blank.
-
- \begin{itemize}
-  \item $1$ is a \AnsT{factor} of every whole number.
-  \item $0$ is a \AnsT{multiple} of every whole number.
-  \item $3$ is a \AnsT{factor} of $9$.
-  \item All even numbers are \AnsT{factor}s of $2$.
- \end{itemize}
-\end{problem}
-
-\begin{problem}{Divisibility}
- Circle factors of each number. More than one factor may be circled.
+\begin{problem}{Factorize}
+ Find the prime factorization for each number.
 
  \begin{itemize}
-  \item $25$ \hfill $\Ans{1}$~~~$2$~~~$\Ans{5}$~~~$10$~~~$100$
-  \item $172$ \hfill $\Ans{1}$~~~$\Ans{2}$~~~$5$~~~$10$~~~$100$
-  \item $1793$ \hfill $\Ans{1}$~~~$2$~~~$5$~~~$10$~~~$100$
-  \item $2000$ \hfill $\Ans{1}$~~~$\Ans{2}$~~~$\Ans{5}$~~~$\Ans{10}$
-  ~~~$\Ans{100}$
+  \item $12 = \Ans{2\times2\times3}$
+  \item $70 = \Ans{2\times5\times7}$
+  \item $100 = \Ans{2\times2\times5\times5}$
  \end{itemize}
 \end{problem}
-
-\section{QUIZ}
-There is a quiz today (Quiz 3: Parity and Divisibility). The allocated length
-for the quiz is $15$ minutes.
-
-\section{Divisors \& Primes}
-We will talk some more about primes today, and also about divisors.
 
 \begin{problem}{Prime Factors}
  Find one (no need to find all) prime factor for each number.
@@ -220,6 +246,13 @@ We will talk some more about primes today, and also about divisors.
   \item $521976505$ \hfill Factor: \Ans{5}
  \end{itemize}
 \end{problem}
+
+\chapter{Greatest Common Divisor}
+
+\section{GCD \& LCM}
+We will discuss two very important topics that have many applications: the
+greatest common divisor, and another similar operation, the least common
+multiple.
 
 \subsection{Greatest Common Divisor}
 Given two positive integers, we define their GCD (greatest common divisor) to be
@@ -238,8 +271,57 @@ greatest factor that these have in common is $12$. Therefore we denote \[
  \end{itemize}
 \end{problem}
 
-\section{Homework}
-Today's homework contains an investigation about remainders, and some additional
-questions about prime numbers and GCD.
+\subsection{Least Common Multiple}
+Similarly, given two positive integers, we define their LCM (least common
+multiple) to be the smallest positive integer that's a multiple of both those
+numbers. For instance, the positive multiples of $24$ are $24$, $48$, $72$, and
+so on, and the positive multiples of $36$ are $36$, $72$, $108$, and so on.
+The smallest multiple that these have in common is $72$. Therefore we
+denote \[
+ \operatorname{lcm}(24, 36) = 72
+\]
+
+\section{Applications}
+The GCD and the LCM have many applications across mathematics. One useful
+application comes from studying fractions. Two fractions are equivalent if,
+despite the numerator and the denominator possibly differing, they represent
+the same quantity. For instance, the fraction $\frac{1}{2}$ is equivalent to
+fractions $\frac{2}{4}$, $\frac{3}{6}$, and so on.
+
+We may \emph{simplify} a fraction by writing it as an equivalent fraction with
+least possible (positive) denominator. Simplifying fractions makes it easy to
+determine whether two fractions are equivalent, and also makes fractions easier
+to work with. There exists a simple algorithm to simplify a fraction. Given
+$\frac{n}{m}$, compute $d=\gcd(n, m)$, and then $\frac{n\div d}{m\div d}$ is the
+simplest form.
+
+\begin{problem}{Simplify Fraction}
+ Simplify. Note that the fraction may possibly already be in simplest form.
+
+ \begin{itemize}
+  \item $\frac{20}{15}=\Ans{\frac{4}{3}}$
+  \item $\frac{24}{36}=\Ans{\frac{2}{3}}$
+  \item $\frac{7}{13}=\Ans{\frac{7}{13}}$
+ \end{itemize}
+\end{problem}
+
+When we add or subtract fractions, it helps often to write the fractions with
+equal denominator. To select a compatible denominator, we may use the least
+common multiple. For example, to add $\frac{a}{b}+\frac{c}{d}$, we may compute
+$\ell=\operatorname{lcm}(b, d)$ and then compute \begin{align*}
+ \frac{a}{b}+\frac{c}{d}
+ &= \frac{a\ell\div b}{\ell} + \frac{c\ell\div d}{\ell} \\
+ &= \frac{a\ell\div b + c\ell\div d}{\ell}
+\end{align*} which then we may simplify with the algorithm described above.
+
+\begin{problem}{Adding and Subtracting Fractions}
+ Add or subtract. Then simplify.
+
+ \begin{itemize}
+  \item $\frac{1}{2} + \frac{1}{3} = \Ans{\frac{5}{6}}$
+  \item $\frac{3}{4} + \frac{1}{6} = \Ans{\frac{11}{12}}$
+  \item $\frac{23}{36} - \frac{11}{24} = \Ans{\frac{13}{36}}$
+ \end{itemize}
+\end{problem}
 
 \end{document}
