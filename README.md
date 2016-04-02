@@ -69,15 +69,10 @@ factorization.
 
 ### Sequences
 
-This subject covers arithmetic, geometric, and Fibonacci sequences. It is
-mostly complete but somewhat rough on the edges.
+This subject covers arithmetic, geometric, and Fibonacci sequences. It is mostly
+complete but somewhat rough on the edges.
 
 ### Skills
-
-This subject will include more skills in the future, but expansion is not
-currently a major priority.
-
-### Supplemental
 
 This subject will include more skills in the future, but expansion is not
 currently a major priority.
