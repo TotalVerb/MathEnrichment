@@ -10,7 +10,7 @@
 \begin{document}
 \maketitle
 
-\chapter{Parity}
+\chapter{Parity \& Divisibility}
 
 Number Theory is the study of whole numbers. That means $0$, $1$, $2$, and so
 on. Number Theory also studies negative whole numbers, such as $-1$, $-2$, and
@@ -30,7 +30,7 @@ An odd number is a number of the form $2n+1$, where $n$ is any integer. The
 expression $2n+1$ means $(2\times n) + 1$. We perform the multiplication first
 because of the order of operations.
 
-\section{Determining Parity}
+\subsection{Determining Parity}
 It is easy to determine whether a number is even or odd. Let's start with small
 examples first. We know $4=2\times2$, so it's even. We know $7=2\times3+1$, so
 it's odd. A number is either even or odd, but it's never both. We only need to
@@ -51,7 +51,7 @@ If the numbers are very big, it is convenient to simply observe the last digit.
 If the last digit is even, then the whole number is even. If the last digit is
 odd, then the whole number is odd. Why does this work? We will see very soon.
 
-\section{Sums \& Differences}
+\subsection{Sums \& Differences}
 What happens if we add two odd numbers? Two even numbers? Let's find out. Say
 $2n+1$ and $2m+1$ are two odd numbers. We're using letters here as placeholders;
 $n$ and $m$ can both take the value of any integer. Then \[
@@ -84,7 +84,7 @@ is odd. Feel free to work these out yourself.
  \end{itemize}
 \end{problem}
 
-\section{Products}
+\subsection{Products}
 We can use a similar technique to develop rules for the product of even and odd
 numbers. It turns out that the product of two odd numbers is odd. Say $2n+1$
 and $2m+1$ are two odd numbers. Observe: \begin{align*}
@@ -99,7 +99,7 @@ even number, and $k$ is any integer. Then: \[
  (2n)k = 2(nk)
 \] which is even.
 
-\chapter{Divisibility}
+\section{Divisibility}
 
 We will begin today's topic with a few definitions.
 
@@ -115,13 +115,13 @@ later on, is \emph{divisor}.
 Observe that $1$ is a \emph{factor} of every whole number, and $0$ is a
 \emph{multiple} of every whole number.
 
-\section{Parity \& Divisibility}
+\subsection{Revisiting Parity}
 
 Using our new definitions, we see that the topic we covered last class---even
 and odd numbers---is really just the study of numbers that are and aren't
 divisible by $2$.
 
-\section{Transitivity}
+\subsection{Transitivity}
 
 The \emph{transitivity} principle says that if $a$, $b$, and $c$ are integers,
 and if $a \mid b$ and $b \mid c$, then $a \mid c$. Let's do an example. We know
@@ -132,9 +132,9 @@ is a simple exercise that is easily done using transitivity:
  Does $3$ divide \emph{every} multiple of $12$? \hfill \AnsT{True}~~~False
 \end{problem}
 
-\chapter{Quiz: Parity \& Divisibility}
+\section{Quiz}
 
-\section{Quiz Review}
+\subsection{Quiz Review}
 
 There is a quiz today (Quiz 3: Parity and Divisibility). The allocated length
 for the quiz is $15$ minutes. Three review questions follow. Quiz questions will
@@ -205,12 +205,12 @@ bigger and bigger, prime numbers get rarer and rarer.
 
 However, do note that there is only one even prime: $2$.
 
-\section{Composite Numbers}
+\subsection{Composite Numbers}
 A \emph{composite} number is a number that can be written as the product of two
 smaller positive numbers. Thus $4=2\times2$ is composite. It turns out that
 every non-prime positive whole number except $1$ is composite.
 
-\chapter{The Fundamental Theorem of Arithmetic}
+\section{The Fundamental Theorem of Arithmetic}
 
 One of the most important facts about whole numbers, one that forms the basis
 for much of number theory, is the Fundamental Theorem of Arithmetic. This
@@ -246,6 +246,11 @@ at the same prime factorization (with possibly a different order).
   \item $521976505$ \hfill Factor: \Ans{5}
  \end{itemize}
 \end{problem}
+
+As you will see on the homework, it may be difficult to factor very large
+numbers. In fact, lots of modern cryptography, including the popular RSA
+encryption scheme, rest on the fact that nobody has yet discovered a fast way to
+factor large numbers.
 
 \chapter{Greatest Common Divisor}
 
@@ -323,5 +328,11 @@ $\ell=\operatorname{lcm}(b, d)$ and then compute \begin{align*}
   \item $\frac{23}{36} - \frac{11}{24} = \Ans{\frac{13}{36}}$
  \end{itemize}
 \end{problem}
+
+\section{Remainders}
+We will take a brief break from discussing 
+
+\section{Euclid's Algorithm}
+In this unit we will
 
 \end{document}
