@@ -16,7 +16,9 @@
  on the level of detail.
 
  These notes are intended to be a rough outline of what is taught, and not a
- rigorous and complete reference.
+ rigorous and complete reference. I do not necessarily cover all the material
+ written in these notes in any particular year, and I may occasionally cover
+ material beyond that written in the notes.
 \end{abstract}
 
 \maketitle
@@ -49,7 +51,7 @@ examples first. We know $4=2\times2$, so it's even. We know $7=2\times3+1$, so
 it's odd. A number is either even or odd, but it's never both. We only need to
 divide by $2$: if it evenly divides, then it's even, and otherwise, it's odd.
 
-\begin{problem}{Even or Odd?}
+\begin{problem}{Example}
  Are each of the following numbers even or odd?
 
  \begin{itemize}
@@ -65,6 +67,7 @@ If the last digit is even, then the whole number is even. If the last digit is
 odd, then the whole number is odd. Why does this work? We will see very soon.
 
 \subsection{Sums \& Differences}
+
 What happens if we add two odd numbers? Two even numbers? Let's find out. Say
 $2n+1$ and $2m+1$ are two odd numbers. We're using letters here as placeholders;
 $n$ and $m$ can both take the value of any integer. Then \[
@@ -86,7 +89,7 @@ The rules for subtracting are exactly the same. The difference of two odds is
 even. The difference of two evens is even. The difference of an odd and an even
 is odd. Feel free to work these out yourself.
 
-\begin{problem}{Even or Odd?}
+\begin{problem}{Example}
  Are each of the following numbers even or odd?
 
  \begin{itemize}
@@ -98,6 +101,7 @@ is odd. Feel free to work these out yourself.
 \end{problem}
 
 \subsection{Products}
+
 We can use a similar technique to develop rules for the product of even and odd
 numbers. It turns out that the product of two odd numbers is odd. Say $2n+1$
 and $2m+1$ are two odd numbers. Observe: \begin{align*}
@@ -111,6 +115,20 @@ But the product of an even number with any integer is even. Say $2n$ is an
 even number, and $k$ is any integer. Then: \[
  (2n)k = 2(nk)
 \] which is even.
+
+At this point we have enough knowledge to see why our rule for determining
+parity by looking at the last digit works. In a number written in the place
+value system, such as $76103$, we can split the number into the ones' digit,
+the tens' digit, hundreds' digit, and so on. Another way to think about it is,
+by splitting off the ones' digit, \[
+ 76103 = 3 + 7610 \times 10
+\]
+
+But we know that $10=2\times5$ is even, so by the rules covered above, we know
+that anything mutliplied by $10$ remains even. Then if we add it to an odd
+number, we obtain an odd number, but if we add it to an even number, then we
+obtain an even number. Therefore, just by looking at the last digit, we can
+figure out whether a number is odd or even.
 
 \section{Divisibility}
 
@@ -128,11 +146,40 @@ later on, is \emph{divisor}.
 Observe that $1$ is a \emph{factor} of every whole number, and $0$ is a
 \emph{multiple} of every whole number.
 
+\subsection{Finding Factors}
+
+One class of problem that we may be interested in solving is to list the factors
+for a number. When the number is small, this is easy. For example, listing the
+factors of $6$ is as simple as trying out all smaller (or equal) numbers, and
+finding that only $1$, $2$, $3$, and $6$ divide $6$ evenly.
+
+For larger numbers, we may exploit the fact that factors always come in pairs.
+If $a \mid c$, then there is some number $b$ so that $a \times b = c$. But then
+we can just flip the order of the multiplication, and we see that $b \times a =
+c$ and therefore $b \mid c$. Therefore a convenient way to find big factors is
+to divide the original number by the smaller factors.
+
 \subsection{Revisiting Parity}
 
 Using our new definitions, we see that the topic we covered last class---even
 and odd numbers---is really just the study of numbers that are and aren't
-divisible by $2$.
+divisible by $2$. Even numbers are the multiples of $2$, and all even numbers
+have $2$ as a factor. Be careful! Note that odd numbers do not necessarily have
+$3$ as a factor (for example, $5$ is not a mutliple of $3$), and even numbers
+might (for example, $6$ is a multiple of $3$ and is also even.)
+
+\subsection{Divisibility Rules}
+
+Earlier we have already seen rules for divisibility by $2$. We have a similar
+rule for divisibility by $5$. The reason that this rule is correct will be
+discussed later in this unit, but please feel free to think about it. To figure
+out whether a number is divisible by $5$, simply look at the last digit. If it
+is $0$ or $5$, then the number is divisible by $5$.
+
+For divisibility by $10$, the rule is even simpler. A number is divisible by
+$10$ if and only if the last digit is $0$. A number is divisible by $100$ if the
+last two digits are $0$. (Note that $0$ is a bit of a special case, since it
+only has one digit, but it is still divisible by $100$.)
 
 \subsection{Transitivity}
 
@@ -141,8 +188,17 @@ and if $a \mid b$ and $b \mid c$, then $a \mid c$. Let's do an example. We know
 that $3 \mid 12$, and that $12 \mid 36$. Then by transitivity, $3 \mid 36$. Here
 is a simple exercise that is easily done using transitivity:
 
-\begin{problem}{True or False}
+\begin{problem}{Example}
  Does $3$ divide \emph{every} multiple of $12$? \hfill \AnsT{True}~~~False
+
+ \begin{solution}
+  Say $a$ is some multiple of $12$. By definition, $12 \mid a$. Here we are
+  using $a$ as a placeholder---it can stand for \emph{any} multiple of $12$.
+
+  Since $12 \div 3 = 4 \operatorname{R} 0$, we know that $3 \mid 12$. But if $3
+  \mid 12$ and $12 \mid a$, then by transitivity, $3 \mid a$. Therefore, the
+  statement that $3$ divides every multiple of $12$ is \AnsT{true}.
+ \end{solution}
 \end{problem}
 
 \section{Review}
@@ -220,6 +276,13 @@ However, do note that there is only one even prime: $2$.
 A \emph{composite} number is a number that can be written as the product of two
 smaller positive numbers. Thus $4=2\times2$ is composite. It turns out that
 every non-prime positive whole number except $1$ is composite.
+
+Composite numbers have at least three distinct factors. Usually, they have at
+least four (such as $6$, which has factors $1$, $2$, $3$, and $6$), but there is
+a special category of numbers that have exactly $3$. These are the squares of
+prime numbers. For instance, $4$ has factors $1$, $2$, and $4$, and $9$ has
+factors $1$, $3$ and $9$. This happens when the only prime factor of a number is
+paired with itself.
 
 \section{The Fundamental Theorem of Arithmetic}
 
@@ -463,22 +526,74 @@ very easy for a computer to do. In fact, the algorithm is so efficient that
 computers can easily calculate the greatest common divisors of numbers with
 thousands of digits, in a matter of milliseconds!
 
-\subsection{Example}
+\section{Euclidean Algorithm Examples}
 
 Here is a quick example of using the Euclidean algorithm to compute the
 greatest common divisor of medium-sized numbers:
-\begin{align*}
- \gcd(60, 84)
- &= \gcd(84 \bmod 60, 60) \\
- &= \gcd(24, 60) \\
- &= \gcd(60 \bmod 24, 24) \\
- &= \gcd(12, 24) \\
- &= \gcd(24 \bmod 12, 12) \\
- &= \gcd(0, 12) \\
- &= 12
-\end{align*}
 
-\begin{problem}{Find the GCD}
+\begin{problem}{GCD of Two Numbers}
+ Compute $\gcd(60, 84) = \Ans{12}$.
+
+ \begin{solution}
+  \begin{align*}
+   \gcd(60, 84)
+   &= \gcd(84 \bmod 60, 60) \\
+   &= \gcd(24, 60) \\
+   &= \gcd(60 \bmod 24, 24) \\
+   &= \gcd(12, 24) \\
+   &= \gcd(24 \bmod 12, 12) \\
+   &= \gcd(0, 12) \\
+   &= 12
+  \end{align*}
+ \end{solution}
+\end{problem}
+
+We may alternatively seek to find the GCD of multiple (more than two) numbers.
+This means the largest number that is a divisor of all the numbers we're
+interested in. We can do this by finding the GCD of the first two, and then
+finding the GCD of that number and the third, and so on. That is, we use the
+formula \[
+ \gcd(a, b, c, d, \dots) = \gcd(\gcd(a, b), c, d, \dots)
+\]
+
+This computation may require several long and tedious applications of the
+Euclidean algorithm. Luckily, in practice, when GCDs for large numbers must be
+computed, computers can typically be used. You will not be required to do
+problems of this sort on your homework or quizzes.
+
+\begin{problem}{GCD of Three Numbers}
+ Compute $\gcd(3636, 3948, 4056) = \Ans{12}$.
+
+ \begin{solution}
+  \begin{align*}
+   \gcd(3636, 3948, 4056)
+   &= \gcd(\gcd(3636, 3948), 4056) \\
+   &= \gcd(\gcd(3948 \bmod 3636, 3636), 4056) \\
+   &= \gcd(\gcd(312, 3636), 4056) \\
+   &= \gcd(\gcd(3636 \bmod 312, 312), 4056) \\
+   &= \gcd(\gcd(204, 312), 4056) \\
+   &= \gcd(\gcd(312 \bmod 204, 204), 4056) \\
+   &= \gcd(\gcd(108, 204), 4056) \\
+   &= \gcd(\gcd(204 \bmod 108, 108), 4056) \\
+   &= \gcd(\gcd(96, 108), 4056) \\
+   &= \gcd(\gcd(108 \bmod 96, 96), 4056) \\
+   &= \gcd(\gcd(12, 96), 4056) \\
+   &= \gcd(\gcd(96 \bmod 12, 12), 4056) \\
+   &= \gcd(\gcd(0, 12), 4056) \\
+   &= \gcd(12, 4056) \\
+   &= \gcd(4056 \bmod 12, 12) \\
+   &= \gcd(0, 12) \\
+   &= \Ans{12}
+  \end{align*}
+ \end{solution}
+\end{problem}
+
+We may cover a few assorted problems to reinforce your ability to compute the
+GCD using the Euclidean algorithm. However, in general, this computation is not
+difficult, but is brainless and long, and I do not recommend you do many of
+these problems for practice.
+
+\begin{problem}{Assorted GCD Problems}
  Use the Euclidean Algorithm to compute the following:
 
  \begin{itemize}
@@ -487,7 +602,6 @@ greatest common divisor of medium-sized numbers:
   \item $\gcd(319, 920) = \Ans{1}$
   \item $\gcd(2635, 4515) = \Ans{5}$
   \item $\gcd(12936, 25256) = \Ans{616}$
-  \item $\gcd(3636, 3948, 4056) = \Ans{12}$
   \item $\gcd(399, 1533, 1659, 2016) = \Ans{1}$
  \end{itemize}
 \end{problem}
