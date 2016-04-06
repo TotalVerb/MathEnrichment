@@ -8,7 +8,20 @@
 \author{Fengyang Wang}
 
 \begin{document}
+
+\begin{abstract}
+ This is an introduction to more advanced topics in number theory suitable for
+ a Grade 4 audience. These notes were prepared for the Grand River Chinese
+ School. Each chapter may take two to four hours to deliver entirely, depending
+ on the level of detail.
+
+ These notes are intended to be a rough outline of what is taught, and not a
+ rigorous and complete reference.
+\end{abstract}
+
 \maketitle
+
+\tableofcontents
 
 \chapter{Parity \& Divisibility}
 
@@ -132,13 +145,11 @@ is a simple exercise that is easily done using transitivity:
  Does $3$ divide \emph{every} multiple of $12$? \hfill \AnsT{True}~~~False
 \end{problem}
 
-\section{Quiz}
+\section{Review}
 
-\subsection{Quiz Review}
-
-There is a quiz today (Quiz 3: Parity and Divisibility). The allocated length
-for the quiz is $15$ minutes. Three review questions follow. Quiz questions will
-be very similar in nature.
+There is a quiz for this unit (Quiz 3: Parity and Divisibility). The allocated
+length for the quiz is $15$ minutes. Three review questions follow. Quiz
+questions will be very similar in nature.
 
 \begin{problem}{Factor Pairs}
  Complete the factor pairs.
@@ -252,14 +263,58 @@ numbers. In fact, lots of modern cryptography, including the popular RSA
 encryption scheme, rest on the fact that nobody has yet discovered a fast way to
 factor large numbers.
 
+\subsection{Applications to Problem Solving}
+
+So far in this unit, we have not done so many applications to problems of the
+sort typically seen in math contests. However, this does not mean that the
+Fundamental Theorem of Arithmetic is not useful for contest math. Many questions
+can be simplified greatly by factorizing numbers into their prime
+factorizations. It is even useful for mental arithmetic. We will see some
+examples below.
+
+\begin{problem}{Mental Arithmetic}
+ Find, without using a calculator, $1875\times48$.
+
+ \begin{solution}
+  We compute \[
+   1875 = 5 \times 5 \times 5 \times 5 \times 3
+  \] and \[
+   48 = 2 \times 2 \times 2 \times 2 \times 3
+  \] so \begin{align*}
+   1875 \times 48
+   &= 5 \times 5 \times 5 \times 5 \times 3 \times 2 \times 2 \times 2 \times 2
+   \times 3 \\
+   &= 10 \times 10 \times 10 \times 10 \times 3 \times 3 \\
+   &= \Ans{90000}
+  \end{align*}
+
+  Factorizing numbers into primes before multiplying them is a common technique
+  in mental math.
+ \end{solution}
+\end{problem}
+
+\subsection{Culture and History}
+
+Although the Fundamental Theorem of Arithmetic is known to be true, many people
+believe that it is not obvious. Why is it that all positive integers can be
+broken down \emph{uniquely} into prime numbers? In mathematics, claims like the
+Fundamental Theorem of Arithmetic require proof. That is, we need a convincing
+argument that it is true for all numbers. The argument should depend only on
+facts that are known and accepted to be true, or facts that also have proofs.
+The first known proof for the Fundamental Theorem of Arithmetic was in book VII
+(7) of Euclid's Elements, propositions 30 and 32. It is beyond the scope of this
+course.
+
 \chapter{Greatest Common Divisor}
 
-\section{GCD \& LCM}
-We will discuss two very important topics that have many applications: the
-greatest common divisor, and another similar operation, the least common
-multiple.
+\section{Introduction}
+
+In this chapter, we will discuss two very important
+topics that have many applications: the greatest common divisor, and another
+similar operation, the least common multiple.
 
 \subsection{Greatest Common Divisor}
+
 Given two positive integers, we define their GCD (greatest common divisor) to be
 the largest positive integer that's a factor for both those numbers. For
 instance, the factors of $24$ are $1$, $2$, $3$, $4$, $6$, $8$, $12$, $24$, and
@@ -268,7 +323,7 @@ greatest factor that these have in common is $12$. Therefore we denote \[
  \gcd(24, 36) = 12
 \]
 
-\begin{problem}{GCD Examples}
+\begin{problem}{Examples}
  \begin{itemize}
   \item $\gcd(10, 20) = \Ans{10}$
   \item $\gcd(15, 25) = \Ans{5}$
@@ -285,6 +340,15 @@ The smallest multiple that these have in common is $72$. Therefore we
 denote \[
  \operatorname{lcm}(24, 36) = 72
 \]
+
+An intriguing connection between the GCD and the LCM is given by the following
+identity, which we will not justify in this class, but you may see again in the
+future: \[
+ \gcd(a, b) \times \operatorname{lcm}(a, b) = a \times b
+\]
+
+Roughly speaking, this identity says that the product of two numbers is the same
+as the product of their GCD and their LCM.
 
 \section{Applications}
 The GCD and the LCM have many applications across mathematics. One useful
@@ -329,10 +393,111 @@ $\ell=\operatorname{lcm}(b, d)$ and then compute \begin{align*}
  \end{itemize}
 \end{problem}
 
-\section{Remainders}
-We will take a brief break from discussing 
+\section{Remainders Review}
+Before we continue, it is important to have a good grasp of what remainders are,
+and to introduce some new notation. While this is adequately covered on the
+homework assignments, a quick recap is provided below.
 
-\section{Euclid's Algorithm}
-In this unit we will
+When we divide $20$ by $4$, we count how many groups of $4$ are needed to make
+$20$. We know that $5 \times 4 = 20$. This means that it takes $5$ groups of $4$
+to make $20$. So $20 \div 4 = 5$.
+
+Sometimes the numbers might not work out perfectly. Let's try dividing $20$ by
+$3$. If we make $7$ groups of $3$, the total number would be $7 \times 3 = 21$.
+But this is too big. If we make $6$ groups of $3$, the total number would be $6
+\times 3 = 18$. But this is too small. So we can make six groups, but we'd then
+have $20 - 18 = 2$ left over!
+
+We say that when we divide $20$ by $3$, our \emph{quotient} is $6$ because we
+can make $6$ groups of $3$ in total. And then we say that our \emph{remainder}
+is $2$ because after making $6$ groups of $3$, we have $2$ left over. We can
+also write this as $20 \div 3 = 6 \operatorname{R} 2$. The ``R'' stands for
+``remainder''.
+
+Suppose we didn't care what the quotient was; only the remainder is important.
+Then we can write that as $16 \bmod 5 = 1$. We don't care how many groups we
+made, but we do care that one was left over after making those groups.
+
+\section{Euclidean Algorithm}
+An \emph{algorithm} is a ``step-by-step procedure for performing a calculation
+according to well-defined rules'' (Wikipedia).
+
+In this lesson we will cover a useful algorithm that allows us to find the
+greatest common divisor of two large numbers. This algorithm has been known for
+thousands of years. It was discovered by the Ancient Greeks, and is named after
+Euclid, one of the most famous mathematicians in history.
+
+This algorithm is based on the fact that the greatest common denominator does
+not change if the smaller number is subtracted from the larger one. That is,
+$\gcd(a, b) = \gcd(a, b - a)$ for all positive integers $a$ and $b$, with $b>a$.
+Proving this fact is beyond the scope of this course. However, we will look at
+an example.
+
+Consider $\gcd(8, 12)=4$. If we subtract $8$ from $12$, we get $\gcd(8, 4)=4$.
+If we subtract now $4$ from $8$, we get $\gcd(4, 4)=4$. We notice that the GCD
+is unchanged despite these subtractions.
+
+To avoid subtracting potentially many times, we can change the repeated
+subtraction into a remainder operation. Thus we arrive at the most commonly
+stated version of the Euclidean algorithm:
+
+\subsection{The Euclidean Algorithm}
+
+To find the Greatest Common Divisor of two numbers, $a$ and $b$:
+\begin{enumerate}
+ \item If $a=0$, then terminate. The greatest common divisor is $b$.
+ \item Otherwise, apply the Euclidean Algorithm to find the GCD of $b \bmod a$
+ and $a$. That is, $\gcd(a, b) = \gcd(b \bmod a, a)$.
+\end{enumerate}
+
+\subsection{Properties of the Euclidean Algorithm}
+
+This algorithm is an example of a recursive algorithm. More specifically, it is
+a ``tail recursive'' algorithm. That means that the algorithm either produces a
+result, or it requires running the algorithm another time on simpler numbers. We
+may need to run the Euclidean algorithm several times on progressively simpler
+numbers before finishing the computation.
+
+Although the Euclidean algorithm may take some time to compute by hand, it is
+very easy for a computer to do. In fact, the algorithm is so efficient that
+computers can easily calculate the greatest common divisors of numbers with
+thousands of digits, in a matter of milliseconds!
+
+\subsection{Example}
+
+Here is a quick example of using the Euclidean algorithm to compute the
+greatest common divisor of medium-sized numbers:
+\begin{align*}
+ \gcd(60, 84)
+ &= \gcd(84 \bmod 60, 60) \\
+ &= \gcd(24, 60) \\
+ &= \gcd(60 \bmod 24, 24) \\
+ &= \gcd(12, 24) \\
+ &= \gcd(24 \bmod 12, 12) \\
+ &= \gcd(0, 12) \\
+ &= 12
+\end{align*}
+
+\begin{problem}{Find the GCD}
+ Use the Euclidean Algorithm to compute the following:
+
+ \begin{itemize}
+  \item $\gcd(12, 28) = \Ans{4}$
+  \item $\gcd(147, 392) = \Ans{49}$
+  \item $\gcd(319, 920) = \Ans{1}$
+  \item $\gcd(2635, 4515) = \Ans{5}$
+  \item $\gcd(12936, 25256) = \Ans{616}$
+  \item $\gcd(3636, 3948, 4056) = \Ans{12}$
+  \item $\gcd(399, 1533, 1659, 2016) = \Ans{1}$
+ \end{itemize}
+\end{problem}
+
+\chapter{Modular Arithmetic}
+
+The final chapter in this unit will be brief, and you will not be quizzed on the
+material. However, the content of this chapter will certainly be interesting and
+engaging.
+
+TK.
 
 \end{document}
