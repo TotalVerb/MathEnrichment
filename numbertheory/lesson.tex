@@ -10,15 +10,21 @@
 \begin{document}
 
 \begin{abstract}
+
  This is an introduction to more advanced topics in number theory suitable for
- a Grade 4 audience. These notes were prepared for the Grand River Chinese
- School. Each chapter may take two to four hours to deliver entirely, depending
- on the level of detail.
+ an advanced Grade 4 audience. These notes were prepared for the Grand River
+ Chinese School. Each chapter may take two to four hours to deliver entirely,
+ depending on the level of detail.
 
  These notes are intended to be a rough outline of what is taught, and not a
  rigorous and complete reference. I do not necessarily cover all the material
  written in these notes in any particular year, and I may occasionally cover
  material beyond that written in the notes.
+
+ Although the notes are intended to be presented to a young audience, they are
+ written for a teacher and not for a student. Many of the terms used will not be
+ familiar to the students, and will need to be explained differently.
+
 \end{abstract}
 
 \maketitle
@@ -617,7 +623,130 @@ The final chapter in this unit will be brief, and you will not be quizzed on the
 material. However, the content of this chapter will certainly be interesting.
 
 In earlier chapters we discussed briefly remainders and some applications. In
-this chapter we will develop new powerful techniques to simplify the computation
-of these problems.
+this chapter, we will develop new powerful techniques to simplify the solution
+to these problems.
+
+\section{Generalizing Parity}
+
+When we talked about even and odd numbers, we came up with rules about the
+result of adding, subtracting, and multiplying even and odd numbers. We can come
+up with similar strategies for divisibility by any number, not just $2$. For the
+purposes of discussing this with greater ease, we will consider $7$ as our base.
+
+All positive integers (in fact, all integers, including zero and negative ones)
+can be categorized into $7$ distinct buckets based on their remainder when
+divided by $7$. Let us call these buckets $[0]$, $[1]$, $[2]$, $[3]$, $[4]$,
+$[5]$, and $[6]$. In the following table we have categorized the numbers from
+$0$ to $30$ into these buckets:
+
+\begin{center}
+ \begin{tabular}{|c|lllll|}
+  \hline
+  $[0]$ & $0$ & $7$ & $14$ & $21$ & $28$ \\ \hline
+  $[1]$ & $1$ & $8$ & $15$ & $22$ & $29$ \\ \hline
+  $[2]$ & $2$ & $9$ & $16$ & $23$ & $30$ \\ \hline
+  $[3]$ & $3$ & $10$ & $17$ & $24$ & \\ \hline
+  $[4]$ & $4$ & $11$ & $18$ & $25$ & \\ \hline
+  $[5]$ & $5$ & $12$ & $19$ & $26$ & \\ \hline
+  $[6]$ & $6$ & $13$ & $20$ & $27$ & \\ \hline
+ \end{tabular}
+\end{center}
+
+We can see a few patterns in the above table. When we add $1$ to a number, we
+move to the next bucket. But $[6]$ has no next bucket, so what happens when we
+add $1$ to a number in bucket $[6]$? We move to bucket $[0]$! In some sense,
+these buckets form a sort of cycle. After we reach the last bucket, we loop
+around and return to the first bucket (Figure~\ref{ma:equiv-class-cycle}).
+
+\begin{figure}
+ \label{ma:equiv-class-cycle}
+ \begin{tikzpicture}
+ \def \n {7}
+ \def \r {3cm}
+ \def \sp {10}
+ \def \tt {360/\n}
+
+ \foreach \s in {0,...,6}
+ {
+  \node[draw, circle] at ({\tt * \s}:\r) {$[\s]$};
+  \draw[->, >=latex] ({\tt * \s + \sp}:\r)
+    arc ({\tt * \s + \sp}:{\tt * (\s + 1) - \sp}:\r);
+ }
+ \end{tikzpicture}
+ \caption{When we add $1$ to a number in a bucket, we move to the next bucket in
+ this diagram.}
+\end{figure}
+
+This behaviour should make sense when starting at buckets $[0]$ to $[5]$. But
+for bucket $[6]$, why is it that we move to bucket $[0]$ by adding one more? We
+can find the solution using algebra, just like how we did when talking about
+parity. Any number in bucket $[6]$ looks like $7n+6$ for some integer $n$. If we
+add $1$ to this, \[ 7n+6 + 1 = 7n+7 = 7(n+1) \] and we can see that this is a
+multiple of $7$, and so belongs in bucket $[0]$.
+
+We now consider what happens if we add $2$ to a number. In which bucket would
+the new number be in? This is the same as adding $1$ twice. So, for example,
+$[0]$ goes to $[2]$, $[4]$ goes to $[6]$, $[5]$ goes to $[0]$ and $[6]$ goes to
+$[1]$. Again, we are just moving around in circles. It is similar to addition
+on the number line, but instead of going in a line, we are going in a cycle.
+
+The process of addition is moving numbers from one remainder bucket to the next
+several times. What happens if we add $7$? Well, we would have gone one whole
+cycle around, and so our result should be in the same bucket. And indeed, that
+is what we would expect, since adding $7$ should not change the remainder when
+dividing by $7$.
+
+The same goes for any multiple of $7$. If we add $21$, we would go around one
+whole cycle $3$ times, and then arrive back where we started. For bigger numbers
+that are not multiples of $7$, we can think of the addition as moving around the
+whole cycle several times, then moving some extra steps. How many extra steps do
+we move? Why, the remainder when divided by $7$, of course.
+
+To recap, we have devised a system where we can predict the remainder of a sum
+when divided by $7$, knowing just the remainders of the two summands when
+divided by $7$. We simply start at the bucket for the first number and advance a
+number of buckets in the cycle equal to the remainder of the second number when
+divided by $7$. We introduce the following notation: \[ [1] + [2] = [3] \] to
+mean that the sum of a number in bucket $[1]$ and a number in bucket $[2]$ is a
+number in bucket $[3]$.
+
+We can return to algebra to provide a justification for this behaviour. Say
+$n \bmod 7 = i$, and $m \bmod 7 = j$. Then let $n = 7k + i$ and $m = 7\ell + j$.
+We see that \begin{align*}
+ (n + m) \bmod 7
+ &= (7k+i + 7\ell+j) \bmod 7 \\
+ &= (7(k+\ell) + i + j) \bmod 7 \\
+ &= (i + j) \bmod 7
+\end{align*} which is the same as saying that the remainder of the sum of two
+numbers when divided by $7$ is the same as the remainder of the sum of the
+remainders when divided by $7$. In other words, the bucket of the result is
+determined only by the buckets of the summands.
+
+By now we have come up with a generalization of the concept of parity (for
+divisibility by $2$) to divisibility by $7$. Instead of categorizing numbers
+into even and odd numbers, we categorize them into the $7$ buckets depending on
+their remainder when divided by $7$. But we could have chosen any positive
+integer to start with, not just $7$. By using the same techniques we applied
+above, we can create a new way of analyzing numbers using any positive integer
+as our base.
+
+\section{Introducing Multiplication}
+
+For simplicity, we'll continue to use $7$ as our base, but keep in mind that the
+interesting results we will notice are valid in other bases also. Above, we saw
+the important fact that the remainder of the sum of two numbers is the same as
+the remainder of the sum of the remainders of two numbers. There is a similar
+fact for multiplication. Indeed, \[
+ ab \bmod 7 = (a \bmod 7)(b \bmod 7) \bmod 7
+\]
+
+That is, instead of multiplying two numbers and then taking the remainder of the
+product, we can instead multiply their remainders and take the remainder of
+that. While above we gave an algebraic explanation for the sum of two numbers,
+for the sake of time we will not do that for the product. But a similar
+algebraic explanation is possible, and if you are interested, you may try to
+devise it yourself.
+
+\end{document}
 
 \end{document}

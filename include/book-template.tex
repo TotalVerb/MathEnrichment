@@ -11,6 +11,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage{gensymb}
 
+\usepackage[toc]{glossaries}
+
 \makeatletter
 \newenvironment{problem}{\@startsection
        {subsection}
@@ -22,6 +24,10 @@
        \large\bf\noindent{Problem }
        }
        }
+\makeatother
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
 \makeatother
 
 \newenvironment{solution}
