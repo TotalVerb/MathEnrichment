@@ -5,7 +5,14 @@ Number Theory. Most of it was developed for the Grand River Chinese School
 interest course in mathematics, at the Grade 4 level, but some of the content is
 appropriate for a more advanced audience.
 
-## Subjects
+## Highlighted Subjects
+
+### Number Theory
+
+This subject covers parity, divisibility, primes, factorization, the GCD, and an
+introduction to modular arithmetic. It is considered complete.
+
+## Subjects in Progress
 
 ### Diagnostic
 
@@ -60,12 +67,6 @@ This subject covers logic and probability. It is quite short and incomplete.
 ### Measurement
 
 This subject is planned but not yet started. Stay tuned!
-
-### Number Theory
-
-This subject covers divisibility and primes. It is complete, but some
-significant expansion is planned, so that it will also cover remainders and
-factorization.
 
 ### Sequences
 

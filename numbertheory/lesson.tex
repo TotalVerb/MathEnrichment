@@ -4,8 +4,13 @@
 \newcommand{\ProjectName}{Grade 4 Olympic Math}
 \input{\IncludePath/book-template.tex}
 
+% use glossaries for this document
+\input{\IncludePath/gloss-g4.tex}
+\makeglossaries
+
 \title{Number Theory}
 \author{Fengyang Wang}
+\date{April 7, 2016}
 
 \begin{document}
 
@@ -36,12 +41,14 @@
 Number Theory is the study of whole numbers. That means $0$, $1$, $2$, and so
 on. Number Theory also studies negative whole numbers, such as $-1$, $-2$, and
 so on. Positive and negative whole numbers, and $0$, are together called
-``integers''.
+\glspl{integer}.
 
 \section{Parity}
 
-``Parity'' is the term used for odd and even numbers. Today, we will study their
-differences and several properties. We will approach the problem algebraically.
+\Gls{parity} is a property of integers that classifies integers into even
+integers and odd integers. In this section, we will study the differences
+between even and odd integers, and also study several important properties. We
+will approach the problem algebraically.
 
 An even number is a number of the form $2n$, where $n$ is any integer. The
 expression $2n$ means $2\times n$; we omit the $\times$ so that it is faster to
@@ -189,10 +196,10 @@ only has one digit, but it is still divisible by $100$.)
 
 \subsection{Transitivity}
 
-The \emph{transitivity} principle says that if $a$, $b$, and $c$ are integers,
-and if $a \mid b$ and $b \mid c$, then $a \mid c$. Let's do an example. We know
-that $3 \mid 12$, and that $12 \mid 36$. Then by transitivity, $3 \mid 36$. Here
-is a simple exercise that is easily done using transitivity:
+The \gls{transitivity} principle of divisiblity says that if $a$, $b$, and $c$
+are integers, and if $a \mid b$ and $b \mid c$, then $a \mid c$. Let's do an
+example. We know that $3 \mid 12$, and that $12 \mid 36$. Then by transitivity,
+$3 \mid 36$. Here is a simple exercise that is easily done using transitivity:
 
 \begin{problem}{Example}
  Does $3$ divide \emph{every} multiple of $12$? \hfill \AnsT{True}~~~False
@@ -890,5 +897,7 @@ lines of work. For instance, consider the following.
 We do not have time to further discuss modular arithmetic in this course. But
 this subject is very powerful, and you will see it again and again in the
 future.
+
+\printglossaries
 
 \end{document}
