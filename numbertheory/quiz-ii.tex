@@ -3,7 +3,7 @@
 \newcommand{\IncludePath}{../include}
 \input{\IncludePath/quiz-template.tex}
 
-\title{Quiz $4$: Primes \& GCD}
+\title{Quiz $4$: Prime Numbers}
 \author{Name: \underline{\hspace{5cm}} Mark: $\displaystyle \frac{\hspace{3em}}{50}$}
 \date{April 2, 2016}
 
@@ -11,7 +11,36 @@
 
 \maketitle
 
+Please write your \emph{first and last} name. Each part is worth one bonus mark.
+
 \thispagestyle{empty}
+
+\begin{problem}{Sieve of Eratosthenes}
+ Follow the given instructions to create a list of all prime numbers from $1$
+ to $25$.
+
+ \begin{enumerate}
+  \item Cross off $1$. It is not prime.
+  \item Circle $2$, because it is a prime number. Cross off all multiples of $2$
+  ($4$, $6$, $8$, \dots), because they are composite.
+ \end{enumerate}
+
+ \begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+   \hline
+   $1$ & $2$ & $3$ & $4$ & $5$ \\
+   \hline
+   $6$ & $7$ & $8$ & $9$ & $10$ \\
+   \hline
+   $11$ & $12$ & $13$ & $14$ & $15$ \\
+   \hline
+   $16$ & $17$ & $18$ & $19$ & $20$ \\
+   \hline
+   $21$ & $22$ & $23$ & $24$ & $25$ \\
+   \hline
+  \end{tabular}
+ \end{center}
+\end{problem}
 
 \begin{problem}{Prime Factor}
  Find one prime factor for each number. Do not try to find additional factors.

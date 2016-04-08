@@ -249,18 +249,20 @@ questions will be very similar in nature.
 
 \chapter{Prime Numbers}
 
-Today's topic is prime numbers.
-
-\section{Primes}
 A \emph{prime number} is a positive integer that has exactly two positive
-factors: $1$ and itself. We can easily check whether small numbers are prime.
-First, note $1$ is not prime, because it has just one factor. However, $2$ is
-prime, because it has exactly two factors: $1$ and itself.
+factors: $1$ and itself.
 
-\begin{problem}{Prime}
+\section{Testing for Primality}
+
+We can easily check whether small numbers are prime. First, note $1$ is not
+prime, because it has just one factor. However, $2$ is prime, because it has
+exactly two factors: $1$ and itself.
+
+\begin{problem}{The First Few Primes}
  Is each number prime or not prime?
 
  \begin{itemize}
+  \item $2$ \hfill \AnsT{Prime}~~~Not Prime
   \item $3$ \hfill \AnsT{Prime}~~~Not Prime
   \item $4$ \hfill Prime~~~\AnsT{Not Prime}
   \item $5$ \hfill \AnsT{Prime}~~~Not Prime
@@ -274,11 +276,22 @@ prime, because it has exactly two factors: $1$ and itself.
 
 Don't get caught in the trap that every odd number is prime! $9=3\times3$ is
 not. Neither are $15$, $21$, $25$, and many others. In fact, as the numbers get
-bigger and bigger, prime numbers get rarer and rarer.
+bigger and bigger, prime numbers get rarer and rarer. However, do note that
+there is only one even prime: $2$.
 
-However, do note that there is only one even prime: $2$.
+\subsection{For Large Numbers}
 
-\subsection{Composite Numbers}
+Checking whether large numbers are prime is much harder to do on paper. However,
+it is easy to see that some numbers are composite. For example, if a number ends
+in $0$, $2$, $4$, $5$, $6$, or $8$, then it is probably composite---the only two
+exceptions are $2$ and $5$.
+
+As an interesting note, which we will not explore further in this class, there
+are actually infinitely many prime numbers. That means that no matter how big
+our prime numbers get, we can always find another bigger prime number.
+
+\section{Composite Numbers}
+
 A \emph{composite} number is a number that can be written as the product of two
 smaller positive numbers. Thus $4=2\times2$ is composite. It turns out that
 every non-prime positive whole number except $1$ is composite.
@@ -289,6 +302,11 @@ a special category of numbers that have exactly $3$. These are the squares of
 prime numbers. For instance, $4$ has factors $1$, $2$, and $4$, and $9$ has
 factors $1$, $3$ and $9$. This happens when the only prime factor of a number is
 paired with itself.
+
+When numbers get quite large, composite numbers vastly outnumber prime numbers.
+Many classes of numbers contain only one prime number and infinitely many
+composite numbers. For instance, among the powers of $2$ ($2$, $4$, $8$, $16$,
+\dots), only $2$ is prime.
 
 \section{The Fundamental Theorem of Arithmetic}
 
@@ -747,6 +765,130 @@ for the sake of time we will not do that for the product. But a similar
 algebraic explanation is possible, and if you are interested, you may try to
 devise it yourself.
 
-\end{document}
+We are able to solve advanced problems easily by applying the techniques shown
+above. Let us consider, for example, the following problems:
+
+\begin{problem}{A Million Days}
+
+ Today is Sunday. $1000$ days later, it will be Saturday. $1000000$ days later,
+ what day will it be?
+
+ \begin{solution}
+
+  The question tells us that $1000$ days later, it will be Saturday. Since
+  Saturday is $6$ days past Sunday, we know that $1000 \bmod 7 = 6$.
+
+  We need to compute $1000000 \bmod 7$. We can use the technique developed above
+  to simplify: \begin{align*}
+   1000000 \bmod 7
+   &= (1000 \times 1000) \bmod 7 \\
+   &= ((1000 \bmod 7) \times (1000 \bmod 7)) \bmod 7 \\
+   &= (6 \times 6) \bmod 7 \\
+   &= 36 \bmod 7 \\
+   &= 1
+  \end{align*}
+  so after $1000000$ days, the day of the week will be $1$ past Sunday, hence
+  \AnsT{Monday}.
+
+ \end{solution}
+\end{problem}
+
+\begin{problem}{A Large Power of $2$}
+
+ Find $2^{32} \bmod 7$.
+
+ \begin{solution}
+
+  We could find the product, but that would take a long time. Since $16$ is a
+  power of $2$, it may be useful to consider the remainders of $2^1$, $2^2$,
+  $2^4$, $2^8$, $2^{16}$, and then finally $2^{32}$.
+
+  First, note that $2 \bmod 7 = 2$. Then note $2^2 \bmod 7 = 4 \bmod 7 = 4$.
+  Next, note that \begin{align*}
+   2^4 \bmod 7
+   &= (2 \times 2 \times 2 \times 2) \bmod 7 \\
+   &= 16 \bmod 7 \\
+   &= 2
+  \end{align*} and so far, all the calculations have been short and easy.
+
+  For $2^8 \bmod 7$, instead of calculating the product, we could apply the
+  above result: \begin{align*}
+   2^8 \bmod 7
+   &= (\underbrace{2 \times 2 \times \dots \times 2}_{8\text{ twos}}) \bmod 7 \\
+   &= (2 \times 2 \times 2 \times 2)(2 \times 2 \times 2 \times 2) \bmod 7 \\
+   &= 16\times16 \bmod 7 \\
+   &= (16 \bmod 7)(16 \bmod 7) \bmod 7 \\
+   &= 2 \times 2 \bmod 7 \\
+   &= 4 \bmod 7 \\
+   &= 4
+  \end{align*}
+
+  Next, for $2^{16} \bmod 7$, we do the same thing again: \begin{align*}
+   2^{16} \bmod 7
+   &= (\underbrace{2 \times 2 \times \dots \times 2}_{16\text{ twos}}) \bmod 7 \\
+   &= (\underbrace{2 \times 2 \times \dots \times 2}_{8\text{ twos}})
+   (\underbrace{2 \times 2 \times \dots \times 2}_{8\text{ twos}}) \bmod 7 \\
+   &= 2^8\times2^8 \bmod 7 \\
+   &= (2^8 \bmod 7)(2^8 \bmod 7) \bmod 7 \\
+   &= 4 \times 4 \bmod 7 \\
+   &= 16 \bmod 7 \\
+   &= 2
+  \end{align*}
+
+  And finally, one more time for $2^{32} \bmod 7$: \begin{align*}
+   2^{32} \bmod 7
+   &= (\underbrace{2 \times 2 \times \dots \times 2}_{32\text{ twos}}) \bmod 7 \\
+   &= (\underbrace{2 \times 2 \times \dots \times 2}_{16\text{ twos}})
+   (\underbrace{2 \times 2 \times \dots \times 2}_{16\text{ twos}}) \bmod 7 \\
+   &= 2^{16}\times2^{16} \bmod 7 \\
+   &= (2^{16} \bmod 7)(2^{16} \bmod 7) \bmod 7 \\
+   &= 2 \times 2 \bmod 7 \\
+   &= 4 \bmod 7 \\
+   &= \Ans{4}
+  \end{align*}
+
+ \end{solution}
+\end{problem}
+
+\section{Notation}
+
+The kind of computation we were doing above is known as \emph{modular
+arithmetic}. Sometimes it is convenient to use specialized notation to describe
+operations. Now we will take look at the commonly used notation, and how it can
+be used to solve problems.
+
+First, we introduce the concept that two numbers are \emph{congruent} modulo
+some base $k$ if they have the same remainder when divided by $k$. For example,
+$17$ and $10$ are congruent modulo $7$, because $17 \bmod 7 = 3 = 10 \bmod 7$.
+
+We can write this as: \[
+ 17 \equiv 10 \mod 7
+\]
+
+By working with congruences, we can solve complex problems in relatively few
+lines of work. For instance, consider the following.
+
+\begin{problem}{Huge Number, Small Remainder}
+ Define $10! = 10 \times 9 \times 8 \times \dots \times 1$. Find $10! \bmod 72$.
+
+ \begin{solution}
+  We see that \begin{align*}
+   10!
+   &\equiv 10 \times 9 \times 8 \times \dots \times 1 \mod 72 \\
+   &\equiv 9 \times 8 \times 10 \times 7 \times 6 \times \dots \times 1
+   \mod 72 \\
+   &\equiv 72 \times 10 \times 7! \mod 72 \\
+   &\equiv 0 \times 10 \times 7! \mod 72 \\
+   &\equiv 0 \mod 72
+  \end{align*}
+  so $10! \bmod 72 = \Ans{0}$.
+ \end{solution}
+\end{problem}
+
+\section{Further Study}
+
+We do not have time to further discuss modular arithmetic in this course. But
+this subject is very powerful, and you will see it again and again in the
+future.
 
 \end{document}
