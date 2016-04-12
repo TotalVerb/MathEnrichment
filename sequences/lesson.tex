@@ -6,18 +6,38 @@
 
 \title{Sequences}
 \author{Fengyang Wang}
+\date{April 12, 2016}
 
 \begin{document}
+
+\begin{abstract}
+
+ This is an introduction to sequences suitable for an advanced Grade 4 audience.
+ These notes were prepared for the Grand River Chinese School.
+
+ These notes are intended to be a rough outline of what is taught, and not a
+ rigorous and complete reference. In particular, I typically cover much more
+ content than is written in these notes.
+
+ Although the notes are intended to be presented to a young audience, they are
+ written for a teacher and not for a student. Many of the terms used will not be
+ familiar to the students, and will need to be explained differently.
+
+\end{abstract}
+
 \maketitle
+
+\tableofcontents
 
 \chapter{The Fibonacci Sequence}
 
 We'll begin with an introduction by means of rabbits. Start with one young
 rabbit. Every generation, each mature rabbit has one kid, who becomes a new
 young rabbit. Every year, young rabbits grow into mature rabbits. Rabbits never
-die. Keep track of the total rabbit population every month.
+die. We can keep track of the total rabbit population every month (See Figure
+~\ref{fib:rabbit}).
 
-\begin{center}
+\begin{figure}
  \begin{tabular}{|c|c|c|c|}
   \hline
   Month \# & Young rabbits & Mature rabbits & Total rabbits \\
@@ -31,7 +51,11 @@ die. Keep track of the total rabbit population every month.
   \vdots & \vdots & \vdots & \vdots \\
   \hline
  \end{tabular}
-\end{center}
+
+ \caption{Rabbit population in the first few months}
+
+ \label{fib:rabbit}
+\end{figure}
 
 The sequence of numbers at the right hand side is interesting, not least because
 it occurs in the other sequences written down also. It was discovered by the
@@ -63,9 +87,10 @@ about whether the $1000$th Fibonacci number is odd or even.
 
 \section{Partial Sums}
 
-Observe the partial sums of the Fibonacci sequence:
+Observe the partial sums of the Fibonacci sequence (Figure
+~\ref{fib:partialsums}).
 
-\begin{center}
+\begin{figure}
  \begin{tabular}{|c|c|c|c|}
   \hline
   $n$ & $\displaystyle \sum_{k=1}^n F_n$ & Value & $F_{n+2}$ \\
@@ -78,6 +103,17 @@ Observe the partial sums of the Fibonacci sequence:
   \vdots & \vdots & \vdots & \vdots \\
   \hline
  \end{tabular}
-\end{center}
+
+ \caption{Partial sums of the Fibonacci sequence}
+
+ \label{fib:partialsums}
+\end{figure}
+
+% Glossaries and List of Figures
+\printglossaries
+
+\cleardoublepage
+\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures
 
 \end{document}
