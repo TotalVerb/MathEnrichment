@@ -1,0 +1,31 @@
+\newcommand{\fgLabelledCycle}[1]{
+\begin{tikzpicture}
+\def \n {#1}
+\def \r {3cm}
+\def \sp {10}
+\def \tt {360/\n}
+
+\foreach \s in {0,...,\numexpr#1-1\relax}
+{
+\node[draw, circle] at ({\tt * \s}:\r) {$[\s]$};
+\draw[->, >=latex] ({\tt * \s + \sp}:\r)
+arc ({\tt * \s + \sp}:{\tt * (\s + 1) - \sp}:\r);
+}
+\end{tikzpicture}}
+
+\newcommand{\fgClock}{
+\begin{tikzpicture}
+% draw clock border
+\draw (0,0) circle [radius=1.6cm];
+
+% draw clock label
+\foreach \angle [count=\i] in {60,30,...,-270}
+{
+\draw (\angle:1.5cm) -- (\angle:1.6cm);
+\node at (\angle:1.2cm) {\i};
+}
+
+% draw hands
+\draw[line width=2pt] (60:0) -- (60:0.6cm);
+\draw[line width=2pt] (90:0) -- (90:0.9cm);
+\end{tikzpicture}}

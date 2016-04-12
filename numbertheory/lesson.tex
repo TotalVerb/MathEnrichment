@@ -10,7 +10,7 @@
 
 \title{Number Theory}
 \author{Fengyang Wang}
-\date{April 11, 2016}
+\date{April 12, 2016}
 
 \begin{document}
 
@@ -36,12 +36,54 @@
 
 \tableofcontents
 
-\chapter{Parity \& Divisibility}
+\chapter{Introduction}
 
 Number Theory is the study of whole numbers. That means $0$, $1$, $2$, and so
 on. Number Theory also studies negative whole numbers, such as $-1$, $-2$, and
 so on. Positive and negative whole numbers, and $0$, are together called
 \glspl{integer}.
+
+Many of the topics in number theory are based off the operations of
+multiplication and division. Consider a multiplication expression, such as \[ 7
+\times 9 = 63 \]
+
+In this expression, $7$ is the \gls{multiplicand}, $9$ is the \gls{multiplier},
+and $63$ is the \gls{product}. An important property of multiplication is that
+it is commutative, which means we may switch the order. That is, \[ 9 \times 7 =
+7 \times 9 \]
+
+Before we continue, it is important to have a good grasp of what remainders are,
+and to introduce some new notation. Recall first that division is the operation
+of repeated subtraction, like how multiplication is the operation of repeated
+addition.
+
+When we divide $20$ by $4$, we count how many groups of $4$ are needed to make
+$20$. We know that $4 \times 5 = 20$. This means that it takes $5$ groups of $4$
+to make $20$. So $20 \div 4 = 5$.
+
+Sometimes the numbers might not work out perfectly. Let's try dividing $20$ by
+$3$. If we make $7$ groups of $3$, the total number would be $3 \times 7 = 21$.
+But this is too big. If we make $6$ groups of $3$, the total number would be $3
+\times 6 = 18$. But this is too small. So we can make six groups, but we'd then
+have $20 - 18 = 2$ left over.
+
+We say that when we divide $20$ by $3$, our \emph{quotient} is $6$ because we
+can make $6$ groups of $3$ in total. And then we say that our \emph{remainder}
+is $2$ because after making $6$ groups of $3$, we have $2$ left over. We can
+also write this as $20 \div 3 = 6 \operatorname{R} 2$. The ``R'' stands for
+``remainder''.
+
+Suppose we didn't care what the quotient was; only the remainder is important.
+Then we can write that as $16 \bmod 5 = 1$. We don't care how many groups we
+made, but we do care that one was left over after making those groups.
+
+The study of remainders is very useful for several major applications, some of
+which we will see later this unit. Recalling the patterning unit, we used
+remainders to compute future terms in repeated sequences. Many of the
+applications of remainders are based off this application.
+
+
+\chapter{Parity \& Divisibility}
 
 \section{Parity}
 
@@ -333,7 +375,7 @@ important thing is that this is the same factorization as last time, except in a
 different order. In fact, no matter, how we factor $70$, we will always arrive
 at the same prime factorization (with possibly a different order).
 
-\begin{problem}{Factorize}
+\begin{problem}{Prime Factorization I}
  Find the prime factorization for each number.
 
  \begin{itemize}
@@ -343,13 +385,15 @@ at the same prime factorization (with possibly a different order).
  \end{itemize}
 \end{problem}
 
-\begin{problem}{Prime Factors}
- Find one (no need to find all) prime factor for each number.
+\begin{problem}{Small Prime Factors I}
+
+ Find one prime factor for each number. Do not try to find additional factors.
 
  \begin{itemize}
   \item $99959386$ \hfill Factor: \Ans{2}
   \item $521976505$ \hfill Factor: \Ans{5}
  \end{itemize}
+
 \end{problem}
 
 As you will see on the homework, it may be difficult to factor very large
@@ -387,17 +431,42 @@ examples below.
  \end{solution}
 \end{problem}
 
-\subsection{Culture and History}
+\subsection{History}
 
-Although the Fundamental Theorem of Arithmetic is known to be true, many people
-believe that it is not obvious. Why is it that all positive integers can be
-broken down \emph{uniquely} into prime numbers? In mathematics, claims like the
+The Fundamental Theorem of Arithmetic is known to be true. But for most people,
+it is not obviously true. Why is it that all positive integers can be broken
+down \emph{uniquely} into prime numbers? In mathematics, claims like the
 Fundamental Theorem of Arithmetic require proof. That is, we need a convincing
 argument that it is true for all numbers. The argument should depend only on
 facts that are known and accepted to be true, or facts that also have proofs.
 The first known proof for the Fundamental Theorem of Arithmetic was in book VII
-(7) of Euclid's Elements, propositions 30 and 32. It is beyond the scope of this
-course.
+(7) of Euclid's Elements, propositions 30 and 32. This proof is not covered in
+the course.
+
+\section{Review}
+
+\begin{problem}{Small Prime Factors II}
+ Find one prime factor for each number. Do not try to find additional factors.
+
+ \begin{itemize}
+  \item $999958$ \hfill Factor: \Ans{2}
+  \item $999993$ \hfill Factor: \Ans{3}
+  \item $999995$ \hfill Factor: \Ans{5}
+ \end{itemize}
+
+\end{problem}
+
+\begin{problem}{Prime Factorization II}
+ Find the unique prime factorization of each number.
+
+ \begin{itemize}
+  \item $55$ \hfill $\Ans{5} \times \Ans{11}$
+  \item $30$ \hfill $\Ans{2} \times \Ans{3} \times \Ans{5}$
+  \item $42$ \hfill $\Ans{2} \times \Ans{3} \times \Ans{7}$
+  \item $24$ \hfill $\Ans{2} \times \Ans{2} \times \Ans{2} \times \Ans{3}$
+ \end{itemize}
+\end{problem}
+
 
 \chapter{Greatest Common Divisor}
 
@@ -444,11 +513,17 @@ future: \[
 Roughly speaking, this identity says that the product of two numbers is the same
 as the product of their GCD and their LCM.
 
-\section{Applications}
-The GCD and the LCM have many applications across mathematics. One useful
-application comes from studying fractions. Two fractions are equivalent if,
-despite the numerator and the denominator possibly differing, they represent
-the same quantity. For instance, the fraction $\frac{1}{2}$ is equivalent to
+\section{Application to Rational Numbers}
+
+The GCD and the LCM have many applications across mathematics. An important
+application is to the study of rational numbers, or fractions. Recall that a
+fraction is a pair of two integers, the numerator and the denominator.
+Additionally, the denominator is not allowed to be zero, because we cannot split
+any quantity into zero parts.
+
+Note that a fraction does not have a unique representation as a numerator and
+denominator. Two fractions may be equal even if the numerator and the
+denominators differ. For instance, the fraction $\frac{1}{2}$ is equal to
 fractions $\frac{2}{4}$, $\frac{3}{6}$, and so on.
 
 We may \emph{simplify} a fraction by writing it as an equivalent fraction with
@@ -487,38 +562,9 @@ $\ell=\operatorname{lcm}(b, d)$ and then compute \begin{align*}
  \end{itemize}
 \end{problem}
 
-\section{Remainders Review}
-Before we continue, it is important to have a good grasp of what remainders are,
-and to introduce some new notation. While this is adequately covered on the
-homework assignments, a quick recap is provided below.
-
-When we divide $20$ by $4$, we count how many groups of $4$ are needed to make
-$20$. We know that $5 \times 4 = 20$. This means that it takes $5$ groups of $4$
-to make $20$. So $20 \div 4 = 5$.
-
-Sometimes the numbers might not work out perfectly. Let's try dividing $20$ by
-$3$. If we make $7$ groups of $3$, the total number would be $7 \times 3 = 21$.
-But this is too big. If we make $6$ groups of $3$, the total number would be $6
-\times 3 = 18$. But this is too small. So we can make six groups, but we'd then
-have $20 - 18 = 2$ left over!
-
-We say that when we divide $20$ by $3$, our \emph{quotient} is $6$ because we
-can make $6$ groups of $3$ in total. And then we say that our \emph{remainder}
-is $2$ because after making $6$ groups of $3$, we have $2$ left over. We can
-also write this as $20 \div 3 = 6 \operatorname{R} 2$. The ``R'' stands for
-``remainder''.
-
-Suppose we didn't care what the quotient was; only the remainder is important.
-Then we can write that as $16 \bmod 5 = 1$. We don't care how many groups we
-made, but we do care that one was left over after making those groups.
-
-The study of remainders is very useful for several major applications, some of
-which we will see later this unit. Recalling the patterning unit, we used
-remainders to compute future terms in repeated sequences. Many of the
-applications of remainders are based off this application.
-
 \section{Euclidean Algorithm}
-An \emph{algorithm} is a ``step-by-step procedure for performing a calculation
+
+An \gls{algorithm} is a ``step-by-step procedure for performing a calculation
 according to well-defined rules'' (Wikipedia).
 
 In this lesson we will cover a useful algorithm that allows us to find the
@@ -549,7 +595,7 @@ To find the Greatest Common Divisor of two numbers, $a$ and $b$:
  and $a$. That is, $\gcd(a, b) = \gcd(b \bmod a, a)$.
 \end{enumerate}
 
-\subsection{Properties of the Euclidean Algorithm}
+\subsection{Properties}
 
 This algorithm is an example of a recursive algorithm. More specifically, it is
 a ``tail recursive'' algorithm. That means that the algorithm either produces a
@@ -684,19 +730,8 @@ these buckets form a sort of cycle. After we reach the last bucket, we loop
 around and return to the first bucket (Figure~\ref{ma:equiv-class-cycle}).
 
 \begin{figure}
- \begin{tikzpicture}
- \def \n {7}
- \def \r {3cm}
- \def \sp {10}
- \def \tt {360/\n}
+ \fgLabelledCycle{7}
 
- \foreach \s in {0,...,6}
- {
-  \node[draw, circle] at ({\tt * \s}:\r) {$[\s]$};
-  \draw[->, >=latex] ({\tt * \s + \sp}:\r)
-    arc ({\tt * \s + \sp}:{\tt * (\s + 1) - \sp}:\r);
- }
- \end{tikzpicture}
  \caption{When we add $1$ to a number in a bucket, we move to the next bucket in
  this diagram.}
 
@@ -729,7 +764,7 @@ whole cycle several times, then moving some extra steps. How many extra steps do
 we move? Why, the remainder when divided by $7$, of course.
 
 To recap, we have devised a system where we can predict the remainder of a sum
-when divided by $7$, knowing just the remainders of the two summands when
+when divided by $7$, knowing just the remainders of the two \glspl{summand} when
 divided by $7$. We simply start at the bucket for the first number and advance a
 number of buckets in the cycle equal to the remainder of the second number when
 divided by $7$. We introduce the following notation: \[ [1] + [2] = [3] \] to
@@ -870,6 +905,9 @@ some base $k$ if they have the same remainder when divided by $k$. For example,
 $17$ and $10$ are congruent modulo $7$, because $17 \bmod 7 = 3 = 10 \bmod 7$.
 
 We can write this as: \[
+ 17 \equiv 10 \pmod 7
+\]
+or alternatively without the brackets, but keeping the additional space, as \[
  17 \equiv 10 \mod 7
 \]
 
@@ -882,12 +920,12 @@ lines of work. For instance, consider the following.
  \begin{solution}
   We see that \begin{align*}
    10!
-   &\equiv 10 \times 9 \times 8 \times \dots \times 1 \mod 72 \\
+   &\equiv 10 \times 9 \times 8 \times \dots \times 1 \mod {72} \\
    &\equiv 9 \times 8 \times 10 \times 7 \times 6 \times \dots \times 1
-   \mod 72 \\
-   &\equiv 72 \times 10 \times 7! \mod 72 \\
-   &\equiv 0 \times 10 \times 7! \mod 72 \\
-   &\equiv 0 \mod 72
+   \mod {72} \\
+   &\equiv 72 \times 10 \times 7! \mod {72} \\
+   &\equiv 0 \times 10 \times 7! \mod {72} \\
+   &\equiv 0 \mod {72}
   \end{align*}
   so $10! \bmod 72 = \Ans{0}$.
  \end{solution}
@@ -933,7 +971,7 @@ lines of work. For instance, consider the following.
    5 - 13 \times 29
    &\equiv 5 - 1 \times 5 \\
    &\equiv 5 - 5 \\
-   &\equiv 0 \bmod 12
+   &\equiv 0 \mod {12}
   \end{align*}
 
   Of course, there is no $0$ on the clock---in its place is \Ans{12}, which was
@@ -943,21 +981,7 @@ lines of work. For instance, consider the following.
 \end{problem}
 
 \begin{figure}
- \begin{tikzpicture}
-  % draw clock border
-  \draw (0,0) circle [radius=1.6cm];
-
-  % draw clock label
-  \foreach \angle [count=\i] in {60,30,...,-270}
-  {
-    \draw (\angle:1.5cm) -- (\angle:1.6cm);
-    \node at (\angle:1.2cm) {\i};
-  }
-
-  % draw hands
-  \draw[line width=2pt] (60:0) -- (60:0.6cm);
-  \draw[line width=2pt] (90:0) -- (90:0.9cm);
- \end{tikzpicture}
+ \fgClock{}
 
  \caption{A 12-hour clock displaying the time 1:00.}
 
@@ -970,6 +994,10 @@ We do not have time to further discuss modular arithmetic in this course. But
 this subject is very powerful, and you will see it again and again in the
 future.
 
+% Glossaries and List of Figures
 \printglossaries
 
+\cleardoublepage
+\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures
 \end{document}
