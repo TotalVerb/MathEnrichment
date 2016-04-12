@@ -10,22 +10,17 @@
 \usepackage{fancyhdr}
 \usepackage[utf8]{inputenc}
 \usepackage{gensymb}
+\usepackage{framed}
 
 \usepackage[toc]{glossaries}
 \makeglossaries
 
-\makeatletter
-\newenvironment{problem}{\@startsection
-       {subsection}
-       {1}
-       {-.2em}
-       {-3.5ex plus -1ex minus -.2ex}
-       {2.3ex plus .2ex}
-       {\pagebreak[3]
-       \large\bf\noindent{Problem }
-       }
-       }
-\makeatother
+\newenvironment{problem}[1]{
+ \begin{framed}
+  \begin{center} \underline{Example. \textbf{#1}} \end{center}
+}{
+ \end{framed}
+}
 
 \makeatletter
 \g@addto@macro\@floatboxreset\centering

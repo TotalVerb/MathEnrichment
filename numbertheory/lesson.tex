@@ -10,7 +10,7 @@
 
 \title{Number Theory}
 \author{Fengyang Wang}
-\date{April 7, 2016}
+\date{April 11, 2016}
 
 \begin{document}
 
@@ -64,7 +64,7 @@ examples first. We know $4=2\times2$, so it's even. We know $7=2\times3+1$, so
 it's odd. A number is either even or odd, but it's never both. We only need to
 divide by $2$: if it evenly divides, then it's even, and otherwise, it's odd.
 
-\begin{problem}{Example}
+\begin{problem}{Odd or Even}
  Are each of the following numbers even or odd?
 
  \begin{itemize}
@@ -102,7 +102,7 @@ The rules for subtracting are exactly the same. The difference of two odds is
 even. The difference of two evens is even. The difference of an odd and an even
 is odd. Feel free to work these out yourself.
 
-\begin{problem}{Example}
+\begin{problem}{Odd or Even}
  Are each of the following numbers even or odd?
 
  \begin{itemize}
@@ -201,7 +201,7 @@ are integers, and if $a \mid b$ and $b \mid c$, then $a \mid c$. Let's do an
 example. We know that $3 \mid 12$, and that $12 \mid 36$. Then by transitivity,
 $3 \mid 36$. Here is a simple exercise that is easily done using transitivity:
 
-\begin{problem}{Example}
+\begin{problem}{Multiples of $12$ and $3$}
  Does $3$ divide \emph{every} multiple of $12$? \hfill \AnsT{True}~~~False
 
  \begin{solution}
@@ -238,7 +238,7 @@ questions will be very similar in nature.
   \item $1$ is a \AnsT{factor} of every whole number.
   \item $0$ is a \AnsT{multiple} of every whole number.
   \item $3$ is a \AnsT{factor} of $9$.
-  \item All even numbers are \AnsT{multiples}s of $2$.
+  \item All even numbers are \AnsT{multiple}s of $2$.
  \end{itemize}
 \end{problem}
 
@@ -562,7 +562,7 @@ very easy for a computer to do. In fact, the algorithm is so efficient that
 computers can easily calculate the greatest common divisors of numbers with
 thousands of digits, in a matter of milliseconds!
 
-\section{Euclidean Algorithm Examples}
+\subsection{Examples}
 
 Here is a quick example of using the Euclidean algorithm to compute the
 greatest common divisor of medium-sized numbers:
@@ -684,7 +684,6 @@ these buckets form a sort of cycle. After we reach the last bucket, we loop
 around and return to the first bucket (Figure~\ref{ma:equiv-class-cycle}).
 
 \begin{figure}
- \label{ma:equiv-class-cycle}
  \begin{tikzpicture}
  \def \n {7}
  \def \r {3cm}
@@ -700,6 +699,8 @@ around and return to the first bucket (Figure~\ref{ma:equiv-class-cycle}).
  \end{tikzpicture}
  \caption{When we add $1$ to a number in a bucket, we move to the next bucket in
  this diagram.}
+
+ \label{ma:equiv-class-cycle}
 \end{figure}
 
 This behaviour should make sense when starting at buckets $[0]$ to $[5]$. But
@@ -891,6 +892,77 @@ lines of work. For instance, consider the following.
   so $10! \bmod 72 = \Ans{0}$.
  \end{solution}
 \end{problem}
+
+\begin{problem}{Units Digit}
+ Find the ones' digit of the following sum: \[
+  40 + 7874 + 648 + 56 + 338
+ \]
+
+ \begin{solution}
+  We seek \[
+   (40 + 7874 + 648 + 56 + 338) \bmod 10
+  \]
+
+  It is straightforward to compute this: \begin{align*}
+   40 + 7874 + 648 + 56 + 338
+   &\equiv 0 + 4 + 8 + 6 + 8 \\
+   &\equiv 26 \\
+   &\equiv 6 \pmod {10}
+  \end{align*}
+  and hence the ones' digit of the desired sum is \Ans{6}.
+ \end{solution}
+\end{problem}
+
+\begin{problem}{Clock Arithmetic}
+
+ A $12$-hour analog clock (which are increasingly rare nowadays) is a
+ time-keeping device numbered from $1$ to $12$ (see Figure~\ref{ma:clock}).
+ There are two hands. The longer one is the minute hand, which measures minutes,
+ and the shorter one is the hour hand, which measures hours. Each hour, the hour
+ hand of the clock moves clockwise (that is, up one number) by one labelled
+ segment. Every $12$ hours, the clock returns to its original orientation. For
+ the purposes of this question, we'll ignore the minute hand and focus only on
+ the hour hand.
+
+ If a clock's hour hand is pointing to the $5$ right now, to where was it
+ pointing $13\times29$ hours ago?
+
+ \begin{solution}
+  We seek $5 - 13 \times 29 \bmod 12$. It is straightforward to calculate this
+  with modular arithmetic: \begin{align*}
+   5 - 13 \times 29
+   &\equiv 5 - 1 \times 5 \\
+   &\equiv 5 - 5 \\
+   &\equiv 0 \bmod 12
+  \end{align*}
+
+  Of course, there is no $0$ on the clock---in its place is \Ans{12}, which was
+  where the hour hand was pointing.
+ \end{solution}
+
+\end{problem}
+
+\begin{figure}
+ \begin{tikzpicture}
+  % draw clock border
+  \draw (0,0) circle [radius=1.6cm];
+
+  % draw clock label
+  \foreach \angle [count=\i] in {60,30,...,-270}
+  {
+    \draw (\angle:1.5cm) -- (\angle:1.6cm);
+    \node at (\angle:1.2cm) {\i};
+  }
+
+  % draw hands
+  \draw[line width=2pt] (60:0) -- (60:0.6cm);
+  \draw[line width=2pt] (90:0) -- (90:0.9cm);
+ \end{tikzpicture}
+
+ \caption{A 12-hour clock displaying the time 1:00.}
+
+ \label{ma:clock}
+\end{figure}
 
 \section{Further Study}
 
