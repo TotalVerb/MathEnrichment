@@ -1,0 +1,77 @@
+\documentclass[a4paper,10pt]{report}
+
+\newcommand{\IncludePath}{../include}
+\newcommand{\ProjectName}{Grade 4 Olympic Math}
+\input{\IncludePath/book-template.tex}
+
+% use glossaries for this document
+\input{\IncludePath/gloss-g4.tex}
+\makeglossaries
+
+\title{Functions \& Algorithms}
+\author{Fengyang Wang}
+\date{April 11, 2016}
+
+\begin{document}
+
+\begin{abstract}
+
+ This is an introduction to functions suitable for an advanced Grade 4 audience.
+ These notes were prepared for the Grand River Chinese School. Each chapter may
+ take two to four hours to deliver entirely, depending on the level of detail.
+
+ These notes are intended to be a rough outline of what is taught, and not a
+ rigorous and complete reference. I do not necessarily cover all the material
+ written in these notes in any particular year, and I may occasionally cover
+ material beyond that written in the notes.
+
+ Although the notes are intended to be presented to a young audience, they are
+ written for a teacher and not for a student. Many of the terms used will not be
+ familiar to the students, and will need to be explained differently.
+
+\end{abstract}
+
+\maketitle
+
+\tableofcontents
+
+\chapter{Functions of One Variable}
+
+\section{Introduction}
+
+Imagine a factory where raw materials are converted into finished products. Each
+different kind of raw material is converted into a different kind of product.
+For instance, coal is converted into energy, wood is converted into furniture,
+glass into windows, and so on and so forth. We can create a table describing
+which raw materials are accepted, and which goods are produced from those raw
+materials (Table \ref{fov:factory}).
+
+\begin{table}
+ \renewcommand{\arraystretch}{1.2}
+ \begin{tabular}{|c|c|}
+  \hline
+  \textbf{In} & \textbf{Out} \\
+  \hline
+  coal & energy \\
+  wood & furniture \\
+  glass & windows \\
+  \hline
+ \end{tabular}
+
+ \caption{Raw inputs accepted by the factory, and the outputs associated with
+ them.}
+ \label{fov:factory}
+\end{table}
+
+\chapter{Functions of Multiple Variables}
+
+\chapter{Recursion}
+
+\chapter{Algorithms}
+
+\chapter{Applications}
+
+
+\printglossaries
+
+\end{document}
