@@ -1,43 +1,11 @@
 \documentclass[12pt,letterpaper]{article}
 
-\usepackage{extsizes}
+\newcommand{\IncludePath}{../include}
+\input{\IncludePath/hmwk-template.tex}
 
-\usepackage{amssymb,amsmath,amsthm}
-\usepackage{enumerate}
-\usepackage[margin=1.25in]{geometry}
-\usepackage{graphicx,ctable,booktabs}
-\usepackage{fancyhdr}
-\usepackage[utf8]{inputenc}
-
-\makeatletter
-\newenvironment{problem}{\@startsection
-       {section}
-       {1}
-       {-.2em}
-       {-3.5ex plus -1ex minus -.2ex}
-       {2.3ex plus .2ex}
-       {\pagebreak[3]
-       \large\bf\noindent{Problem }
-       }
-       }
-\makeatother
-
-\title{Fractions \& Probability}
+\title{Events \& Expected Value}
 \author{Name: \underline{\hspace{5cm}}}
-\date{October 24, 2014}
-
-\pagestyle{fancy}
-\lhead{Fractions \& Probability}
-\chead{} 
-\rhead{\thepage} 
-\lfoot{\small\scshape Grade 4 Olympic Math} 
-\cfoot{} 
-\rfoot{} 
-\renewcommand{\headrulewidth}{.3pt} 
-\renewcommand{\footrulewidth}{.3pt}
-\setlength\voffset{-0.25in}
-\setlength\textheight{648pt}
-\setlength\headheight{15pt}
+\date{October 4, 2014}
 
 \begin{document}
 
@@ -45,72 +13,89 @@
 
 \thispagestyle{empty}
 
-\begin{problem}{Equivalent Fractions}
- Find the equivalent fraction with the smallest denominator. (In other words, simplify the fraction.)
-\begin{enumerate}[\hspace{.5cm}a.]
-\item $\frac{2}{4}$
-\item $\frac{3}{12}$
-\item $\frac{10}{15}$
-\end{enumerate}
-\end{problem}
-
-\begin{problem}{Simple Probability}
-\begin{enumerate}[\hspace{.5cm}a.]
-\item I flip a fair coin. What's the probability that I flip heads?
-\item I roll a fair six-sided die $D_6$. What's the probability that the number I roll is one of $1$, $2$, $5$?
-\item I draw a card from a deck of cards with jokers removed. (A deck of cards contains $52$ cards. There are $13$ clubs, $13$ spades,
-$13$ hearts, and $13$ diamonds.) What's the probability that I draw a spade?
-\item I have a bag with $2$ green marbles, $3$ blue marbles, and $4$ red marbles.
-I pick a marble at random. What's the probability that I pick a red marble?
-\end{enumerate}
-\end{problem}
-
 \begin{problem}{Independent Events}
-Select the pair of events that is independent. Remember that events are independent if the outcome of one event
-does not affect the other.
+ Select the pairs of events that are independent. Remember that events are
+ independent if the outcome of one does not affect the other.
+
+ \begin{enumerate}[\hspace{.5cm}a.]
+  \item I draw a card from a deck of cards. Then I draw another card from the
+  same deck, without replacement.
+  \item I roll a four-sided die. Then I roll a six-sided die.
+  \item I have a bag of red and blue balls. I draw a ball, then put it back into
+  the bag. Then I draw another ball.
+ \end{enumerate}
+\end{problem}
+
+\begin{problem}{Joint Probability}
+I roll a four-sided die $D_4$, then a six-sided die $D_6$, and then flip a coin
+$C$. All are fair. Find the probability of:
 
 \begin{enumerate}[\hspace{.5cm}a.]
-\item I have a bag of red, blue, and green balls. I take a ball out. Then I take another ball out, without putting the first one
-back in.
-\item I roll a fair six-sided die $D_6$. Then I flip a fair coin $C$.
+\item $D_4$ is even and $C$ shows heads.
+\item $D_4=2$, $D_6=6$, and $C$ shows tails.
+\item $D_4 + D_6 = 10$
 \end{enumerate}
 \end{problem}
 
-\begin{problem}{Multiplying Fractions}
-Find the product:
-
-\begin{enumerate}[\hspace{.5cm}a.]
-\item $\frac{1}{2} \times \frac{2}{3}$
-\item $\frac{3}{8} \times \frac{5}{9}$
-\item $\frac{1}{2} \times \frac{1}{2} \times \frac{1}{2} \times \frac{1}{2}$
-\end{enumerate}
+\begin{problem}{Coin Flips}
+A fair coin is flipped $5$ times. What's the probability that they're all heads?
 \end{problem}
 
-\begin{problem}{Die roll}
-I roll $3$ six-sided dice. What's the probability that the sum of numbers shown is $18$?
+\begin{problem}{Marbles}
+A bag contains $2$ blue marbles and $3$ red marbles. I take a marble out of the
+bag at random, then put it back in. I do this until I have taken out (and
+returned) $3$ marbles. What's the probability that they're all red?
 \end{problem}
 
-\begin{problem}{Spinner}
- Look at the spinner and answer the questions.
- \begin{center}
- \includegraphics[width=100px]{./spinner.png}
- % spinner.png: 400x400 pixel, 81dpi, 12.55x12.55 cm, bb=0 0 356 356
- \end{center}
- 
-\begin{enumerate}[\hspace{.5cm}a.]
-\item To the nearest $\frac{1}{6}$, what's the probability of spinning green? Red?
-\item I spin the spinner twice. What's the probability of spinning green, then red?
-\item I spin the spinner twice. What's the probability of spinning red, then green?
-\item I spin the spinner twice. What's the probability of spinning red and green (in any order)?
-\end{enumerate}
+\begin{problem}{The Sum Rule}
+ I roll a fair 4-sided die and a fair 6-sided die. What's the probability that I
+ will see a $3$ on one die, and any odd number on the other? (It doesn't matter
+ which die shows the odd number and which shows the $3$.)
+
+ To solve the question, you need to use the sum rule:
+
+ \begin{equation*}
+  \underbrace{P(A \cup B)}_\text{A or B happens}
+  = \underbrace{P(A)}_\text{A happens} + \underbrace{P(B) -
+  P(A \cap B)}_\text{B happens but A does not}
+ \end{equation*}
+
+ To calculate the probability of $A$ or $B$ happening, we can add the cases that
+ $A$ happens, and the cases where $B$ happens but $A$ doesn't also happen. (We
+ can't just add $P(A)$ and $P(B)$ because then we'd be double-counting the cases
+ where both $A$ and $B$ happen!)
+\end{problem}
+
+\begin{problem}{Dependent Events}
+
+ A bag contains $2$ blue marbles and $3$ red marbles. Two marbles are drawn from
+ the bag, without replacing marbles after they are drawn. Find the probability
+ that:
+
+ \begin{enumerate}[\hspace{.5cm}a.]
+  \item Both marbles are red.
+  \item Both marbles are blue.
+  \item One marble is red and one marble is blue. (The order of marbles does not
+  matter.)
+ \end{enumerate}
+
+ \emph{Careful---since we aren't replacing marbles, the colours of the two
+ marbles are not independent!}
 \end{problem}
 
 \begin{problem}{Challenge}
- Find the product:
- \[
-  \frac{1}{2} \times \frac{2}{3} \times \frac{3}{4} \times \ldots \times \frac{99}{100}
- \]
+ If I roll a fair six-sided die $4$ times, what's the probability that at least
+ one will show $6$?
+\end{problem}
 
+\begin{problem}{Expected Value}
+Calculate the expected value (optional):
+
+ \begin{enumerate}[\hspace{.5cm}a.]
+  \item If I roll a six-sided die ($1$ to $6$).
+  \item If I roll a six-sided die, but the face with $6$ is edited to $9$.
+  \item If I roll $8$ six-sided dice and add the results.
+ \end{enumerate}
 \end{problem}
 
 \end{document}

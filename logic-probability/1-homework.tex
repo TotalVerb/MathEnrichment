@@ -1,43 +1,11 @@
 \documentclass[12pt,letterpaper]{article}
 
-\usepackage{extsizes}
+\newcommand{\IncludePath}{../include}
+\input{\IncludePath/hmwk-template.tex}
 
-\usepackage{amssymb,amsmath,amsthm}
-\usepackage{enumerate}
-\usepackage[margin=1.25in]{geometry}
-\usepackage{graphicx,ctable,booktabs}
-\usepackage{fancyhdr}
-\usepackage[utf8]{inputenc}
-
-\makeatletter
-\newenvironment{problem}{\@startsection
-       {section}
-       {1}
-       {-.2em}
-       {-3.5ex plus -1ex minus -.2ex}
-       {2.3ex plus .2ex}
-       {\pagebreak[3]
-       \large\bf\noindent{Problem }
-       }
-       }
-\makeatother
-
-\title{Events \& Expected Value}
+\title{Logical Reasoning}
 \author{Name: \underline{\hspace{5cm}}}
-\date{October 4, 2014}
-
-\pagestyle{fancy}
-\lhead{Events \& Expected Value}
-\chead{} 
-\rhead{\thepage} 
-\lfoot{\small\scshape Grade 4 Olympic Math} 
-\cfoot{} 
-\rfoot{} 
-\renewcommand{\headrulewidth}{.3pt} 
-\renewcommand{\footrulewidth}{.3pt}
-\setlength\voffset{-0.25in}
-\setlength\textheight{648pt}
-\setlength\headheight{15pt}
+\date{September 27, 2014}
 
 \begin{document}
 
@@ -45,80 +13,87 @@
 
 \thispagestyle{empty}
 
-\begin{problem}{Independent Events}
-Select the pairs of events that are independent. Remember that events are independent if the outcome of one
-does not affect the other.
+\begin{problem}{Cold Snow}
+
+If it is snowing, then it is cold. Which of the below statements is a logical
+conclusion?
 
 \begin{enumerate}[\hspace{.5cm}a.]
-\item I draw a card from a deck of cards. Then I draw another card from the same deck, without replacement.
-\item I roll a four-sided die. Then I roll a six-sided die.
-\item I have a bag of red and blue balls. I draw a ball, then put it back into the bag. Then I draw another ball.
+\item If it is cold, then it is snowing.
+\item If it is not cold, then it is not snowing.
+\item If it is not snowing, then it is not cold.
 \end{enumerate}
 \end{problem}
 
-\begin{problem}{Joint Probability}
-I roll a four-sided die $D_4$, then a six-sided die $D_6$, and then flip a coin $C$. All are fair.
-Find the probability of:
+\begin{problem}{Logical Weather}
+Select the statements where the left side logically implies the right side.
 
 \begin{enumerate}[\hspace{.5cm}a.]
-\item $D_4$ is even and $C$ shows heads.
-\item $D_4=2$, $D_6=6$, and $C$ shows tails.
-\item $D_4 + D_6 = 10$
+\item It is raining and it is cloudy $\to$ It is cloudy.
+\item It is sunny or it is snowing. $\to$ It is snowing or it is sunny.
+\item It is cold or it is not foggy. $\to$ It is foggy and it is cold.
+\item It is not hot and it is not humid. $\to$ It is hot or it is humid.
 \end{enumerate}
 \end{problem}
 
-\begin{problem}{Coin Flips}
-A fair coin is flipped $5$ times. What's the probability that they're all heads?
-\end{problem}
+\begin{problem}{Alvin in the Rain}
 
-\begin{problem}{Marbles}
-A bag contains $2$ blue marbles and $3$ red marbles. I take a marble out of the bag at random, then put it back in. I do this
-until I have taken out (and returned) $3$ marbles. What's the probability that they're all red?
-\end{problem}
+ If it is not raining, then Alvin is happy. Which of the following statements is
+ a logical conclusion?
 
-\begin{problem}{The Sum Rule}
- I roll a fair 4-sided die and a fair 6-sided die. What's the probability that I will see a $3$ on one die, and any odd number
- on the other?
- (It doesn't matter which die shows the odd number and which shows the $3$.)
- 
- To solve the question, you need to use the sum rule:
- 
- \begin{equation*}
-  \underbrace{P(A \cup B)}_\text{A or B happens}
-  = \underbrace{P(A)}_\text{A happens} + \underbrace{P(B) - P(A \cap B)}_\text{B happens but A does not}
- \end{equation*}
- 
- To calculate the probability of $A$ or $B$ happening, we can add the cases that $A$ happens,
- and the cases where $B$ happens but $A$ doesn't also happen. (We can't just add $P(A)$ and $P(B)$
- because then we'd be double-counting the cases where both $A$ and $B$ happen!)
-\end{problem}
-
-\begin{problem}{Dependent Events}
-
- A bag contains $2$ blue marbles and $3$ red marbles. Two marbles are drawn from the bag, without replacing marbles
- after they are drawn. Find the probability that:
- 
  \begin{enumerate}[\hspace{.5cm}a.]
-  \item Both marbles are red.
-  \item Both marbles are blue.
-  \item One marble is red and one marble is blue. (The order of marbles does not matter.)
+  \item It is not raining and Alvin is happy.
+  \item It is raining or Alvin is happy.
+  \item If Alvin is happy, then it is not raining.
  \end{enumerate}
- 
- \emph{Careful---since we aren't replacing marbles, the colours of the two marbles are not independent!}
 \end{problem}
+
+\begin{problem}{Treasure Chest}
+
+The key to a treasure chest is hidden in one of box A, box B, or box C. It is
+either yellow, blue, or green. Where is the key given the following statements?
+Is it possible to logically determine the colour of the key, or is there not
+enough information to determine that?
+
+ \begin{enumerate}
+  \item If the key is in box C, then the key is yellow.
+  \item If the key is blue, then the key is not in box B.
+  \item If the key is not green, then the key is in box A.
+  \item If the key is not in box C, then the key is not green.
+ \end{enumerate}
+\end{problem}
+
+\begin{problem}{Inconclusive}
+
+ Identify the statements that are not logical conclusions. (Assume the left hand
+ side is true.) That is, the left side alone does not logically imply the right
+ side.
+
+ \begin{enumerate}[\hspace{.5cm}a.]
+  \item If it is cold and it is snowing, then it is winter. It is winter. $\to$
+  Either it is cold or it is snowing, or both.
+  \item If the sun shines at 7:00, then it is summer. It is not summer. $\to$
+  The sun is not shining at 7:00.
+  \item All birds are animals. Some animals are mammals. $\to$ Some birds are
+  mammals.
+  \item All frogs eat flies. Some frogs eat mosquitoes. $\to$ Some frogs eat
+  both mosquitoes and flies.
+ \end{enumerate}
+
+\end{problem}
+
 
 \begin{problem}{Challenge}
- If I roll a fair six-sided die $4$ times, what's the probability that at least one will show $6$?
-\end{problem}
 
-\begin{problem}{Expected Value}
-Calculate the expected value (optional):
+You find three treasure boxes. Only one of them has treasure; the other two have
+nothing. Each treasure box has a message written on it. Only one of these
+messages is true; the other two are false. Which treasure box has the treasure?
 
- \begin{enumerate}[\hspace{.5cm}a.]
-  \item If I roll a six-sided die ($1$ to $6$).
-  \item If I roll a six-sided die, but the face with $6$ is edited to $9$.
-  \item If I roll $8$ six-sided dice and add the results.
- \end{enumerate}
+\begin{enumerate}
+\item The treasure is not here.
+\item The treasure is not here.
+\item The treasure is in box 2.
+\end{enumerate}
 \end{problem}
 
 \end{document}
