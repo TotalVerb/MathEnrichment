@@ -1,8 +1,8 @@
 \newcommand{\fgLabelledCycle}[1]{
 \begin{tikzpicture}
 \def \n {#1}
-\def \r {3cm}
-\def \sp {10}
+\def \r {2cm}
+\def \sp {14}
 \def \tt {360/\n}
 
 \foreach \s in {0,...,\numexpr#1-1\relax}
@@ -28,4 +28,17 @@ arc ({\tt * \s + \sp}:{\tt * (\s + 1) - \sp}:\r);
 % draw hands
 \draw[line width=2pt] (60:0) -- (60:0.6cm);
 \draw[line width=2pt] (90:0) -- (90:0.9cm);
+\end{tikzpicture}}
+
+\newcommand{\fgNumberLine}[2]{
+\begin{tikzpicture}
+\foreach \x in {#1,...,#2}
+{
+\draw (\x, -0.1) -- (\x, 0.1);
+\node at (\x, -0.4) {$\x$};
+}
+\draw (#1, 0) -- (#2, 0);
+
+% bold line at zero
+\draw[line width=2pt] (0, -0.15) -- (0, 0.15);
 \end{tikzpicture}}

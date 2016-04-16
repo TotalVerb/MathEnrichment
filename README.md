@@ -10,7 +10,8 @@ appropriate for a more advanced audience.
 ### Number Theory (Grade 4)
 
 This subject covers parity, divisibility, primes, factorization, the GCD, and an
-introduction to modular arithmetic. It is considered complete.
+introduction to modular arithmetic. It is considered complete, with lesson,
+homeworks, answers, and quizzes.
 
 ## Subjects in Progress
 

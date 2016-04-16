@@ -16,19 +16,24 @@
 
 \begin{abstract}
 
- This is an introduction to more advanced topics in number theory suitable for
- an advanced Grade 4 audience. These notes were prepared for the Grand River
- Chinese School. Each chapter may take two to four hours to deliver entirely,
- depending on the level of detail.
+This is an introduction to more advanced topics in number theory suitable for an
+advanced Grade 4 audience. These notes were prepared for the Grand River Chinese
+School. The content covered is not typically presented to elementary school
+students. It is hard and designed to challenge even the strongest students,
+while being accessible for everyone. Each chapter (excluding the introduction)
+may take two to four hours to deliver entirely, depending on the level of
+detail.
 
- These notes are intended to be a rough outline of what is taught, and not a
- rigorous and complete reference. I do not necessarily cover all the material
- written in these notes in any particular year, and I may occasionally cover
- material beyond that written in the notes.
+These notes are intended to be a rough outline of what is taught, and not a
+rigorous and complete reference. I do not necessarily cover all the material
+written in these notes in any particular year. In particular, the more abstract
+algebraic concepts are often abbreviated or left out, and are included for
+completeness. I may occasionally cover material beyond that written in the
+notes.
 
- Although the notes are intended to be presented to a young audience, they are
- written for a teacher and not for a student. Many of the terms used will not be
- familiar to the students, and will need to be explained differently.
+Although the notes are intended to be presented to a young audience, they are
+written for a teacher and not for a student. Many of the terms used will not be
+familiar to the students. They require explanation.
 
 \end{abstract}
 
@@ -38,10 +43,31 @@
 
 \chapter{Introduction}
 
-Number Theory is the study of whole numbers. That means $0$, $1$, $2$, and so
-on. Number Theory also studies negative whole numbers, such as $-1$, $-2$, and
-so on. Positive and negative whole numbers, and $0$, are together called
-\glspl{integer}.
+Number Theory is the study of \glspl{integer} and problems based on the
+integers. Firstly, what is an integer? We are familiar with the whole numbers,
+which can be drawn on the number line (see Figure~\ref{nt-int:pnumberline}). The
+whole numbers begin with $0$ and continue $1$, $2$, $3$, and so on.
+
+\begin{figure}
+ \fgNumberLine{0}{8}
+
+ \caption{The whole numbers on a number line}
+ \label{nt-int:pnumberline}
+\end{figure}
+
+We may now add in the negative numbers, $-1$, $-2$, $-3$, and so on. If these
+numbers are considered together with the whole numbers, then we have a full
+number line that contains all the integers (see
+Figure~\ref{nt-int:inumberline}). For most of this unit, we will work with
+positive integers only, which start at $1$ and continue $2$, $3$, $4$, and so
+on.
+
+\begin{figure}
+ \fgNumberLine{-4}{4}
+
+ \caption{The integers on a number line}
+ \label{nt-int:inumberline}
+\end{figure}
 
 Many of the topics in number theory are based off the operations of
 multiplication and division. Consider a multiplication expression, such as \[ 7
@@ -79,7 +105,7 @@ made, but we do care that one was left over after making those groups.
 
 The study of remainders is very useful for several major applications, some of
 which we will see later this unit. Recalling the patterning unit, we used
-remainders to compute future terms in repeated sequences. Many of the
+remainders to compute future terms in repeating sequences. Many of the
 applications of remainders are based off this application.
 
 
@@ -90,7 +116,9 @@ applications of remainders are based off this application.
 \Gls{parity} is a property of integers that classifies integers into even
 integers and odd integers. In this section, we will study the differences
 between even and odd integers, and also study several important properties. We
-will approach the problem algebraically.
+will also approach the problem algebraically. Do not be alarmed by the presence
+of letters along with numbers. Unless otherwise stated, a letter is simply a
+placeholder for a number.
 
 An even number is a number of the form $2n$, where $n$ is any integer. The
 expression $2n$ means $2\times n$; we omit the $\times$ so that it is faster to
@@ -106,7 +134,7 @@ examples first. We know $4=2\times2$, so it's even. We know $7=2\times3+1$, so
 it's odd. A number is either even or odd, but it's never both. We only need to
 divide by $2$: if it evenly divides, then it's even, and otherwise, it's odd.
 
-\begin{problem}{Odd or Even}
+\begin{problem}{Odd or Even I}
  Are each of the following numbers even or odd?
 
  \begin{itemize}
@@ -138,13 +166,26 @@ Say $2n$ is an even number, and $2m+1$ is an odd number. Then \[
  2n + 2m + 1 = 2(n+m) + 1
 \] which is an odd number. So the sum of an even number and an odd number is
 odd. And because we can rearrange the order of addition, therefore the sum of an
-odd number and a even number is also odd.
+odd number and a even number is also odd. These results can be summarized in a
+table (see Figure~\ref{pd:psumt}).
+
+\begin{figure}
+ \begin{tabular}{c|cc}
+  $\times$ & Even & Odd  \\
+  \hline
+  Even   & Even & Odd \\
+  Odd    & Odd & Even
+ \end{tabular}
+
+ \caption{Result of adding numbers, by parity}
+ \label{pd:psumt}
+\end{figure}
 
 The rules for subtracting are exactly the same. The difference of two odds is
 even. The difference of two evens is even. The difference of an odd and an even
 is odd. Feel free to work these out yourself.
 
-\begin{problem}{Odd or Even}
+\begin{problem}{Odd or Even II}
  Are each of the following numbers even or odd?
 
  \begin{itemize}
@@ -169,7 +210,20 @@ and $2m+1$ are two odd numbers. Observe: \begin{align*}
 But the product of an even number with any integer is even. Say $2n$ is an
 even number, and $k$ is any integer. Then: \[
  (2n)k = 2(nk)
-\] which is even.
+\] which is even. We may summarize these results in another table (see
+Figure~\ref{pd:pprodt})
+
+\begin{figure}
+ \begin{tabular}{c|cc}
+  $\times$ & Even & Odd  \\
+  \hline
+  Even   & Even & Even \\
+  Odd    & Even & Odd
+ \end{tabular}
+
+ \caption{Result of multiplying numbers, by parity}
+ \label{pd:pprodt}
+\end{figure}
 
 At this point we have enough knowledge to see why our rule for determining
 parity by looking at the last digit works. In a number written in the place
@@ -258,9 +312,9 @@ $3 \mid 36$. Here is a simple exercise that is easily done using transitivity:
 
 \section{Review}
 
-There is a quiz for this unit (Quiz 3: Parity and Divisibility). The allocated
-length for the quiz is $15$ minutes. Three review questions follow. Quiz
-questions will be very similar in nature.
+There is a quiz for this chapter (Quiz 3: Parity and Divisibility). The
+anticipated length for the quiz is $15$ minutes. Three review questions follow.
+Quiz questions will be very similar in nature.
 
 \begin{problem}{Factor Pairs}
  Complete the factor pairs.
@@ -375,6 +429,61 @@ important thing is that this is the same factorization as last time, except in a
 different order. In fact, no matter, how we factor $70$, we will always arrive
 at the same prime factorization (with possibly a different order).
 
+One way to quickly determine the prime factorization is to use a factor tree. We
+draw the number we want to factor on top, and split it up into two children. If
+any child is prime, we leave it be; otherwise, we split that up further into two
+children. We repeat this procedure until all leaves are prime (see
+Figure~\ref{pn:factortree70} and Figure~\ref{pn:factortree48} for examples). The
+product of these leaves is the prime factorization.
+
+\begin{figure}
+ \begin{forest}
+  [$70$
+    [$7$,circle,draw]
+    [$10$
+     [$2$,circle,draw]
+     [$5$,circle,draw]]]
+ \end{forest} \hspace{1em}
+ \begin{forest}
+  [$70$
+    [$14$,circle,draw
+     [$2$,circle,draw]
+     [$7$,circle,draw]]
+    [$5$,circle,draw]]
+ \end{forest}
+
+ \caption{Two different factor trees for $70$}
+ \label{pn:factortree70}
+\end{figure}
+
+\begin{figure}
+ \begin{forest}
+  [$48$
+   [$4$
+    [$2$,circle,draw]
+    [$2$,circle,draw]]
+   [$12$
+    [$2$,circle,draw]
+    [$6$
+     [$2$,circle,draw]
+     [$3$,circle,draw]]]]
+ \end{forest} \hspace{1em}
+ \begin{forest}
+  [$48$
+   [$3$,circle,draw]
+   [$16$
+    [$4$
+     [$2$,circle,draw]
+     [$2$,circle,draw]]
+    [$4$
+     [$2$,circle,draw]
+     [$2$,circle,draw]]]]
+ \end{forest}
+
+ \caption{Two different factor trees for $48$}
+ \label{pn:factortree48}
+\end{figure}
+
 \begin{problem}{Prime Factorization I}
  Find the prime factorization for each number.
 
@@ -397,9 +506,9 @@ at the same prime factorization (with possibly a different order).
 \end{problem}
 
 As you will see on the homework, it may be difficult to factor very large
-numbers. In fact, lots of modern cryptography, including the popular RSA
-encryption scheme, rest on the fact that nobody has yet discovered a fast way to
-factor large numbers.
+numbers. In fact, much of modern cryptography, including the popular RSA
+encryption scheme, relies on the fact that nobody has yet discovered a fast way
+to factor large numbers.
 
 \subsection{Applications to Problem Solving}
 

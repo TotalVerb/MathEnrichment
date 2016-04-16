@@ -3,6 +3,7 @@
 
 \usepackage{tikz}
 \usetikzlibrary{shapes}
+\usepackage{forest}
 
 \usepackage{amssymb,amsmath,amsthm}
 \usepackage{enumerate}
@@ -15,12 +16,17 @@
 \usepackage[toc]{glossaries}
 \makeglossaries
 
+\newcounter{exampleproblem}[chapter]
+\newcommand{\theproblem}{\thechapter\alph{exampleproblem}}
 \newenvironment{problem}[1]{
+ \addtocounter{exampleproblem}{1}
  \begin{framed}
-  \begin{center} \underline{Example. \textbf{#1}} \end{center}
+  \begin{center} \underline{Example \theproblem. \textbf{#1}} \end{center}
 }{
  \end{framed}
 }
+
+\renewcommand{\arraystretch}{1.5}
 
 \makeatletter
 \g@addto@macro\@floatboxreset\centering
