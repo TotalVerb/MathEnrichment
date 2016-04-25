@@ -32,12 +32,6 @@ complete but somewhat rough on the edges.
 
 ## Future Subjects
 
-### Digit sums (High School)
-
-This subject covers an interesting subject that comes up often when looking at
-whole numbers in base 10: the sum of the digits. Currently contains two lessons,
-both interactive notebooks, but both incomplete.
-
 ### Operations (High School)
 
 This subject is planned to be a gentle introduction to analysis, covering basic
