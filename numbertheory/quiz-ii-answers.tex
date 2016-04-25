@@ -1,0 +1,120 @@
+\documentclass[12pt,letterpaper]{article}
+
+\newcommand{\IncludePath}{../include}
+\input{\IncludePath/quiz-template.tex}
+
+\title{Quiz $4$: Number Theory}
+\author{Answers [2]}
+\date{April 23, 2016}
+
+\begin{document}
+
+\maketitle
+
+Please write your \emph{first and last} name. Each part of your is worth one
+bonus mark. Two additional bonus marks are available (Problem 6). Note that the
+first question is worth $25$ marks (one per table cell), so please be careful
+when doing that question!
+
+\thispagestyle{empty}
+
+\begin{problem}{Sieve of Eratosthenes [25]}
+ Follow the given instructions to create a list of all prime numbers from $1$
+ to $25$. The algorithm described here is known as the Sieve of Eratosthenes,
+ and it is one of the fastest known ways to generate prime numbers.
+
+ \begin{enumerate}
+  \item Cross off $1$. It is not prime.
+  \item Circle $2$, because it is a prime number. Cross off all bigger multiples
+  of $2$ ($4$, $6$, $8$, \dots), because they are composite.
+  \item Circle the smallest number that hasn't been crossed off. Since it isn't
+  divisible by any smaller prime (otherwise, it would have been crossed off),
+  it must be prime. Now cross off all multiples of the number you just circled.
+  \item Repeat the last step until all numbers are crossed off or circled.
+ \end{enumerate}
+
+ \begin{center}
+  \def\arraystretch{1.7}
+  \begin{tabular}{|c|c|c|c|c|}
+   \hline
+   $1$ & \Ans{2} & \Ans{3} & $4$ & \Ans{5} \\
+   \hline
+   $6$ & \Ans{7} & $8$ & $9$ & $10$ \\
+   \hline
+   \Ans{11} & $12$ & \Ans{13} & $14$ & $15$ \\
+   \hline
+   $16$ & \Ans{17} & $18$ & \Ans{19} & $20$ \\
+   \hline
+   $21$ & $22$ & \Ans{23} & $24$ & $25$ \\
+   \hline
+  \end{tabular}
+ \end{center}
+
+ Check your work! There should be $9$ prime numbers circled.
+\end{problem}
+
+\begin{problem}{Prime Factor [3]}
+ Find one prime factor for each number. Do not try to find additional factors.
+
+ \begin{itemize}
+  \item $208790602$ \hfill Factor: \Ans{2}
+  \item $249898465$ \hfill Factor: \Ans{5}
+  \item $299999967$ \hfill Factor: \Ans{3}
+ \end{itemize}
+
+\end{problem}
+
+\begin{problem}{Factorize [12]}
+ Find the unique prime factorization of each number.
+
+ \begin{itemize}
+  \item $14$ \hfill \Ans{2 \times 7}
+  \item $27$ \hfill \Ans{3 \times 3 \times 3}
+  \item $28$ \hfill \Ans{2 \times 2 \times 7}
+  \item $90$ \hfill \Ans{2 \times 3 \times 3 \times 5}
+ \end{itemize}
+\end{problem}
+
+\begin{problem}{GCD [6]}
+ Find the GCD of each pair of numbers.
+
+ \begin{itemize}
+  \begin{multicols}{2}
+   \item $\gcd(10, 20) = \Ans{10}$
+   \item $\gcd(7, 11) = \Ans{1}$
+   \item $\gcd(25, 25) = \Ans{25}$
+   \item $\gcd(1, 19) = \Ans{1}$
+   \item $\gcd(60, 80) = \Ans{20}$
+   \item $\gcd(0, 128) = \Ans{128}$
+  \end{multicols}
+ \end{itemize}
+\end{problem}
+
+\begin{problem}{LCM [4]}
+ Find the LCM of each pair of numbers.
+
+ \begin{itemize}
+  \begin{multicols}{2}
+   \item $\operatorname{lcm}(10, 20) = \Ans{20}$
+   \item $\operatorname{lcm}(7, 11) = \Ans{77}$
+   \item $\operatorname{lcm}(1, 19) = \Ans{19}$
+   \item $\operatorname{lcm}(60, 80) = \Ans{240}$
+  \end{multicols}
+ \end{itemize}
+\end{problem}
+
+\begin{problem}{Bonus [2]}
+ \begin{itemize}
+  \item Use the Euclidean algorithm to find \[
+   \gcd(1234, 5678) = \Ans{2}
+  \]
+
+  \item Note that $1234 \times 5678 = 7006652$. Now use the fact that
+  $\gcd(a, b) \times \operatorname{lcm}(a, b) = a \times b$ to find \[
+   \operatorname{lcm}(1234, 5678) = \Ans{3503326}
+  \]
+ \end{itemize}
+\end{problem}
+
+
+\end{document}

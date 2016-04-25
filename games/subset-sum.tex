@@ -1,0 +1,94 @@
+\documentclass[12pt,letterpaper]{article}
+
+\newcommand{\IncludePath}{../include}
+\input{\IncludePath/hmwk-template.tex}
+
+\title{Subset Sum \& Other Puzzles}
+\author{Name: \underline{\hspace{5cm}}}
+\date{April 23, 2016}
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{empty}
+
+Some of these puzzles might be quite hard. Get things as close to zero, or as
+short, as possible. You might not find the shortest possible solution and that's
+okay. We'll go over the correct answers in class.
+
+The \textsc{Subset Sum} problem is not hard to state. We have a set of numbers;
+that is, a collection of several different numbers. The question is: can we find
+a nonempty subset of numbers that sums to zero? For instance, if our set is
+$\{1, 2, 3\}$, then the answer is obviously no. We only have positive numbers,
+so we can't possibly make $0$. But if our set is $\{-1, 1, 2\}$, then we can do
+it. Take $-1 + 1 = 0$. We did not use the $2$, but that's okay. We can use any
+nonempty subset---that is, we can't use no numbers, and we can't use any number
+more than once.
+
+\begin{problem}{Subset Sum I}
+ Find a subset of $\{-5, 1, 2, 3, 4\}$ that sums to $0$.
+\end{problem}
+
+\begin{problem}{Subset Sum II}
+ Find a subset of $\{-13, -8, 1, 2, 3, 4\}$ that sums to $0$.
+\end{problem}
+
+\begin{problem}{Subset Sum III}
+ Find a subset of $\{-100, -10, 5, 15, 105, 120\}$ that sums to $0$.
+\end{problem}
+
+\begin{problem}{Subset Sum IV}
+ Find a subset of $\{-390, -380, -370, -360, -352, -342, -332, -120, 2000,
+ 2016\}$ that sums to $0$.
+\end{problem}
+
+\vspace{2em}
+
+HELLO is a word with five letters, and MELON is a word with five letters. The
+``word'' HMELLON has just seven letters, and we can find both words (in the
+right order) in it, though we need to ignore two letters in both cases. We say
+that HMELLON is a \textsc{Shortest Common Supersequence} of HELLO and MELON,
+because we can't do this in any fewer than $7$ letters.
+
+\begin{problem}{Shortest Common Supersequence I}
+ Find a shortest common supersequence of OLYMPIC and MATH.
+\end{problem}
+
+\begin{problem}{Shortest Common Supersequence II}
+ Find a shortest common supersequence of SHORTEST and SUPERSEQUENCE.
+\end{problem}
+
+\begin{problem}{Shortest Common Supersequence III}
+ Find a shortest common supersequence of the words THIS and MIGHT and BE and
+ QUITE and HARD.
+\end{problem}
+
+\begin{problem}{Shortest Common Supersequence IV}
+ Find a shortest common supersequence of the words IF and THAT and WAS and HARD
+ and THEN and THIS and IS and HARDER.
+\end{problem}
+
+\vspace{2em}
+
+We define the \textsc{Hamming Distance} between two strings to be the minimum
+number of edits we need to turn one string into another. One edit is either:
+\begin{itemize}
+ \item adding a character
+ \item removing a character
+ \item turning a character into another
+\end{itemize}
+
+As an example, the Hamming Distance between HELLO and MELON is $3$. We may,
+for example, change H to M, then delete one L, and then add an N. There are
+other ways of achieving the same result, but the best we can do is $3$ edits.
+
+\begin{problem}{Hamming Distance I}
+ Find the Hamming Distance between OLYMPIC and MATH.
+\end{problem}
+
+\begin{problem}{Hamming Distance II}
+ Find the Hamming Distance between HAMMING and DISTANCE.
+\end{problem}
+
+\end{document}
