@@ -12,10 +12,14 @@
 \usepackage[utf8]{inputenc}
 \usepackage{gensymb}
 \usepackage{multicol}
+\usepackage{siunitx}
+\usepackage{titling}
+\setlength{\droptitle}{-3em}
+\posttitle{\par\end{center}}
 
-
+\renewcommand{\familydefault}{\sfdefault}
 \makeatletter
-\newenvironment{problem}{\@startsection
+\newenvironment{problem}[1][]{\@startsection
        {section}
        {1}
        {-.2em}
@@ -39,6 +43,10 @@
 \setlength\voffset{-0.25in}
 \setlength\textheight{648pt}
 \setlength\headheight{15pt}
+
+\newcommand{\HomeworkTitle}{
+    \maketitle
+}
 
 \input{\IncludePath/answers.tex}
 \input{\IncludePath/blanks.tex}
