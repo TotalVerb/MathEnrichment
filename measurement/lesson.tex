@@ -1,0 +1,316 @@
+\documentclass[a4paper,10pt]{report}
+
+\newcommand{\IncludePath}{../include}
+\newcommand{\ProjectName}{Grade 4 Olympic Math}
+\input{\IncludePath/book-template.tex}
+\input{\IncludePath/gloss-g4.tex}
+\makeglossaries
+
+\title{Measurement}
+\author{Fengyang Wang}
+
+\begin{document}
+
+\begin{abstract}
+ This is an introduction to more advanced topics in measurement suitable for an
+ advanced Grade 4 audience. These notes were prepared for the Grand River
+ Chinese School.
+
+ This topic is new this year, though it adapts and incorporates content from the
+ geometry unit I taught in previous years. Historically, I taught a four-class
+ geometry primer discussing angles, angles of polygons, and area. Confusion has
+ always arisen with units of measurement, which I suspect is due to the lack of
+ education about units and dimension in school. Hence, I have substantially
+ revised and expanded the curriculum to include much more discussion about
+ dimension and units.
+
+ However, the quality of most of these notes is untested, and I may not end up
+ presenting all of the information. I anticipate that each chapter will take
+ around two to four hours to present, depending on the level of detail.
+
+ Although the notes are intended to be presented to a young audience, they are
+ written for a teacher and not for a student. Many of the terms used will not be
+ familiar to the students. They require explanation.
+\end{abstract}
+
+\maketitle
+
+\tableofcontents
+
+\chapter{Angles}
+
+\section{Planes}
+
+Often, we like to do geometry on a flat surface. Note that this is not the only
+kind of geometry; we could do geometry in three dimensions, for example. Many
+physicists and mathematicians investigate even stranger geometries, such as
+geometries with time. However, flat geometry is much easier to understand and
+visualize, and is interesting in its own right. In fact, even if we work in
+three or more dimensions, we often still study interactions that occur on planes
+within a higher-dimensional space.
+
+The study of geometry on a flat surface is called \gls{plane geometry}. The flat
+surfaces that we do our work on are called \glspl{plane}. For this unit, we will
+be doing plane geometry.
+
+\section{Lines}
+
+To understand angles, first we must consider straight lines. In geometry, there
+is a specific definition for what is a \gls{line}. For example, the object
+depicted in Figure~\ref{an:line-segment} is not a line. Why not? In regular
+geometry, a line is defined as continuing forever in both directions. Straight
+objects that terminate at both ends are instead called \glspl{line segment}.
+
+\begin{figure}
+ \fgLineSegment{}
+
+ \caption{A line segment --- not a line!}
+ \label{an:line-segment}
+\end{figure}
+
+We cannot physically draw an infinitely long line. Instead, we use arrows at
+both ends to denote that our line continues forever at both ends.
+Figure~\ref{an:line} demonstrates how arrows can be used.
+
+\begin{figure}
+ \fgLine{}
+
+ \caption{One way to draw a line continuing infinitely in both directions}
+ \label{an:line}
+\end{figure}
+
+The existence of line segments, which are terminated at both ends, and lines,
+which continue forever at both ends, raises a question. Are there geometric
+objects that terminate at one end, and continue forever at the other end? Yes!
+These kinds of objects are called \glspl{ray}. They behave like lines in one
+direction, and like line segments in the other direction. Figure~\ref{an:ray}
+shows how one might draw a ray.
+
+\begin{figure}
+ \fgRay{}
+
+ \caption{One way to draw a ray terminating at one end and continuing forever
+ in the other direction}
+ \label{an:ray}
+\end{figure}
+
+A ray has a direction: the end that it terminates at is where the ray starts,
+and travelling toward its infinite end is considered moving in the ray's
+direction. You may have heard of a ``ray of light''. This phrase comes from the
+well-known behaviour of light: if we shine a flashlight, the resulting ray goes
+on forever (though perhaps with ever-decreasing intensity) in the direction the
+light is shown. But there is a clear starting point. Behind the flashlight,
+there is no light.
+
+Although this could be confusing at first, the point that the ray ends at is
+both a start and an end. It is a start because the ray begins at that point if
+we travel along the ray in the direction it points. But it is also an end,
+because equivalently we could say that the ray ends at that point if we travel
+along the opposite direction. To minimize the confusion, from now on we will
+consistently call that point the \gls{endpoint} of the ray.
+
+\subsection{Properties of Lines}
+
+There are a few facts about straight lines, line segments, and rays on a plane
+that are useful to know:
+
+\begin{itemize}
+ \item If two lines are the same line (they occupy the same space), then they
+ are called \gls{coincident}.
+ \item The straight line segment is the shortest route between two points.
+ \item If two lines never intersect, they are called \gls{parallel}.
+ \item Two distinct (not coincident) straight lines will never intersect at two
+ or more points.
+\end{itemize}
+
+\begin{problem}{Intersecting Lines I}
+ Three lines are drawn on a plane, no two parallel or coincident. Is it possible
+ for there to be four points on the plane that are on more than one line?
+
+ \begin{solution}
+  \AnsT{No}. There can only be up to three points, since there is only up to one
+  point on both the first and second lines, up to one point on both the first
+  and third lines, and up to one point on both the second and third lines.
+  Therefore, there can only be up to \[ 1 + 1 + 1 = 3 \] points in total that
+  are on more than one line.
+ \end{solution}
+\end{problem}
+
+\begin{problem}{Intersecting Lines II}
+ Three lines are drawn on a plane, no two parallel or coincident. Is it possible
+ for there to be only one point that is on more than one line?
+
+ \begin{solution}
+  \AnsT{Yes}. We just require three lines that intersect together at one point.
+  This is basically the design of the asterisk character *; see
+  Figure~\ref{an:asterisk}.
+ \end{solution}
+\end{problem}
+
+\begin{figure}
+ \fgAsterisk{}
+
+ \caption{Three lines interesting at a single point}
+ \label{an:asterisk}
+\end{figure}
+
+\section{Angles between Rays}
+
+Consider Figure~\ref{an:tworays}, which depicts two rays that share a common
+endpoint. Then look at Figure~\ref{an:tworaysfar}, which also depicts two rays
+with a common endpoint, but further apart. At least, to our eyes the two rays
+look further apart. But what does it mean for rays to be far apart?
+
+This is no longer a simple matter of distance. Because the rays share a common
+endpoint, the distance between them is zero. That means that the rays are no
+more distant from each other in Figure~\ref{an:tworaysfar} than in
+Figure~\ref{an:tworays}. Rather, we need another way to measure how far two rays
+are. We will use the \gls{angle} between the rays to describe this.
+
+\begin{figure}
+ \fgTwoRays{}
+
+ \caption{Two rays sharing a common endpoint}
+ \label{an:tworays}
+\end{figure}
+
+\begin{figure}
+ \fgTwoRaysFar{}
+
+ \caption{Two rays sharing a common endpoint, but further apart}
+ \label{an:tworaysfar}
+\end{figure}
+
+The size of an angle is measured in degrees. We use \SI{90}{\degree} to denote
+the angle of an L. Therefore, for example, \SI{45}{\degree} would be half the
+size of that angle. We will soon develop more intuition into what angles
+measuring a particular number of degrees look like.
+
+To make it clear that we are talking about the angle between two rays, we can
+draw figures with part of a circle sandwiched between two rays. This part-circle
+indicates that the figure's subject is the angle between the rays. Often, we can
+add additional description near the part-circle, such as a measure of how large
+the angle is. In Figure~\ref{an:anglethirty}, a \SI{30}{\degree} angle is
+depicted.
+
+\begin{figure}
+ \fgAngleN{30}
+
+ \caption{An angle measuring \SI{30}{\degree} with a part-circle highlighting
+ it}
+ \label{an:anglethirty}
+\end{figure}
+
+\section{Acute, Right, Obtuse, and Straight Angles}
+
+When two rays meet either other in an L shape, the resulting angle is called a
+\gls{right angle}. Figure~\ref{an:tworaysright} depicts a right angle. Note that
+we often use a square to represent a right angle instead of drawing part of a
+circle. Right angles are everywhere. For instance, rectangles have four right
+angles. Take a look around the classroom and note how many right angles you see.
+
+\begin{figure}
+ \fgTwoRaysRight{}
+
+ \caption{Two rays meeting at a right angle, with the right angle labelled using
+ a square shape}
+ \label{an:tworaysright}
+\end{figure}
+
+Another special kind of angle occurs when two rays of opposite directions meet
+at a point. Since the rays together form a straight line, such angles are called
+\glspl{straight angle}. Figure~\ref{an:tworaysstraight} depicts a straight
+angle.
+
+\begin{figure}
+ \fgAngleN{180}
+
+ \caption{Two rays meeting at a straight angle}
+ \label{an:tworaysstraight}
+\end{figure}
+
+The right angle, as mentioned earlier, is given a size of \SI{90}{\degree}.
+Right angles are so important that other angles are classified based off their
+size in relation to the right angle. Angles measuring more than \SI{0}{\degree},
+but less than \SI{90}{\degree}, are classified as \glspl{acute angle}. Angles
+measuring more than \SI{90}{\degree}, but less than \SI{180}{\degree}, are
+classified as \glspl{obtuse angle}.
+
+\begin{problem}{Acute, Right, Obtuse}
+ Circle the correct category for each angle.
+
+ \begin{itemize}
+  \item \SI{41}{\degree} \hfill Acute~~Right~~Obtuse
+  \item \SI{175}{\degree} \hfill Acute~~Right~~Obtuse
+ \end{itemize}
+
+ \begin{solution}
+  Because $\SI{0}{\degree} < \SI{41}{\degree} < \SI{90}{\degree}$,
+  \SI{41}{\degree} is an \AnsT{acute} angle. Because $\SI{90}{\degree} <
+  \SI{175}{\degree} < \SI{180}{\degree}$, \SI{175}{\degree} is an \AnsT{obtuse}
+  angle.
+ \end{solution}
+\end{problem}
+
+\section{Reflex Angles}
+
+When two rays intersect, there are actually two angles that one can draw. One of
+these angles is an acute, right, obtuse, or straight angle; the other is either
+a straight angle or a so called \gls{reflex angle}. Reflex angles are greater
+than \SI{180}{\degree} but less than \SI{360}{\degree}. A reflex angle is
+depicted in Figure~\ref{an:tworaysreflex}; note that it combines with an acute
+angle to form the full circle.
+
+Reflex angles are not as important as acute, right, and obtuse angles; therefore
+we will not focus on them much for the remainder of this course.
+
+\begin{figure}
+ \fgAngleN{300}
+
+ \caption{Two rays meeting at an acute angle, but the reflex angle is
+ highlighted}
+ \label{an:tworaysreflex}
+\end{figure}
+
+\section{Angles as Turns}
+
+Imagine rotating an object around some pivot point. How can we measure how much
+an object has rotated? One way would be to measure the number of full rotations,
+defining a full rotation to be a complete turn around the pivot. After a full
+rotation, the object is in the same orientation that it was in originally.
+
+Consider a straight bar with both tips coloured differently, initially oriented
+horizontally. We draw the initial position here and define this position to be
+the starting position.
+
+TK.
+
+\section{Angles of a Polygon}
+
+TK.
+
+\chapter{Units of Measurement}
+
+In the last chapter, we saw two units of measurement: the turn and the degree.
+We learned that one turn is equivalent to \SI{360}{\degree}. But from common
+sense, we know that \(1 \ne 360\). How could adding units change that?
+
+TK.
+
+\chapter{Length and Area}
+
+TK.
+
+\chapter{Geometric Theorems}
+
+TK.
+
+
+% Glossaries and List of Figures
+\printglossaries
+
+\cleardoublepage
+\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures
+
+\end{document}

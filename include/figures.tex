@@ -42,3 +42,59 @@ arc ({\tt * \s + \sp}:{\tt * (\s + 1) - \sp}:\r);
 % bold line at zero
 \draw[line width=2pt] (0, -0.15) -- (0, 0.15);
 \end{tikzpicture}}
+
+\newcommand{\fgLineSegment}{
+\begin{tikzpicture}
+\draw[line width=2pt] (-5, 0) -- (5, 0);
+\end{tikzpicture}}
+
+\newcommand{\fgLine}{
+\begin{tikzpicture}
+\draw[->, =>latex, line width=2pt] (0, 0) -- (5, 0);
+\draw[->, =>latex, line width=2pt] (0, 0) -- (-5, 0);
+\end{tikzpicture}}
+
+\newcommand{\fgRay}{
+\begin{tikzpicture}
+\draw[->, =>latex, line width=2pt] (-5, 0) -- (5, 0);
+\end{tikzpicture}}
+
+\newcommand{\fgTwoRays}{
+\begin{tikzpicture}
+\draw[->, =>latex, line width=2pt] (0, 0) -- (2.5, 0);
+\draw[->, =>latex, line width=2pt] (0, 0) -- (2, 1.5);
+\end{tikzpicture}}
+
+\newcommand{\fgTwoRaysFar}{
+\begin{tikzpicture}
+\draw[->, =>latex, line width=2pt] (0, 0) -- (2.5, 0);
+\draw[->, =>latex, line width=2pt] (0, 0) -- (1.5, 2);
+\end{tikzpicture}}
+
+\newcommand{\fgTwoRaysRight}{
+\begin{tikzpicture}
+\draw[->, =>latex, line width=2pt] (0, 0) -- (3, 0);
+\draw[->, =>latex, line width=2pt] (0, 0) -- (0, 3);
+\draw[line width=2pt] (0, 1) -- (1, 1) -- (1, 0);
+\end{tikzpicture}}
+
+\newcommand{\fgAsterisk}{
+\begin{tikzpicture}
+\draw[->, =>latex, line width=2pt] (0, 0) -- (1, 0);
+\draw[->, =>latex, line width=2pt] (0, 0) -- (0.5, 0.87);
+\draw[->, =>latex, line width=2pt] (0, 0) -- (-0.5, 0.87);
+\draw[->, =>latex, line width=2pt] (0, 0) -- (-1, 0);
+\draw[->, =>latex, line width=2pt] (0, 0) -- (-0.5, -0.87);
+\draw[->, =>latex, line width=2pt] (0, 0) -- (0.5, -0.87);
+\end{tikzpicture}}
+
+\newcommand{\fgAngleN}[1]{
+\begin{tikzpicture}
+\coordinate (A) at (0,0);
+\coordinate (B) at (0:3);
+\coordinate (C) at (#1:3);
+\draw[->, =>latex, line width=2pt] (A) -- (B);
+\draw[->, =>latex, line width=2pt] (A) -- (C);
+\pic [draw, line width=2pt, "{\small\SI{#1}{\degree}}", angle radius=1.5cm] {angle = B--A--C};
+%\draw[line width=2pt] ++(#1:1) arc (#1:0:1) node[midway] ;
+\end{tikzpicture}}
