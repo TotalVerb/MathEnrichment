@@ -1,55 +1,18 @@
 \documentclass[12pt,letterpaper]{article}
 
-\usepackage{tikz}
-\usetikzlibrary{shapes}
-
-\usepackage{amssymb,amsmath,amsthm}
-\usepackage{enumerate}
-\usepackage[margin=1in]{geometry}
-\usepackage{graphicx,ctable,booktabs}
-\usepackage{fancyhdr}
-\usepackage[utf8]{inputenc}
-\usepackage{siunitx}
-
-\makeatletter
-\newenvironment{problem}{\@startsection
-       {section}
-       {1}
-       {-.2em}
-       {-3.5ex plus -1ex minus -.2ex}
-       {2.3ex plus .2ex}
-       {\pagebreak[3]
-       \large\bf\noindent{Problem }
-       }
-       }
-\makeatother
-
-\renewcommand{\thesection}{\Roman{section}}
+\newcommand{\IncludePath}{../include}
+\input{\IncludePath/quiz-template.tex}
 
 \title{Quiz $1$: Geometry}
-\author{Name: \underline{\hspace{5cm}}
-Mark: $\displaystyle \frac{\hspace{3em}}{25}$}
-\date{November 21, 2015}
+\author{Name: \underline{\hspace{5cm}} Mark: $\displaystyle \frac{\hspace{3em}}{25}$}
+\date{October XX, 2016}
 
-\pagestyle{fancy}
-\lhead{Quiz $1$: Geometry}
-\chead{}
-\rhead{\thepage}
-\lfoot{\small\scshape Grade 4 Olympic Math}
-\cfoot{}
-\rfoot{}
-\renewcommand{\headrulewidth}{.3pt}
-\renewcommand{\footrulewidth}{.3pt}
-\setlength\voffset{-0.25in}
-\setlength\textheight{648pt}
-\setlength\headheight{15pt}
+\begin{document}
 
 \newcommand*\circleletter[1]{%
   \begin{tikzpicture}[baseline=(C.base)]
     \node[draw,circle,inner sep=1pt](C) {#1};
   \end{tikzpicture}}
-
-\begin{document}
 
 \maketitle
 
@@ -57,20 +20,20 @@ Mark: $\displaystyle \frac{\hspace{3em}}{25}$}
 
 \noindent\underline{Instructions}
 
-\noindent The test is marked out of $25$. Each part of a question
-is worth $2$ marks.
+\noindent The test is marked out of $25$. Each part of a question is worth $2$
+marks.
 
-\noindent There are $14$ parts, so there is
-$3$-mark bonus available. Note that Problem IV is difficult.
+\noindent There are $14$ parts, so there is $3$-mark bonus available. Note that
+Problem IV is difficult.
 
 \noindent (Optional) Show work on the scrap paper. Part marks are awarded for
 work done.
 
-\noindent All angles that look right are right. All lines
-that look parallel are parallel.
+\noindent All angles that look right are right. All lines that look parallel are
+parallel.
 
-\noindent Calculators are permitted but are not needed. Reference formulas on
-bottom of back page.
+\noindent Calculators are not permitted. Reference formulas on bottom of back
+page.
 
 \begin{problem}{Toronto}
 \begin{figure}[h]
@@ -93,8 +56,8 @@ bottom of back page.
   \item What kind of shape is Building~\circleletter{B}?
   \hfill Quadrilateral~~Circle~~Other
 
-  \item What is the sum of interior angles for Building~\circleletter{A}?
-  \hfill $90^\circ$~~$180^\circ$~~$360^\circ$~~$540^\circ$
+  \item What is the sum of interior angles for Building~\circleletter{A}? \hfill
+  \SI{90}{\degree}~~\SI{180}{\degree}~~\SI{360}{\degree}~~\SI{540}{\degree}
 
   \item Which building has greater area?
   \hfill Building~\circleletter{A}~~Building~\circleletter{B}
@@ -128,27 +91,25 @@ bottom of back page.
 
   \hfill Acute~~Right~~Obtuse~~Straight~~Reflex
 
-  \item The angle supplementary to the marked angle is $63^\circ$.
+  \item The angle supplementary to the marked angle is \SI{63}{\degree}.
   What is the measure of the marked angle?
+  \hfill \blankC \si{\degree}
 
-  \hfill $\underline{\hspace{3em}}^\circ$
-
-  \item How many sides does this garden have? \hfill $\underline{\hspace{3em}}$
+  \item How many sides does this garden have? \hfill \blankC
 
   \item How many of the garden's interior angles are reflex angles?
   \hfill $\underline{\hspace{3em}}$
 
-  \item What is the area of this garden? \hfill $\underline{\hspace{3em}}$
-  \si{\meter^2}
- \end{enumerate}
+  \item What is the area of this garden? \hfill \blankC \si{\meter^2}
+\end{enumerate}
 
 \end{problem}
 
 \begin{problem}{Challenge}
- Two angles are complementary. One is $18^\circ$ greater than the other.
+ Two angles are complementary. One is \SI{18}{\degree} greater than the other.
  What are the two angles?
 
- \hfill $\underline{\hspace{3em}}^\circ$, $\underline{\hspace{3em}}^\circ$
+ \hfill \blankC \si{\degree}, \blankC \si{\degree}
 \end{problem}
 
 \vspace{1em}\noindent\underline{Reference}

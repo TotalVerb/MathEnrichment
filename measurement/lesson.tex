@@ -37,7 +37,11 @@
 
 \tableofcontents
 
-\chapter{Angles}
+\chapter{Introduction}
+
+This unit is about geometry and measuring the physical world. Our focus will be
+on figures on a two-dimensional surface, and the quantities we can use to
+measure those figures.
 
 \section{Planes}
 
@@ -109,7 +113,7 @@ because equivalently we could say that the ray ends at that point if we travel
 along the opposite direction. To minimize the confusion, from now on we will
 consistently call that point the \gls{endpoint} of the ray.
 
-\subsection{Properties of Lines}
+\section{Properties of Lines}
 
 There are a few facts about straight lines, line segments, and rays on a plane
 that are useful to know:
@@ -154,6 +158,49 @@ that are useful to know:
  \label{an:asterisk}
 \end{figure}
 
+\section{Length}
+
+It does not make sense to talk about the length of a line or ray, because those
+objects extend forever. Line segments, on the other hand, do have a well-defined
+length. In the physical world, length is typically measured in units of
+kilometres, metres, centimetres, or millimetres.
+
+Length is related to distance. In fact, the distance between two points is the
+length of the straight line segment connecting those two points. Therefore,
+distance is also measured in units of length.
+
+It is meaningless to say that the distance between two objects is $3$---but it
+is meaningful to say that the distance is \SI{3}{\metre}. The unit is not
+optional; it is a fundamental component of what the quantity means.
+
+That is not to say, however, that units cannot be changed. Indeed, it is
+possible to convert between various units of length. The SI system of units in
+use around the world makes conversions especially convenient. It is useful to
+remember that:
+
+\begin{itemize}
+  \item $\SI{1}{\kilo\metre}=\SI{1000}{\metre}$
+  \item $\SI{1}{\metre}=\SI{100}{\centi\metre}$
+  \item $\SI{1}{\centi\metre}=\SI{10}{\milli\metre}$
+\end{itemize}
+
+\begin{problem}{Unit Conversion I}
+  Convert \SI{1}{\kilo\metre} to millimetres.
+
+  \begin{solution}
+    Note \(
+      \SI{1}{\kilo\metre} = \SI{1000}{\metre}
+    \) and \(
+      \SI{1}{\metre} = \SI{1000}{\milli\metre}
+    \), so \[
+      \SI{1}{\kilo\metre} = 1000 \cdot \SI{1}{\metre} = 1000 \cdot
+      \SI{1000}{\milli\metre} = \Ans{\SI{1000000}{\milli\metre}}
+    \]
+  \end{solution}
+\end{problem}
+
+\chapter{Angles}
+
 \section{Angles between Rays}
 
 Consider Figure~\ref{an:tworays}, which depicts two rays that share a common
@@ -181,10 +228,10 @@ are. We will use the \gls{angle} between the rays to describe this.
  \label{an:tworaysfar}
 \end{figure}
 
-The size of an angle is measured in degrees. We use \SI{90}{\degree} to denote
-the angle of an L. Therefore, for example, \SI{45}{\degree} would be half the
-size of that angle. We will soon develop more intuition into what angles
-measuring a particular number of degrees look like.
+The size (also called ``measure'') of an angle is measured in degrees. We use
+\SI{90}{\degree} to denote the angle of an L. Therefore, for example,
+\SI{45}{\degree} would be half the size of that angle. We will soon develop more
+intuition into what angles measuring a particular number of degrees look like.
 
 To make it clear that we are talking about the angle between two rays, we can
 draw figures with part of a circle sandwiched between two rays. This part-circle
@@ -201,7 +248,9 @@ depicted.
  \label{an:anglethirty}
 \end{figure}
 
-\section{Acute, Right, Obtuse, and Straight Angles}
+\section{Classifying Angles by Measure}
+
+\subsection{Right and Straight Angles}
 
 When two rays meet either other in an L shape, the resulting angle is called a
 \gls{right angle}. Figure~\ref{an:tworaysright} depicts a right angle. Note that
@@ -229,6 +278,8 @@ angle.
  \label{an:tworaysstraight}
 \end{figure}
 
+\subsection{Acute and Obtuse Angles}
+
 The right angle, as mentioned earlier, is given a size of \SI{90}{\degree}.
 Right angles are so important that other angles are classified based off their
 size in relation to the right angle. Angles measuring more than \SI{0}{\degree},
@@ -252,7 +303,7 @@ classified as \glspl{obtuse angle}.
  \end{solution}
 \end{problem}
 
-\section{Reflex Angles}
+\subsection{Reflex Angles}
 
 When two rays intersect, there are actually two angles that one can draw. One of
 these angles is an acute, right, obtuse, or straight angle; the other is either
@@ -271,6 +322,116 @@ we will not focus on them much for the remainder of this course.
  highlighted}
  \label{an:tworaysreflex}
 \end{figure}
+
+\section{Angle Arithmetic}
+
+We can add two angles placed next to each other together, forming a bigger
+angle. The measure of this bigger angle is the sum of the measures of the two
+components. In Figure~\ref{an:acutesum}, we see two acute angles measuring
+\SI{30}{\degree} and \SI{60}{\degree}, and their sum is \SI{90}{\degree}. We can
+add degrees just by adding the numbers together and leaving the unit as-is.
+
+\begin{figure}
+ \fgAngleSumNM{30}{60}
+
+ \caption{Two acute angles summing to a right angle; the sum is highlighted in
+ blue}
+ \label{an:acutesum}
+\end{figure}
+
+Similarly, we can subtract two angles if one is contained within the other. The
+angle left over is a smaller angle. In Figure~\ref{an:obtusediff}, we see a
+\SI{60}{\degree} angle taken away from a \SI{120}{\degree} angle, leaving
+another \SI{60}{\degree} angle as the difference.
+
+\begin{figure}
+ \fgAngleDiffNM{100}{60}
+
+ \caption{An acute angle is subtracted off an obtuse angle, leaving an acute
+ angle; the difference is highlighted in blue}
+ \label{an:obtusediff}
+\end{figure}
+
+\begin{problem}{Adding Angles I}
+  Find each sum or difference of angles.
+
+  \begin{itemize}
+    \item $\SI{20}{\degree} + \SI{30}{\degree}$
+    \item $\SI{155}{\degree} - \SI{65}{\degree}$
+  \end{itemize}
+
+  \begin{solution}
+    We have \[ \SI{20}{\degree} + \SI{30}{\degree} = (20+30)\si{\degree} =
+    \Ans{\SI{50}{\degree}} \]
+
+    And \[ \SI{155}{\degree} + \SI{65}{\degree} =
+    (155-65)\si{\degree} = \Ans{\SI{90}{\degree}} \]
+  \end{solution}
+\end{problem}
+
+\begin{problem}{Adding Angles II}
+  Determine whether each case is possible. If so, give an example. Otherwise,
+  give a reason why it is not possible.
+
+  \begin{itemize}
+    \item The sum of two acute angles is an acute angle.
+    \item An obtuse angle minus a right angle is an obtuse angle.
+  \end{itemize}
+
+  \begin{solution}
+    The first case is \AnsT{possible}; we take for example \[
+      \SI{30}{\degree} + \SI{40}{\degree} = \SI{70}{\degree}
+    \] which is acute.
+
+    The second case is \AnsT{not possible}. No obtuse angle is \SI{180}{\degree}
+    or larger; therefore, subtracting \SI{90}{\degree} will always result in an
+    angle less than \SI{90}{\degree}---an acute angle.
+  \end{solution}
+\end{problem}
+
+\subsection{Complementary and Supplementary Angles}
+
+If two angles labelled $\alpha$ and $\beta$ sum to \SI{90}{\degree}, then we say
+that $\alpha$ and $\beta$ are complementary angles. If two angles labelled
+$\alpha$ and $\beta$ sum to \SI{180}{\degree}, then we say that $\alpha$ and
+$\beta$ are supplementary angles. You will not be required to memorize these
+terms; the quiz and homework will remind you of what they mean.
+
+\begin{problem}{Complementary Angles}
+ Find the angle complementary to each of the following.
+
+ \begin{itemize}
+  \item \SI{81}{\degree} \hfill Complementary: \blankC \si{\degree}
+  \item \SI{18}{\degree} \hfill Complementary: \blankC \si{\degree}
+ \end{itemize}
+
+ \begin{solution}
+   We just calculate \[
+    \SI{90}{\degree}-\SI{81}{\degree}=\Ans{\SI{9}{\degree}}
+   \]
+   and \[
+    \SI{90}{\degree}-\SI{18}{\degree}=\Ans{\SI{72}{\degree}}
+   \]
+ \end{solution}
+\end{problem}
+
+\begin{problem}{Supplementary Angles}
+ Find the angle supplementary to each of the following.
+
+ \begin{itemize}
+  \item \SI{81}{\degree} \hfill Supplementary: \blankC \si{\degree}
+  \item \SI{18}{\degree} \hfill Supplementary: \blankC \si{\degree}
+ \end{itemize}
+
+ \begin{solution}
+   We just calculate \[
+    \SI{180}{\degree}-\SI{81}{\degree}=\Ans{\SI{99}{\degree}}
+   \]
+   and \[
+    \SI{180}{\degree}-\SI{18}{\degree}=\Ans{\SI{162}{\degree}}
+   \]
+ \end{solution}
+\end{problem}
 
 \section{Angles as Turns}
 
@@ -291,9 +452,19 @@ TK.
 
 \chapter{Units of Measurement}
 
-In the last chapter, we saw two units of measurement: the turn and the degree.
-We learned that one turn is equivalent to \SI{360}{\degree}. But from common
-sense, we know that \(1 \ne 360\). How could adding units change that?
+In the first chapter, we saw that \si{\kilo\metre}, \si{\metre},
+\si{\centi\metre}, and \si{\milli\metre} are units of length. We know that \[
+  \SI{1}{\kilo\metre} = \SI{1000}{\metre}
+\] but of course, \(1\ne1000\). What's going on here?
+
+In the last chapter, we saw two units of measurement for angles: the turn and
+the degree. We learned that one turn is equivalent to \SI{360}{\degree}. But
+from common sense, we know that \(1 \ne 360\). How can it be?
+
+The answer is quite simple: while \si{\kilo\metre} and \si{\metre} are both
+units of length, they are not the same unit of length. Similarly, although both
+the turn and the degree are units of angle measure, they are not the same unit
+of angle measure.
 
 TK.
 
