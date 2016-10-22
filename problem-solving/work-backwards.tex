@@ -1,53 +1,17 @@
-\documentclass[12pt,letterpaper]{article}
+\documentclass[14pt,letterpaper]{article}
 
-\usepackage{tikz}
-\usetikzlibrary{shapes}
+\newcommand{\IncludePath}{../include}
+\input{\IncludePath/hmwk-template.tex}
 
-\usepackage{amssymb,amsmath,amsthm}
-\usepackage{enumerate}
-\usepackage[margin=1in]{geometry}
-\usepackage{graphicx,ctable,booktabs}
-\usepackage{fancyhdr}
-\usepackage[utf8]{inputenc}
-\usepackage{siunitx}
-
-\makeatletter
-\newenvironment{problem}{\@startsection
-       {section}
-       {1}
-       {-.2em}
-       {-3.5ex plus -1ex minus -.2ex}
-       {2.3ex plus .2ex}
-       {\pagebreak[3]
-       \large\bf\noindent{Problem }
-       }
-       }
-\makeatother
-
-\renewcommand{\thesection}{\Roman{section}}
-
-\title{Problem Solving Skills: Working Backwards}
+\title{Working Backward}
 \author{Name: \underline{\hspace{5cm}}}
-\date{November 21, 2015}
-
-\pagestyle{fancy}
-\lhead{Working Backwards}
-\chead{}
-\rhead{\thepage}
-\lfoot{\small\scshape Grade 4 Olympic Math}
-\cfoot{}
-\rfoot{}
-\renewcommand{\headrulewidth}{.3pt}
-\renewcommand{\footrulewidth}{.3pt}
-\setlength\voffset{-0.25in}
-\setlength\textheight{648pt}
-\setlength\headheight{15pt}
+\date{October 22, 2016}
 
 \begin{document}
-
-\maketitle
+\HomeworkTitle
 
 \thispagestyle{empty}
+
 \begin{problem}{Fruit}
  Ming bought a bag of fruit to share among her friends. She kept half the fruits
  for herself, and gave $3$ fruits each to $5$ friends. How many fruits did Ming

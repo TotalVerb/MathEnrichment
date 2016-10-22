@@ -5,7 +5,7 @@
 
 \title{Units of Measurement}
 \author{Name: \underline{\hspace{5cm}}}
-\date{September 24, 2016}
+\date{October 22, 2016}
 
 \begin{document}
 \HomeworkTitle
@@ -21,6 +21,77 @@
    \item \ldots{}the length and width are equal?
    \item \ldots{}the perimeter is \SI{26}{\metre}?
  \end{enumerate}
+\end{problem}
+
+\begin{problem}{Units of Money}
+  Money also has units. In Canada, there are two kinds of units in common use:
+  the dollar and the cent. We know that $\$1=100\text{\textcent}$. The average
+  car costs $\$0.0000001$ of gasoline to drive \SI{1}{\milli\metre}. How much
+  would the gasoline for a car to drive \SI{1}{\kilo\metre} cost, in cents?
+  \hfill \blankC\textcent
+\end{problem}
+
+\begin{problem}{Dimensional Analysis}
+  Exactly one of the following four equations is correct. Which is it? (Hint:
+  think about units. You can eliminate many possibilities because the units
+  are incorrect.)
+
+  \begin{itemize}
+    \item \(\SI{123891}{\metre} \times \SI{23241}{\metre}
+    = \SI{15348979881}{\metre}\)
+    \item \(\SI{1}{\metre} + \SI{1}{\metre} = \SI{2}{\centi\metre}\)
+    \item \(\SI{17}{\kilo\metre} \times \SI{17}{\centi\metre} =
+    \SI{2890}{\metre\squared}\)
+    \item \(\SI{1}{\metre} \times \SI{1}{\metre} = \SI{1}{\kilo\gram}\)
+  \end{itemize}
+\end{problem}
+
+\begin{problem}{Challenge II}
+  A \emph{Euclidean vector} is an object with a magnitude and direction. We can
+  represent displacements as vectors. For instance, suppose we make a map of
+  the 2D plane, with each square grid cell \SI{1}{\centi\metre\squared} in
+  size. We can measure a vector by recording the distance to the right and the
+  distance upward that the vector displaces.
+
+  \begin{center}
+    \begin{tikzpicture}
+      \draw[step=1cm,gray] (0,0) grid (6,6);
+      \draw[line width=1mm,->] (0,0) -- (3,4) node[anchor=south]
+      {\(\mathbf{u}\)};
+      \draw[line width=1mm,->] (3,4) -- (5,2) node[anchor=north]
+      {\(\mathbf{v}\)};
+    \end{tikzpicture}
+  \end{center}
+
+  The vectors \(\mathbf{u}\) and \(\mathbf{v}\) are labelled. We say that \[
+    \mathbf{u} = \left( \SI{3}{\centi\metre}, \SI{4}{\centi\metre} \right)
+    \hspace{2em}
+    \mathbf{v} = \left( \SI{2}{\centi\metre}, \SI{-2}{\centi\metre} \right)
+  \] because vector \(\mathbf{u}\) displaces \SI{3}{\centi\metre} to the right
+  and \SI{4}{\centi\metre} up, and vector \(\mathbf{v}\) displaces
+  \SI{2}{\centi\metre} to the right and \SI{-2}{\centi\metre} up.
+
+  \begin{itemize}
+    \item Convert \(\mathbf{u}\) to millimetres. \hfill
+    \(\mathbf{u} = \left(
+    \blankC\,\si{\milli\metre}, \blankC\,\si{\milli\metre} \right)\)
+    \item We define \(\mathbf{u} + \mathbf{v}\) to be the total displacement
+    after displacing by \(\mathbf{u}\), then further displacing by
+    \(\mathbf{v}\). Note that we can calculate this by considering the
+    rightward and upward components separately. Find \(\mathbf{u} +
+    \mathbf{v}\). \hfill \(\mathbf{u} + \mathbf{v} = \left(
+    \blankC\,\si{\centi\metre}, \blankC\,\si{\centi\metre} \right)\)
+    \item We define \(2\mathbf{u} = \mathbf{u} + \mathbf{u}\). Again, we can
+    calculate this by considering the rightward and upward components
+    separately. Find \(2\mathbf{u}\). \hfill \(2\mathbf{u} = \left(
+    \blankC\,\si{\centi\metre}, \blankC\,\si{\centi\metre} \right)\)
+    \item Compute (unrelated to the diagram above), being careful about unit
+    conversion, \[
+      4\left( \SI{2}{\metre}, \SI{5}{\metre} \right) +
+      2\left( \SI{5}{\centi\metre}, \SI{10}{\centi\metre} \right)
+      = \left( \blankC\,\si{\milli\metre}, \blankC\,\si{\milli\metre} \right)
+    \]
+  \end{itemize}
 \end{problem}
 
 \end{document}
