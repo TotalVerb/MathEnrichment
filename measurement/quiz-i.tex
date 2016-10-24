@@ -3,8 +3,8 @@
 \newcommand{\IncludePath}{../include}
 \input{\IncludePath/quiz-template.tex}
 
-\title{Quiz $1$: Geometry}
-\author{Name: \underline{\hspace{5cm}} Mark: $\displaystyle \frac{\hspace{3em}}{25}$}
+\title{Quiz 1: Geometry}
+\author{Name: \underline{\hspace{5cm}} \OutOf{12}}
 \date{October XX, 2016}
 
 \begin{document}
@@ -18,24 +18,19 @@
 
 \thispagestyle{empty}
 
-\noindent\underline{Instructions}
+\section*{Instructions}
+\begin{itemize}
+  \item The test is marked out of 12.
+  \item Problem 4 is a bonus question. The maximum achievable score is 14.
+  \item (Optional) Show work on the scrap paper. Part marks are awarded for
+  work done.
+  \item All angles that look right are right. All lines that look parallel are
+  parallel.
+  \item Calculators are not permitted. Reference formulas on bottom of back
+  page.
+\end{itemize}
 
-\noindent The test is marked out of $25$. Each part of a question is worth $2$
-marks.
-
-\noindent There are $14$ parts, so there is $3$-mark bonus available. Note that
-Problem IV is difficult.
-
-\noindent (Optional) Show work on the scrap paper. Part marks are awarded for
-work done.
-
-\noindent All angles that look right are right. All lines that look parallel are
-parallel.
-
-\noindent Calculators are not permitted. Reference formulas on bottom of back
-page.
-
-\begin{problem}{Toronto}
+\begin{problem}{Toronto\hfill/5}
 \begin{figure}[h]
   \begin{center}
     \includegraphics[trim=50 50 50 50, clip, width=.5\textwidth]{toronto.png}
@@ -64,9 +59,8 @@ page.
  \end{enumerate}
 \end{problem}
 
-\begin{problem}{Triangle}
- A right triangle has base length \SI{10}{\meter}
- and height \SI{10}{\meter}.
+\begin{problem}{Triangle\hfill/2}
+ A right triangle has base length \SI{10}{\meter} and height \SI{10}{\meter}.
 
  \begin{enumerate}
   \item What is its area?
@@ -76,36 +70,44 @@ page.
  \end{enumerate}
 \end{problem}
 
-\begin{problem}{Garden}
-\begin{figure}[h]
+\begin{problem}{Garden\hfill/5}
   \begin{center}
-    \includegraphics[width=.4\textwidth]{garden.png}
+    \begin{tikzpicture}
+      \coordinate (B) at (3,0);
+      \coordinate (A) at (2,0);
+      \coordinate (C) at (1,2);
+      \draw[step=1cm,gray] (-0.3,-0.3) grid (5.3,4.3);
+      \draw[line width=1mm] (0,0) -- (0,4) -- (5,4) -- (5,0) -- (4,2) -- (3,0)
+      -- (2,0) -- (1,2) -- (0,0);
+      \pic [draw, "\(\alpha\)", line width=0.4mm, angle radius=0.6cm]
+      {angle = B--A--C};
+    \end{tikzpicture}
   \end{center}
-\end{figure}
 
- Look at the map of Vegeta's vegetable garden. The shaded part is the
- garden itself. Each grid square represents \SI{1}{\meter^2}. One angle is marked.
+ Look at the map of Vegeta's vegetable garden. The part enclosed in the bold
+ lines is the garden itself. Each grid square represents \SI{1}{\meter^2}. One
+ angle is marked.
 
  \begin{enumerate}
-  \item What kind of angle is the marked angle? (circle one)
+  \item What kind of angle is the marked angle \(\alpha\)? (circle one)
 
   \hfill Acute~~Right~~Obtuse~~Straight~~Reflex
 
-  \item The angle supplementary to the marked angle is \SI{63}{\degree}.
-  What is the measure of the marked angle?
+  \item The angle supplementary to \(\alpha\) is \SI{63}{\degree}. What is the
+  measure of \(\alpha\)?
   \hfill \blankC \si{\degree}
 
   \item How many sides does this garden have? \hfill \blankC
 
   \item How many of the garden's interior angles are reflex angles?
-  \hfill $\underline{\hspace{3em}}$
+  \hfill \blankC
 
   \item What is the area of this garden? \hfill \blankC \si{\meter^2}
 \end{enumerate}
 
 \end{problem}
 
-\begin{problem}{Challenge}
+\begin{problem}{Challenge\hfill/2}
  Two angles are complementary. One is \SI{18}{\degree} greater than the other.
  What are the two angles?
 

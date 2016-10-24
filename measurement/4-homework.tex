@@ -20,9 +20,9 @@
   \hline
   Base & Height & Area \\
   \hline
-  $10$ & $20$ & \\
-  & $10$ & $60$ \\
-  $5$ & & $15$ \\
+  \SI{10}{\centi\metre} & \SI{20}{\centi\metre} & \\
+  & \SI{10}{\metre} & \SI{60}{\metre\squared} \\
+  \SI{5}{\kilo\metre} & & \SI{15}{\kilo\metre\squared} \\
   \hline
  \end{tabular}
  \end{center}
@@ -36,50 +36,26 @@
   \hline
   Base & Height & Area \\
   \hline
-  $7$ & $8$ & \\
-  $15$ & $4$ & \\
-  $5$ & & $50$ \\
-  & $3$ & $36$ \\
-  $20$ & $3$ & \\
+  \SI{7}{\metre} & \SI{8}{\metre} & \\
+  \SI{5}{\milli\metre} & & \SI{50}{\milli\metre\squared} \\
+  & \SI{3}{\mega\metre} & \SI{36}{\mega\metre\squared} \\
   \hline
  \end{tabular}
  \end{center}
+ Note: \SI{1}{\mega\metre} (one megametre) is \SI{1000000}{\metre}
 \end{problem}
 
 \begin{problem}{Rectangle}
- Circle ``True'' or ``False'' for each statement.
+ Circle ``All'' if all rectangles meet the description, ``Some'' if there are
+ rectangles that meet the description and there are rectangles that don't, and
+ ``No'' if no rectangles meet the description.
+
  \begin{itemize}
-  \item All rectangles are parallelograms. \hfill True~~False
-  \item All rectangles are squares. \hfill True~~False
-  \item The interior angles of all rectangles sum to $360\degree$.
-  \hfill True~~False
-  \item Rectangles always have $4$ obtuse angles. \hfill True~~False
- \end{itemize}
-\end{problem}
-
-\begin{problem}{Area of a Rectangle}
- Find the area of each rectangle.
-
- \begin{center}
-  \begin{tabular}{|c|c|c|}
-   \hline
-   Width & Length & Area \\
-   \hline
-   $10$ & $5$ & \\
-   $8$ & $12$ & \\
-   \hline
-  \end{tabular}
- \end{center}
-\end{problem}
-
-\begin{problem}{Trapezoid}
- Circle ``True'' or ``False'' for each statement.
- \begin{itemize}
-  \item All trapezoids are parallelograms. \hfill True~~False
-  \item All parallelograms are trapezoids. \hfill True~~False
-  \item Trapezoids have at least one set of perpendicular sides.
-  \hfill True~~False
-  \item The area of a trapezoid depends on its height. \hfill True~~False
+  \item \blankC~rectangles are parallelograms. \hfill All~~Some~~No
+  \item \blankC~rectangles are squares. \hfill All~~Some~~No
+  \item The interior angles of \blankC~rectangles sum to \SI{360}{\degree}.
+  \hfill All~~Some~~No
+  \item \blankC~rectangles have $4$ obtuse angles. \hfill All~~Some~~No
  \end{itemize}
 \end{problem}
 
@@ -91,21 +67,25 @@
   \hline
   Upper base & Lower base & Height & Area \\
   \hline
-  $5$ & $7$ & $5$ & \\
-  $8$ & $12$ & $17$ & \\
+  \SI{5}{\metre} & \SI{7}{\metre} & \SI{5}{\metre} & \\
+  \SI{8}{\metre} & \SI{12}{\metre} & \SI{17}{\metre} & \\
   \hline
  \end{tabular}
  \end{center}
 \end{problem}
 
 \begin{problem}{Challenge}
- What's the area of this kite? (The diagonals [dotted lines] measure $30$ and
- $50$ and intersect at right angles.)
+ What's the area of this kite? (Note: The kite is the four-sided shape outlined
+ in bold. Lengths refer to the entire diagonal, not just half of it.)
 
- \begin{wrapfigure}{r}{0pt}
- \includegraphics[width=30em]{kite.png}
- \end{wrapfigure}
+ \begin{center}
+   \begin{tikzpicture}
+     \draw[line width=1mm] (0,0) -- (5,3) -- (10,0) -- (5,-3) -- (0,0);
+     \draw (5,3) -- (5,1.5) node[right] {\SI{30}{\metre}} -- (5,-3);
+     \draw (0,0) -- (3,0) node[above] {\SI{50}{\metre}} -- (10,0);
+     \draw (4.5,0) -- (4.5,0.5) -- (5,0.5);
+   \end{tikzpicture}
+ \end{center}
 \end{problem}
-
 
 \end{document}

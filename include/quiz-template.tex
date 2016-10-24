@@ -2,19 +2,25 @@
 \usepackage{titling}
 
 \usepackage{tikz}
-\usetikzlibrary{shapes}
+\usetikzlibrary{quotes,angles,shapes}
 
 \usepackage{amssymb,amsmath,amsthm}
 \usepackage{enumerate}
 \usepackage[margin=0.8in]{geometry}
-\usepackage{graphicx,ctable,booktabs}
+\usepackage{graphicx,booktabs}
 \usepackage{fancyhdr}
+\usepackage{gensymb}
 \usepackage{multicol}
 \usepackage{siunitx}
-\usepackage[utf8]{inputenc}
+\usepackage{titling}
+\usepackage{wrapfig}
+\usepackage{textcomp}
+\setlength{\droptitle}{-3em}
+\posttitle{\par\end{center}}
 
+\renewcommand{\familydefault}{\sfdefault}
 \makeatletter
-\newenvironment{problem}{\@startsection
+\newenvironment{problem}[1][]{\@startsection
        {section}
        {1}
        {-.2em}
@@ -30,7 +36,7 @@
 \lhead{\thetitle}
 \chead{}
 \rhead{\thepage}
-\lfoot{\small\scshape Grade 4 Olympic Math}
+\lfoot{\small\scshape Olympic Math}
 \cfoot{}
 \rfoot{}
 \renewcommand{\headrulewidth}{.3pt}
@@ -38,6 +44,14 @@
 \setlength\voffset{-0.25in}
 \setlength\textheight{648pt}
 \setlength\headheight{15pt}
+
+\newcommand{\QuizTitle}{
+    \maketitle
+}
+
+\newcommand{\OutOf}[1]{
+    ~Mark: \raisebox{.7ex}{\hspace{2em}} \Big/ \raisebox{-.5ex}{#1}
+}
 
 \input{\IncludePath/answers.tex}
 \input{\IncludePath/blanks.tex}

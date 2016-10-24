@@ -125,3 +125,12 @@ arc ({\tt * \s + \sp}:{\tt * (\s + 1) - \sp}:\r);
 \pic [draw, line width=2pt, "{\small\SI{#2}{\degree}}", angle radius=1.0cm] {angle = D--A--C};
 \pic [draw=blue, line width=1pt, angle radius=2.0cm] {angle = B--A--D};
 \end{tikzpicture}}
+
+\newcommand{\fgQuadrilateral}[4]{
+\begin{tikzpicture}
+  \coordinate (A) at #1;
+  \coordinate (B) at #2;
+  \coordinate (C) at #3;
+  \coordinate (D) at #4;
+  \draw[line width=1mm] (A) -- (B) -- (C) -- (D) -- (A) -- (B);
+\end{tikzpicture}}
