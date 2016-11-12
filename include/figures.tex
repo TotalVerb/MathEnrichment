@@ -126,11 +126,76 @@ arc ({\tt * \s + \sp}:{\tt * (\s + 1) - \sp}:\r);
 \pic [draw=blue, line width=1pt, angle radius=2.0cm] {angle = B--A--D};
 \end{tikzpicture}}
 
+\newcommand{\fgTriangle}[3]{
+\begin{tikzpicture}
+  \coordinate (A) at #1;
+  \coordinate (B) at #2;
+  \coordinate (C) at #3;
+  \draw[line width=.5mm] (A) -- (B) -- (C) -- cycle;
+\end{tikzpicture}}
+
+\newcommand{\fgRightTriangleWithLegs}[5]{
+\begin{tikzpicture}
+  \coordinate (A) at #1;
+  \coordinate (B) at #2;
+  \coordinate (C) at #3;
+  \draw[line width=.5mm] (A) -- node[below] {#4} (B) -- node[right] {#5} (C) --
+  cycle;
+  \tkzMarkRightAngle[draw=red](A,B,C)
+\end{tikzpicture}}
+
+\newcommand{\fgTriangleAlt}[3]{
+\begin{tikzpicture}
+  \coordinate (A) at #1;
+  \coordinate (B) at #2;
+  \coordinate (C) at #3;
+  \coordinate (HA) at ($(B)!(A)!(C)$);
+  \coordinate (HB) at ($(A)!(B)!(C)$);
+  \coordinate (HC) at ($(B)!(C)!(A)$);
+  \draw[line width=.5mm] (A) -- (B) -- (C) -- cycle;
+  \draw[red,line width=.3mm]
+    (A) -- (HA)
+    (B) -- (HB)
+    (C) -- (HC);
+  \tkzMarkRightAngle[draw=red](B,HC,C)
+  \tkzMarkRightAngle[draw=red](C,HA,A)
+  \tkzMarkRightAngle[draw=red](A,HB,B)
+\end{tikzpicture}}
+
+\newcommand{\fgBoxedTriangle}[5]{
+\begin{tikzpicture}
+  \coordinate (A) at #1;
+  \coordinate (B) at #2;
+  \coordinate (C) at #3;
+  \coordinate (D) at #4;
+  \coordinate (E) at #5;
+  \coordinate (HA) at ($(B)!(A)!(C)$);
+  \coordinate (HB) at ($(A)!(B)!(C)$);
+  \coordinate (HC) at ($(B)!(C)!(A)$);
+  \draw[fill=orange!30] (A) rectangle (C);
+  \draw[fill=purple!30] (A) rectangle (B);
+  \draw[line width=.5mm,fill=white,fill opacity=0.4]
+    (A) -- (B) -- (C) -- cycle;
+  \draw[blue,line width=.3mm] (B) -- (C) -- (D) -- (E) -- cycle;
+  \draw[red,line width=.3mm] (A) -- (HA);
+  \tkzMarkRightAngle[draw=red](C,HA,A)
+\end{tikzpicture}}
+
 \newcommand{\fgQuadrilateral}[4]{
 \begin{tikzpicture}
   \coordinate (A) at #1;
   \coordinate (B) at #2;
   \coordinate (C) at #3;
   \coordinate (D) at #4;
-  \draw[line width=1mm] (A) -- (B) -- (C) -- (D) -- (A) -- (B);
+  \draw[line width=.5mm] (A) -- (B) -- (C) -- (D) -- (A) -- (B);
+\end{tikzpicture}}
+
+\newcommand{\fgQuadrilateralDiag}[4]{
+\begin{tikzpicture}
+  \coordinate (A) at #1;
+  \coordinate (B) at #2;
+  \coordinate (C) at #3;
+  \coordinate (D) at #4;
+  \draw[line width=.5mm] (A) -- (B) -- (C) -- (D) -- (A) -- (B);
+  \draw[line width=.5mm] (C) -- (A);
 \end{tikzpicture}}

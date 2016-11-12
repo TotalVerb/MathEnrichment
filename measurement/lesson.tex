@@ -474,6 +474,20 @@ TK.
 
 \section{Area of a Rectangle}
 
+\begin{figure}
+  \fgQuadrilateral{(0,0)}{(0,2)}{(5,2)}{(5,0)}
+
+  \caption{A rectangle}
+  \label{ar:rectangle}
+\end{figure}
+
+A rectangle is a quadrilateral (four-sided polygon) with four right angles. See
+Figure~\ref{ar:rectangle} for an example. The area of a rectangle is given by
+the equation \begin{equation}
+  A = \ell \times w
+\end{equation} where \(\ell\) represents the length and \(w\) the width of the
+rectangle.
+
 \begin{problem}{Area of a Rectangle}
  Find the area of each rectangle.
 
@@ -503,9 +517,108 @@ TK.
  \end{solution}
 \end{problem}
 
+A special case of a rectangle is a square, where the four sides are all equal
+and meet at right angles. TK.
+
 \section{Area of a Triangle}
 
-TK.
+A triangle is a polygon with exactly three sides. We can classify triangles by
+the measure of their largest angle. Figure~\ref{ar:triangle-obtuse} depicts a
+triangle with an obtuse angle. Triangles with an obtuse angle are called obtuse
+triangles. Triangles cannot have more than one obtuse angle. Why? The sum of
+the interior angles of a triangle is \SI{180}{\degree}, and two obtuse angles
+already sum to more than \SI{180}{\degree}.
+
+Figure~\ref{ar:triangle-right} depicts a triangle with a right angle. Triangles
+with a right angle are called \glspl{right triangle}. Could a triangle have two
+right angles? If it did, then the third angle would have to be \SI{0}{\degree}.
+But two lines intersecting at \SI{0}{\degree} would have to be coincident, so
+our triangle will degenerate into a line segment. Generally, we don't call line
+segments triangles. Similarly, a triangle couldn't have a straight or reflex
+angle --- not even a single one.
+
+Finally, figure~\ref{ar:triangle-acute} depicts a triangle with three acute
+angles. This is possible. In fact, many triangles you draw will have three
+acute angles. Triangles with only acute angles are called acute triangles.
+
+\begin{figure}
+  \fgTriangleAlt{(0,0)}{(2,0)}{(4,4)}
+
+  \caption{A triangle with an obtuse angle}
+  \label{ar:triangle-obtuse}
+\end{figure}
+
+\begin{figure}
+  \fgTriangle{(0,0)}{(4,0)}{(4,3)}
+
+  \caption{A triangle with a right angle}
+  \label{ar:triangle-right}
+\end{figure}
+
+\begin{figure}
+  \fgTriangleAlt{(0,0)}{(6,0)}{(4,4)}
+
+  \caption{A triangle with three acute angles}
+  \label{ar:triangle-acute}
+\end{figure}
+
+An altitude of a triangle is a line segment drawn from a vertex to the opposite
+side, which intersects the opposite side at a right angle. Each triangle has
+three altitudes. When we measure a triangle, we usually pick one side of the
+triangle to call the base. The length of the altitude corresponding to that
+side is called the ``height'' of the triangle. Often, the base is drawn at the
+bottom of the triangle, but this is not required. After all, we can rotate a
+triangle without changing its shape.
+
+Let's try to figure out a formula for the area of a triangle. The triangle that
+looks simplest is the right triangle, so let's look at that first. Make the
+base one of the sides incident to the right angle. Then, the height is the
+other side. Consider the triangle drawn in Figure~\ref{ar:triangle-right}
+first. Let's rotate it \SI{180}{\degree}, to get
+Figure~\ref{ar:triangle-right-rotated}.
+
+\begin{figure}
+  \fgTriangle{(0,0)}{(0,3)}{(4,3)}
+
+  \caption{A triangle with a right angle, rotated \SI{180}{\degree}}
+  \label{ar:triangle-right-rotated}
+\end{figure}
+
+This triangle can fit together with the original triangle like puzzle pieces.
+The resulting shape is a rectangle, as seen in
+Figure~\ref{ar:triangle-rectangle}. Since both these triangles are the same
+size, that means that the area of one of them is half the area of the
+rectangle. From this, we come to our first conclusion: for a right triangle,
+the area is one half the product of the height and the base.
+
+\begin{figure}
+  \fgQuadrilateralDiag{(0,0)}{(0,3)}{(4,3)}{(4,0)}
+
+  \caption{Two right triangles put together to form a rectangle}
+  \label{ar:triangle-rectangle}
+\end{figure}
+
+For an acute triangle, make any side the base and draw the height. We now put
+the triangle into a box, like in Figure~\ref{ar:boxed-acute}. The box is split
+into two smaller rectangles by the triangle's altitude. Each rectangle has half
+contained within the triangle and half not contained. So the triangle is, once
+again, half the area of the rectangle. The rectangle's area is the product of
+the height and the base, so the area of the triangle is one half the product of
+the height and the base. This is the same result as we obtained with the right
+triangle.
+
+\begin{figure}
+  \fgBoxedTriangle{(4,4)}{(6,0)}{(0,0)}{(0,4)}{(6,4)}
+
+  \caption{An acute triangle with a rectangle drawn around it}
+  \label{ar:boxed-acute}
+\end{figure}
+
+In fact, even obtuse angles satisfy the same formula. (That is a trickier
+problem to solve, but can be shown the same way through dividing up triangles
+and rectangles.) The area of a triangle is always given by \begin{equation} A =
+\frac{1}{2} \times b \times h \end{equation} where \(b\) is the base and \(h\)
+is the height of the triangle.
 
 \begin{problem}{Area of a Triangle}
  Complete the table for each triangle.
@@ -541,7 +654,11 @@ TK.
 
 \section{Area of a Parallelogram}
 
-TK.
+A parallelogram is a quadrilateral with two sets of parallel sides. A
+parallelogram can be split into two triangles, and from that we can obtain the
+formula for the area of a parallelogram: \begin{equation}
+  A = b \times h
+\end{equation} where \(b\) represents the base and \(h\) represents the height.
 
 \begin{problem}{Area of a Parallelogram}
   \begin{center}
@@ -599,6 +716,58 @@ is at least one, that means that all parallelograms are trapezoids.
 TK.
 
 \chapter{Geometric Theorems}
+
+\section{Squares and Square Roots}
+
+Before continuing in geometry, we will talk about some arithmetic. TK.
+
+\section{Right Triangles}
+
+Recall that a \gls{right triangle} is a triangle with one right angle. Consider
+the right triangle in Figure~\ref{gt:triangle-345}.
+
+\begin{figure}
+  \fgRightTriangleWithLegs{(0,0)}{(4,0)}{(4,3)}{4}{3}
+
+  \caption{A triangle with a right angle}
+  \label{gt:triangle-345}
+\end{figure}
+
+We call the two sides of a right triangle incident to the right angle the legs.
+In Figure~\ref{gt:triangle-345}, the lengths of the two legs are \(3\) and
+\(4\). The side opposite to the right angle is called the ``hypotenuse''. From
+the lengths of the legs, can we figure out the length of the hypotenuse?
+
+TK.
+
+\section{Using Variables}
+
+Above we derived the length of the hypotenuse for two specific sets of leg
+lengths. Recall that we have formulas for the area of several kinds of shapes.
+For instance, the formula for the area of a triangle is \[
+  A = \frac{1}{2} b \times h
+\] where the letters \(b\) and \(h\) represent the actual lengths of the base
+and altitude.
+
+Can we find a formula for the length of the hypotenuse, using letters \(a\) and
+\(b\) to represent the leg lengths? If we could do this, then we can find the
+length of the hypotenuse for any right triangle, without needing to go through
+the tedious process we did above.
+
+TK.
+
+\section{The Pythagorean Theorem}
+
+In the section above, we derived a formula for the length of the hypotenuse
+using the lengths of the two legs. If the lengths of the two legs are \(a\) and
+\(b\), and the length of the hypotenuse is \(c\), then we saw that
+\begin{equation}
+  \label{gt:pythagorean}
+  c^2 = a^2 + b^2
+\end{equation}
+
+Equation~\ref{gt:pythagorean} is known as the Pythagorean Theorem. This is a
+very useful theorem for many geometry problems.
 
 TK.
 

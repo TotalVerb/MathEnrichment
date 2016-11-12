@@ -5,7 +5,7 @@
 
 \title{Area}
 \author{Name: \underline{\hspace{5cm}}}
-\date{October 8, 2016}
+\date{October 29, 2016}
 
 \begin{document}
 \HomeworkTitle
@@ -72,6 +72,26 @@
   \hline
  \end{tabular}
  \end{center}
+\end{problem}
+
+\begin{problem}{Area of Lattice Polygons}
+  A \emph{lattice} polygon is a polygon whose vertices are all on a grid. To
+  find the area of these shapes, split them up into rectangles and triangles,
+  and add or subtract areas. Sometimes, you will need to add areas, and other
+  times you will need to subtract them. Find the area of each lattice polygon
+  shown.
+
+  \begin{center}
+    \begin{tikzpicture}
+      \draw[step=1cm] (-0.3,-0.3) grid (15.3,4.3);
+      \draw[line width=1mm] (0,0) -- (0,3) -- (6,4) -- (5,0) -- (4,2) -- (2,0)
+      -- (1,1) -- (0,0) -- (0,3);
+      \draw[line width=1mm] (6,0) -- (6,2) -- (9,4) -- (7,2) -- (9,0) -- (6,0)
+      -- (6,2);
+      \draw[line width=1mm] (8,2) -- (13,4) -- (13,2) -- (15,4) -- (15,0) --
+      (8,2) -- (13,4);
+    \end{tikzpicture}
+  \end{center}
 \end{problem}
 
 \begin{problem}{Challenge}

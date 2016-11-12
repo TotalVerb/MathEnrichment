@@ -10,7 +10,7 @@
 
 \title{Number Theory}
 \author{Fengyang Wang}
-\date{April 12, 2016}
+\date{October 24, 2016}
 
 \begin{document}
 
@@ -109,14 +109,29 @@ remainders to compute future terms in repeating sequences. Many of the
 applications of remainders are based off this application.
 
 \begin{problem}{Guess the Number}
- A number yields a remainder of 1 when divided by 2, a remainder of 2 when
- divided by 3, a remainder of 3 when divided by 4, and a remainder of 4 when
- divided by 5.
+ A number yields a remainder of \(1\) when divided by \(2\), a remainder of
+ \(2\) when divided by \(3\), a remainder of \(3\) when divided by \(4\), and a
+ remainder of \(4\) when divided by \(5\).
 
  \begin{enumerate}[\hspace{1cm}a.]
   \item What is the smallest positive number to have this property?
   \item Give two other positive numbers to have the above property.
  \end{enumerate}
+
+ \begin{solution}
+   \begin{enumerate}[\hspace{1cm}a.]
+     \item The important pattern to see here is that each remainder is one less
+     than the number being divided by: \(1 = 2 - 1\), \(2 = 3 - 1\), and so
+     forth. That means that if we add one to a number that has this property,
+     then it should be divisible by all of \(2\), \(3\), \(4\), and \(5\). The
+     smallest positive number divisible by all of these is \(60\), so \(60 - 1
+     = \Ans{59}\) is the smallest positive number having the property.
+     \item As seen in the solution to part a., any number having the property
+     is one less than a number divisible by \(2\), \(3\), \(4\), and \(5\).
+     Other numbers that work therefore include \(120 - 1 = \Ans{119}\) and
+     \(180 - 1 = \Ans{179}\).
+   \end{enumerate}
+ \end{solution}
 \end{problem}
 
 \chapter{Parity \& Divisibility}

@@ -1,0 +1,117 @@
+\documentclass[12pt,letterpaper]{article}
+
+\newcommand{\IncludePath}{../../include}
+\input{\IncludePath/hmwk-template.tex}
+
+\title{Complex Numbers}
+\author{By Fengyang Wang for Saturday Sessions}
+\date{November 5, 2016}
+
+\newcommand{\im}{i}
+
+\begin{document}
+\HomeworkTitle
+
+\begin{problem}{Complex Logarithm}
+ Compute the logarithm of each complex number, given in Cartesian form. Because
+ the complex logarithm is multivalued, here you need simply fill in the blanks
+ so that the equation is true. Recall that \(\exp{x} = e^x\). Make all angles
+ between \(-\pi\) and \(\pi\), keeping the sign suggested in the problem. Write
+ answers in exact form.
+
+ \begin{enumerate}[\hspace{.5cm}a.]
+  \item \(e = 2.718\ldots = \exp\left(\blankB + \blankB\im\right)\)
+  \item \(-1 = \exp\left(\blankB + \blankB\im\right)\)
+  \item \(-\im = \exp\left(\blankB - \blankC\im\right)\)
+ \end{enumerate}
+\end{problem}
+
+\begin{problem}{Polar Form}
+ Write each complex number, given in Cartesian form, in polar form. Recall
+ that polar form is \(r\exp{\im\theta}\), where \(-\pi < \theta \le \pi\).
+
+ \begin{enumerate}[\hspace{.5cm}a.]
+  \item \(1 + \sqrt{3}\im = \blankB\exp\blankC\im\)
+  \item \(-4 = \blankB\exp\blankC\im\)
+  \item \(5\im = \blankB\exp\blankC\im\)
+ \end{enumerate}
+
+ \noindent Write the following complex number, given in polar form, in
+ Cartesian form.
+
+ \begin{enumerate}[\hspace{.5cm}a.]
+  \item \(2\sqrt{3}\exp\frac{2\im\pi}{3} = \blankB + \blankB\im\)
+ \end{enumerate}
+\end{problem}
+
+\begin{problem}{Orthogonality}
+  Let \(a,b,c,d\in\mathbf{C}\) represent points \(A, B, C, D\) in the 2D
+  Euclidean plane, all distinct.
+
+  \begin{itemize}
+    \item The line \(AB\) can be defined by \(a + t(b-a)\) where
+    \(t\in\mathbf{R}\). What equation describes this line, rotated
+    \SI{90}{\degree}, pivoted at \(A\)?
+    \item When is \(AB\) orthogonal to \(CD\)? Express your answer as a single
+    equation involving complex numbers \(a, b, c, d\), the imaginary unit
+    \(\im\), and free parameter \(t\in\mathbf{R}\), without directly involving
+    complex conjugates.
+    \item Hence, derive that a condition for \(AB \perp CD\) is \[
+      \frac{d-c}{b-a} = -\overline{\left(\frac{d-c}{b-a}\right)}
+    \]
+  \end{itemize}
+\end{problem}
+
+\begin{problem}{Characterization of Cyclic Quadrilaterals}
+  Let \(a,b,c,d\in\mathbf{C}\) represent points \(A, B, C, D\) in the 2D
+  Euclidean plane, all distinct.
+
+  \begin{itemize}
+    \item There is a theorem that says that a quadrilateral is cyclic (i.e. all
+    four vertices lie on a circle) if the opposite angles are equal. Give an
+    equation that characterizes when \(\angle ABC + \angle ADC =
+    \SI{180}{\degree}\). Be careful, as angles computed with \(\arg\) are
+    directed.
+    \item Hence, derive that \(A, B, C, D\) lie on the same circle if and only
+    if \[
+      \frac{b-a}{b-c} = t\frac{d-a}{d-c}
+    \] for some real parameter \(t\in\mathbf{R}\).
+  \end{itemize}
+\end{problem}
+
+\begin{problem}{Reflection}
+  Let \(a, b, c\in\mathbf{C}\) represent points \(A, B, C\) in the 2D Euclidean
+  plane, all distinct.
+
+  \begin{itemize}
+    \item Write the equation of the line \(AB\).
+    \item Write the equation of the line perpendicular to \(AB\) that passes
+    through \(C\).
+    \item Let \(C'\) be the reflection of point \(C\) about line \(AB\). Show
+    that the complex number \(c'\) representing point \(C'\) is given by \[
+      c' = \frac{(a-b)\overline{c} + \overline{a}b -
+      a\overline{b}}{\overline{a} - \overline{b}}
+    \]
+  \end{itemize}
+\end{problem}
+
+\begin{problem}{Complex Trivia}
+  \begin{itemize}
+    \item Let \(z\in\mathbf{C}\). Show that \(z\overline{z} = {\|z\|}^2\).
+    \item Let \(z\in\mathbf{C}\). Show that \({z}^{-1} = \overline{z} \iff
+    \|z\| = 1\).
+    \item Let \(a, b, c\in\mathbf{C}\) represent points \(A, B, C\) in the 2D
+    Euclidean plane, all distinct. Show that \[
+      \frac{a-b}{b-c} \in \mathbf{R} \iff A, B, C\text{ are collinear}
+    \]
+    \item Find the area of triangle \(\triangle ABC\) in terms of complex
+    numbers \(a, b, c\in\mathbf{C}\).
+    \item (IMO 2004/5) In the convex quadrilateral \(ABCD\), the diagonal
+    \(BD\) is not the bisector of any of the angles \(\angle ABC\) and \(\angle
+    CDA\). Let \(P\) be the point in the interior of \(ABCD\) such that
+    \(\angle PBC\) = \(\angle DBA\) and \(\angle PDC = \angle BDA\). Prove that
+    the quadrilateral \(ABCD\) is cyclic if and only if \(AP = CP\).
+  \end{itemize}
+\end{problem}
+
+\end{document}

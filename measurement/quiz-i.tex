@@ -4,7 +4,7 @@
 \input{\IncludePath/quiz-template.tex}
 
 \title{Quiz 1: Geometry}
-\author{Name: \underline{\hspace{5cm}} \OutOf{12}}
+\author{Name: \underline{\hspace{5cm}} \OutOf{10}}
 \date{October XX, 2016}
 
 \begin{document}
@@ -20,8 +20,8 @@
 
 \section*{Instructions}
 \begin{itemize}
-  \item The test is marked out of 12.
-  \item Problem 4 is a bonus question. The maximum achievable score is 14.
+  \item The quiz is marked out of 10.
+  \item Problem 2 is a bonus question. The maximum achievable score is 12.
   \item (Optional) Show work on the scrap paper. Part marks are awarded for
   work done.
   \item All angles that look right are right. All lines that look parallel are
@@ -30,7 +30,7 @@
   page.
 \end{itemize}
 
-\begin{problem}{Toronto\hfill/5}
+\begin{problem}{Toronto\hfill/4}
 \begin{figure}[h]
   \begin{center}
     \includegraphics[trim=50 50 50 50, clip, width=.5\textwidth]{toronto.png}
@@ -47,9 +47,6 @@
 
   \item What kind of shape is Building~\circleletter{A}?
   \hfill Rhombus~~Kite~~Rectangle
-
-  \item What kind of shape is Building~\circleletter{B}?
-  \hfill Quadrilateral~~Circle~~Other
 
   \item What is the sum of interior angles for Building~\circleletter{A}? \hfill
   \SI{90}{\degree}~~\SI{180}{\degree}~~\SI{360}{\degree}~~\SI{540}{\degree}
@@ -78,7 +75,7 @@
       \coordinate (C) at (1,2);
       \draw[step=1cm,gray] (-0.3,-0.3) grid (5.3,4.3);
       \draw[line width=1mm] (0,0) -- (0,4) -- (5,4) -- (5,0) -- (4,2) -- (3,0)
-      -- (2,0) -- (1,2) -- (0,0);
+      -- (2,0) -- (1,2) -- cycle;
       \pic [draw, "\(\alpha\)", line width=0.4mm, angle radius=0.6cm]
       {angle = B--A--C};
     \end{tikzpicture}
@@ -107,19 +104,23 @@
 
 \end{problem}
 
-\begin{problem}{Challenge\hfill/2}
+\begin{problem}{Challenge\hfill/1}
  Two angles are complementary. One is \SI{18}{\degree} greater than the other.
- What are the two angles?
+ What are the two angles? \vspace{1ex}
 
  \hfill \blankC \si{\degree}, \blankC \si{\degree}
 \end{problem}
 
 \vspace{1em}\noindent\underline{Reference}
 
-\noindent Area formulas: $A_\Delta=\frac{1}{2}bh$, $A_\square=\ell w$,
-$A_\text{parallelogram}=bh$,
-$A_\text{trapezoid}=\frac{1}{2}\left(b_1+b_2\right)h$
+\noindent Area formulas: \(A_\Delta=\frac{1}{2}bh\), \(A_\square=\ell w\),
+\(A_\text{parallelogram}=bh\),
+\(A_\text{trapezoid}=\frac{1}{2}\left(b_1+b_2\right)h\)
 
-\noindent Interior angle sum: $\mathrm{AS}=180^\circ (n-2)$
+\noindent Interior angle sum: \(\mathrm{AS}=\SI{180}{\degree} (n-2)\)
+
+\noindent Complementary angles sum to \(\SI{90}{\degree}\)
+
+\noindent Supplementary angles sum to \(\SI{180}{\degree}\)
 
 \end{document}

@@ -1,0 +1,99 @@
+\documentclass[14pt,letterpaper]{article}
+
+\newcommand{\IncludePath}{../include}
+\input{\IncludePath/hmwk-template.tex}
+
+\title{Theorems}
+\author{Name: \underline{\hspace{5cm}}}
+\date{November 5, 2016}
+
+\begin{document}
+\HomeworkTitle
+
+\thispagestyle{empty}
+
+\begin{problem}{Squares \& Square Roots}
+  Calculate each of the following. Be careful with units.
+  \begin{itemize}
+    \item \(10^2 = \blankD\)
+    \item \({\left(\SI{2}{\metre}\right)}^2 = \blankD\)
+    \item \(\sqrt{36} = \blankD\)
+    \item \(\sqrt{\SI{81}{\metre\squared}} = \blankD\)
+  \end{itemize}
+\end{problem}
+
+\begin{problem}{Pythagorean Theorem}
+ Find \(x\). Use the Pythagorean theorem to find unknown sides.
+
+ \begin{center}
+   \begin{tikzpicture}
+     \coordinate (A) at (0, 0);
+     \coordinate (B) at (6, 0);
+     \coordinate (C) at (6, 2.5);
+     \coordinate (D) at (7.2, 1.6);
+     \draw[thick] (A) -- (B) node[midway,below] {\SI{12}{\metre}}
+                      -- (C)
+                      -- cycle node[midway,above] {\(x\)};
+     \draw[thick] (D) -- (B) node[midway,right] {\SI{4}{\metre}}
+                      -- (C)
+                      -- cycle node[at start,right=3pt] {\SI{3}{\metre}};
+     \tkzMarkRightAngle(A,B,C)
+     \tkzMarkRightAngle(B,D,C)
+   \end{tikzpicture}
+ \end{center}
+\end{problem}
+
+\begin{problem}{Challenge I}
+  Pythagoras thought that \(\sqrt{2}\) must be a rational number (that is, a
+  fraction). It is possible to get quite close --- for example,
+  \(\frac{99}{70}\) is almost \(\sqrt{2}\): \[
+    {\left(\frac{99}{70}\right)}^2 \approx 2.000205
+  \] but it turns out that there is no rational number (fraction) that is
+  exactly \(\sqrt{2}\). Using this fact, is there a rational number that is the
+  square root of \(8\)? Why or why not?
+\end{problem}
+
+\begin{problem}{Challenge II}
+  In this problem, we will look at the Pythagorean theorem from the point of
+  view of vectors. Let \(\mathbf{v}=(x, y)\) be a two-dimensional vector.
+  Define the ``norm'' of vector \(\|\mathbf{v}\|\) to be: \[ \|\mathbf{v}\| =
+  \sqrt{x^2 + y^2} \]
+
+  There are a lot of variables in the above, so don't worry if it's confusing.
+  Let's look at a few examples. If \(\mathbf{u} = (3, 4)\), then \[
+    \|\mathbf{u}\| = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5
+  \]
+
+  If \(\mathbf{v} = (12, 5)\), then \[
+    \|\mathbf{v}\| = \sqrt{12^2 + 5^2} = \sqrt{144 + 25} = \sqrt{169} = 13
+  \]
+
+  A good way to think about the norm is that it is the length of a vector. Note
+  in particular the similarity in the definition above and the Pythagorean
+  theorem. The diagram below shows vectors \(\mathbf{u}\) and \(\mathbf{v}\),
+  as defined above, and their norms:
+
+  \begin{center}
+    \begin{tikzpicture}
+      \draw[step=0.5cm,black!30] (0,0) grid (7,4);
+      \draw[line width=1mm,->] (0,0) -- (1.5,2) node[anchor=south]
+      {\(\|\mathbf{u}\|=5\)};
+      \draw[line width=1mm,->] (0,0) -- (6,2.5) node[anchor=north]
+      {\(\|\mathbf{v}\|=13\)};
+    \end{tikzpicture}
+  \end{center}
+
+  Say that \(\mathbf{w} = (8, 6)\). Then if you recall from two weeks ago, we
+  defined \(2\mathbf{w} = \mathbf{w} + \mathbf{w} = (16, 12)\).
+
+  \begin{itemize}
+    \item Find \(\|2\mathbf{w}\|\). (You may use a calculator.)
+    \item Find \(2\times\|\mathbf{w}\|\). If you did it correctly, this should
+    be the same as your answer above. Do you think this is always going to
+    happen for all vectors \(\mathbf{w}\)?
+    \item Make a convincing argument why your belief is correct, one way or the
+    other.
+  \end{itemize}
+\end{problem}
+
+\end{document}

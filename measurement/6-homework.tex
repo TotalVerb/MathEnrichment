@@ -1,0 +1,112 @@
+\documentclass[14pt,letterpaper]{article}
+
+\newcommand{\IncludePath}{../include}
+\input{\IncludePath/hmwk-template.tex}
+
+\title{Quiz Review}
+\author{Name: \underline{\hspace{5cm}}}
+\date{November 12, 2016}
+
+\begin{document}
+\HomeworkTitle
+
+\thispagestyle{empty}
+
+\begin{problem}{Triangle Angle Sum}
+ Find the angle marked by \(\alpha\). \hfill \(\alpha = \blankC \si{\degree}\)
+
+ \begin{center}
+   \begin{tikzpicture}
+     \coordinate (A) at (0:3);
+     \coordinate (B) at (0:0);
+     \coordinate (C) at (50:3);
+     \draw[thick] (A) -- (B) -- (C) -- cycle;
+     \pic [draw, thick,
+           "{\small\SI{50}{\degree}}", angle radius=1cm] {angle = A--B--C};
+     \pic [draw, thick,
+           "{\small\SI{65}{\degree}}", angle radius=1cm] {angle = C--A--B};
+     \pic [draw, thick,
+           "{\alpha}", angle radius=1cm] {angle = B--C--A};
+   \end{tikzpicture}
+ \end{center}
+\end{problem}
+
+\begin{problem}{Area of a Triangle}
+ Find the area of this triangle. \hfill \(A = \blankC \SI{\degree}\)
+
+ \begin{center}
+   \begin{tikzpicture}
+     \coordinate (A) at (6,0);
+     \coordinate (B) at (0,0);
+     \coordinate (C) at (7,3);
+     \coordinate (HC) at ($(B)!(C)!(A)$);
+     \draw[thick] (A) -- node[below] {\(6\)} (B) -- (C) -- cycle;
+     \draw[red,line width=.3mm]
+       (C) -- node[right,black] {\(3\)} (HC);
+     \tkzMarkRightAngle[draw=red](B,HC,C)
+   \end{tikzpicture}
+ \end{center}
+\end{problem}
+
+\begin{problem}{Area of Lattice Polygons}
+  Find the area of the shape below. Each grid square is
+  \SI{1}{\centi\metre\cubed}.
+  \hfill \(A = \blankC~\si{\centi\metre\cubed}\)
+
+  \begin{center}
+    \begin{tikzpicture}
+      \draw[step=1cm] (-0.3,-0.3) grid (15.3,3.3);
+      \draw[line width=1mm] (0,0) -- (2,3) -- (3,1) -- (5,2) -- (7,3) -- (8,1)
+      -- (11,1) -- (13,3) -- (15,0) -- cycle;
+    \end{tikzpicture}
+  \end{center}
+\end{problem}
+
+\begin{problem}{Challenge}
+  In past weeks, we saw that if \(\mathbf{v} = (x, y)\) is a vector, then we
+  define \[
+    2\mathbf{v} = \mathbf{v} + \mathbf{v} = (x + x, y + y) = (2x, 2y)
+  \] and again, for sake of example, if \(\mathbf{w} = (3, 4)\), then
+  \(2\mathbf{w} = (6, 8)\).
+
+  But of course, we can multiply vectors by other numbers also, not just \(2\).
+  In general, if \(a\) is a number, and \(\mathbf{v} = (x, y)\) is a vector,
+  then \(a\mathbf{v} = (ax, ay)\). The characters \(ax\) mean \(a \times x\);
+  we are leaving out the multiplication sign \(\times\) for convenience.
+
+  Let us do some examples first. Note \[
+    6(2, 4) = (6\times2, 6\times4) = (12, 24)
+  \] and \[
+    3(5, 10) = (3\times5, 3\times10) = (15, 30)
+  \]
+
+  Geometrically, multiplying vectors is like stretching that vector out. For
+  example, the diagram below shows \(\mathbf{u} = (3, 1)\) and a stretched-out
+  \(4\mathbf{u} = (12, 4)\).
+
+  \begin{center}
+    \begin{tikzpicture}
+      \draw[step=0.5cm,black!30] (0,0) grid (7,3);
+      \draw[line width=1mm,->,gray] (0,0) -- (6,2.0) node[anchor=south, black]
+      {\(4\mathbf{u}\)};
+      \draw[line width=1mm,->] (0,0) -- (1.5,0.5) node[anchor=south]
+      {\(\mathbf{u}\)};
+    \end{tikzpicture}
+  \end{center}
+
+  Say that \(\mathbf{u} = (3, 1)\) and \(\mathbf{w} = (2, 3)\). Then:
+
+  \begin{itemize}
+    \item Find \(5\mathbf{u}\).
+    \item Find \(5\mathbf{w}\).
+    \item By adding your responses to the two problems above, find
+    \(5\mathbf{u} + 5\mathbf{w}\).
+    \item Find \(\mathbf{u} + \mathbf{w}\).
+    \item By multiplying your response to the answer above by \(5\), find
+    \(5(\mathbf{u} + \mathbf{w})\).
+    \item If you did this problem correctly, your responses to the third and
+    fifth parts should be the same. Draw a picture to check this geometrically.
+  \end{itemize}
+\end{problem}
+
+\end{document}
