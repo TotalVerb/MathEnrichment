@@ -3,8 +3,10 @@
 \newcommand{\IncludePath}{../include}
 \input{\IncludePath/hmwk-template.tex}
 
+% \answerstrue % turn on for answers
+\defauthor
+
 \title{Angles I}
-\author{Name: \underline{\hspace{5cm}}}
 \date{October 1, 2016}
 
 \begin{document}
@@ -14,47 +16,47 @@
 
 \begin{problem}{Unit Conversion}
   Recall that \begin{itemize}
-    \item $\SI{1}{\kilo\metre}=\SI{1000}{\metre}$
-    \item $\SI{1}{\metre}=\SI{100}{\centi\metre}$
+    \item \(\SI{1}{\kilo\metre}=\SI{1000}{\metre}\)
+    \item \(\SI{1}{\metre}=\SI{100}{\centi\metre}\)
   \end{itemize}
   Using this information, what is \SI{3}{\kilo\metre} converted to centimetres?
-  \hfill \blankE \si{\centi\metre}
+  \hfill \Switch{\Ans{\SI{300000}{\centi\metre}}}{\blankE \si{\centi\metre}}
 \end{problem}
 
 \begin{problem}{Acute, Right, Obtuse}
  Circle the correct category for each angle.
 
  \begin{itemize}
-  \item \SI{123}{\degree} \hfill Acute~~Right~~Obtuse
-  \item \SI{88}{\degree} \hfill Acute~~Right~~Obtuse
-  \item \SI{90}{\degree} \hfill Acute~~Right~~Obtuse
+  \item \SI{123}{\degree} \hfill Acute~~Right~~\MCSelect{Obtuse}
+  \item \SI{88}{\degree} \hfill \MCSelect{Acute}~~Right~~Obtuse
+  \item \SI{90}{\degree} \hfill Acute~~\MCSelect{Right}~~Obtuse
  \end{itemize}
 \end{problem}
 
 \begin{problem}{Angle sum}
  \begin{itemize}
   \item The sum of an acute angle and a right angle is:
-        \hfill Acute~~Right~~Obtuse
+        \hfill Acute~~Right~~\MCSelect{Obtuse}
   \item Half of a right angle is:
-        \hfill Acute~~Right~~Obtuse
+        \hfill \MCSelect{Acute}~~Right~~Obtuse
  \end{itemize}
 \end{problem}
 
 \begin{problem}{Triangle Angle Sum}
  The sum of the angles of a triangle is \SI{180}{\degree}. Two of the angles
  measure \SI{25}{\degree} and \SI{140}{\degree}. What does the third angle
- measure?
+ measure? \Switch{\Ans{\SI{15}{\degree}}}{}
 \end{problem}
 
 \begin{problem}{Supplementary}
  Two angles are supplementary. One is \SI{20}{\degree} greater than the other.
- Find both angles.
+ Find both angles. \Switch{\Ans{\SI{80}{\degree}}, \Ans{\SI{100}{\degree}}}{}
 \end{problem}
 
 \begin{problem}{Lines I}
  Five lines are on a plane. No two lines are parallel, and no three (or more)
  lines intersect at a single point. How many points on the plane lie on more
- than one line?
+ than one line? \Switch{\Ans{10}}{}
 \end{problem}
 
 \begin{problem}{Lines II}
@@ -62,7 +64,10 @@
  then the resulting lines do intersect. (``Extending'' a ray to a line means
  continuing the ray from its endpoint, but in the opposite direction of the
  ray. The resulting object extends infinitely in both directions, and so is a
- line.)
+ line.) \Switch{\begin{center}\begin{tikzpicture}
+  \draw[->] (0,0) -- (2,0);
+  \draw[->] (3,-3) -- (3,-1);
+ \end{tikzpicture}\end{center}}{}
 \end{problem}
 
 \begin{problem}{Challenge}
@@ -75,12 +80,14 @@ The sum of the interior angles of a triangle is \SI{180}{\degree}.
 
 \begin{enumerate}
  \item What is the sum of interior angles of a rectangle?
+ \Switch{\Ans{\SI{360}{\degree}}}{}
  \item Use the picture to show that the sum of interior angles of any pentagon
  is \SI{540}{\degree}.
  \item Draw an octagon (eight-sided shape). What is the sum of its interior
- angles?
+ angles? \Switch{\Ans{\SI{1080}{\degree}}}{}
  \item When one side is added to a shape (for example, changing a triangle
  [$3$] to a quadrilateral [$4$]), by how much does the angle sum change? Why?
+ \Switch{\Ans{\SI{180}{\degree}}}{}
 \end{enumerate}
 
 \end{problem}

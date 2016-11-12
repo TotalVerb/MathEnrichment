@@ -1,2 +1,5 @@
 \newcommand{\Ans}[1]{\framebox{$#1$}}
 \newcommand{\AnsT}[1]{\framebox{#1}}
+\newif\ifanswers
+\newcommand{\Switch}[2]{\ifanswers#1\else#2\fi}
+\newcommand{\MCSelect}[1]{\Switch{\AnsT{#1}}{#1}}

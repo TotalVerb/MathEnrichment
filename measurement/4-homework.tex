@@ -3,8 +3,10 @@
 \newcommand{\IncludePath}{../include}
 \input{\IncludePath/hmwk-template.tex}
 
+\answerstrue % turn on for answers
+\defauthor
+
 \title{Area}
-\author{Name: \underline{\hspace{5cm}}}
 \date{October 29, 2016}
 
 \begin{document}
@@ -20,9 +22,12 @@
   \hline
   Base & Height & Area \\
   \hline
-  \SI{10}{\centi\metre} & \SI{20}{\centi\metre} & \\
-  & \SI{10}{\metre} & \SI{60}{\metre\squared} \\
-  \SI{5}{\kilo\metre} & & \SI{15}{\kilo\metre\squared} \\
+  \SI{10}{\centi\metre} & \SI{20}{\centi\metre} &
+  \Switch{\Ans{\SI{100}{\centi\metre\squared}}}{} \\
+  \Switch{\Ans{\SI{12}{\metre}}}{} & \SI{10}{\metre} &
+  \SI{60}{\metre\squared} \\
+  \SI{5}{\kilo\metre} & \Switch{\Ans{\SI{6}{\kilo\metre}}}{} &
+  \SI{15}{\kilo\metre\squared} \\
   \hline
  \end{tabular}
  \end{center}
@@ -36,9 +41,12 @@
   \hline
   Base & Height & Area \\
   \hline
-  \SI{7}{\metre} & \SI{8}{\metre} & \\
-  \SI{5}{\milli\metre} & & \SI{50}{\milli\metre\squared} \\
-  & \SI{3}{\mega\metre} & \SI{36}{\mega\metre\squared} \\
+  \SI{7}{\metre} & \SI{8}{\metre} &
+  \Switch{\Ans{\SI{56}{\metre\squared}}}{} \\
+  \SI{5}{\milli\metre} & \Switch{\Ans{\SI{10}{\milli\metre}}}{} &
+  \SI{50}{\milli\metre\squared} \\
+  \Switch{\Ans{\SI{12}{\mega\metre}}}{} & \SI{3}{\mega\metre} &
+  \SI{36}{\mega\metre\squared} \\
   \hline
  \end{tabular}
  \end{center}
@@ -51,11 +59,12 @@
  ``No'' if no rectangles meet the description.
 
  \begin{itemize}
-  \item \blankC~rectangles are parallelograms. \hfill All~~Some~~No
-  \item \blankC~rectangles are squares. \hfill All~~Some~~No
+  \item \blankC~rectangles are parallelograms. \hfill \MCSelect{All}~~Some~~No
+  \item \blankC~rectangles are squares. \hfill All~~\MCSelect{Some}~~No
   \item The interior angles of \blankC~rectangles sum to \SI{360}{\degree}.
-  \hfill All~~Some~~No
-  \item \blankC~rectangles have $4$ obtuse angles. \hfill All~~Some~~No
+  \hfill \MCSelect{All}~~Some~~No
+  \item \blankC~rectangles have \(4\) obtuse angles.
+  \hfill All~~Some~~\MCSelect{No}
  \end{itemize}
 \end{problem}
 
@@ -67,8 +76,10 @@
   \hline
   Upper base & Lower base & Height & Area \\
   \hline
-  \SI{5}{\metre} & \SI{7}{\metre} & \SI{5}{\metre} & \\
-  \SI{8}{\metre} & \SI{12}{\metre} & \SI{17}{\metre} & \\
+  \SI{5}{\metre} & \SI{7}{\metre} & \SI{5}{\metre} &
+  \Switch{\Ans{\SI{30}{\metre\squared}}}{} \\
+  \SI{8}{\metre} & \SI{12}{\metre} & \SI{17}{\metre} &
+  \Switch{\Ans{\SI{170}{\metre\squared}}}{} \\
   \hline
  \end{tabular}
  \end{center}
@@ -78,18 +89,21 @@
   A \emph{lattice} polygon is a polygon whose vertices are all on a grid. To
   find the area of these shapes, split them up into rectangles and triangles,
   and add or subtract areas. Sometimes, you will need to add areas, and other
-  times you will need to subtract them. Find the area of each lattice polygon
-  shown.
+  times you will need to subtract them. If each grid cell is
+  \SI{1}{\centi\metre\squared}, then find the area of each lattice polygon
+  shown. \Switch{\Ans{\SI{15}{\centi\metre\squared}},
+  \Ans{\SI{5}{\centi\metre\squared}},
+  \Ans{\SI{14}{\centi\metre\squared}}}{}
 
   \begin{center}
     \begin{tikzpicture}
       \draw[step=1cm] (-0.3,-0.3) grid (15.3,4.3);
       \draw[line width=1mm] (0,0) -- (0,3) -- (6,4) -- (5,0) -- (4,2) -- (2,0)
-      -- (1,1) -- (0,0) -- (0,3);
-      \draw[line width=1mm] (6,0) -- (6,2) -- (9,4) -- (7,2) -- (9,0) -- (6,0)
-      -- (6,2);
+      -- (1,1) -- cycle;
+      \draw[line width=1mm] (6,0) -- (6,2) -- (9,4) -- (7,2) -- (9,0)
+      -- cycle;
       \draw[line width=1mm] (8,2) -- (13,4) -- (13,2) -- (15,4) -- (15,0) --
-      (8,2) -- (13,4);
+      cycle;
     \end{tikzpicture}
   \end{center}
 \end{problem}
@@ -97,6 +111,7 @@
 \begin{problem}{Challenge}
  What's the area of this kite? (Note: The kite is the four-sided shape outlined
  in bold. Lengths refer to the entire diagonal, not just half of it.)
+ \Switch{\Ans{\SI{750}{\metre\squared}}}{}
 
  \begin{center}
    \begin{tikzpicture}

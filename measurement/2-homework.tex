@@ -3,8 +3,10 @@
 \newcommand{\IncludePath}{../include}
 \input{\IncludePath/hmwk-template.tex}
 
+% \answerstrue % turn on for answers
+\defauthor
+
 \title{Angles II}
-\author{Name: \underline{\hspace{5cm}}}
 \date{October 8, 2016}
 
 \begin{document}
@@ -14,7 +16,7 @@
 
 \begin{problem}{Unit Conversion}
   Recall that one turn is \SI{360}{\degree}. What is \(\frac{4}{9}\) of a turn
-  in degrees? \hfill \blankE \si{\degree}
+  in degrees? \Switch{\Ans{\SI{160}{\degree}}}{\hfill \blankE \si{\degree}}
 \end{problem}
 
 \begin{problem}{Angle Sum of a Triangle I}
@@ -22,11 +24,11 @@
 
  \begin{itemize}
   \item \SI{110}{\degree}, \SI{36}{\degree}, \SI{8}{\degree}
-  \hfill Yes~~No
+  \hfill Yes~~\MCSelect{No}
   \item \SI{100}{\degree}, \SI{53}{\degree}, \SI{27}{\degree}
-  \hfill Yes~~No
+  \hfill \MCSelect{Yes}~~No
   \item \SI{108}{\degree}, \SI{16}{\degree}, \SI{150}{\degree}
-  \hfill Yes~~No
+  \hfill Yes~~\MCSelect{No}
  \end{itemize}
 \end{problem}
 
@@ -36,9 +38,9 @@
 
  \begin{itemize}
   \item A triangle has two obtuse angles.
-  \hfill Possible~~Not Possible
+  \hfill Possible~~\MCSelect{Not Possible}
   \item A triangle has three acute angles.
-  \hfill Possible~~Not Possible
+  \hfill \MCSelect{Possible}~~Not Possible
  \end{itemize}
 \end{problem}
 
@@ -47,11 +49,11 @@
 
  \begin{itemize}
   \item \SI{85}{\degree}, \SI{85}{\degree},
-  \blankC \si{\degree}
+  \Switch{\Ans{\SI{10}{\degree}}}{\blankC \si{\degree}}
   \item \SI{30}{\degree}, \SI{60}{\degree},
-  \blankC \si{\degree}
+  \Switch{\Ans{\SI{90}{\degree}}}{\blankC \si{\degree}}
   \item \SI{90}{\degree}, \SI{45}{\degree},
-  \blankC \si{\degree}
+  \Switch{\Ans{\SI{45}{\degree}}}{\blankC \si{\degree}}
  \end{itemize}
 \end{problem}
 
@@ -59,16 +61,17 @@
  What is the sum of the interior angles of each following polygon?
 
  \begin{itemize}
-  \item Hexagon ($6$-sided)
-  \hfill Sum: \blankC \si{\degree}
-  \item Hendecagon ($11$-sided)
-  \hfill Sum: \blankC \si{\degree}
+  \item Hexagon (\(6\)-sided)
+  \hfill Sum: \Switch{\Ans{\SI{720}{\degree}}}{\blankC \si{\degree}}
+  \item Hendecagon (\(11\)-sided)
+  \hfill Sum: \Switch{\Ans{\SI{1620}{\degree}}}{\blankC \si{\degree}}
  \end{itemize}
 \end{problem}
 
 \begin{problem}{Hexagon}
  Can five of the six angles of a hexagon measure \SI{30}{\degree},
  \SI{40}{\degree}, \SI{50}{\degree}, \SI{60}{\degree}, and \SI{70}{\degree}?
+ \Switch{\AnsT{No}}{}
 \end{problem}
 
 \begin{problem}{Challenge I}
@@ -79,22 +82,23 @@
  \begin{itemize}
   \item \SI{20}{\degree}, \SI{50}{\degree}, and \SI{110}{\degree} are the three
   interior angles of a convex triangle. What is the sum of the exterior angles
-  of this triangle?
+  of this triangle? \Switch{\Ans{\SI{360}{\degree}}}{}
   \item Pick three other angles that add up to \SI{180}{\degree} and find the
-  sum of exterior angles of the triangle that contains those angles. What do you
-  notice?
+  sum of exterior angles of the triangle that contains those angles. What do
+  you notice? \Switch{\Ans{\SI{360}{\degree}}}{}
   \item What is the sum of the exterior angles of a convex polygon? Hint: Pick
-  $5$ angles that sum to \SI{540}{\degree}. Calculate the exterior angles and
-  add those up.
-  \item What is true about the sum of exterior angles of any polygon? Why do you
-  think this is the case?
+  \(5\) angles that sum to \SI{540}{\degree}. Calculate the exterior angles and
+  add those up. \Switch{\Ans{\SI{360}{\degree}}}{}
+  \item What is true about the sum of exterior angles of any polygon? Why do
+  you think this is the case? \Switch{\Ans{\SI{360}{\degree}}}{}
  \end{itemize}
 \end{problem}
 
 \begin{problem}{Challenge II}
   An \emph{equiangular} polygon is a polygon whose angles are all equal. There
-  is a number $n$ with the property that in an $n$-sided equiangular polygon,
-  all the angles measure \SI{175}{\degree}. What is $n$?
+  is a number \(n\) with the property that in an \(n\)-sided equiangular
+  polygon, all the angles measure \SI{175}{\degree}. What is \(n\)?
+  \Switch{\Ans{72}}{}
 \end{problem}
 
 \end{document}
