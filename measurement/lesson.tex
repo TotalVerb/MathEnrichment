@@ -470,7 +470,39 @@ TK.
 
 \chapter{Length and Area}
 
+In previous units, we looked at how to measure angles. Angles are a way of
+measuring the size of the gap between two intersecting rays. We will now look
+at another important geometric quantity: length.
+
+We have all encountered length in everyday life. Some things are longer than
+others. Geometrically, length is the measure of the size of a line segment.
+Figure~\ref{ar:different-lengths} depicts two line segments with different
+lengths. We can see from the diagram that line segment \(B\) is longer than
+line segment \(A\), but how can we measure that? Our goal is to attach a number
+to both line segments so we can say more precisely how long they are.
+
+\begin{figure}
+  \begin{tikzpicture}
+    \draw[thick] (0,0) -- node[below] {A} (2,0);
+    \draw[thick] (-1,-1) -- node[below] {B} (3,-1);
+  \end{tikzpicture}
+
+  \caption{Two line segments of different lengths; \(B\) is longer than \(A\)}
+  \label{ar:different-lengths}
+\end{figure}
+
 TK.
+
+\section{Units of Length}
+
+TK.
+
+\section{Distance}
+
+In past sections, we have looked at how to measure the length of particular
+line segments. Another way to think of the length of a line segment is that it
+is the distance between the two ends. TK.
+
 
 \section{Area of a Rectangle}
 
@@ -719,7 +751,45 @@ TK.
 
 \section{Squares and Square Roots}
 
-Before continuing in geometry, we will talk about some arithmetic. TK.
+Before continuing in geometry, we will talk about some arithmetic. Recall that
+the area of a rectangle is given by \[
+  A = \ell \times w
+\]
+
+Then, what is the area of a square? All squares are rectangles: they have two
+sets of parallel sides which meet at right angles. In fact, we can use the
+formula for the area of a rectangle. This is just a special case where the
+length and the width happen to be the same number. Figure~\ref{gt:square-s}
+depicts a square with side length \(s\). Then the width and the length of this
+square are both \(s\). That is, \[
+  \ell = w = s
+\]
+
+Now to calculate the area of the square, we can use the formula for the area of
+a rectangle: \[
+  A = \ell \times w = s \times s
+\] and so the result is simply the side length multiplied with itself.
+
+It turns out that multiplying numbers by themselves is common enough that we
+give this operation its own name and notation. If \(n\) is a number, then we
+denote by \(n^2\) (pronounced ``\(n\) squared'') the quantity \(n\times n\). We
+are simply defining this notation, which will save us some writing.
+
+Using this notation, the formula for the area of a square is given by
+\begin{equation}
+  A = s^2
+\end{equation} where \(s\) is the side length of the square.
+
+We must be careful when squaring quantities with units, because squaring is a
+multiplication, and so we must multiply the unit with itself too. This is where
+the notation \si{\metre\squared} mentioned in the last unit comes from. TK.
+
+\begin{figure}
+  \fgQuadrilateral{(0,0)}{(0,2)}{(2,2)}{(2,0)}
+
+  \caption{A square with side length \(s\)}
+  \label{gt:square-s}
+\end{figure}
 
 \section{Right Triangles}
 
