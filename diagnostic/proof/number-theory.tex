@@ -1,0 +1,118 @@
+\documentclass[12pt,letterpaper]{article}
+
+\newcommand{\IncludePath}{../../include}
+\input{\IncludePath/hmwk-template.tex}
+
+\title{Number Theory}
+\author{By Fengyang Wang for Saturday Sessions}
+\date{November 26, 2016}
+
+\newcommand{\im}{i}
+
+\begin{document}
+\HomeworkTitle
+\begin{problem}{Factorization I}
+  \begin{enumerate}
+    \item
+    List all the (positive integer) factors of \(20\):
+   \blankB, \blankB,
+   \blankB, \blankB,
+   \blankB, \blankB
+   \item
+    A number is \emph{perfect} if the sum of its factors is equal to twice the
+    number itself. For example, \(6\) is perfect because
+    \(1+2+3+6=12=6\times2\). Which of the following is a perfect number:
+    \(10\), \(17\), \(28\)?
+   \item
+   Between \(1\) and \(1000\) (inclusive), how many numbers are divisible by
+   all of \(2\), \(3\), \(4\), and \(6\)? \Switch{\Ans{83}}{}
+  \item \(2^{10}=1024\). How many (positive integer) factors does \(1024\)
+  have?
+ \end{enumerate}
+\end{problem}
+
+\begin{problem}{Factorization II}
+
+The notation $5!$ (pronounced ``five factorial'') means the product of all
+integers from $1$ to $5$; that is, $1 \times 2 \times 3 \times 4 \times 5$.
+Similarly, $3! = 1 \times 2 \times 3$ and $100! = 1 \times 2 \times 3
+\times\ldots\times 99 \times 100$.
+
+\begin{enumerate}
+ \item Find the prime factorization of $4!$. \hfill
+ $\blankB \times \blankB \times \blankB \times \blankB$
+ \item In the prime factorization of $100!$, how many $2$'s are there? (Hint:
+ Do not write out the entire prime factorization! Which numbers in the product
+ are composite? How many of those composite numbers contain a prime factor of
+ $2$? Which of those contain more than one $2$ in their prime factorization?)
+\end{enumerate}
+
+\end{problem}
+
+\begin{problem}{Palindromes}
+ A \emph{palindrome} is a number that reads the same forwards and backwards in
+ decimal notation. For example, $12321$ is a palindrome, as is $7227$ or
+ $888888$.
+
+ \begin{enumerate}
+  \item How many two-digit palindromes are there? ($00=0$ does not have two
+  digits.)
+  \item What two numbers are factors of all two-digit palindromes?
+  \item $1221$ and $9999$ are two examples of four-digit palindromes. How many
+  four-digit palindromes are there? (Do not include palindromes starting with
+  $0$.)
+  \item How many four-digit palindromes are even?
+  \item How many four-digit palindromes are divisible by $11$?
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{B\'ezout's Lemma}
+ There is a very interesting property of the GCD called B\'ezout's Lemma. It
+ says that if $a$ and $b$ are integers, and $\gcd(a, b) = d$, then there are
+ some other integers $x$ and $y$ so that $ax + by = d$. Here are two examples.
+
+ \begin{enumerate}
+  \item Compute $\gcd(18, 16) = \blankC$
+  \item Fill in the blanks with integers so that the following equation is true:
+  \[ 18 \times \blankC + 16 \times (- \blankC) = 2 \]
+  \item Fill in the blanks with integers so that the following equation is true:
+  \[ 20 \times \blankC + 28 \times (- \blankC) = 4 \]
+ \end{enumerate}
+\end{problem}
+
+\begin{problem}{Coprimeness}
+
+ We say that two numbers $a$ and $b$ are relatively prime (or co-prime for
+ short) if $\gcd(a, b) = 1$. That is, if two numbers have no common factors
+ except $1$, then they are co-prime.
+
+ \begin{enumerate}
+  \item Are $3$ and $6$ co-prime? \(8\) and \(13\)? \(9\) and \(16\)?
+  \item Fill in the blanks with integers so that the following equation is true:
+  \[ 22331115 \times 9 \times \blankC + 22331115 \times 16 \times (-\blankC) =
+  22331115 \]
+  \item Given that $9 \mid 16\times22331115$, prove that $9\mid22331115$?
+ \end{enumerate}
+\end{problem}
+
+\begin{problem}{Challenge}
+  \begin{enumerate}
+    \item
+ A \emph{semiprime} number is a number which is the product of exactly two
+ prime numbers. For example, $9=3\times3$ is semiprime, as is $38=2\times19$.
+ Say $9409$ and $8633$ are two semiprime numbers that share a prime factor.
+ Find their shared prime factor.
+ \item How many numbers between $1$ and $100000$ (including both endpoints)
+ are there that yield a remainder of $1$ when divided by $2$, $3$, $4$, $5$,
+ $6$, $7$, and $8$?
+ \item (NCC 2016 F6) Find the smallest positive integer \(n\) that satisfies \[
+ \gcd(n^2 + 4n - 5, 2n^2 + 9n - 5) = 2016 \] where \(\gcd(a, b)\) denotes the
+ greatest common divisor of \(a\) and \(b\).
+ \item (NCC 2016 F8) Determine the number of \(4\)-tuples \((a, b, c, d)\) of
+(not necessarily distinct) positive integers whose product, \(abcd\), is
+\(2016\). You may use the fact that \(2016 = 2^5 \cdot 3^2 \cdot 7\).
+  \item What is the unit's digit of \(7^7\)?
+ \end{enumerate}
+\end{problem}
+
+\end{document}

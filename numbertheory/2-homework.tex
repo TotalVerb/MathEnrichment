@@ -3,8 +3,10 @@
 \newcommand{\IncludePath}{../include}
 \input{\IncludePath/hmwk-template.tex}
 
+% \answerstrue % turn on for answers
+\defauthor
+
 \title{Divisibility}
-\author{Name: \underline{\hspace{5cm}}}
 \date{March 5, 2016}
 
 \begin{document}
@@ -13,49 +15,50 @@
 
 \thispagestyle{empty}
 
-The symbol $\mid$ means ``divides''. If $A$ and $B$ are two numbers, then $A$
-divides $B$ when $B \div A$ has no remainder.
+The symbol \(\mid\) means ``divides''. If \(A\) and \(B\) are two numbers, then
+\(A\) divides \(B\) when \(B \div A\) has no remainder.
 
 A number is a \emph{factor} of another number if it divides that number. For
-example, $3$ is a \emph{factor} of $9$ because $3 \mid 9$. A number is a
+example, \(3\) is a \emph{factor} of \(9\) because \(3 \mid 9\). A number is a
 \emph{multiple} of another number if the other number divides it. For example,
-$9$ is a \emph{multiple} of $3$.
+\(9\) is a \emph{multiple} of \(3\).
 
-$1$ is a \emph{factor} of every whole number, and $0$ is a \emph{multiple} of
-every whole number. The \emph{transitivity} principle says that if $a$, $b$, and
-$c$ are integers, and if $a \mid b$ and $b \mid c$, then $a \mid c$.
+\(1\) is a \emph{factor} of every whole number, and \(0\) is a \emph{multiple}
+of every whole number. The \emph{transitivity} principle says that if \(a\),
+\(b\), and \(c\) are integers, and if \(a \mid b\) and \(b \mid c\), then \(a
+\mid c\).
 
 \begin{problem}{Divisibility}
  Are all of the following divisibility statements correct or incorrect? If
  incorrect, change the divisibility statement so that it becomes correct.
 
  \begin{enumerate}
-  \item $6 \mid 2$
-  \item $4 \mid 40$
-  \item $3 \mid 99$
-  \item $100 \mid 7801$
+  \item \(6 \mid 2\)
+  \item \(4 \mid 40\)
+  \item \(3 \mid 99\)
+  \item \(100 \mid 7801\)
  \end{enumerate}
 \end{problem}
 
-\begin{problem}{Multiples of $3$ and $6$}
-
+\begin{problem}{Multiples of \(3\) and \(6\)}
  \begin{itemize}
-  \item Complete this list of multiples of $3$: $0$, $3$, $6$,
-  \underline{\hspace{2em}}, \underline{\hspace{2em}}, \underline{\hspace{2em}},
-  $18$, \ldots
+  \item Complete this list of multiples of \(3\): \(0\), \(3\), \(6\),
+  \blankB, \blankB, \blankB,
+  \(18\), \ldots
 
-  \item Complete this list of multiples of $6$: $0$, $6$, $12$,
-  \underline{\hspace{2em}}, \underline{\hspace{2em}}, \underline{\hspace{2em}},
-  $36$, \ldots
+  \item Complete this list of multiples of \(6\): \(0\), \(6\), \(12\),
+  \blankB, \blankB, \blankB,
+  \(36\), \ldots
  \end{itemize}
 \end{problem}
 
 \begin{problem}{Transititity}
- Let $a$, $b$, and $c$ be three integers. Use transitivity to verify the
+ Let \(a\), \(b\), and \(c\) be three integers. Use transitivity to verify the
  following statements:
  \begin{itemize}
-  \item If $a \mid b$, then $a \mid bc$.
-  \item If $a \mid b$, and $b \mid c$, and $c \mid 10000$, then $a \mid 10000$.
+  \item If \(a \mid b\), then \(a \mid bc\).
+  \item If \(a \mid b\), and \(b \mid c\), and \(c \mid 10000\), then \(a \mid
+  10000\).
  \end{itemize}
 \end{problem}
 
@@ -69,40 +72,41 @@ $c$ are integers, and if $a \mid b$ and $b \mid c$, then $a \mid c$.
  \end{center}
 
  \begin{enumerate}
-  \item The rectangle has area \underline{\hspace{4em}} square units.
-  \item $7$ is a \underline{\hspace{10em}} of the rectangle's area.
-  \item The rectangle's area is a \underline{\hspace{10em}} of $10$.
+  \item The rectangle has area \blankD square units.
+  \item \(7\) is a \underline{\hspace{10em}} of the rectangle's area.
+  \item The rectangle's area is a \underline{\hspace{10em}} of \(10\).
  \end{enumerate}
 \end{problem}
 
-\begin{problem}{Factors of $20$}
- List all the factors of $20$:
- \underline{\hspace{2em}}, \underline{\hspace{2em}},
- \underline{\hspace{2em}}, \underline{\hspace{2em}},
- \underline{\hspace{2em}}, \underline{\hspace{2em}}
+\begin{problem}{Factors of \(20\)}
+ List all the factors of \(20\):
+ \blankB, \blankB,
+ \blankB, \blankB,
+ \blankB, \blankB
 \end{problem}
 
 \begin{problem}{Perfect Number}
- A number is \emph{perfect} if the sum of its factors is equal to twice the
- number itself. For example, $6$ is perfect because $1+2+3+6=12=6\times2$. Which
- of the following is a perfect number: $10$, $17$, $28$?
+  A number is \emph{perfect} if the sum of its factors is equal to twice the
+  number itself. For example, \(6\) is perfect because \(1+2+3+6=12=6\times2\).
+  Which of the following is a perfect number: \(10\), \(17\), \(28\)?
 \end{problem}
 
 \begin{problem}{Challenge I}
- Define a number to be ``cool'' if it is divisible by all of $2$, $3$, $4$, and
- $6$. For example, $60$ is a cool number but $100$ is not. Between $1$ and
- $1000$ (including both $1$ and $1000$), how many numbers are cool? \Ans{83}
+ Define a number to be ``cool'' if it is divisible by all of \(2\), \(3\),
+ \(4\), and \(6\). For example, \(60\) is a cool number but \(100\) is not.
+ Between \(1\) and \(1000\) (including both \(1\) and \(1000\)), how many
+ numbers are cool? \Switch{\Ans{83}}{}
 \end{problem}
 
 \begin{problem}{Challenge II}
  \begin{enumerate}
-  \item How many factors does $1$ have?
-  \item How many factors does $2$ have?
-  \item How many factors does $4$ have?
-  \item How many factors does $8$ have?
-  \item The notation $2^{10}$ means $\underbrace{ 2\times2\times2\times
-  \ldots\times2}_\text{$10$ twos}$; that is, $10$ twos multiplied together.
-  $2^{10}=1024$. How many factors does $1024$ have?
+  \item How many factors does \(1\) have?
+  \item How many factors does \(2\) have?
+  \item How many factors does \(4\) have?
+  \item How many factors does \(8\) have?
+  \item The notation \(2^{10}\) means \(\underbrace{ 2\times2\times2\times
+  \ldots\times2}_{10\text{ twos}}\); that is, \(10\) twos multiplied together.
+  \(2^{10}=1024\). How many factors does \(1024\) have?
  \end{enumerate}
 \end{problem}
 
