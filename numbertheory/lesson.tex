@@ -45,8 +45,8 @@ familiar to the students. They require explanation.
 
 Number Theory is the study of \glspl{integer} and problems based on the
 integers. Firstly, what is an integer? We are familiar with the whole numbers,
-which can be drawn on the number line (see Figure~\ref{nt-int:pnumberline}). The
-whole numbers begin with $0$ and continue $1$, $2$, $3$, and so on.
+which can be drawn on the number line (see Figure~\ref{nt-int:pnumberline}).
+The whole numbers begin with \(0\) and continue \(1\), \(2\), \(3\), and so on.
 
 \begin{figure}
  \fgNumberLine{0}{8}
@@ -55,12 +55,13 @@ whole numbers begin with $0$ and continue $1$, $2$, $3$, and so on.
  \label{nt-int:pnumberline}
 \end{figure}
 
-We may now add in the negative numbers, $-1$, $-2$, $-3$, and so on. If these
-numbers are considered together with the whole numbers, then we have a full
-number line that contains all the integers (see
+We may now add in the negative numbers, \(-1\), \(-2\), \(-3\), and so on. If
+these numbers are considered together with the whole numbers, then we have a
+full number line that contains all the integers (see
 Figure~\ref{nt-int:inumberline}). For most of this unit, we will work with
-positive integers only, which start at $1$ and continue $2$, $3$, $4$, and so
-on.
+positive integers only, which start at \(1\) and continue \(2\), \(3\), \(4\),
+and so on. Note, in particular, that \(0\) is neither a positive integer nor a
+negative integer.
 
 \begin{figure}
  \fgNumberLine{-4}{4}
@@ -73,34 +74,34 @@ Many of the topics in number theory are based off the operations of
 multiplication and division. Consider a multiplication expression, such as \[ 7
 \times 9 = 63 \]
 
-In this expression, $7$ is the \gls{multiplicand}, $9$ is the \gls{multiplier},
-and $63$ is the \gls{product}. An important property of multiplication is that
-it is commutative, which means we may switch the order. That is, \[ 9 \times 7 =
-7 \times 9 \]
+In this expression, \(7\) is the \gls{multiplicand}, \(9\) is the
+\gls{multiplier}, and \(63\) is the \gls{product}. An important property of
+multiplication is that it is commutative, which means we may switch the order.
+That is, \[ 9 \times 7 = 7 \times 9 \]
 
-Before we continue, it is important to have a good grasp of what remainders are,
-and to introduce some new notation. Recall first that division is the operation
-of repeated subtraction, like how multiplication is the operation of repeated
-addition.
+Before we continue, it is important to have a good grasp of what remainders
+are, and to introduce some new notation. Recall first that division is the
+operation of repeated subtraction, like how multiplication is the operation of
+repeated addition.
 
-When we divide $20$ by $4$, we count how many groups of $4$ are needed to make
-$20$. We know that $4 \times 5 = 20$. This means that it takes $5$ groups of $4$
-to make $20$. So $20 \div 4 = 5$.
+When we divide \(20\) by \(4\), we count how many groups of \(4\) are needed to
+make \(20\). We know that \(4 \times 5 = 20\). This means that it takes \(5\)
+groups of \(4\) to make \(20\). So \(20 \div 4 = 5\).
 
-Sometimes the numbers might not work out perfectly. Let's try dividing $20$ by
-$3$. If we make $7$ groups of $3$, the total number would be $3 \times 7 = 21$.
-But this is too big. If we make $6$ groups of $3$, the total number would be $3
-\times 6 = 18$. But this is too small. So we can make six groups, but we'd then
-have $20 - 18 = 2$ left over.
+Sometimes the numbers might not work out perfectly. Let's try dividing \(20\)
+by \(3\). If we make \(7\) groups of \(3\), the total number would be \(3
+\times 7 = 21\). But this is too big. If we make \(6\) groups of \(3\), the
+total number would be \(3 \times 6 = 18\). But this is too small. So we can
+make six groups, but we'd then have \(20 - 18 = 2\) left over.
 
-We say that when we divide $20$ by $3$, our \emph{quotient} is $6$ because we
-can make $6$ groups of $3$ in total. And then we say that our \emph{remainder}
-is $2$ because after making $6$ groups of $3$, we have $2$ left over. We can
-also write this as $20 \div 3 = 6 \operatorname{R} 2$. The ``R'' stands for
-``remainder''.
+We say that when we divide \(20\) by \(3\), our \emph{quotient} is \(6\)
+because we can make \(6\) groups of \(3\) in total. And then we say that our
+\emph{remainder} is \(2\) because after making \(6\) groups of \(3\), we have
+\(2\) left over. We can also write this as \(20 \div 3 = 6 \operatorname{R}
+2\). The ``R'' stands for ``remainder''.
 
 Suppose we didn't care what the quotient was; only the remainder is important.
-Then we can write that as $16 \bmod 5 = 1$. We don't care how many groups we
+Then we can write that as \(16 \bmod 5 = 1\). We don't care how many groups we
 made, but we do care that one was left over after making those groups.
 
 The study of remainders is very useful for several major applications, some of
@@ -145,28 +146,30 @@ will also approach the problem algebraically. Do not be alarmed by the presence
 of letters along with numbers. Unless otherwise stated, a letter is simply a
 placeholder for a number.
 
-An even number is a number of the form $2n$, where $n$ is any integer. The
-expression $2n$ means $2\times n$; we omit the $\times$ so that it is faster to
-read and write.
+An even number is a number of the form \(2n\), where \(n\) is any integer. The
+expression \(2n\) means \(2\times n\); we omit the \(\times\) so that it is
+faster to read and write.
 
-An odd number is a number of the form $2n+1$, where $n$ is any integer. The
-expression $2n+1$ means $(2\times n) + 1$. We perform the multiplication first
-because of the order of operations.
+An odd number is a number of the form \(2n+1\), where \(n\) is any integer. The
+expression \(2n+1\) means \((2\times n) + 1\). We perform the multiplication
+first because of the order of operations.
 
 \subsection{Determining Parity}
+
 It is easy to determine whether a number is even or odd. Let's start with small
-examples first. We know $4=2\times2$, so it's even. We know $7=2\times3+1$, so
-it's odd. A number is either even or odd, but it's never both. We only need to
-divide by $2$: if it evenly divides, then it's even, and otherwise, it's odd.
+examples first. We know \(4=2\times2\), so it's even. We know \(7=2\times3+1\),
+so it's odd. A number is either even or odd, but it's never both. We only need
+to divide by \(2\): if it evenly divides, then it's even, and otherwise, it's
+odd.
 
 \begin{problem}{Odd or Even I}
  Are each of the following numbers even or odd?
 
  \begin{itemize}
-  \item $10$ \hfill \AnsT{Even}~~~Odd
-  \item $0$ \hfill \AnsT{Even}~~~Odd
-  \item $19$ \hfill Even~~~\AnsT{Odd}
-  \item $-1$ \hfill Even~~~\AnsT{Odd}
+  \item \(10\) \hfill \AnsT{Even}~~~Odd
+  \item \(0\) \hfill \AnsT{Even}~~~Odd
+  \item \(19\) \hfill Even~~~\AnsT{Odd}
+  \item \(-1\) \hfill Even~~~\AnsT{Odd}
  \end{itemize}
 \end{problem}
 
@@ -177,17 +180,17 @@ odd, then the whole number is odd. Why does this work? We will see very soon.
 \subsection{Sums \& Differences}
 
 What happens if we add two odd numbers? Two even numbers? Let's find out. Say
-$2n+1$ and $2m+1$ are two odd numbers. We're using letters here as placeholders;
-$n$ and $m$ can both take the value of any integer. Then \[
- (2n+1) + (2m+1) = 2n + 2m + 1 + 1 = 2n + 2m + 2 = 2(n+m+1)
-\] but $n+m+1$ is an integer, and therefore the sum is even.
+\(2n+1\) and \(2m+1\) are two odd numbers. We're using letters here as
+placeholders; \(n\) and \(m\) can both take the value of any integer. Then \[
+(2n+1) + (2m+1) = 2n + 2m + 1 + 1 = 2n + 2m + 2 = 2(n+m+1) \] but \(n+m+1\) is
+an integer, and therefore the sum is even.
 
 We can use a very similar strategy to find the sum of two even numbers. This is
-even easier. Say $2n$ and $2m$ are two even numbers. Then \[
+even easier. Say \(2n\) and \(2m\) are two even numbers. Then \[
  2n + 2m = 2(n+m)
-\] but $n+m$ is an integer, and therefore the sum is even.
+\] but \(n+m\) is an integer, and therefore the sum is even.
 
-Say $2n$ is an even number, and $2m+1$ is an odd number. Then \[
+Say \(2n\) is an even number, and \(2m+1\) is an odd number. Then \[
  2n + 2m + 1 = 2(n+m) + 1
 \] which is an odd number. So the sum of an even number and an odd number is
 odd. And because we can rearrange the order of addition, therefore the sum of an
@@ -196,7 +199,7 @@ table (see Figure~\ref{pd:psumt}).
 
 \begin{figure}
  \begin{tabular}{c|cc}
-  $\times$ & Even & Odd  \\
+  \(+\) & Even & Odd  \\
   \hline
   Even   & Even & Odd \\
   Odd    & Odd & Even
@@ -208,39 +211,52 @@ table (see Figure~\ref{pd:psumt}).
 
 The rules for subtracting are exactly the same. The difference of two odds is
 even. The difference of two evens is even. The difference of an odd and an even
-is odd. Feel free to work these out yourself.
+is odd. These results are summarized in Figure~\ref{pd:pdifft}. Feel free to
+work these out yourself.
+
+\begin{figure}
+ \begin{tabular}{c|cc}
+  \(-\) & Even & Odd  \\
+  \hline
+  Even   & Even & Odd \\
+  Odd    & Odd & Even
+ \end{tabular}
+
+ \caption{Result of subtracting numbers, by parity}
+ \label{pd:pdifft}
+\end{figure}
 
 \begin{problem}{Odd or Even II}
  Are each of the following numbers even or odd?
 
  \begin{itemize}
-  \item $100 + 200$ \hfill \AnsT{Even}~~~Odd
-  \item $1273 + 19023$ \hfill \AnsT{Even}~~~Odd
-  \item $19082 - 1911$ \hfill Even~~~\AnsT{Odd}
-  \item $109291 + 8329 + 9107$ \hfill Even~~~\AnsT{Odd}
+  \item \(100 + 200\) \hfill \AnsT{Even}~~~Odd
+  \item \(1273 + 19023\) \hfill \AnsT{Even}~~~Odd
+  \item \(19082 - 1911\) \hfill Even~~~\AnsT{Odd}
+  \item \(109291 + 8329 + 9107\) \hfill Even~~~\AnsT{Odd}
  \end{itemize}
 \end{problem}
 
 \subsection{Products}
 
 We can use a similar technique to develop rules for the product of even and odd
-numbers. It turns out that the product of two odd numbers is odd. Say $2n+1$
-and $2m+1$ are two odd numbers. Observe: \begin{align*}
+numbers. It turns out that the product of two odd numbers is odd. Say \(2n+1\)
+and \(2m+1\) are two odd numbers. Observe: \begin{align*}
  (2n+1)(2m+1)
  &= 2n(2m+1) + (2m+1) \\
  &= 4nm+2n+2m+1 \\
  &= 2(2nm+n+m) + 1
 \end{align*} which is odd.
 
-But the product of an even number with any integer is even. Say $2n$ is an
-even number, and $k$ is any integer. Then: \[
+But the product of an even number with any integer is even. Say \(2n\) is an
+even number, and \(k\) is any integer. Then: \[
  (2n)k = 2(nk)
 \] which is even. We may summarize these results in another table (see
 Figure~\ref{pd:pprodt})
 
 \begin{figure}
  \begin{tabular}{c|cc}
-  $\times$ & Even & Odd  \\
+  \(\times\) & Even & Odd  \\
   \hline
   Even   & Even & Even \\
   Odd    & Even & Odd
@@ -252,103 +268,108 @@ Figure~\ref{pd:pprodt})
 
 At this point we have enough knowledge to see why our rule for determining
 parity by looking at the last digit works. In a number written in the place
-value system, such as $76103$, we can split the number into the ones' digit,
+value system, such as \(76103\), we can split the number into the ones' digit,
 the tens' digit, hundreds' digit, and so on. Another way to think about it is,
 by splitting off the ones' digit, \[
  76103 = 3 + 7610 \times 10
 \]
 
-But we know that $10=2\times5$ is even, so by the rules covered above, we know
-that anything mutliplied by $10$ remains even. Then if we add it to an odd
-number, we obtain an odd number, but if we add it to an even number, then we
-obtain an even number. Therefore, just by looking at the last digit, we can
+But we know that \(10=2\times5\) is even, so by the rules covered above, we
+know that anything mutliplied by \(10\) remains even. Then if we add it to an
+odd number, we obtain an odd number, but if we add it to an even number, then
+we obtain an even number. Therefore, just by looking at the last digit, we can
 figure out whether a number is odd or even.
 
 \section{Divisibility}
 
 We will begin today's topic with a few definitions.
 
-The symbol $\mid$ means ``divides''. If $A$ and $B$ are two numbers, then $A$
-divides $B$ when $B \div A$ has no remainder.
+The symbol \(\mid\) means ``divides''. If \(A\) and \(B\) are two numbers, then
+\(A\) divides \(B\) when \(B \div A\) has no remainder.
 
 A number is a \emph{factor} of another number if it divides that number. For
-example, $3$ is a \emph{factor} of $9$ because $3 \mid 9$. A number is a
+example, \(3\) is a \emph{factor} of \(9\) because \(3 \mid 9\). A number is a
 \emph{multiple} of another number if the other number divides it. For example,
-$9$ is a \emph{multiple} of $3$. Another word for factor, which we will see
+\(9\) is a \emph{multiple} of \(3\). Another word for factor, which we will see
 later on, is \emph{divisor}.
 
-Observe that $1$ is a \emph{factor} of every whole number, and $0$ is a
+Observe that \(1\) is a \emph{factor} of every whole number, and \(0\) is a
 \emph{multiple} of every whole number.
 
 \subsection{Finding Factors}
 
-One class of problem that we may be interested in solving is to list the factors
-for a number. When the number is small, this is easy. For example, listing the
-factors of $6$ is as simple as trying out all smaller (or equal) numbers, and
-finding that only $1$, $2$, $3$, and $6$ divide $6$ evenly.
+One class of problem that we may be interested in solving is to list the
+factors for a number. When the number is small, this is easy. For example,
+listing the factors of \(6\) is as simple as trying out all smaller (or equal)
+numbers, and finding that only \(1\), \(2\), \(3\), and \(6\) divide \(6\)
+evenly.
 
 For larger numbers, we may exploit the fact that factors always come in pairs.
-If $a \mid c$, then there is some number $b$ so that $a \times b = c$. But then
-we can just flip the order of the multiplication, and we see that $b \times a =
-c$ and therefore $b \mid c$. Therefore a convenient way to find big factors is
-to divide the original number by the smaller factors.
+If \(a \mid c\), then there is some number \(b\) so that \(a \times b = c\).
+But then we can just flip the order of the multiplication, and we see that \(b
+\times a = c\) and therefore \(b \mid c\). Therefore a convenient way to find
+big factors is to divide the original number by the smaller factors.
 
 \subsection{Revisiting Parity}
 
 Using our new definitions, we see that the topic we covered last class---even
 and odd numbers---is really just the study of numbers that are and aren't
-divisible by $2$. Even numbers are the multiples of $2$, and all even numbers
-have $2$ as a factor. Be careful! Note that odd numbers do not necessarily have
-$3$ as a factor (for example, $5$ is not a mutliple of $3$), and even numbers
-might (for example, $6$ is a multiple of $3$ and is also even.)
+divisible by \(2\). Even numbers are the multiples of \(2\), and all even
+numbers have \(2\) as a factor. Be careful! Note that odd numbers do not
+necessarily have \(3\) as a factor (for example, \(5\) is not a mutliple of
+\(3\)), and even numbers might (for example, \(6\) is a multiple of \(3\) and
+is also even.)
 
 \subsection{Divisibility Rules}
 
-Earlier we have already seen rules for divisibility by $2$. We have a similar
-rule for divisibility by $5$. The reason that this rule is correct will be
+Earlier we have already seen rules for divisibility by \(2\). We have a similar
+rule for divisibility by \(5\). The reason that this rule is correct will be
 discussed later in this unit, but please feel free to think about it. To figure
-out whether a number is divisible by $5$, simply look at the last digit. If it
-is $0$ or $5$, then the number is divisible by $5$.
+out whether a number is divisible by \(5\), simply look at the last digit. If
+it is \(0\) or \(5\), then the number is divisible by \(5\).
 
-For divisibility by $10$, the rule is even simpler. A number is divisible by
-$10$ if and only if the last digit is $0$. A number is divisible by $100$ if the
-last two digits are $0$. (Note that $0$ is a bit of a special case, since it
-only has one digit, but it is still divisible by $100$.)
+For divisibility by \(10\), the rule is even simpler. A number is divisible by
+\(10\) if and only if the last digit is \(0\). A number is divisible by \(100\)
+if the last two digits are \(0\). (Note that \(0\) is a bit of a special case,
+since it only has one digit, but it is still divisible by \(100\).)
 
 \subsection{Transitivity}
 
-The \gls{transitivity} principle of divisiblity says that if $a$, $b$, and $c$
-are integers, and if $a \mid b$ and $b \mid c$, then $a \mid c$. Let's do an
-example. We know that $3 \mid 12$, and that $12 \mid 36$. Then by transitivity,
-$3 \mid 36$. Here is a simple exercise that is easily done using transitivity:
+The \gls{transitivity} principle of divisiblity says that if \(a\), \(b\), and
+\(c\) are integers, and if \(a \mid b\) and \(b \mid c\), then \(a \mid c\).
+Let's do an example. We know that \(3 \mid 12\), and that \(12 \mid 36\). Then
+by transitivity, \(3 \mid 36\). Here is a simple exercise that is easily done
+using transitivity:
 
-\begin{problem}{Multiples of $12$ and $3$}
- Does $3$ divide \emph{every} multiple of $12$? \hfill \AnsT{True}~~~False
+\begin{problem}{Multiples of \(12\) and \(3\)}
+ Does \(3\) divide \emph{every} multiple of \(12\)? \hfill \AnsT{True}~~~False
 
  \begin{solution}
-  Say $a$ is some multiple of $12$. By definition, $12 \mid a$. Here we are
-  using $a$ as a placeholder---it can stand for \emph{any} multiple of $12$.
+  Say \(a\) is some multiple of \(12\). By definition, \(12 \mid a\). Here we
+  are using \(a\) as a placeholder---it can stand for \emph{any} multiple of
+  \(12\).
 
-  Since $12 \div 3 = 4 \operatorname{R} 0$, we know that $3 \mid 12$. But if $3
-  \mid 12$ and $12 \mid a$, then by transitivity, $3 \mid a$. Therefore, the
-  statement that $3$ divides every multiple of $12$ is \AnsT{true}.
+  Since \(12 \div 3 = 4 \operatorname{R} 0\), we know that \(3 \mid 12\). But
+  if \(3 \mid 12\) and \(12 \mid a\), then by transitivity, \(3 \mid a\).
+  Therefore, the statement that \(3\) divides every multiple of \(12\) is
+  \AnsT{true}.
  \end{solution}
 \end{problem}
 
 \section{Review}
 
 There is a quiz for this chapter (Quiz 3: Parity and Divisibility). The
-anticipated length for the quiz is $15$ minutes. Three review questions follow.
-Quiz questions will be very similar in nature.
+anticipated length for the quiz is \(15\) minutes. Three review questions
+follow. Quiz questions will be very similar in nature.
 
 \begin{problem}{Factor Pairs}
  Complete the factor pairs.
 
  \begin{itemize}
-  \item $6 = 1 \times \Ans{6}$
-  \item $6 = 2 \times \Ans{3}$
-  \item $6 = 3 \times \Ans{2}$
-  \item $6 = 6 \times \Ans{1}$
+  \item \(6 = 1 \times \Ans{6}\)
+  \item \(6 = 2 \times \Ans{3}\)
+  \item \(6 = 3 \times \Ans{2}\)
+  \item \(6 = 6 \times \Ans{1}\)
  \end{itemize}
 \end{problem}
 
@@ -356,10 +377,10 @@ Quiz questions will be very similar in nature.
  Use the word ``factor'' or ``multiple'' to complete each blank.
 
  \begin{itemize}
-  \item $1$ is a \AnsT{factor} of every whole number.
-  \item $0$ is a \AnsT{multiple} of every whole number.
-  \item $3$ is a \AnsT{factor} of $9$.
-  \item All even numbers are \AnsT{multiple}s of $2$.
+  \item \(1\) is a \AnsT{factor} of every whole number.
+  \item \(0\) is a \AnsT{multiple} of every whole number.
+  \item \(3\) is a \AnsT{factor} of \(9\).
+  \item All even numbers are \AnsT{multiple}s of \(2\).
  \end{itemize}
 \end{problem}
 
@@ -367,52 +388,54 @@ Quiz questions will be very similar in nature.
  Circle factors of each number. More than one factor may be circled.
 
  \begin{itemize}
-  \item $25$ \hfill $\Ans{1}$~~~$2$~~~$\Ans{5}$~~~$10$~~~$100$
-  \item $172$ \hfill $\Ans{1}$~~~$\Ans{2}$~~~$5$~~~$10$~~~$100$
-  \item $1793$ \hfill $\Ans{1}$~~~$2$~~~$5$~~~$10$~~~$100$
-  \item $2000$ \hfill $\Ans{1}$~~~$\Ans{2}$~~~$\Ans{5}$~~~$\Ans{10}$
-  ~~~$\Ans{100}$
+  \item \(25\) \hfill \(\Ans{1}\)~~~\(2\)~~~\(\Ans{5}\)~~~\(10\)~~~\(100\)
+  \item \(172\) \hfill \(\Ans{1}\)~~~\(\Ans{2}\)~~~\(5\)~~~\(10\)~~~\(100\)
+  \item \(1793\) \hfill \(\Ans{1}\)~~~\(2\)~~~\(5\)~~~\(10\)~~~\(100\)
+  \item \(2000\) \hfill \(\Ans{1}\)~~~\(\Ans{2}\)~~~\(\Ans{5}\)~~~\(\Ans{10}\)
+  ~~~\(\Ans{100}\)
  \end{itemize}
 \end{problem}
 
 \chapter{Prime Numbers}
 
 A \emph{prime number} is a positive integer that has exactly two positive
-factors: $1$ and itself.
+factors: \(1\) and itself. We care about prime numbers because they are the
+basic building blocks for all other positive integers, a fact which we will
+look at in more depth later on.
 
 \section{Testing for Primality}
 
-We can easily check whether small numbers are prime. First, note $1$ is not
-prime, because it has just one factor. However, $2$ is prime, because it has
-exactly two factors: $1$ and itself.
+We can easily check whether small numbers are prime. First, note \(1\) is not
+prime, because it has just one factor. However, \(2\) is prime, because it has
+exactly two factors: \(1\) and itself.
 
 \begin{problem}{The First Few Primes}
  Is each number prime or not prime?
 
  \begin{itemize}
-  \item $2$ \hfill \AnsT{Prime}~~~Not Prime
-  \item $3$ \hfill \AnsT{Prime}~~~Not Prime
-  \item $4$ \hfill Prime~~~\AnsT{Not Prime}
-  \item $5$ \hfill \AnsT{Prime}~~~Not Prime
-  \item $6$ \hfill Prime~~~\AnsT{Not Prime}
-  \item $7$ \hfill \AnsT{Prime}~~~Not Prime
-  \item $8$ \hfill Prime~~~\AnsT{Not Prime}
-  \item $9$ \hfill Prime~~~\AnsT{Not Prime}
-  \item $10$ \hfill Prime~~~\AnsT{Not Prime}
+  \item \(2\) \hfill \AnsT{Prime}~~~Not Prime
+  \item \(3\) \hfill \AnsT{Prime}~~~Not Prime
+  \item \(4\) \hfill Prime~~~\AnsT{Not Prime}
+  \item \(5\) \hfill \AnsT{Prime}~~~Not Prime
+  \item \(6\) \hfill Prime~~~\AnsT{Not Prime}
+  \item \(7\) \hfill \AnsT{Prime}~~~Not Prime
+  \item \(8\) \hfill Prime~~~\AnsT{Not Prime}
+  \item \(9\) \hfill Prime~~~\AnsT{Not Prime}
+  \item \(10\) \hfill Prime~~~\AnsT{Not Prime}
  \end{itemize}
 \end{problem}
 
-Don't get caught in the trap that every odd number is prime! $9=3\times3$ is
-not. Neither are $15$, $21$, $25$, and many others. In fact, as the numbers get
-bigger and bigger, prime numbers get rarer and rarer. However, do note that
-there is only one even prime: $2$.
+Don't get caught in the trap that every odd number is prime! \(9=3\times3\) is
+not. Neither are \(15\), \(21\), \(25\), and many others. In fact, as the
+numbers get bigger and bigger, prime numbers get rarer and rarer. However, do
+note that there is only one even prime: \(2\).
 
 \subsection{For Large Numbers}
 
-Checking whether large numbers are prime is much harder to do on paper. However,
-it is easy to see that some numbers are composite. For example, if a number ends
-in $0$, $2$, $4$, $5$, $6$, or $8$, then it is probably composite---the only two
-exceptions are $2$ and $5$.
+Checking whether large numbers are prime is much harder to do on paper.
+However, it is easy to see that some numbers are composite. For example, if a
+number ends in \(0\), \(2\), \(4\), \(5\), \(6\), or \(8\), then it is probably
+composite---the only two exceptions are \(2\) and \(5\).
 
 As an interesting note, which we will not explore further in this class, there
 are actually infinitely many prime numbers. That means that no matter how big
@@ -421,91 +444,95 @@ our prime numbers get, we can always find another bigger prime number.
 \section{Composite Numbers}
 
 A \emph{composite} number is a number that can be written as the product of two
-smaller positive numbers. Thus $4=2\times2$ is composite. It turns out that
-every non-prime positive whole number except $1$ is composite.
+smaller positive numbers. Thus \(4=2\times2\) is composite. It turns out that
+every non-prime positive whole number except \(1\) is composite.
 
 Composite numbers have at least three distinct factors. Usually, they have at
-least four (such as $6$, which has factors $1$, $2$, $3$, and $6$), but there is
-a special category of numbers that have exactly $3$. These are the squares of
-prime numbers. For instance, $4$ has factors $1$, $2$, and $4$, and $9$ has
-factors $1$, $3$ and $9$. This happens when the only prime factor of a number is
-paired with itself.
+least four (such as \(6\), which has factors \(1\), \(2\), \(3\), and \(6\)),
+but there is a special category of numbers that have exactly \(3\). These are
+the squares of prime numbers. (Recall that a square is a number multiplied by
+itself.) For instance, \(4\) has factors \(1\), \(2\), and \(4\), and \(9\) has
+factors \(1\), \(3\) and \(9\). This happens when the only prime factor of a
+number is paired with itself.
 
 When numbers get quite large, composite numbers vastly outnumber prime numbers.
 Many classes of numbers contain only one prime number and infinitely many
-composite numbers. For instance, among the powers of $2$ ($2$, $4$, $8$, $16$,
-\dots), only $2$ is prime.
+composite numbers. For instance, among the powers of \(2\) (\(2\), \(4\),
+\(8\), \(16\), \dots), only \(2\) is prime.
 
 \section{The Fundamental Theorem of Arithmetic}
 
 One of the most important facts about whole numbers, one that forms the basis
 for much of number theory, is the Fundamental Theorem of Arithmetic. This
-theorem is a result that states that every positive whole number can be factored
-uniquely into primes. What does that mean?
+theorem is a result that states that every positive whole number can be
+factored uniquely into primes. What does that mean?
 
-If we have a whole number, say, $70$, we see that we can write it as
-$7\times10$. Furthermore, $10=2\times5$. So we can factor $70=7\times2\times5$.
-Each of these numbers is now prime, and so we cannot factor this further, except
-by introducing copies of $1$, which is pointless.
+If we have a whole number, say, \(70\), we see that we can write it as
+\(7\times10\). Furthermore, \(10=2\times5\). So we can factor
+\(70=7\times2\times5\). Each of these numbers is now prime, and so we cannot
+factor this further, except by introducing copies of \(1\), which is pointless.
+(We could always write a number as itself times \(1\), but since multiplying by
+\(1\) does not do anything, we might as well leave them out.)
 
-But what if we had factored it a different way, first writing $70=5\times14$?
-Then we notice that $14=2\times7$, so we can change to $70=5\times2\times7$. The
-important thing is that this is the same factorization as last time, except in a
-different order. In fact, no matter, how we factor $70$, we will always arrive
-at the same prime factorization (with possibly a different order).
+But what if we had factored it a different way, first writing \(70=5\times14\)?
+Then we notice that \(14=2\times7\), so we can change to
+\(70=5\times2\times7\). The important thing is that this is the same
+factorization as last time, except in a different order. In fact, no matter,
+how we factor \(70\), we will always arrive at the same prime factorization
+(with possibly a different order).
 
-One way to quickly determine the prime factorization is to use a factor tree. We
-draw the number we want to factor on top, and split it up into two children. If
-any child is prime, we leave it be; otherwise, we split that up further into two
-children. We repeat this procedure until all leaves are prime (see
-Figure~\ref{pn:factortree70} and Figure~\ref{pn:factortree48} for examples). The
-product of these leaves is the prime factorization.
+One way to quickly determine the prime factorization is to use a factor tree.
+We draw the number we want to factor on top, and split it up into two children.
+If any child is prime, we leave it be; otherwise, we split that up further into
+two children. We repeat this procedure until all leaves are prime (see
+Figure~\ref{pn:factortree70} and Figure~\ref{pn:factortree48} for examples).
+The product of these leaves is the prime factorization.
 
 \begin{figure}
  \begin{forest}
-  [$70$
-    [$7$,circle,draw]
-    [$10$
-     [$2$,circle,draw]
-     [$5$,circle,draw]]]
+  [\(70\)
+    [\(7\),circle,draw]
+    [\(10\)
+     [\(2\),circle,draw]
+     [\(5\),circle,draw]]]
  \end{forest} \hspace{1em}
  \begin{forest}
-  [$70$
-    [$14$,circle,draw
-     [$2$,circle,draw]
-     [$7$,circle,draw]]
-    [$5$,circle,draw]]
+  [\(70\)
+    [\(14\),circle,draw
+     [\(2\),circle,draw]
+     [\(7\),circle,draw]]
+    [\(5\),circle,draw]]
  \end{forest}
 
- \caption{Two different factor trees for $70$}
+ \caption{Two different factor trees for \(70\)}
  \label{pn:factortree70}
 \end{figure}
 
 \begin{figure}
  \begin{forest}
-  [$48$
-   [$4$
-    [$2$,circle,draw]
-    [$2$,circle,draw]]
-   [$12$
-    [$2$,circle,draw]
-    [$6$
-     [$2$,circle,draw]
-     [$3$,circle,draw]]]]
+  [\(48\)
+   [\(4\)
+    [\(2\),circle,draw]
+    [\(2\),circle,draw]]
+   [\(12\)
+    [\(2\),circle,draw]
+    [\(6\)
+     [\(2\),circle,draw]
+     [\(3\),circle,draw]]]]
  \end{forest} \hspace{1em}
  \begin{forest}
-  [$48$
-   [$3$,circle,draw]
-   [$16$
-    [$4$
-     [$2$,circle,draw]
-     [$2$,circle,draw]]
-    [$4$
-     [$2$,circle,draw]
-     [$2$,circle,draw]]]]
+  [\(48\)
+   [\(3\),circle,draw]
+   [\(16\)
+    [\(4\)
+     [\(2\),circle,draw]
+     [\(2\),circle,draw]]
+    [\(4\)
+     [\(2\),circle,draw]
+     [\(2\),circle,draw]]]]
  \end{forest}
 
- \caption{Two different factor trees for $48$}
+ \caption{Two different factor trees for \(48\)}
  \label{pn:factortree48}
 \end{figure}
 
@@ -513,9 +540,9 @@ product of these leaves is the prime factorization.
  Find the prime factorization for each number.
 
  \begin{itemize}
-  \item $12 = \Ans{2\times2\times3}$
-  \item $70 = \Ans{2\times5\times7}$
-  \item $100 = \Ans{2\times2\times5\times5}$
+  \item \(12 = \Ans{2\times2\times3}\)
+  \item \(70 = \Ans{2\times5\times7}\)
+  \item \(100 = \Ans{2\times2\times5\times5}\)
  \end{itemize}
 \end{problem}
 
@@ -524,8 +551,8 @@ product of these leaves is the prime factorization.
  Find one prime factor for each number. Do not try to find additional factors.
 
  \begin{itemize}
-  \item $99959386$ \hfill Factor: \Ans{2}
-  \item $521976505$ \hfill Factor: \Ans{5}
+  \item \(99959386\) \hfill Factor: \Ans{2}
+  \item \(521976505\) \hfill Factor: \Ans{5}
  \end{itemize}
 
 \end{problem}
@@ -539,13 +566,13 @@ to factor large numbers.
 
 So far in this unit, we have not done so many applications to problems of the
 sort typically seen in math contests. However, this does not mean that the
-Fundamental Theorem of Arithmetic is not useful for contest math. Many questions
-can be simplified greatly by factorizing numbers into their prime
+Fundamental Theorem of Arithmetic is not useful for contest math. Many
+questions can be simplified greatly by factorizing numbers into their prime
 factorizations. It is even useful for mental arithmetic. We will see some
 examples below.
 
 \begin{problem}{Mental Arithmetic}
- Find, without using a calculator, $1875\times48$.
+ Find, without using a calculator, \(1875\times48\).
 
  \begin{solution}
   We compute \[
@@ -577,15 +604,96 @@ The first known proof for the Fundamental Theorem of Arithmetic was in book VII
 (7) of Euclid's Elements, propositions 30 and 32. This proof is not covered in
 the course.
 
+\section{The Sieve of Eratosthenes}
+
+Earlier, we found the first few prime numbers simply by finding factors. This
+is unfortunately quite a slow way to find prime numbers. With a few
+observations, we can find prime numbers much faster. Firstly, we noted earlier
+that all factors come in pairs. For example, \(8 \mid 56\) (i.e. \(8\) is a
+factor of \(56\)), so there is some number that we can multiply with \(8\) to
+get \(56\). This number is \(7\). We have \(8 \times 7 = 7 \times 8 = 56\).
+
+In the case of a perfect square, a factor could be paired with itself. For
+example, \(10 \mid 100\), and indeed \(10 \times 10 = 100\), so \(10\) is
+paired with itself. But being paired with itself still counts has being part of
+a factor pair.
+
+You may have noticed that when we search for factors of numbers, we find the
+same factor pair possibly more than once. For instance, suppose we construct a
+factor table for \(21\), trying out all the numbers from \(1\) to \(21\). See
+Figure~\ref{pn:factor-21} for an example. This is a lot of work! It may seem at
+first like all the work is necessary, because we don't find the last factor,
+\(21\), until the last row. But notice that we have encounted all the factors
+by the third row: some of them are just on the right.
+
+Indeed, this is where the idea of pairs comes in. Instead of checking every
+number, and try to get every pair of numbers \(a \times b = 21\), we could only
+check the pairs \(a \times b = 21\) where \(a \le b\). That is to say, once the
+left hand number exceeds the right hand number, then we don't need to check any
+more. The right hand side of Figure~\ref{pn:factor-21} shows an abbreviated
+table where we stop after checking \(4\). Why \(4\)? Well, \(5 \times 5 = 25\),
+which is already bigger than \(21\). So we know that if \(5\) did divide \(21\)
+(which it does not), then the factor it pairs with must be less than \(5\). But
+then we would have already found it.
+
+\begin{figure}
+  \begin{tabular}{|cl|}
+    \hline
+    & \(21 = \) \\
+    \hline
+    \checkmark & \(1 \times 21\) \\
+    & \(2 \times \dots\) \\
+    \checkmark & \(3 \times 7\) \\
+    & \(4 \times \dots\) \\
+    & \(5 \times \dots\) \\
+    & \(6 \times \dots\) \\
+    \checkmark & \(7 \times 3\) \\
+    & \(8 \times \dots\) \\
+    & \(9 \times \dots\) \\
+    & \(10 \times \dots\) \\
+    & \(11 \times \dots\) \\
+    & \(12 \times \dots\) \\
+    & \(13 \times \dots\) \\
+    & \(14 \times \dots\) \\
+    & \(15 \times \dots\) \\
+    & \(16 \times \dots\) \\
+    & \(17 \times \dots\) \\
+    & \(18 \times \dots\) \\
+    & \(19 \times \dots\) \\
+    & \(20 \times \dots\) \\
+    \checkmark & \(21 \times 1\) \\
+    \hline
+  \end{tabular}
+  \begin{tabular}{|clc|}
+    \hline
+    & \(21 = \) & \\
+    \hline
+    \checkmark & \(1 \times 21\) & \checkmark \\
+    & \(2 \times \dots\) & \\
+    \checkmark & \(3 \times 7\) & \checkmark \\
+    & \(4 \times \dots\) & \\
+    & \(5\) \textbf{stop} & \\
+    \hline
+  \end{tabular}
+
+  \caption{On the left, a factor table used to find the factors of \(21\);
+  while this works, it's a lot of work, not all necessary. On the right, an
+  abbreviated factor table that still finds all the factors, but is much less
+  work to draw.}
+  \label{pn:factor-21}
+\end{figure}
+
+TK.
+
 \section{Review}
 
 \begin{problem}{Small Prime Factors II}
  Find one prime factor for each number. Do not try to find additional factors.
 
  \begin{itemize}
-  \item $999958$ \hfill Factor: \Ans{2}
-  \item $999993$ \hfill Factor: \Ans{3}
-  \item $999995$ \hfill Factor: \Ans{5}
+  \item \(999958\) \hfill Factor: \Ans{2}
+  \item \(999993\) \hfill Factor: \Ans{3}
+  \item \(999995\) \hfill Factor: \Ans{5}
  \end{itemize}
 
 \end{problem}
@@ -594,10 +702,10 @@ the course.
  Find the unique prime factorization of each number.
 
  \begin{itemize}
-  \item $55$ \hfill $\Ans{5} \times \Ans{11}$
-  \item $30$ \hfill $\Ans{2} \times \Ans{3} \times \Ans{5}$
-  \item $42$ \hfill $\Ans{2} \times \Ans{3} \times \Ans{7}$
-  \item $24$ \hfill $\Ans{2} \times \Ans{2} \times \Ans{2} \times \Ans{3}$
+  \item \(55\) \hfill \(\Ans{5} \times \Ans{11}\)
+  \item \(30\) \hfill \(\Ans{2} \times \Ans{3} \times \Ans{5}\)
+  \item \(42\) \hfill \(\Ans{2} \times \Ans{3} \times \Ans{7}\)
+  \item \(24\) \hfill \(\Ans{2} \times \Ans{2} \times \Ans{2} \times \Ans{3}\)
  \end{itemize}
 \end{problem}
 
@@ -612,75 +720,75 @@ similar operation, the least common multiple.
 
 \subsection{Greatest Common Divisor}
 
-Given two positive integers, we define their GCD (greatest common divisor) to be
-the largest positive integer that's a factor for both those numbers. For
-instance, the factors of $24$ are $1$, $2$, $3$, $4$, $6$, $8$, $12$, $24$, and
-the factors of $36$ are $1$, $2$, $3$, $4$, $6$, $9$, $12$, $18$, $36$. The
-greatest factor that these have in common is $12$. Therefore we denote \[
- \gcd(24, 36) = 12
-\]
+Given two positive integers, we define their GCD (greatest common divisor) to
+be the largest positive integer that's a factor for both those numbers. For
+instance, the factors of \(24\) are \(1\), \(2\), \(3\), \(4\), \(6\), \(8\),
+\(12\), \(24\), and the factors of \(36\) are \(1\), \(2\), \(3\), \(4\),
+\(6\), \(9\), \(12\), \(18\), \(36\). The greatest factor that these have in
+common is \(12\). Therefore we denote \[ \gcd(24, 36) = 12 \]
 
 \begin{problem}{Examples}
  \begin{itemize}
-  \item $\gcd(10, 20) = \Ans{10}$
-  \item $\gcd(15, 25) = \Ans{5}$
-  \item $\gcd(7, 11) = \Ans{1}$
+  \item \(\gcd(10, 20) = \Ans{10}\)
+  \item \(\gcd(15, 25) = \Ans{5}\)
+  \item \(\gcd(7, 11) = \Ans{1}\)
  \end{itemize}
 \end{problem}
 
 \subsection{Least Common Multiple}
+
 Similarly, given two positive integers, we define their LCM (least common
 multiple) to be the smallest positive integer that's a multiple of both those
-numbers. For instance, the positive multiples of $24$ are $24$, $48$, $72$, and
-so on, and the positive multiples of $36$ are $36$, $72$, $108$, and so on.
-The smallest multiple that these have in common is $72$. Therefore we
-denote \[
+numbers. For instance, the positive multiples of \(24\) are \(24\), \(48\),
+\(72\), and so on, and the positive multiples of \(36\) are \(36\), \(72\),
+\(108\), and so on. The smallest multiple that these have in common is \(72\).
+Therefore we denote \[
  \operatorname{lcm}(24, 36) = 72
 \]
 
 An intriguing connection between the GCD and the LCM is given by the following
 identity, which we will not justify in this class, but you may see again in the
-future: \[
+future: \begin{equation}
  \gcd(a, b) \times \operatorname{lcm}(a, b) = a \times b
-\]
+\end{equation}
 
-Roughly speaking, this identity says that the product of two numbers is the same
-as the product of their GCD and their LCM.
+Roughly speaking, this identity says that the product of two numbers is the
+same as the product of their GCD and their LCM.
 
 \section{Application to Rational Numbers}
 
 The GCD and the LCM have many applications across mathematics. An important
 application is to the study of rational numbers, or fractions. Recall that a
 fraction is a pair of two integers, the numerator and the denominator.
-Additionally, the denominator is not allowed to be zero, because we cannot split
-any quantity into zero parts.
+Additionally, the denominator is not allowed to be zero, because we cannot
+split any quantity into zero parts.
 
 Note that a fraction does not have a unique representation as a numerator and
 denominator. Two fractions may be equal even if the numerator and the
-denominators differ. For instance, the fraction $\frac{1}{2}$ is equal to
-fractions $\frac{2}{4}$, $\frac{3}{6}$, and so on.
+denominators differ. For instance, the fraction \(\frac{1}{2}\) is equal to
+fractions \(\frac{2}{4}\), \(\frac{3}{6}\), and so on.
 
 We may \emph{simplify} a fraction by writing it as an equivalent fraction with
 least possible (positive) denominator. Simplifying fractions makes it easy to
 determine whether two fractions are equivalent, and also makes fractions easier
 to work with. There exists a simple algorithm to simplify a fraction. Given
-$\frac{n}{m}$, compute $d=\gcd(n, m)$, and then $\frac{n\div d}{m\div d}$ is the
-simplest form.
+\(\frac{n}{m}\), compute \(d=\gcd(n, m)\), and then \(\frac{n\div d}{m\div d}\)
+is the simplest form.
 
 \begin{problem}{Simplify Fraction}
  Simplify. Note that the fraction may possibly already be in simplest form.
 
  \begin{itemize}
-  \item $\frac{20}{15}=\Ans{\frac{4}{3}}$
-  \item $\frac{24}{36}=\Ans{\frac{2}{3}}$
-  \item $\frac{7}{13}=\Ans{\frac{7}{13}}$
+  \item \(\frac{20}{15}=\Ans{\frac{4}{3}}\)
+  \item \(\frac{24}{36}=\Ans{\frac{2}{3}}\)
+  \item \(\frac{7}{13}=\Ans{\frac{7}{13}}\)
  \end{itemize}
 \end{problem}
 
 When we add or subtract fractions, it helps often to write the fractions with
 equal denominator. To select a compatible denominator, we may use the least
-common multiple. For example, to add $\frac{a}{b}+\frac{c}{d}$, we may compute
-$\ell=\operatorname{lcm}(b, d)$ and then compute \begin{align*}
+common multiple. For example, to add \(\frac{a}{b}+\frac{c}{d}\), we may
+compute \(\ell=\operatorname{lcm}(b, d)\) and then compute \begin{align*}
  \frac{a}{b}+\frac{c}{d}
  &= \frac{a\ell\div b}{\ell} + \frac{c\ell\div d}{\ell} \\
  &= \frac{a\ell\div b + c\ell\div d}{\ell}
@@ -690,9 +798,9 @@ $\ell=\operatorname{lcm}(b, d)$ and then compute \begin{align*}
  Add or subtract. Then simplify.
 
  \begin{itemize}
-  \item $\frac{1}{2} + \frac{1}{3} = \Ans{\frac{5}{6}}$
-  \item $\frac{3}{4} + \frac{1}{6} = \Ans{\frac{11}{12}}$
-  \item $\frac{23}{36} - \frac{11}{24} = \Ans{\frac{13}{36}}$
+  \item \(\frac{1}{2} + \frac{1}{3} = \Ans{\frac{5}{6}}\)
+  \item \(\frac{3}{4} + \frac{1}{6} = \Ans{\frac{11}{12}}\)
+  \item \(\frac{23}{36} - \frac{11}{24} = \Ans{\frac{13}{36}}\)
  \end{itemize}
 \end{problem}
 
@@ -708,13 +816,13 @@ Euclid, one of the most famous mathematicians in history.
 
 This algorithm is based on the fact that the greatest common denominator does
 not change if the smaller number is subtracted from the larger one. That is,
-$\gcd(a, b) = \gcd(a, b - a)$ for all positive integers $a$ and $b$, with $b>a$.
-Proving this fact is beyond the scope of this course. However, we will look at
-an example.
+\(\gcd(a, b) = \gcd(a, b - a)\) for all positive integers \(a\) and \(b\), with
+\(b>a\). Proving this fact is beyond the scope of this course. However, we will
+look at an example.
 
-Consider $\gcd(8, 12)=4$. If we subtract $8$ from $12$, we get $\gcd(8, 4)=4$.
-If we subtract now $4$ from $8$, we get $\gcd(4, 4)=4$. We notice that the GCD
-is unchanged despite these subtractions.
+Consider \(\gcd(8, 12)=4\). If we subtract \(8\) from \(12\), we get \(\gcd(8,
+4)=4\). If we subtract now \(4\) from \(8\), we get \(\gcd(4, 4)=4\). We notice
+that the GCD is unchanged despite these subtractions.
 
 To avoid subtracting potentially many times, we can change the repeated
 subtraction into a remainder operation. Thus we arrive at the most commonly
@@ -722,20 +830,20 @@ stated version of the Euclidean algorithm:
 
 \subsection{The Euclidean Algorithm}
 
-To find the Greatest Common Divisor of two numbers, $a$ and $b$:
+To find the Greatest Common Divisor of two numbers, \(a\) and \(b\):
 \begin{enumerate}
- \item If $a=0$, then terminate. The greatest common divisor is $b$.
- \item Otherwise, apply the Euclidean Algorithm to find the GCD of $b \bmod a$
- and $a$. That is, $\gcd(a, b) = \gcd(b \bmod a, a)$.
+ \item If \(a=0\), then terminate. The greatest common divisor is \(b\).
+ \item Otherwise, apply the Euclidean Algorithm to find the GCD of \(b \bmod
+ a\) and \(a\). That is, \(\gcd(a, b) = \gcd(b \bmod a, a)\).
 \end{enumerate}
 
 \subsection{Properties}
 
 This algorithm is an example of a recursive algorithm. More specifically, it is
 a ``tail recursive'' algorithm. That means that the algorithm either produces a
-result, or it requires running the algorithm another time on simpler numbers. We
-may need to run the Euclidean algorithm several times on progressively simpler
-numbers before finishing the computation.
+result, or it requires running the algorithm another time on simpler numbers.
+We may need to run the Euclidean algorithm several times on progressively
+simpler numbers before finishing the computation.
 
 Although the Euclidean algorithm may take some time to compute by hand, it is
 very easy for a computer to do. In fact, the algorithm is so efficient that
@@ -748,7 +856,7 @@ Here is a quick example of using the Euclidean algorithm to compute the
 greatest common divisor of medium-sized numbers:
 
 \begin{problem}{GCD of Two Numbers}
- Compute $\gcd(60, 84) = \Ans{12}$.
+ Compute \(\gcd(60, 84) = \Ans{12}\).
 
  \begin{solution}
   \begin{align*}
@@ -778,7 +886,7 @@ computed, computers can typically be used. You will not be required to do
 problems of this sort on your homework or quizzes.
 
 \begin{problem}{GCD of Three Numbers}
- Compute $\gcd(3636, 3948, 4056) = \Ans{12}$.
+ Compute \(\gcd(3636, 3948, 4056) = \Ans{12}\).
 
  \begin{solution}
   \begin{align*}
@@ -813,19 +921,20 @@ these problems for practice.
  Use the Euclidean Algorithm to compute the following:
 
  \begin{itemize}
-  \item $\gcd(12, 28) = \Ans{4}$
-  \item $\gcd(147, 392) = \Ans{49}$
-  \item $\gcd(319, 920) = \Ans{1}$
-  \item $\gcd(2635, 4515) = \Ans{5}$
-  \item $\gcd(12936, 25256) = \Ans{616}$
-  \item $\gcd(399, 1533, 1659, 2016) = \Ans{1}$
+  \item \(\gcd(12, 28) = \Ans{4}\)
+  \item \(\gcd(147, 392) = \Ans{49}\)
+  \item \(\gcd(319, 920) = \Ans{1}\)
+  \item \(\gcd(2635, 4515) = \Ans{5}\)
+  \item \(\gcd(12936, 25256) = \Ans{616}\)
+  \item \(\gcd(399, 1533, 1659, 2016) = \Ans{1}\)
  \end{itemize}
 \end{problem}
 
 \chapter{Modular Arithmetic}
 
-The final chapter in this unit will be brief, and you will not be quizzed on the
-material. However, the content of this chapter will certainly be interesting.
+The final chapter in this unit will be brief, and you will not be quizzed on
+the material. However, the content of this chapter will certainly be
+interesting.
 
 In earlier chapters we discussed briefly remainders and some applications. In
 this chapter, we will develop new powerful techniques to simplify the solution
@@ -834,109 +943,110 @@ to these problems.
 \section{Generalizing Parity}
 
 When we talked about even and odd numbers, we came up with rules about the
-result of adding, subtracting, and multiplying even and odd numbers. We can come
-up with similar strategies for divisibility by any number, not just $2$. For the
-purposes of discussing this with greater ease, we will consider $7$ as our base.
+result of adding, subtracting, and multiplying even and odd numbers. We can
+come up with similar strategies for divisibility by any number, not just \(2\).
+For the purposes of discussing this with greater ease, we will consider \(7\)
+as our base.
 
 All positive integers (in fact, all integers, including zero and negative ones)
-can be categorized into $7$ distinct buckets based on their remainder when
-divided by $7$. Let us call these buckets $[0]$, $[1]$, $[2]$, $[3]$, $[4]$,
-$[5]$, and $[6]$. In the following table we have categorized the numbers from
-$0$ to $30$ into these buckets:
+can be categorized into \(7\) distinct buckets based on their remainder when
+divided by \(7\). Let us call these buckets \([0]\), \([1]\), \([2]\), \([3]\),
+\([4]\), \([5]\), and \([6]\). In the following table we have categorized the
+numbers from \(0\) to \(30\) into these buckets:
 
 \begin{center}
  \begin{tabular}{|c|lllll|}
   \hline
-  $[0]$ & $0$ & $7$ & $14$ & $21$ & $28$ \\ \hline
-  $[1]$ & $1$ & $8$ & $15$ & $22$ & $29$ \\ \hline
-  $[2]$ & $2$ & $9$ & $16$ & $23$ & $30$ \\ \hline
-  $[3]$ & $3$ & $10$ & $17$ & $24$ & \\ \hline
-  $[4]$ & $4$ & $11$ & $18$ & $25$ & \\ \hline
-  $[5]$ & $5$ & $12$ & $19$ & $26$ & \\ \hline
-  $[6]$ & $6$ & $13$ & $20$ & $27$ & \\ \hline
+  \([0]\) & \(0\) & \(7\) & \(14\) & \(21\) & \(28\) \\ \hline
+  \([1]\) & \(1\) & \(8\) & \(15\) & \(22\) & \(29\) \\ \hline
+  \([2]\) & \(2\) & \(9\) & \(16\) & \(23\) & \(30\) \\ \hline
+  \([3]\) & \(3\) & \(10\) & \(17\) & \(24\) & \\ \hline
+  \([4]\) & \(4\) & \(11\) & \(18\) & \(25\) & \\ \hline
+  \([5]\) & \(5\) & \(12\) & \(19\) & \(26\) & \\ \hline
+  \([6]\) & \(6\) & \(13\) & \(20\) & \(27\) & \\ \hline
  \end{tabular}
 \end{center}
 
-We can see a few patterns in the above table. When we add $1$ to a number, we
-move to the next bucket. But $[6]$ has no next bucket, so what happens when we
-add $1$ to a number in bucket $[6]$? We move to bucket $[0]$! In some sense,
-these buckets form a sort of cycle. After we reach the last bucket, we loop
-around and return to the first bucket (Figure~\ref{ma:equiv-class-cycle}).
+We can see a few patterns in the above table. When we add \(1\) to a number, we
+move to the next bucket. But \([6]\) has no next bucket, so what happens when
+we add \(1\) to a number in bucket \([6]\)? We move to bucket \([0]\)! In some
+sense, these buckets form a sort of cycle. After we reach the last bucket, we
+loop around and return to the first bucket (Figure~\ref{ma:equiv-class-cycle}).
 
 \begin{figure}
  \fgLabelledCycle{7}
 
- \caption{When we add $1$ to a number in a bucket, we move to the next bucket in
- this diagram.}
+ \caption{When we add \(1\) to a number in a bucket, we move to the next bucket
+ in this diagram.}
 
  \label{ma:equiv-class-cycle}
 \end{figure}
 
-This behaviour should make sense when starting at buckets $[0]$ to $[5]$. But
-for bucket $[6]$, why is it that we move to bucket $[0]$ by adding one more? We
-can find the solution using algebra, just like how we did when talking about
-parity. Any number in bucket $[6]$ looks like $7n+6$ for some integer $n$. If we
-add $1$ to this, \[ 7n+6 + 1 = 7n+7 = 7(n+1) \] and we can see that this is a
-multiple of $7$, and so belongs in bucket $[0]$.
+This behaviour should make sense when starting at buckets \([0]\) to \([5]\).
+But for bucket \([6]\), why is it that we move to bucket \([0]\) by adding one
+more? We can find the solution using algebra, just like how we did when talking
+about parity. Any number in bucket \([6]\) looks like \(7n+6\) for some integer
+\(n\). If we add \(1\) to this, \[ 7n+6 + 1 = 7n+7 = 7(n+1) \] and we can see
+that this is a multiple of \(7\), and so belongs in bucket \([0]\).
 
-We now consider what happens if we add $2$ to a number. In which bucket would
-the new number be in? This is the same as adding $1$ twice. So, for example,
-$[0]$ goes to $[2]$, $[4]$ goes to $[6]$, $[5]$ goes to $[0]$ and $[6]$ goes to
-$[1]$. Again, we are just moving around in circles. It is similar to addition
-on the number line, but instead of going in a line, we are going in a cycle.
+We now consider what happens if we add \(2\) to a number. In which bucket would
+the new number be in? This is the same as adding \(1\) twice. So, for example,
+\([0]\) goes to \([2]\), \([4]\) goes to \([6]\), \([5]\) goes to \([0]\) and
+\([6]\) goes to \([1]\). Again, we are just moving around in circles. It is
+similar to addition on the number line, but instead of going in a line, we are
+going in a cycle.
 
 The process of addition is moving numbers from one remainder bucket to the next
-several times. What happens if we add $7$? Well, we would have gone one whole
+several times. What happens if we add \(7\)? Well, we would have gone one whole
 cycle around, and so our result should be in the same bucket. And indeed, that
-is what we would expect, since adding $7$ should not change the remainder when
-dividing by $7$.
+is what we would expect, since adding \(7\) should not change the remainder
+when dividing by \(7\).
 
-The same goes for any multiple of $7$. If we add $21$, we would go around one
-whole cycle $3$ times, and then arrive back where we started. For bigger numbers
-that are not multiples of $7$, we can think of the addition as moving around the
-whole cycle several times, then moving some extra steps. How many extra steps do
-we move? Why, the remainder when divided by $7$, of course.
+The same goes for any multiple of \(7\). If we add \(21\), we would go around
+one whole cycle \(3\) times, and then arrive back where we started. For bigger
+numbers that are not multiples of \(7\), we can think of the addition as moving
+around the whole cycle several times, then moving some extra steps. How many
+extra steps do we move? Why, the remainder when divided by \(7\), of course.
 
 To recap, we have devised a system where we can predict the remainder of a sum
-when divided by $7$, knowing just the remainders of the two \glspl{summand} when
-divided by $7$. We simply start at the bucket for the first number and advance a
-number of buckets in the cycle equal to the remainder of the second number when
-divided by $7$. We introduce the following notation: \[ [1] + [2] = [3] \] to
-mean that the sum of a number in bucket $[1]$ and a number in bucket $[2]$ is a
-number in bucket $[3]$.
+when divided by \(7\), knowing just the remainders of the two \glspl{summand}
+when divided by \(7\). We simply start at the bucket for the first number and
+advance a number of buckets in the cycle equal to the remainder of the second
+number when divided by \(7\). We introduce the following notation: \[ [1] + [2] =
+[3] \] to mean that the sum of a number in bucket \([1]\) and a number in
+bucket \([2]\) is a number in bucket \([3]\).
 
-We can return to algebra to provide a justification for this behaviour. Say
-$n \bmod 7 = i$, and $m \bmod 7 = j$. Then let $n = 7k + i$ and $m = 7\ell + j$.
-We see that \begin{align*}
+We can return to algebra to provide a justification for this behaviour. Say \(n
+\bmod 7 = i\), and \(m \bmod 7 = j\). Then let \(n = 7k + i\) and \(m = 7\ell +
+j\). We see that \begin{align*}
  (n + m) \bmod 7
  &= (7k+i + 7\ell+j) \bmod 7 \\
  &= (7(k+\ell) + i + j) \bmod 7 \\
  &= (i + j) \bmod 7
 \end{align*} which is the same as saying that the remainder of the sum of two
-numbers when divided by $7$ is the same as the remainder of the sum of the
-remainders when divided by $7$. In other words, the bucket of the result is
+numbers when divided by \(7\) is the same as the remainder of the sum of the
+remainders when divided by \(7\). In other words, the bucket of the result is
 determined only by the buckets of the summands.
 
 By now we have come up with a generalization of the concept of parity (for
-divisibility by $2$) to divisibility by $7$. Instead of categorizing numbers
-into even and odd numbers, we categorize them into the $7$ buckets depending on
-their remainder when divided by $7$. But we could have chosen any positive
-integer to start with, not just $7$. By using the same techniques we applied
-above, we can create a new way of analyzing numbers using any positive integer
-as our base.
+divisibility by \(2\)) to divisibility by \(7\). Instead of categorizing
+numbers into even and odd numbers, we categorize them into the \(7\) buckets
+depending on their remainder when divided by \(7\). But we could have chosen
+any positive integer to start with, not just \(7\). By using the same
+techniques we applied above, we can create a new way of analyzing numbers using
+any positive integer as our base.
 
 \section{Introducing Multiplication}
 
-For simplicity, we'll continue to use $7$ as our base, but keep in mind that the
-interesting results we will notice are valid in other bases also. Above, we saw
-the important fact that the remainder of the sum of two numbers is the same as
-the remainder of the sum of the remainders of two numbers. There is a similar
-fact for multiplication. Indeed, \[
- ab \bmod 7 = (a \bmod 7)(b \bmod 7) \bmod 7
-\]
+For simplicity, we'll continue to use \(7\) as our base, but keep in mind that
+the interesting results we will notice are valid in other bases also. Above, we
+saw the important fact that the remainder of the sum of two numbers is the same
+as the remainder of the sum of the remainders of two numbers. There is a
+similar fact for multiplication. Indeed, \[ ab \bmod 7 = (a \bmod 7)(b \bmod 7)
+\bmod 7 \]
 
-That is, instead of multiplying two numbers and then taking the remainder of the
-product, we can instead multiply their remainders and take the remainder of
+That is, instead of multiplying two numbers and then taking the remainder of
+the product, we can instead multiply their remainders and take the remainder of
 that. While above we gave an algebraic explanation for the sum of two numbers,
 for the sake of time we will not do that for the product. But a similar
 algebraic explanation is possible, and if you are interested, you may try to
@@ -947,16 +1057,16 @@ above. Let us consider, for example, the following problems:
 
 \begin{problem}{A Million Days}
 
- Today is Sunday. $1000$ days later, it will be Saturday. $1000000$ days later,
- what day will it be?
+ Today is Sunday. \(1000\) days later, it will be Saturday. \(1000000\) days
+ later, what day will it be?
 
  \begin{solution}
 
-  The question tells us that $1000$ days later, it will be Saturday. Since
-  Saturday is $6$ days past Sunday, we know that $1000 \bmod 7 = 6$.
+  The question tells us that \(1000\) days later, it will be Saturday. Since
+  Saturday is \(6\) days past Sunday, we know that \(1000 \bmod 7 = 6\).
 
-  We need to compute $1000000 \bmod 7$. We can use the technique developed above
-  to simplify: \begin{align*}
+  We need to compute \(1000000 \bmod 7\). We can use the technique developed
+  above to simplify: \begin{align*}
    1000000 \bmod 7
    &= (1000 \times 1000) \bmod 7 \\
    &= ((1000 \bmod 7) \times (1000 \bmod 7)) \bmod 7 \\
@@ -964,31 +1074,31 @@ above. Let us consider, for example, the following problems:
    &= 36 \bmod 7 \\
    &= 1
   \end{align*}
-  so after $1000000$ days, the day of the week will be $1$ past Sunday, hence
-  \AnsT{Monday}.
+  so after \(1000000\) days, the day of the week will be \(1\) past Sunday,
+  hence \AnsT{Monday}.
 
  \end{solution}
 \end{problem}
 
-\begin{problem}{A Large Power of $2$}
+\begin{problem}{A Large Power of \(2\)}
 
- Find $2^{32} \bmod 7$.
+ Find \(2^{32} \bmod 7\).
 
  \begin{solution}
 
-  We could find the product, but that would take a long time. Since $16$ is a
-  power of $2$, it may be useful to consider the remainders of $2^1$, $2^2$,
-  $2^4$, $2^8$, $2^{16}$, and then finally $2^{32}$.
+  We could find the product, but that would take a long time. Since \(16\) is a
+  power of \(2\), it may be useful to consider the remainders of \(2^1\),
+  \(2^2\), \(2^4\), \(2^8\), \(2^{16}\), and then finally \(2^{32}\).
 
-  First, note that $2 \bmod 7 = 2$. Then note $2^2 \bmod 7 = 4 \bmod 7 = 4$.
-  Next, note that \begin{align*}
+  First, note that \(2 \bmod 7 = 2\). Then note \(2^2 \bmod 7 = 4 \bmod 7 =
+  4\). Next, note that \begin{align*}
    2^4 \bmod 7
    &= (2 \times 2 \times 2 \times 2) \bmod 7 \\
    &= 16 \bmod 7 \\
    &= 2
   \end{align*} and so far, all the calculations have been short and easy.
 
-  For $2^8 \bmod 7$, instead of calculating the product, we could apply the
+  For \(2^8 \bmod 7\), instead of calculating the product, we could apply the
   above result: \begin{align*}
    2^8 \bmod 7
    &= (\underbrace{2 \times 2 \times \dots \times 2}_{8\text{ twos}}) \bmod 7 \\
@@ -1000,7 +1110,7 @@ above. Let us consider, for example, the following problems:
    &= 4
   \end{align*}
 
-  Next, for $2^{16} \bmod 7$, we do the same thing again: \begin{align*}
+  Next, for \(2^{16} \bmod 7\), we do the same thing again: \begin{align*}
    2^{16} \bmod 7
    &= (\underbrace{2 \times 2 \times \dots \times 2}_{16\text{ twos}}) \bmod 7 \\
    &= (\underbrace{2 \times 2 \times \dots \times 2}_{8\text{ twos}})
@@ -1012,7 +1122,7 @@ above. Let us consider, for example, the following problems:
    &= 2
   \end{align*}
 
-  And finally, one more time for $2^{32} \bmod 7$: \begin{align*}
+  And finally, one more time for \(2^{32} \bmod 7\): \begin{align*}
    2^{32} \bmod 7
    &= (\underbrace{2 \times 2 \times \dots \times 2}_{32\text{ twos}}) \bmod 7 \\
    &= (\underbrace{2 \times 2 \times \dots \times 2}_{16\text{ twos}})
@@ -1035,8 +1145,9 @@ operations. Now we will take look at the commonly used notation, and how it can
 be used to solve problems.
 
 First, we introduce the concept that two numbers are \emph{congruent} modulo
-some base $k$ if they have the same remainder when divided by $k$. For example,
-$17$ and $10$ are congruent modulo $7$, because $17 \bmod 7 = 3 = 10 \bmod 7$.
+some base \(k\) if they have the same remainder when divided by \(k\). For
+example, \(17\) and \(10\) are congruent modulo \(7\), because \[ 17 \bmod 7 =
+3 = 10 \bmod 7 \].
 
 We can write this as: \[
  17 \equiv 10 \pmod 7
@@ -1049,7 +1160,7 @@ By working with congruences, we can solve complex problems in relatively few
 lines of work. For instance, consider the following.
 
 \begin{problem}{Huge Number, Small Remainder}
- Define $10! = 10 \times 9 \times 8 \times \dots \times 1$. Find $10! \bmod 72$.
+ Define \(10! = 10 \times 9 \times 8 \times \dots \times 1\). Find \(10! \bmod 72\).
 
  \begin{solution}
   We see that \begin{align*}
@@ -1061,7 +1172,7 @@ lines of work. For instance, consider the following.
    &\equiv 0 \times 10 \times 7! \mod {72} \\
    &\equiv 0 \mod {72}
   \end{align*}
-  so $10! \bmod 72 = \Ans{0}$.
+  so \(10! \bmod 72 = \Ans{0}\).
  \end{solution}
 \end{problem}
 
@@ -1087,29 +1198,29 @@ lines of work. For instance, consider the following.
 
 \begin{problem}{Clock Arithmetic}
 
- A $12$-hour analog clock (which are increasingly rare nowadays) is a
- time-keeping device numbered from $1$ to $12$ (see Figure~\ref{ma:clock}).
- There are two hands. The longer one is the minute hand, which measures minutes,
- and the shorter one is the hour hand, which measures hours. Each hour, the hour
- hand of the clock moves clockwise (that is, up one number) by one labelled
- segment. Every $12$ hours, the clock returns to its original orientation. For
- the purposes of this question, we'll ignore the minute hand and focus only on
- the hour hand.
+ A \(12\)-hour analog clock (which are increasingly rare nowadays) is a
+ time-keeping device numbered from \(1\) to \(12\) (see Figure~\ref{ma:clock}).
+ There are two hands. The longer one is the minute hand, which measures
+ minutes, and the shorter one is the hour hand, which measures hours. Each
+ hour, the hour hand of the clock moves clockwise (that is, up one number) by
+ one labelled segment. Every \(12\) hours, the clock returns to its original
+ orientation. For the purposes of this question, we'll ignore the minute hand
+ and focus only on the hour hand.
 
- If a clock's hour hand is pointing to the $5$ right now, to where was it
- pointing $13\times29$ hours ago?
+ If a clock's hour hand is pointing to the \(5\) right now, to where was it
+ pointing \(13\times29\) hours ago?
 
  \begin{solution}
-  We seek $5 - 13 \times 29 \bmod 12$. It is straightforward to calculate this
-  with modular arithmetic: \begin{align*}
+  We seek \(5 - 13 \times 29 \bmod 12\). It is straightforward to calculate
+  this with modular arithmetic: \begin{align*}
    5 - 13 \times 29
    &\equiv 5 - 1 \times 5 \\
    &\equiv 5 - 5 \\
    &\equiv 0 \mod {12}
   \end{align*}
 
-  Of course, there is no $0$ on the clock---in its place is \Ans{12}, which was
-  where the hour hand was pointing.
+  Of course, there is no \(0\) on the clock---in its place is \Ans{12}, which
+  was where the hour hand was pointing.
  \end{solution}
 
 \end{problem}
