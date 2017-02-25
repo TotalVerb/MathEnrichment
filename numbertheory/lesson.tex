@@ -10,7 +10,7 @@
 
 \title{Number Theory}
 \author{Fengyang Wang}
-\date{October 24, 2016}
+\date{February 25, 2017}
 
 \begin{document}
 
@@ -146,13 +146,37 @@ will also approach the problem algebraically. Do not be alarmed by the presence
 of letters along with numbers. Unless otherwise stated, a letter is simply a
 placeholder for a number.
 
-An even number is a number of the form \(2n\), where \(n\) is any integer. The
-expression \(2n\) means \(2\times n\); we omit the \(\times\) so that it is
-faster to read and write.
+An \gls{even} number is a number of the form \(2n\), where \(n\) is any
+integer. The expression \(2n\) means \(2\times n\); we omit the \(\times\) so
+that it is faster to read and write. What are some examples? For instance,
+\(6\) is an even number, because we can write \(6 = 2 \times 3\).
 
-An odd number is a number of the form \(2n+1\), where \(n\) is any integer. The
-expression \(2n+1\) means \((2\times n) + 1\). We perform the multiplication
-first because of the order of operations.
+Is \(2\) even? Yes. We can write \(2 = 2 \times 1\), so \(2\) is an even
+number. Is \(0\) even? Yes. We can write \(0 = 2 \times 0\), so \(0\) is also
+an even number. What about \(-10\)? This is also an even number, because we can
+write \(-10 = 2 \times -5\).
+
+Now let's consider \(5\). Can we find an integer \(n\) so that \(5 = 2n\)? The
+answer is no. If we try \(n = 2\), we get \(2 \times 2 = 4\), which is too
+small. But if we try \(n = 3\), we get \(2 \times 3 = 6\), which is too big.
+Since there are no integers between \(2\) and \(3\), the conclusion is that
+there is no integer \(n\) with \(5 = 2n\).
+
+Then, \(5\) is not even. We say that \(5\) is \gls{odd}: that simply means that
+it is not even. All integers, then, are either even or odd, never neither and
+never both.
+
+The numbers \(-4\), \(-2\), \(0\), \(2\), and \(4\) are even, while the numbers
+\(-3\), \(-1\), \(1\), and \(3\) are odd. Notice that in between every two even
+numbers is an odd number, and in between every two odd numbers is an even
+number. Indeed, if we add \(1\) to an even number, we will always get an odd
+number; if we add \(1\) to an odd number, we will always get an even number.
+
+Furthermore, any odd number is exactly \(1\) more than some even number. What
+we conclude is that any odd number can be written as \(2n+1\), where \(n\) is
+some integer. In addition, any integer of the form \(2n+1\), where \(n\) is
+some integer, is odd. (The expression \(2n+1\) means \((2\times n) + 1\). We
+perform the multiplication first because of the order of operations.)
 
 \subsection{Determining Parity}
 
