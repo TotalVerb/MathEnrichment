@@ -1,0 +1,106 @@
+\documentclass[12pt,letterpaper]{article}
+
+\newcommand{\IncludePath}{../../include}
+\input{\IncludePath/hmwk-template.tex}
+
+\title{Inequalities}
+\author{By Fengyang Wang for Saturday Sessions}
+\date{January 28, 2017}
+
+\newcommand{\im}{i}
+
+\begin{document}
+\HomeworkTitle
+\begin{problem}{Arithmetic Mean}
+  Let \(a\) and \(b\) be real numbers. We define the \emph{arithmetic mean} of
+  \(a\) and \(b\) to be \[
+   \operatorname{AM}(a, b) = \frac{a + b}{2}
+  \]
+  \begin{enumerate}
+    \item Show that \[
+      a + \frac{b - a}{2} = \frac{a + b}{2}
+    \]
+    \item Show that if \(a < b\), then \[
+      a < \frac{a + b}{2} < b
+    \]
+ \end{enumerate}
+\end{problem}
+
+\begin{problem}{Geometric Mean}
+  Let \(a\) and \(b\) be positive real numbers. We define the \emph{geometric
+  mean} of \(a\) and \(b\) to be \[
+   \operatorname{GM}(a, b) = \sqrt{ab}
+  \]
+  \begin{enumerate}
+    \item Explain why we require \(a\) and \(b\) to be positive.
+    \item Show that if \(0 < a < b\), then \[
+      a < \sqrt{ab} < b
+    \]
+    \item Show that \(x^2 - 2xy + y^2 \ge 0\) for all real \(x\) and \(y\).
+    When does equality hold?
+    \item Show that if \(0 < a < b\), \[
+      \sqrt{ab} \le \frac{a+b}{2}
+    \] with equality if and only if \(a = b\). Hint: apply the last inequality
+    to \(x=\sqrt{a}\), \(y=\sqrt{b}\).
+
+    This inequality is known as the AMGM inequality; i.e. for all positive real
+    numbers \(a\) and \(b\), \[
+      \operatorname{AM}(a, b) \ge \operatorname{GM}(a, b)
+    \]
+ \end{enumerate}
+\end{problem}
+
+\begin{problem}{Applications of AMGM}
+  \begin{enumerate}
+    \item Given \SI{20}{\metre} of fence, the maximum rectangular area that can
+    be enclosed is \SI{25}{\metre\squared}. Using the AMGM equality, explain
+    why.
+    \item Let \(a\), \(b\), and \(c\) be positive real numbers. Show that \[
+      (a+b)(b+c)(c+a) \ge 8abc
+    \]
+    \item Let \(x\) be a positive real number. Show that \[
+      x + \frac{1}{x} \ge 2
+    \] and determine when equality holds.
+  \end{enumerate}
+\end{problem}
+
+\begin{problem}{Root Mean Square}
+  Let \(a\) and \(b\) be positive real numbers. We define the \emph{root mean
+  square} of \(a\) and \(b\) to be \[
+    \operatorname{RMS}(a, b) = \sqrt{\frac{a^2 + b^2}{2}}
+  \]
+
+\begin{enumerate}
+ \item Show that for \(a\) and \(b\) positive reals, \[
+  \operatorname{RMS}(a, b) \ge \operatorname{AM}(a, b)
+ \]
+ \item Conclude, by transitivity, that \[
+  \operatorname{RMS}(a, b) \ge \operatorname{GM}(a, b)
+ \]
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{The Cauchy-Schwarz Inequality}
+  Define \((a, b, c) \cdot (d, e, f) = ad + be + cf\), and call this the
+  \emph{dot product} of two real vectors \((a, b, c)\) and \((d, e, f)\).
+  Define \(\|(a, b, c)\| = \sqrt{a^2+b^2+c^2}\) and call this the \emph{norm}
+  of the real vector \((a, b, c)\).
+
+  \begin{enumerate}
+    \item Similarly to the definition above, define \((a, b) \cdot (c, d) = ac +
+    bd\) and \(\|(a, b)\| = \sqrt{a^2 + b^2}\). Show that \[
+      (a, b) \cdot (c, d) = ac + bd \le \sqrt{a^2 + b^2}\sqrt{c^2 + d^2}
+      = \|(a, b)\|\|(c, d)\|
+    \]
+
+    \item Show that \[
+      (a, b, c) \cdot (d, e, f) \le \|(a, b, c)\| \|(d, e, f)\|
+    \] for all real vectors \((a, b, c)\) and \((d, e, f)\).
+
+    This is a special case of the Cauchy-Schwarz inequality. In general, dot
+    products and norms can be defined for vectors of any length. Here we have
+    considered the case of lengths \(2\) and \(3\).
+  \end{enumerate}
+\end{problem}
+
+\end{document}
