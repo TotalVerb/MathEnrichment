@@ -1,0 +1,96 @@
+\documentclass[12pt,letterpaper]{article}
+
+\newcommand{\IncludePath}{../../include}
+\input{\IncludePath/hmwk-template.tex}
+
+\title{Polynomials}
+\author{By Fengyang Wang for Saturday Sessions}
+\date{March 4, 2017}
+
+\newcommand{\im}{i}
+
+\begin{document}
+\HomeworkTitle
+\begin{problem}{Factorization in \(\mathbf{Z}[x]\)}
+  Define \(\mathbf{Z}[x]\) to be the set of polynomials with integer
+  coefficients. In \(\mathbf{Z}[x]\), fully factor the following.
+
+  \begin{enumerate}
+    \item \(16 - x^2\)
+    \item \(2 + 5x + 3x^2\)
+    \item \(1 + 6x + 12x^2 + 8x^3\)
+    \item \(1 - 4x + 6x^2 - 4x^3 + x^4\)
+    \item \(1 - x^4\)
+  \end{enumerate}
+\end{problem}
+
+\begin{problem}{Factorization in \(\mathbf{Q}[x]\)}
+  Define \(\mathbf{Q}[x]\) to be the set of polynomials with rational
+  coefficients. In \(\mathbf{Q}[x]\), fully factor the following.
+
+  \begin{enumerate}
+    \item \(\frac{1}{4} + x + x^2\)
+    \item \(\frac{4}{9} - \frac{4}{9}x + \frac{1}{9}x^2\)
+    \item \(-x + 2x^2\)
+  \end{enumerate}
+\end{problem}
+
+\begin{problem}{Factorization in \(\mathbf{R}[x]\)}
+  Define \(\mathbf{R}[x]\) to be the set of polynomials with real coefficients.
+  In \(\mathbf{R}[x]\), fully factor the following.
+
+  \begin{enumerate}
+    \item \(1 - 5x^2\)
+    \item \(-1 + x + x^2\)
+    \item \(3 - 3x - x^2 + x^3\)
+  \end{enumerate}
+\end{problem}
+
+\begin{problem}{Finite Geometric Series}
+  \begin{enumerate}
+    \item Expand \(\frac{1-x^2}{1-x}\) as a polynomial.
+    \item Expand \(\frac{1-x^5}{1-x}\) as a polynomial.
+    \item Find a fraction of the form \(\frac{p(x)}{q(x)}\), where \(p\) and
+    \(q\) are polynomials, such that \[
+      \frac{p(x)}{q(x)} = \sum_{k=0}^n x^k = 1 + x + \dots + x^n
+    \]
+  \end{enumerate}
+\end{problem}
+
+\begin{problem}{Binomial Coefficients}
+  Recall that \(n! = 1\cdot2 \cdot \dots \cdot (n-1) \cdot n\) is the product
+  of all integers from \(1\) to \(n\).
+
+  \begin{enumerate}
+    \item Define \[
+      \binom{x}{n} := \frac{x\cdot(x-1)\cdot\dots\cdot(x-n)}{n!}
+    \]
+
+    Find the constant term of \(\binom{x}{n}\).
+    \item Find the leading coefficient (that is, the coefficient of the \(x^n\)
+    term) of \(\binom{x}{n}\).
+    \item Compute each of the following. \[
+      \binom{5}{2} = \hspace{4ex}
+      \binom{-1}{10} = \hspace{4ex}
+      \binom{1/2}{3} = \hspace{4ex}
+    \]
+    \item Prove that \[
+      \binom{n}{n} = \binom{n}{0} = 1
+    \]
+  \end{enumerate}
+\end{problem}
+
+\begin{problem}{\(q\)-analogs of Binomial Coefficients}
+  \begin{enumerate}
+    \item Define for non-negative integers \(n > m\) \[
+      \binom{n}{m}_x := \prod_{k=1}^{m} \frac{1-x^{n-k-1}}{1-x^{k}}
+    \]
+
+    Prove that \(\binom{n}{m}_x\) is a polynomial in \(x\).
+    \item Show that \[
+      \binom{n+1}{m}_x = x^m \binom{n}{m}_x + \binom{n}{m-1}_x
+    \]
+  \end{enumerate}
+\end{problem}
+
+\end{document}

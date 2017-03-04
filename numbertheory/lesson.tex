@@ -308,8 +308,9 @@ figure out whether a number is odd or even.
 
 We will begin today's topic with a few definitions.
 
-The symbol \(\mid\) means ``divides''. If \(A\) and \(B\) are two numbers, then
-\(A\) divides \(B\) when \(B \div A\) has no remainder.
+The symbol \(\mid\) means ``divides''. If \(n\) and \(m\) are two numbers, then
+\(n\) divides \(m\) when \(m \div n\) has no remainder; that is, when \(m \bmod
+n = 0\). We write this as \(n \mid m\).
 
 A number is a \emph{factor} of another number if it divides that number. For
 example, \(3\) is a \emph{factor} of \(9\) because \(3 \mid 9\). A number is a
@@ -317,22 +318,71 @@ example, \(3\) is a \emph{factor} of \(9\) because \(3 \mid 9\). A number is a
 \(9\) is a \emph{multiple} of \(3\). Another word for factor, which we will see
 later on, is \emph{divisor}.
 
+We can see that if \(n\) and \(m\) are integers, then the following conditions
+are \gls{equivalent}:
+
+\begin{enumerate}
+  \item \(n\) is a factor of \(m\)
+  \item \(n\) divides \(m\)
+  \item \(m\) is a multiple of \(n\)
+  \item \(m \bmod n = 0\)
+  \item There exists integer \(k\) such that \(m = nk\)
+\end{enumerate}
+
 Observe that \(1\) is a \emph{factor} of every whole number, and \(0\) is a
 \emph{multiple} of every whole number.
+
+We also introduce the symbol \(\nmid\) for ``does not divide''; that is, for
+\(n\) and \(m\) two integers, \(n \nmid m\) whenever it is not the case that
+\(n \mid m\).
+
+\begin{problem}{Factors and Multiples}
+ Let \(a\), \(b\), and \(c\) be integers such that \(c = ab\). Then
+ \begin{enumerate}
+  \item \(a\) must divide \(c\) \hfill \AnsT{True}~~~False
+  \item \(b\) must be a multiple of \(c\) \hfill True~~~\AnsT{False}
+ \end{enumerate}
+
+ \begin{solution}
+  Since \(c = a \times b\), and \(b\) is an integer, therefore \(a \mid c\), so
+  the first statement is always \AnsT{true}.
+
+  But there is no requirement that \(c \mid b\)---take \(a = b = 2\) and \(c =
+  4\), for example. Here \(4 \nmid 2\), so the second statement is
+  \AnsT{false}.
+ \end{solution}
+\end{problem}
 
 \subsection{Finding Factors}
 
 One class of problem that we may be interested in solving is to list the
 factors for a number. When the number is small, this is easy. For example,
 listing the factors of \(6\) is as simple as trying out all smaller (or equal)
-numbers, and finding that only \(1\), \(2\), \(3\), and \(6\) divide \(6\)
-evenly.
+positive integers, and finding that only \(1\), \(2\), \(3\), and \(6\) divide
+\(6\) evenly.
+
+Note that \(-1\), \(-2\), \(-3\), and \(-6\) are also factors of \(6\).
+However, because these are redundant with the positive factors we found above,
+we typically only care about finding the positive factors of a number.
 
 For larger numbers, we may exploit the fact that factors always come in pairs.
 If \(a \mid c\), then there is some number \(b\) so that \(a \times b = c\).
 But then we can just flip the order of the multiplication, and we see that \(b
 \times a = c\) and therefore \(b \mid c\). Therefore a convenient way to find
 big factors is to divide the original number by the smaller factors.
+
+We will revisit this topic, and obtain a faster way to do this type of problem,
+in the future.
+
+\begin{problem}{Positive Factors of \(30\)}
+ Find the first \(4\) positive factors of \(30\).
+
+ \begin{solution}
+  It is clear that \(1 \mid 30\), \(2 \mid 30\), and \(3 \mid 30\). But since
+  \(30 \bmod 4 = 2\), then \(4 \nmid 30\). So we check that \(30 \bmod 5 = 0\),
+  so \(5 \mid 30\). Hence the first four factors are \Ans{1, 2, 3, 5}.
+ \end{solution}
+\end{problem}
 
 \subsection{Revisiting Parity}
 

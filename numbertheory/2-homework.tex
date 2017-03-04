@@ -7,7 +7,7 @@
 \defauthor
 
 \title{Divisibility}
-\date{March 5, 2016}
+\date{March 4, 2017}
 
 \begin{document}
 
@@ -15,71 +15,8 @@
 
 \thispagestyle{empty}
 
-The symbol \(\mid\) means ``divides''. If \(A\) and \(B\) are two numbers, then
-\(A\) divides \(B\) when \(B \div A\) has no remainder.
-
-A number is a \emph{factor} of another number if it divides that number. For
-example, \(3\) is a \emph{factor} of \(9\) because \(3 \mid 9\). A number is a
-\emph{multiple} of another number if the other number divides it. For example,
-\(9\) is a \emph{multiple} of \(3\).
-
-\(1\) is a \emph{factor} of every whole number, and \(0\) is a \emph{multiple}
-of every whole number. The \emph{transitivity} principle says that if \(a\),
-\(b\), and \(c\) are integers, and if \(a \mid b\) and \(b \mid c\), then \(a
-\mid c\).
-
-\begin{problem}{Divisibility}
- Are all of the following divisibility statements correct or incorrect? If
- incorrect, change the divisibility statement so that it becomes correct.
-
- \begin{enumerate}
-  \item \(6 \mid 2\)
-  \item \(4 \mid 40\)
-  \item \(3 \mid 99\)
-  \item \(100 \mid 7801\)
- \end{enumerate}
-\end{problem}
-
-\begin{problem}{Multiples of \(3\) and \(6\)}
- \begin{itemize}
-  \item Complete this list of multiples of \(3\): \(0\), \(3\), \(6\),
-  \blankB, \blankB, \blankB,
-  \(18\), \ldots
-
-  \item Complete this list of multiples of \(6\): \(0\), \(6\), \(12\),
-  \blankB, \blankB, \blankB,
-  \(36\), \ldots
- \end{itemize}
-\end{problem}
-
-\begin{problem}{Transititity}
- Let \(a\), \(b\), and \(c\) be three integers. Use transitivity to verify the
- following statements:
- \begin{itemize}
-  \item If \(a \mid b\), then \(a \mid bc\).
-  \item If \(a \mid b\), and \(b \mid c\), and \(c \mid 10000\), then \(a \mid
-  10000\).
- \end{itemize}
-\end{problem}
-
-\begin{problem}{Rectangle II}
- Look at the diagram below. Each small square is one square unit.
-
- \begin{center}
- \begin{tikzpicture}
-  \draw[step=0.5] (0,0) grid (5,3.5);
- \end{tikzpicture}
- \end{center}
-
- \begin{enumerate}
-  \item The rectangle has area \blankD square units.
-  \item \(7\) is a \underline{\hspace{10em}} of the rectangle's area.
-  \item The rectangle's area is a \underline{\hspace{10em}} of \(10\).
- \end{enumerate}
-\end{problem}
-
 \begin{problem}{Factors of \(20\)}
- List all the factors of \(20\):
+ List all the positive factors of \(20\):
  \blankB, \blankB,
  \blankB, \blankB,
  \blankB, \blankB
@@ -91,6 +28,63 @@ of every whole number. The \emph{transitivity} principle says that if \(a\),
   Which of the following is a perfect number: \(10\), \(17\), \(28\)?
 \end{problem}
 
+\begin{problem}{Multiples of \(3\) and \(6\)}
+ \begin{itemize}
+  \item Fill in the blanks in this list of multiples of \(3\): \(0\), \(3\),
+  \(6\), \Switch{\Ans{9}, \Ans{12}, \Ans{15}}{\blankB, \blankB, \blankB},
+  \(18\), \ldots
+
+  \item Fill in the blanks in this list of multiples of \(6\): \(0\), \(6\),
+  \(12\), \Switch{\Ans{18}, \Ans{24}, \Ans{30}}{\blankB, \blankB, \blankB},
+  \(36\), \ldots
+ \end{itemize}
+\end{problem}
+
+\begin{problem}{Rectangle II}
+ Look at the diagram below. Each small square is one square unit.
+
+ \begin{center}
+ \begin{tikzpicture}
+  \draw[step=0.5] (0,0) grid (4,3);
+ \end{tikzpicture}
+ \end{center}
+
+ \begin{enumerate}
+  \item The rectangle has area \Switch{\Ans{48}}{\blankD} square units.
+  \item \(6\) is a \Switch{\AnsT{factor}}{\underline{\hspace{10em}}} of the
+  rectangle's area.
+  \item The rectangle's area is a
+  \Switch{\AnsT{multiple}}{\underline{\hspace{10em}}} of \(8\).
+ \end{enumerate}
+\end{problem}
+
+\begin{problem}{Linear Diophantine Equations in One Variable}
+  \begin{enumerate}
+    \item Find an integer \(n\) such that \(2n = 4\).
+    \hfill \(n = \Switch{\Ans{2}}{\blankC}\)
+    \item Find an integer \(n\) such that \(3n = -9\).
+    \hfill \(n = \Switch{\Ans{-3}}{\blankC}\)
+    \item Find an integer \(n\) such that \(5n = 45\).
+    \hfill \(n = \Switch{\Ans{9}}{\blankC}\)
+    \item Is there an integer \(n\) such that \(5n = 48\)? Explain why or why
+    not. \Switch{\AnsT{No, since \(5 \nmid 48\).}}{}
+  \end{enumerate}
+\end{problem}
+
+\begin{problem}{True or False}
+ \begin{enumerate}
+  \item \(6 \mid 2\)      \hfill \TFFalse
+  \item \(4 \mid 40\)     \hfill \TFTrue
+  \item \(3 \mid 99\)     \hfill \TFTrue
+  \item \(100 \mid 7801\) \hfill \TFFalse
+  \item Let \(a\), \(b\), and \(c\) be three integers. If \(a \mid b\), then
+  \(a \mid bc\).          \hfill \TFTrue
+  \item Let \(a\), \(b\), and \(c\) be three integers. If \(a \mid b\), and \(b
+  \mid c\), and \(c \mid 10000\), then \(a \mid 10000\).
+                          \hfill \TFTrue
+ \end{enumerate}
+\end{problem}
+
 \begin{problem}{Challenge I}
  Define a number to be ``cool'' if it is divisible by all of \(2\), \(3\),
  \(4\), and \(6\). For example, \(60\) is a cool number but \(100\) is not.
@@ -100,13 +94,14 @@ of every whole number. The \emph{transitivity} principle says that if \(a\),
 
 \begin{problem}{Challenge II}
  \begin{enumerate}
-  \item How many factors does \(1\) have?
-  \item How many factors does \(2\) have?
-  \item How many factors does \(4\) have?
-  \item How many factors does \(8\) have?
+  \item How many positive factors does \(1\) have? \Switch{\Ans{1}}{}
+  \item How many positive factors does \(2\) have? \Switch{\Ans{2}}{}
+  \item How many positive factors does \(4\) have? \Switch{\Ans{3}}{}
+  \item How many positive factors does \(8\) have? \Switch{\Ans{4}}{}
   \item The notation \(2^{10}\) means \(\underbrace{ 2\times2\times2\times
   \ldots\times2}_{10\text{ twos}}\); that is, \(10\) twos multiplied together.
-  \(2^{10}=1024\). How many factors does \(1024\) have?
+  \(2^{10}=1024\). How many positive factors does \(1024\) have?
+  \Switch{\Ans{11}}{}
  \end{enumerate}
 \end{problem}
 
