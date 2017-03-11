@@ -3,8 +3,10 @@
 \newcommand{\IncludePath}{../include}
 \input{\IncludePath/hmwk-template.tex}
 
-\title{Primes \& Remainders}
-\author{Name: \underline{\hspace{5cm}}}
+% \answerstrue % turn on for answers
+\defauthor
+
+\title{The Sieve of Eratosthenes, Primes, and Remainders}
 \date{April 2, 2016}
 
 \begin{document}
@@ -12,54 +14,6 @@
 \maketitle
 
 \thispagestyle{empty}
-
-The first page is about remainders. The back page is a review of prime numbers.
-
-\begin{problem}{Fill in the Blanks I}
- When we divide $20$ by $4$, we count how many groups of $4$ are needed to make
- $20$. We know that $5 \times 4 = 20$. This means that it takes \blankC\ groups
- of $4$ to make $20$. So $20 \div 4 = \blankC$.
-
- When we divide $26$ by $13$, we count how many groups of \blankC\ are needed to
- make \blankC. Therefore, $26 \div 13 = \blankC$.
-\end{problem}
-
-\begin{problem}{Fill in the Blanks II}
- Sometimes the numbers might not work out perfectly. Let's try dividing $20$ by
- $3$. If we make $7$ groups of $3$, the total number would be $7 \times 3 = 21$.
- But this is too big. If we make $6$ groups of $3$, the total number would be
- $\blankC \times 3 = 18$. But this is too small. So we can make six groups, but
- we'd then have $20 - 18 = \blankC$ left over!
-
- We say that when we divide $20$ by $3$, our \emph{quotient} is $6$ because we
- can make \blankC\ groups of $3$ in total. And then we say that our
- \emph{remainder} is $2$ because after making $6$ groups of $3$, we have
- \blankC\ left over. We can also write this as $20 \div 3 = 6 \operatorname{R}
- 2$. The ``R'' stands for ``remainder''.
-
- When we can't make any groups, the quotient is zero ($0$). So $4 \div 10 =
- \blankC \operatorname{R} \blankC$. When there isn't anything left over, the
- remainder is zero ($0$). So $22 \div 2 = \blankC \operatorname{R} \blankC$.
-
- Complete the following: \begin{itemize}
-  \item $17 \div 5 = \blankC \operatorname{R} \blankC$.
-  \item $16 \div 5 = \blankC \operatorname{R} \blankC$.
- \end{itemize}
-\end{problem}
-
-\begin{problem}{Fill in the Blanks III}
- Suppose we didn't care what the quotient was; only the remainder is important.
- Then we can write that as $16 \bmod 5 = 1$. We don't care how many groups we
- made, but we do care that one was left over after making those groups. Complete
- the following:
-
- \begin{itemize}
-  \item $75 \bmod 7 = \blankC$.
-  \item $24 \bmod 3 = \blankC$.
- \end{itemize}
-\end{problem}
-
-\pagebreak
 
 Here is a list of all prime numbers less than $100$: $2$, $3$, $5$, $7$, $11$,
 $13$, $17$, $19$, $23$, $29$, $31$, $37$, $41$, $43$, $47$, $53$, $59$, $61$,
@@ -69,27 +23,21 @@ $67$, $71$, $73$, $79$, $83$, $89$ and $97$.
  Find the unique prime factorization of each number.
 
  \begin{itemize}
-  \item $20$ \hfill $\blankB \times \blankB \times \blankB$
-  \item $4$ \hfill $\blankB \times \blankB$
-  \item $81$ \hfill $\blankB \times \blankB \times \blankB \times \blankB$
-  \item $84$ \hfill $\blankB \times \blankB \times \blankB \times \blankB$
+  \item $20$ \hfill $\SAB{2} \times \SAB{2} \times \SAB{5}$
+  \item $4$ \hfill $\SAB{2} \times \SAB{2}$
+  \item $81$ \hfill $\SAB{3} \times \SAB{3} \times \SAB{3} \times \SAB{3}$
+  \item $84$ \hfill $\SAB{2} \times \SAB{2} \times \SAB{3} \times \SAB{7}$
  \end{itemize}
 \end{problem}
 
 \begin{problem}{Factor sum}
- The sum of all factors of $28$ is:
-
- $\blankB +
- \blankB +
- \blankB +
- \blankB +
- \blankB +
- \blankB = \underline{\hspace{3em}}$
-\end{problem}
-
-\begin{problem}{GCD of a prime}
- What is the greatest common divisor of $7$ and $10$? \hfill
- $\gcd(7, 10) = \blankB$
+ The sum of all positive factors of $28$ is
+ $\SAB{1} +
+ \SAB{2} +
+ \SAB{4} +
+ \SAB{7} +
+ \SAC{14} +
+ \SAC{28} = \SAC{56}$
 \end{problem}
 
 \begin{problem}{Challenge}
@@ -98,15 +46,18 @@ $67$, $71$, $73$, $79$, $83$, $89$ and $97$.
  $888888$.
 
  \begin{itemize}
-  \item What five-digit palindrome starts with $728$? \underline{\hspace{5em}}
+  \item What five-digit palindrome starts with $728$? \SAE{72827}
   \item $11$ and $55$ are two examples of two-digit palindromes.
   How many two-digit palindromes are there? ($00=0$ does not have two digits.)
+  \Switch{\Ans{9}}{}
   \item What two numbers are factors of all two-digit palindromes?
+  \Switch{\Ans{1, 11}}{}
   \item $1221$ and $9999$ are two examples of four-digit palindromes. How many
   four-digit palindromes are there? (Do not include palindromes starting with
-  $0$.)
-  \item How many four-digit palindromes are even?
+  $0$.) \Switch{\Ans{90}}{}
+  \item How many four-digit palindromes are even? \Switch{\Ans{45}}{}
   \item How many four-digit palindromes are divisible by $11$?
+  \Switch{\Ans{90}}{}
  \end{itemize}
 \end{problem}
 
