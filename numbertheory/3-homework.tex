@@ -3,9 +3,11 @@
 \newcommand{\IncludePath}{../include}
 \input{\IncludePath/hmwk-template.tex}
 
+% \answerstrue % turn on for answers
+\defauthor
+
 \title{Prime Numbers \& FTA}
-\author{Name: \underline{\hspace{5cm}}}
-\date{March 12, 2016}
+\date{March 11, 2017}
 
 \begin{document}
 
@@ -13,50 +15,19 @@
 
 \thispagestyle{empty}
 
-A whole number is \emph{prime} if it has just two factors: $1$ and itself. A
-whole number is \emph{composite} if it has three or more factors. $1$ is neither
-prime nor composite because it has just one factor.
-
-A list of all prime numbers less than $100$: $2$, $3$, $5$, $7$, $11$, $13$,
-$17$, $19$, $23$, $29$, $31$, $37$, $41$, $43$, $47$, $53$, $59$, $61$, $67$,
-$71$, $73$, $79$, $83$, $89$ and $97$.
-
-\begin{problem}{Primes}
-Select True or False for each statement.
-
-\begin{itemize}
- \item $5$ is prime \hfill True~~~False
- \item $97$ is prime \hfill True~~~False
- \item $10000000000$ is prime \hfill True~~~False
- \item For all $k>1$, $7k$ is composite \hfill True~~~False
-\end{itemize}
-\end{problem}
-
-\begin{problem}{The Fundamental Theorem of Arithmetic}
- Select True or False for each statement.
-
- \begin{itemize}
-  \item Every whole number except one has multiple prime factorizations.
-  \hfill True~~~False
-  \item Prime factorizations must not contain the number $1$.
-  \hfill True~~~False
-  \item Some composite numbers cannot be factored into primes.
-  \hfill True~~~False
-  \item The prime factorization of any prime number is the number itself.
-  \hfill True~~~False
- \end{itemize}
-
-\end{problem}
+For reference, here is a list of all prime numbers less than $100$: $2$, $3$,
+$5$, $7$, $11$, $13$, $17$, $19$, $23$, $29$, $31$, $37$, $41$, $43$, $47$,
+$53$, $59$, $61$, $67$, $71$, $73$, $79$, $83$, $89$ and $97$.
 
 \begin{problem}{Find the Primes}
- Fill in the blanks with prime numbers.
+ Fill in the blanks with prime numbers. (There might be more than one correct
+ solution.)
 
  \begin{itemize}
   \item $\blankC + \blankC = 52$
   \item $\blankC + \blankC + \blankC = 73$
  \end{itemize}
 \end{problem}
-
 
 \begin{problem}{Prime Factor}
  Find just one prime factor for each number. Do not try to find more.
@@ -68,8 +39,7 @@ Select True or False for each statement.
  \end{itemize}
 \end{problem}
 
-
-\begin{problem}{Factorize}
+\begin{problem}{Factorize, Part One}
  Find the unique prime factorization of each number.
 
  \begin{itemize}
@@ -81,22 +51,40 @@ Select True or False for each statement.
  \end{itemize}
 \end{problem}
 
-\begin{problem}{Big Prime Numbers}
- Suppose you had a large number like $8644255723$. How do you figure out its
- prime factorization? One way is to use \emph{trial division}---just divide by
- all numbers starting from $1$ until you find one that leaves no remainder. It
- turns out $8644255723 = 90907\times95089$, which are both prime numbers.
+\begin{problem}{Factorize, Part Two}
+  A computer has found that \(123456789 = 3803 \times 3607 \times
+  \Switch{\Ans{3}}{\blankC} \times \Switch{\Ans{3}}{\blankC}\), where \(3803\)
+  and \(3607\) are prime numbers, and the two blanks are prime numbers that I
+  forgot to write down! What goes in the blanks?
 
- \begin{enumerate}
-  \item How many divisions do you have to do before you find the first number
-  that works ($90907$)?
-  \item Let's say it takes $1$ minute for a person to divide $8644255723$ by a
-  smaller number (it might take even longer!). How long
-  (\underline{\hspace{5em}} minutes) will it take a person to find the first
-  prime factor?
-  \item How long is that in days spent without eating, drinking, or sleeping?
-  (There are $1440$ minutes in a day.) \hfill \blankB days
- \end{enumerate}
+  Hint: Don't do a full calculation---a good estimate may be good enough.
+\end{problem}
+
+\begin{problem}{True or False}
+Select True or False for each statement.
+
+\begin{itemize}
+  \item $5$ is prime \hfill \TFTrue
+  \item $97$ is prime \hfill \TFTrue
+  \item $10000000000$ is prime \hfill \TFFalse
+  \item Let \(k\) be an integer; if \(k>1\) then $7k$ is composite \hfill
+  \TFTrue
+  \item All composite numbers have at least \(4\) positive factors
+  \hfill \TFFalse
+  \item For all positive prime numbers \(p\), \(p^2\) has \(3\) positive factors
+  \hfill \TFTrue
+  \item Some composite numbers cannot be factored into primes
+  \hfill \TFFalse
+  \item Let \(p\) be a prime number; then \(p\) cannot be written as the
+  product of two primes \hfill \TFTrue
+  \item All composite numbers can be written as the product of two primes
+  \hfill \TFFalse
+  \item For all primes \(p\), \(p^2 + 1\) is prime \hfill \TFFalse
+  \item For all positive integers \(n\), \(n^2 + n\) is composite \hfill
+  \TFFalse
+  \item For all positive integers \(n\), \(n^2 + 3n\) is composite \hfill
+  \TFTrue
+ \end{itemize}
 
 \end{problem}
 
@@ -105,7 +93,7 @@ Select True or False for each statement.
 The notation $5!$ (pronounced ``five factorial'') means the product of all
 integers from $1$ to $5$; that is, $1 \times 2 \times 3 \times 4 \times 5$.
 Similarly, $3! = 1 \times 2 \times 3$ and $100! = 1 \times 2 \times 3
-\times\ldots\times 99 \times 100$.
+\times\dots\times 99 \times 100$.
 
 \begin{enumerate}
  \item Find the prime factorization of $4!$. \hfill
@@ -118,7 +106,5 @@ Similarly, $3! = 1 \times 2 \times 3$ and $100! = 1 \times 2 \times 3
 \end{enumerate}
 
 \end{problem}
-
-
 
 \end{document}

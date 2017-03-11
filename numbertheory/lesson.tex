@@ -407,6 +407,11 @@ For divisibility by \(10\), the rule is even simpler. A number is divisible by
 if the last two digits are \(0\). (Note that \(0\) is a bit of a special case,
 since it only has one digit, but it is still divisible by \(100\).)
 
+For divisibility by \(3\), the rule is a little complicated. A number is
+divisible by \(3\) if and only if the sum of its digits is divisible by \(3\).
+For example, \(123456\) is divisible by \(3\), because the sum of digits
+\(1+2+3+4+5+6=21\) is.
+
 \subsection{Transitivity}
 
 The \gls{transitivity} principle of divisiblity says that if \(a\), \(b\), and
@@ -503,17 +508,6 @@ Don't get caught in the trap that every odd number is prime! \(9=3\times3\) is
 not. Neither are \(15\), \(21\), \(25\), and many others. In fact, as the
 numbers get bigger and bigger, prime numbers get rarer and rarer. However, do
 note that there is only one even prime: \(2\).
-
-\subsection{For Large Numbers}
-
-Checking whether large numbers are prime is much harder to do on paper.
-However, it is easy to see that some numbers are composite. For example, if a
-number ends in \(0\), \(2\), \(4\), \(5\), \(6\), or \(8\), then it is probably
-composite---the only two exceptions are \(2\) and \(5\).
-
-As an interesting note, which we will not explore further in this class, there
-are actually infinitely many prime numbers. That means that no matter how big
-our prime numbers get, we can always find another bigger prime number.
 
 \section{Composite Numbers}
 
@@ -631,10 +625,39 @@ The product of these leaves is the prime factorization.
 
 \end{problem}
 
-As you will see on the homework, it may be difficult to factor very large
-numbers. In fact, much of modern cryptography, including the popular RSA
-encryption scheme, relies on the fact that nobody has yet discovered a fast way
-to factor large numbers.
+As we will see, it may be difficult to factor very large numbers. In fact, much
+of modern cryptography, including the popular RSA encryption scheme, relies on
+the fact that nobody has yet discovered a fast way to factor large numbers.
+
+First, notice that checking whether large numbers are prime is quite hard to do
+on paper. However, it is sometimes easy to see that some numbers are composite.
+For example, if a number ends in \(0\), \(2\), \(4\), \(5\), \(6\), or \(8\),
+then it is probably composite---the only two exceptions are \(2\) and \(5\).
+
+But given a large number, like \(8644255723\), how do we know whether it is
+prime or not? And how do we figure out its prime factorization? One way is to
+use \emph{trial division}---just divide by all numbers starting from \(1\)
+until you find one that leaves no remainder. It turns out \(8644255723 =
+90907\times95089\), which are both prime numbers and cannot be factored
+further.
+
+Then how many divisions do we have to do before we found the first number that
+works? We had to do \(90907\) divisions! That's a lot. If it took us one minute
+to do each division on paper, then it would take over two months of continuous
+work to find it.
+
+Luckily, there are quicker ways to do factorization, and there are computers
+that can do it much faster than humans can. But even computers have their
+limits. Modern computers have a very hard time factoring numbers with thousands
+of digits. But there is a fast way of checking whether a number is prime.
+
+The implication is that it is easy to find two two big prime numbers with a
+computer, and it is easy to multiply them, but it takes a long time to reverse
+that operation and break the big number back down into its prime factors.
+
+As an interesting note, which we will not explore further in this class, there
+are actually infinitely many prime numbers. That means that no matter how big
+our prime numbers get, we can always find another bigger prime number.
 
 \subsection{Applications to Problem Solving}
 

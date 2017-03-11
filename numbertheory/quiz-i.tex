@@ -3,19 +3,21 @@
 \newcommand{\IncludePath}{../include}
 \input{\IncludePath/quiz-template.tex}
 
-\title{Quiz $3$: Parity \& Divisibility}
+\title{Quiz 2: Parity \& Divisibility}
 \author{Name: \underline{\hspace{5cm}} Mark: $\displaystyle \frac{\hspace{3em}}{50}$}
-\date{April 2, 2016}
+\date{March 11, 2017}
 
 \begin{document}
 
 \maketitle
 
-Please write your name. It is worth one bonus mark.
+Please write your name. It is worth one bonus mark. Problem 1 is a bonus
+problem, so the maximum possible mark is 57/50. Note that this does not mean
+that it is the hardest problem.
 
 \thispagestyle{empty}
 
-\begin{problem}{Factor Pairs}
+\begin{problem}{(Bonus) Factor Pairs\hfill/6}
  Complete the factor pairs.
 
  \begin{itemize}
@@ -31,7 +33,7 @@ Please write your name. It is worth one bonus mark.
 
 \end{problem}
 
-\begin{problem}{Divisibility}
+\begin{problem}{Divisibility\hfill/20}
  Circle factors of each number. More than one factor may be circled.
 
  \begin{itemize}
@@ -42,7 +44,7 @@ Please write your name. It is worth one bonus mark.
  \end{itemize}
 \end{problem}
 
-\begin{problem}{Terminology}
+\begin{problem}{Terminology\hfill/5}
  Use the word ``even'', ``odd'', ``factor'', or ``multiple'' to complete each
  blank. Be careful! The same word might be used more than once.
 
@@ -56,25 +58,24 @@ Please write your name. It is worth one bonus mark.
 
 \end{problem}
 
-\begin{problem}{Rectangle Returns}
+\begin{problem}{Rectangle Returns\hfill/3}
  Look at the diagram below. All measurements are made in terms of small squares.
 
  \begin{center}
  \begin{tikzpicture}
-  \draw[step=0.5] (0,0) grid (6,3.5);
+  \draw[step=0.5] (0,0) grid (3,1.5);
  \end{tikzpicture}
  \end{center}
 
  \begin{enumerate}
-  \item What are the dimensions of the rectangle? \hfill
-  $\underline{\hspace{2em}}\times\underline{\hspace{2em}}$
-  \item Is the width of the rectangle even or odd? \hfill Odd \hspace{1em} Even
-  \item Is the height of the rectangle even or odd? \hfill Odd \hspace{1em} Even
-  \item Is the number of small squares even or odd? \hfill Odd \hspace{1em} Even
+  \item What are the dimensions of the rectangle? Don't worry about the order.
+  \hfill \(\blankB\times\blankB\)
+  \item Is the number of small squares even or odd? \hfill Odd \hspace{1em}
+  Even
  \end{enumerate}
 \end{problem}
 
-\begin{problem}{Garden}
+\begin{problem}{Garden\hfill/14}
  Adam wants to grow a rectangular garden in a grid layout, with a total
  of $70$ tomatoes. List all of Adam's options for garden dimensions.
  The first one is done for you. Hint: $70=2\times5\times7$, and remember
@@ -82,16 +83,35 @@ Please write your name. It is worth one bonus mark.
  also.
 
  \begin{itemize}
-  \item $70 = 1 \times 70$
-  \item $70 = \underline{\hspace{2em}} \times \underline{\hspace{2em}}$
-  \item $70 = \underline{\hspace{2em}} \times \underline{\hspace{2em}}$
-  \item $70 = \underline{\hspace{2em}} \times \underline{\hspace{2em}}$
-  \item $70 = \underline{\hspace{2em}} \times \underline{\hspace{2em}}$
-  \item $70 = \underline{\hspace{2em}} \times \underline{\hspace{2em}}$
-  \item $70 = \underline{\hspace{2em}} \times \underline{\hspace{2em}}$
-  \item $70 = \underline{\hspace{2em}} \times \underline{\hspace{2em}}$
+  \begin{multicols}{2}
+    \item $70 = 1 \times 70$
+    \item $70 = \underline{\hspace{2em}} \times \underline{\hspace{2em}}$
+    \item $70 = \underline{\hspace{2em}} \times \underline{\hspace{2em}}$
+    \item $70 = \underline{\hspace{2em}} \times \underline{\hspace{2em}}$
+    \item $70 = \underline{\hspace{2em}} \times \underline{\hspace{2em}}$
+    \item $70 = \underline{\hspace{2em}} \times \underline{\hspace{2em}}$
+    \item $70 = \underline{\hspace{2em}} \times \underline{\hspace{2em}}$
+    \item $70 = \underline{\hspace{2em}} \times \underline{\hspace{2em}}$
+  \end{multicols}
  \end{itemize}
 \end{problem}
 
+\begin{problem}{True or False\hfill/8}
+  Circle True or False for each statement.
+
+  \begin{itemize}
+    \item If \(n\) is even, then \(4 \mid n^2\). \hfill \TFTrue
+    \item If \(n\) is odd, then \(n^2 = 4m + 1\) for some integer \(m\).
+    \hfill \TFTrue
+    \item For all integers \(n\), \(n^3 + 3n - 1\) is odd. \hfill \TFTrue
+    \item There are no integer solutions \((n, m)\) to \(n^2 = 4m + 2\).
+    \hfill \TFTrue
+    \item \(1234 \mid 1522755\). \hfill \TFFalse
+    \item If \(4 \mid n\), then \(4n \mid (n^2+n)^2\). \hfill \TFTrue
+    \item If \(m \mid n\), and \(k \mid n\), then \(m \mid n\). \hfill \TFFalse
+    \item If \(3 \mid n\), but \(9 \nmid n\), then \(6 \mid n\). \hfill
+    \TFFalse
+  \end{itemize}
+\end{problem}
 
 \end{document}
