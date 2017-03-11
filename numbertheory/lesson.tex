@@ -10,7 +10,7 @@
 
 \title{Number Theory}
 \author{Fengyang Wang}
-\date{February 25, 2017}
+\date{March 11, 2017}
 
 \begin{document}
 
@@ -566,7 +566,7 @@ The product of these leaves is the prime factorization.
  \end{forest} \hspace{1em}
  \begin{forest}
   [\(70\)
-    [\(14\),circle,draw
+    [\(14\)
      [\(2\),circle,draw]
      [\(7\),circle,draw]]
     [\(5\),circle,draw]]
@@ -1057,6 +1057,32 @@ these problems for practice.
   \item \(\gcd(399, 1533, 1659, 2016) = \Ans{1}\)
  \end{itemize}
 \end{problem}
+
+\subsection{Computer Algorithm}
+
+One advantage of an algorithm is that we can run them on a computer. For your
+interest, in Figure~\ref{gcd:julia} we have an \gls{implementation} of the
+Euclidean algorithm in the Julia \gls{programming language}. In the Julia
+language, \verb|abs| represents the absolute value, and \verb|rem| represents
+the remainder.
+
+\begin{figure}
+  \begin{minted}{julia}
+gcd(a, b) = if a == 0
+    abs(b)
+else
+    gcd(rem(b, a), a)
+end
+  \end{minted}
+  \caption{An implementation of the Euclidean algorithm in Julia}
+
+  \label{gcd:julia}
+\end{figure}
+
+As mentioned earlier, the Euclidean algorithm is quite efficient. But in fact,
+there are even more efficient algorithms for finding the GCD of two large
+numbers on a computer. Computers can find the GCD of two huge numbers almost
+instantly---even if the numbers involved have thousands of digits.
 
 \chapter{Modular Arithmetic}
 
