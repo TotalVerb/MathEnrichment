@@ -625,6 +625,8 @@ The product of these leaves is the prime factorization.
 
 \end{problem}
 
+\subsection{Factoring Large Numbers}
+
 As we will see, it may be difficult to factor very large numbers. In fact, much
 of modern cryptography, including the popular RSA encryption scheme, relies on
 the fact that nobody has yet discovered a fast way to factor large numbers.
@@ -780,7 +782,36 @@ then we would have already found it.
   \label{pn:factor-21}
 \end{figure}
 
-TK.
+This significantly reduces the amount of work we have to do. But is there an
+even quicker way? Over 2000 years ago, Eratosthenes of Cyrene devised an idea.
+First, notice that you can find all the prime factors, then you can find all
+the other factors. If we think of factorizing a number as breaking it down into
+the pieces that make it up, then the prime factorization is the most broken
+down state. We can recombine the prime factors to create the other factors.
+
+For example, with \(21 = 3 \times 7\), and this is the prime factorization. We
+can see that every factor of \(21\) is just \(3\), \(7\), or some combination.
+(Think of \(1\), the special case, as using no pieces.) See
+Figure~\ref{pn:factor-21-primes} for a diagram showing this process.
+
+\begin{figure}
+  \begin{tabular}{|ccl|}
+    \hline
+    Use \(3\)? & Use \(7\)? & Factor \\
+    \hline
+               &            & \(1\) \\
+    \checkmark &            & \(3\) \\
+               & \checkmark & \(7\) \\
+    \checkmark & \checkmark & \(3\times7=21\) \\
+    \hline
+  \end{tabular}
+
+  \caption{A table listing all factors of \(21\) by combining subsets of the
+  prime numbers}
+  \label{pn:factor-21-primes}
+\end{figure}
+
+TK
 
 \section{Review}
 
