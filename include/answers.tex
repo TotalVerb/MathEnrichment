@@ -1,4 +1,16 @@
 \newcommand{\Ans}[1]{\framebox{$#1$}}
+\newcommand{\SAA}[1]{\Switch{\Ans{#1}}{\blankA}}
+\newcommand{\SAB}[1]{\Switch{\Ans{#1}}{\blankB}}
+\newcommand{\SAC}[1]{\Switch{\Ans{#1}}{\blankC}}
+\newcommand{\SAD}[1]{\Switch{\Ans{#1}}{\blankD}}
+\newcommand{\SAE}[1]{\Switch{\Ans{#1}}{\blankE}}
+\newcommand{\SAF}[1]{\Switch{\Ans{#1}}{\blankF}}
+\newcommand{\STA}[1]{\Switch{\AnsT{#1}}{\blankA}}
+\newcommand{\STB}[1]{\Switch{\AnsT{#1}}{\blankB}}
+\newcommand{\STC}[1]{\Switch{\AnsT{#1}}{\blankC}}
+\newcommand{\STD}[1]{\Switch{\AnsT{#1}}{\blankD}}
+\newcommand{\STE}[1]{\Switch{\AnsT{#1}}{\blankE}}
+\newcommand{\STF}[1]{\Switch{\AnsT{#1}}{\blankF}}
 \newcommand{\AnsT}[1]{\framebox{#1}}
 \newif\ifanswers
 \newcommand{\Switch}[2]{\ifanswers#1\else#2\fi}
