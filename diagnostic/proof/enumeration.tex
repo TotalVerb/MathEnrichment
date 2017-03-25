@@ -1,0 +1,95 @@
+\documentclass[12pt,letterpaper]{article}
+
+\newcommand{\IncludePath}{../../include}
+\input{\IncludePath/hmwk-template.tex}
+
+\title{Enumeration}
+\author{By Fengyang Wang for Saturday Sessions}
+\date{March 25, 2017}
+
+\newcommand{\im}{i}
+
+\begin{document}
+\HomeworkTitle
+\begin{problem}{Cardinality of Finite Sets}
+  For each finite set \(S\), find \(|S|\).
+
+  \begin{enumerate}
+    \item \(S := \{1, 2, 3\}\)
+    \item \(S := \{n \in \mathbf{Z} : n^2 = 4\}\)
+    \item \(S := \{x \in \mathbf{R} : x(x+1)(x+2)(x+3) = 0\}\)
+    \item \(S := \mathbf{Z} \cap \left\{\frac{1}{n} : n \in \mathbf{Z}\right\}\)
+  \end{enumerate}
+\end{problem}
+
+\begin{problem}{Power Sets}
+  Recall \(\mathcal{P}(S)\) denotes the set of subsets of \(S\), including
+  \(\varnothing\) and \(S\) itself. Find all the elements of
+
+  \begin{enumerate}
+    \item \(\mathcal{P}(\{1, 2\})\)
+    \item \(\mathcal{P}(\{1, 2, 3\} \cap \mathcal{P}(\{3, 4\})\)
+    \item \(\{S \in \mathcal{P}(\{1, 2, 3, 4\}) : |S| = 2\}\)
+  \end{enumerate}
+\end{problem}
+
+\begin{problem}{Polynomials}
+  Write each of the following polynomials in standard form.
+
+  \begin{enumerate}
+    \item Let \(S = \mathcal{P}(\{1, 2, 3, 4, 5\})\). Find \[
+      \sum_{A\in S} x^{|A|}
+    \]
+    \item Find \((1+x)^5\)
+    \item Find \[
+      \sum_{n=0}^5 \binom{5}{n} x^n
+    \]
+  \end{enumerate}
+\end{problem}
+
+\begin{problem}{Symmetric Group}
+  Let \(S_n\) be the set of all permutations of \(\{1, \dots, n\}\).
+
+  \begin{enumerate}
+    \item Find \(|S_5|\)
+    \item Find \[
+      \sum_{\sigma\in S_3} x^{\sigma(1)}
+    \]
+    \item Find \[
+      \sum_{\sigma\in S_4} x^{\sigma(1) + \sigma(2)}
+    \]
+    \item Substitute \(x=1\) in the above polynomial to obtain \(|S_4| = 24\).
+    Explain why this is the case.
+  \end{enumerate}
+\end{problem}
+
+\begin{problem}{More Binomial Coefficients}
+  \begin{enumerate}
+    \item Prove that for all \(n\ge1\), \[
+      \sum_{k=0}^n 2^k \binom{n}{k} = 3^n
+    \]
+    Hint: Use the binomial theorem on \((1+2)^n\).
+    \item Prove that for all \(n\ge1\), \[
+      \sum_{k=0}^n (-1)^k \binom{n}{k} = 0
+    \]
+  \end{enumerate}
+\end{problem}
+
+\begin{problem}{Triangular Numbers}
+  \begin{enumerate}
+    \item Show that for \(n\ge1\), \[
+      \sum_{k=1}^n k = 1 + 2 + \dots + n = \frac{n(n+1)}{2} = \binom{n+1}{2}
+    \]
+    There are many ways to do this problem but I encourage you think think
+    about \(2\)-element subsets of \(\{1, \dots, n+1\}\). How would you list
+    those subsets?
+    \item Show that \[
+      \sum_{k=2}^n \binom{k}{2} = \binom{n+1}{3}
+    \]
+    \item Let \(n\ge m\ge 1\) be integers. Find an expression for \[
+      \sum_{k=m}^n \binom{k}{m}
+    \]
+  \end{enumerate}
+\end{problem}
+
+\end{document}
