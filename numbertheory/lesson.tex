@@ -811,7 +811,131 @@ Figure~\ref{pn:factor-21-primes} for a diagram showing this process.
   \label{pn:factor-21-primes}
 \end{figure}
 
-TK
+This means that a good way to factor larger numbers might be to find all the
+prime factors first. That is, first find the prime factorization and then
+combine the primes to find the other factors. We saw the method of factor trees
+earlier, but in general we will need to have a list of prime numbers to do that
+in a reasonable amount of time.
+
+Let's consider the problem of making such a list of prime numbers. Say we're
+interested in all the prime numbers between \(2\) and \(100\). An obvious way
+to go about making the list is to go through the integers, and decide whether
+each is a prime number. We can do that by testing whether it is divisible by
+any smaller prime number; if it is composite, then it must have a smaller prime
+that divides it. This means that we need to use the list as we make it.
+
+This can take a long time, so let's consider an example finding just the prime
+numbers between \(2\) and \(5\) first. The steps for doing this using our
+current procedure are:
+
+\begin{itemize}
+  \item Start with \(2\). It is prime. Our list is \([2]\) right now.
+  \item Now consider \(3\). We check that \(2 \nmid 3\), since \(3 \bmod 2 =
+  1\). So \(3\) is prime.
+  \item Our list is now \([2, 3]\).
+  \item Now consider \(4\). We check that \(2 \nmid 4\), since \(4 \bmod 2 =
+  0\). So \(4\) is not prime.
+  \item Our list is still \([2, 3]\).
+  \item Now consider \(5\). We check \(2 \nmid 5\) and \(3 \nmid 5\). So \(5\)
+  is prime.
+  \item Our list is now \([2, 3, 5]\).
+\end{itemize}
+
+This procedure is quite long and tedious. A better way is given by the Sieve of
+Eratosthenes, which involves crossing off all the multiples of each number we
+find, because those numbers aren't prime. The numbers left over must be prime.
+
+\begin{figure}
+  \begin{center}
+   \def\arraystretch{1.7}
+   \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    \(1\) & \(2\) & \(3\) & \(4\) & \(5\) \\
+    \hline
+    \(6\) & \(7\) & \(8\) & \(9\) & \(10\) \\
+    \hline
+    \(11\) & \(12\) & \(13\) & \(14\) & \(15\) \\
+    \hline
+    \(16\) & \(17\) & \(18\) & \(19\) & \(20\) \\
+    \hline
+    \(21\) & \(22\) & \(23\) & \(24\) & \(25\) \\
+    \hline
+   \end{tabular}
+  \end{center}
+
+  \caption{A grid of numbers between \(1\) and \(25\)}
+  \label{pn:sieve-initial-state}
+\end{figure}
+
+We start with a grid like that in Figure~\ref{pn:sieve-initial-state}. Then we
+do the following steps, to cross off all the non-prime numbers:
+
+\begin{enumerate}
+ \item Cross off \(1\). It is not prime.
+ \item Circle \(2\), because it is a prime number. Cross off all bigger multiples
+ of \(2\) (\(4\), \(6\), \(8\), \dots), because they are composite.
+ \item Circle the smallest number that hasn't been crossed off. Since it isn't
+ divisible by any smaller prime (otherwise, it would have been crossed off),
+ it must be prime. Now cross off all multiples of the number you just circled.
+ \item Repeat the last step until all numbers are crossed off or circled.
+\end{enumerate}
+
+After completing these steps, the grid will look like
+Figure~\ref{pn:sieve-final-state}. The circled numbers are all the primes. This
+\gls{algorithm} is much more efficient than trial division, because we can
+cross off multiples, which is easier to do than find remainders.
+
+% for i in 1:25
+%     if isprime(i)
+%         print("\\circleletter{$i}")
+%     else
+%         print("\\cancel{$i}")
+%     end
+%     if i % 5 == 0
+%         println(" \\\\ \\hline")
+%     else
+%         println(" &")
+%     end
+% end
+
+\begin{figure}
+  \begin{center}
+   \def\arraystretch{1.7}
+   \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    \cancel{1} &
+    \circleletter{2} &
+    \circleletter{3} &
+    \cancel{4} &
+    \circleletter{5} \\ \hline
+    \cancel{6} &
+    \circleletter{7} &
+    \cancel{8} &
+    \cancel{9} &
+    \cancel{10} \\ \hline
+    \circleletter{11} &
+    \cancel{12} &
+    \circleletter{13} &
+    \cancel{14} &
+    \cancel{15} \\ \hline
+    \cancel{16} &
+    \circleletter{17} &
+    \cancel{18} &
+    \circleletter{19} &
+    \cancel{20} \\ \hline
+    \cancel{21} &
+    \cancel{22} &
+    \circleletter{23} &
+    \cancel{24} &
+    \cancel{25} \\
+    \hline
+   \end{tabular}
+  \end{center}
+
+  \caption{A completed Sieve of Eratosthenes for numbers between \(1\) and
+  \(25\)}
+  \label{pn:sieve-final-state}
+\end{figure}
 
 \section{Review}
 

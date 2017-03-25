@@ -14,6 +14,12 @@
 \usepackage{siunitx}
 \usepackage{framed}
 \usepackage{minted}
+\usepackage[makeroom]{cancel}
+
+\newcommand*\circleletter[1]{%
+  \begin{tikzpicture}[baseline=(C.base)]
+    \node[draw,circle,inner sep=1pt](C) {#1};
+  \end{tikzpicture}}
 
 \usepackage[toc]{glossaries}
 \makeglossaries
