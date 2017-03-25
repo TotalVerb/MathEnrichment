@@ -6,8 +6,8 @@
 % \answerstrue % turn on for answers
 \defauthor
 
-\title{The Sieve of Eratosthenes, Primes, and Remainders}
-\date{April 2, 2016}
+\title{The Greatest Common Divisor}
+\date{April 1, 2017}
 
 \begin{document}
 
@@ -30,17 +30,38 @@ $67$, $71$, $73$, $79$, $83$, $89$ and $97$.
  \end{itemize}
 \end{problem}
 
-\begin{problem}{Factor sum}
- The sum of all positive factors of $28$ is
- $\SAB{1} +
- \SAB{2} +
- \SAB{4} +
- \SAB{7} +
- \SAC{14} +
- \SAC{28} = \SAC{56}$
+\begin{problem}{Find the GCD I}
+ Find the GCD of each pair of numbers.
+
+ \begin{itemize}
+  \item $\gcd(1, 7) = \SAB{1}$
+  \item $\gcd(2, 4) = \SAB{2}$
+  \item $\gcd(8, 12) = \SAB{4}$
+  \item $\gcd(0, 12) = \SAB{12}$
+  \item $\gcd(60, 30) = \SAB{30}$
+  \item $\gcd(1000, 100000) = \SAD{1000}$
+ \end{itemize}
 \end{problem}
 
-\begin{problem}{Challenge}
+\begin{problem}{Find the GCD II}
+ Find the GCD of each triplet of numbers.
+
+ \begin{itemize}
+  \item $\gcd(9, 21, 15) = \SAB{3}$
+  \item $\gcd(30, 40, 50) = \SAB{10}$
+ \end{itemize}
+\end{problem}
+
+\begin{problem}{Find the GCD IIII}
+ Use the Euclidean algorithm to find the GCD.
+
+ \begin{itemize}
+  \item $\gcd(1270, 1940) = \SAB{10}$
+  \item $\gcd(2447, 1480) = \SAB{1}$
+ \end{itemize}
+\end{problem}
+
+\begin{problem}{Challenge I}
  A \emph{palindrome} is a number that reads the same forwards and backwards in
  decimal notation. For example, $12321$ is a palindrome, as is $7227$ or
  $888888$.
@@ -61,5 +82,22 @@ $67$, $71$, $73$, $79$, $83$, $89$ and $97$.
  \end{itemize}
 \end{problem}
 
+\begin{problem}{Challenge II}
+ A \emph{semiprime} number is a number which is the product of exactly two prime
+ numbers. For example, $9=3\times3$ is semiprime, as is $38=2\times19$. Say
+ $9409$ and $8633$ are two semiprime numbers that share a prime factor. Find
+ their shared prime factor. \Switch{\Ans{97}}{}
+\end{problem}
+
+\begin{problem}{True or False}
+  \begin{itemize}
+    \item For any integers \(a\) and \(b\), \(\gcd(a, b)
+    \operatorname{lcm}(a, b) = ab\). \hfill \TFTrue
+    \item For any integers \(a\) and \(b\), \(\gcd(ab, 10) = \gcd(a, 10)
+    \gcd(b, 10)\). \hfill \TFFalse
+    \item If \(p\) is prime and \(q\) is an integer, and \(p \nmid q\), then
+    \(\gcd(p, q) = 1\). \hfill \TFTrue
+  \end{itemize}
+\end{problem}
 
 \end{document}

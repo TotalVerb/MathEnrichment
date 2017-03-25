@@ -1082,7 +1082,8 @@ stated version of the Euclidean algorithm:
 
 \subsection{The Euclidean Algorithm}
 
-To find the Greatest Common Divisor of two numbers, \(a\) and \(b\):
+To find the Greatest Common Divisor of two positive whole numbers, \(a\) and
+\(b\):
 \begin{enumerate}
  \item If \(a=0\), then terminate. The greatest common divisor is \(b\).
  \item Otherwise, apply the Euclidean Algorithm to find the GCD of \(b \bmod
@@ -1181,6 +1182,24 @@ these problems for practice.
   \item \(\gcd(399, 1533, 1659, 2016) = \Ans{1}\)
  \end{itemize}
 \end{problem}
+
+\subsection{Negative Numbers}
+
+We can define the greatest common divisor for negative integers also, but we
+must be careful. Since \(2 \div -2\) and \(2 \div 0\), we have that \(\gcd(0,
+-2 = 2\), a positive number. The easiest way to find the GCD of integers that
+might be negative is to take an absolute value. We write
+
+\begin{equation}
+  |n| = \begin{cases}
+    n & \text{if }n\ge 0 \\
+    -n & \text{otherwise}
+  \end{cases}
+\end{equation}
+
+and call this the absolute value of \(n\). For instance, \(|2| = 2\) and \(|-2| =
+2\). Then the GCD of integers that might be negative can be computed as we did
+above, but making sure to take an absolute value where appropriate.
 
 \subsection{Computer Algorithm}
 
