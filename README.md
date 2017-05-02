@@ -23,7 +23,8 @@ expansion is planned.
 ### Logic & Probability (Grade 4)
 
 This subject covers logic and probability. It is quite short, but no expansion
-is planned.
+is planned. It is being decommissioned and eventually will be absorbed into
+Discrete Math.
 
 ### Measurement (Grade 4)
 
@@ -38,7 +39,7 @@ mostly complete but somewhat rough on the edges.
 
 ## Future Subjects
 
-### Functions (Grade 4)
+### Discrete Math (Grade 4)
 
 This subject is not yet started. It covers functions: what they are, what they
 do, and how to use them.
