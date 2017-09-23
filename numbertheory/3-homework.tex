@@ -6,8 +6,8 @@
 % \answerstrue % turn on for answers
 \defauthor
 
-\title{Prime Numbers \& FTA}
-\date{March 11, 2017}
+\title{Divisibility}
+\date{March 4, 2017}
 
 \begin{document}
 
@@ -15,98 +15,95 @@
 
 \thispagestyle{empty}
 
-For reference, here is a list of all prime numbers less than $100$: $2$, $3$,
-$5$, $7$, $11$, $13$, $17$, $19$, $23$, $29$, $31$, $37$, $41$, $43$, $47$,
-$53$, $59$, $61$, $67$, $71$, $73$, $79$, $83$, $89$ and $97$.
+\begin{problem}{Factors of \(20\)}
+ List all the positive factors of \(20\):
+ \Switch{\Ans{1}}{\blankB}, \Switch{\Ans{2}}{\blankB},
+ \Switch{\Ans{4}}{\blankB}, \Switch{\Ans{5}}{\blankB},
+ \Switch{\Ans{10}}{\blankB}, \Switch{\Ans{20}}{\blankB}
+\end{problem}
 
-\begin{problem}{Find the Primes}
- Fill in the blanks with prime numbers. (There might be more than one correct
- solution.)
+\begin{problem}{Perfect Number}
+  A number is \emph{perfect} if the sum of its factors is equal to twice the
+  number itself. For example, \(6\) is perfect because \(1+2+3+6=12=6\times2\).
+  Which of the following is a perfect number: \(10\), \(17\),
+  \Switch{\Ans{28}}{\(28\)}?
+\end{problem}
 
+\begin{problem}{Multiples of \(3\) and \(6\)}
  \begin{itemize}
-  \item \(\SAC{5} + \SAC{47} = 52\)
-  \item \(\SAC{3} + \SAC{3} + \SAC{67} = 73\)
+  \item Fill in the blanks in this list of multiples of \(3\): \(0\), \(3\),
+  \(6\), \Switch{\Ans{9}, \Ans{12}, \Ans{15}}{\blankB, \blankB, \blankB},
+  \(18\), \ldots
+
+  \item Fill in the blanks in this list of multiples of \(6\): \(0\), \(6\),
+  \(12\), \Switch{\Ans{18}, \Ans{24}, \Ans{30}}{\blankB, \blankB, \blankB},
+  \(36\), \ldots
  \end{itemize}
 \end{problem}
 
-\begin{problem}{Prime Factor}
- Find just one prime factor for each number. Do not try to find more.
+\begin{problem}{Rectangle II}
+ Look at the diagram below. Each small square is one square unit.
 
- \begin{itemize}
-  \item $15838$ \hfill Factor: \SAB{2}
-  \item $19385$ \hfill Factor: \SAB{5}
-  \item $21849$ \hfill Factor: \SAB{3}
- \end{itemize}
+ \begin{center}
+ \begin{tikzpicture}
+  \draw[step=0.5] (0,0) grid (4,3);
+ \end{tikzpicture}
+ \end{center}
+
+ \begin{enumerate}
+  \item The rectangle has area \Switch{\Ans{48}}{\blankD} square units.
+  \item \(6\) is a \Switch{\AnsT{factor}}{\underline{\hspace{10em}}} of the
+  rectangle's area.
+  \item The rectangle's area is a
+  \Switch{\AnsT{multiple}}{\underline{\hspace{10em}}} of \(8\).
+ \end{enumerate}
 \end{problem}
 
-\begin{problem}{Factorize, Part 1}
- Find the unique prime factorization of each number.
-
- \begin{itemize}
-  \item $18$ \hfill $\SAB{2} \times \SAB{3} \times \SAB{3}$
-  \item $57$ \hfill $\SAB{3} \times \SAB{19}$
-  \item $100$ \hfill $\SAB{2} \times \SAB{2} \times \SAB{5} \times \SAB{5}$
-  \item $80$ \hfill $\SAB{2} \times \SAB{2} \times \SAB{2} \times \SAB{2}
-  \times \SAB{5}$
- \end{itemize}
-\end{problem}
-
-\begin{problem}{Factorize, Part Two}
-  A computer has found that \(123456789 = 3803 \times 3607 \times \SAC{3}
-  \times \SAC{3}\), where \(3803\) and \(3607\) are prime numbers, and the two
-  blanks are prime numbers that I forgot to write down! What goes in the
-  blanks?
-
-  Hint: Don't do a full calculation---a good estimate may be good enough.
+\begin{problem}{Linear Diophantine Equations in One Variable}
+  \begin{enumerate}
+    \item Find an integer \(n\) such that \(2n = 4\).
+    \hfill \(n = \Switch{\Ans{2}}{\blankC}\)
+    \item Find an integer \(n\) such that \(3n = -9\).
+    \hfill \(n = \Switch{\Ans{-3}}{\blankC}\)
+    \item Find an integer \(n\) such that \(5n = 45\).
+    \hfill \(n = \Switch{\Ans{9}}{\blankC}\)
+    \item Is there an integer \(n\) such that \(5n = 48\)? Explain why or why
+    not. \Switch{\AnsT{No, since \(5 \nmid 48\).}}{}
+  \end{enumerate}
 \end{problem}
 
 \begin{problem}{True or False}
-Select True or False for each statement.
-
-\begin{itemize}
-  \item $5$ is prime \hfill \TFTrue
-  \item $97$ is prime \hfill \TFTrue
-  \item $10000000000$ is prime \hfill \TFFalse
-  \item Let \(k\) be an integer; if \(k>1\) then $7k$ is composite \hfill
-  \TFTrue
-  \item All composite numbers have at least \(4\) positive factors
-  \hfill \TFFalse
-  \item For all positive prime numbers \(p\), \(p^2\) has \(3\) positive factors
-  \hfill \TFTrue
-  \item Some composite numbers cannot be factored into primes
-  \hfill \TFFalse
-  \item Let \(p\) be a prime number; then \(p\) cannot be written as the
-  product of two primes \hfill \TFTrue
-  \item All composite numbers can be written as the product of two primes
-  \hfill \TFFalse
-  \item For all primes \(p\), \(p^2 + 1\) is prime \hfill \TFFalse
-  \item For all positive integers \(n\), \(n^2 + n\) is composite \hfill
-  \TFFalse
-  \item For all positive integers \(n\), \(n^2 + 3n\) is composite \hfill
-  \TFTrue
- \end{itemize}
-
+ \begin{enumerate}
+  \item \(6 \mid 2\)      \hfill \TFFalse
+  \item \(4 \mid 40\)     \hfill \TFTrue
+  \item \(3 \mid 99\)     \hfill \TFTrue
+  \item \(100 \mid 7801\) \hfill \TFFalse
+  \item Let \(a\), \(b\), and \(c\) be three integers. If \(a \mid b\), then
+  \(a \mid bc\).          \hfill \TFTrue
+  \item Let \(a\), \(b\), and \(c\) be three integers. If \(a \mid b\), and \(b
+  \mid c\), and \(c \mid 10000\), then \(a \mid 10000\).
+                          \hfill \TFTrue
+ \end{enumerate}
 \end{problem}
 
-\begin{problem}{Challenge}
+\begin{problem}{Challenge I}
+ Define a number to be ``cool'' if it is divisible by all of \(2\), \(3\),
+ \(4\), and \(6\). For example, \(60\) is a cool number but \(100\) is not.
+ Between \(1\) and \(1000\) (including both \(1\) and \(1000\)), how many
+ numbers are cool? \Switch{\Ans{83}}{}
+\end{problem}
 
-The notation $5!$ (pronounced ``five factorial'') means the product of all
-integers from $1$ to $5$; that is, $1 \times 2 \times 3 \times 4 \times 5$.
-Similarly, $3! = 1 \times 2 \times 3$ and $100! = 1 \times 2 \times 3
-\times\dots\times 99 \times 100$.
-
-\begin{enumerate}
- \item Find the prime factorization of $4!$. \hfill
- $\SAB{2} \times \SAB{2} \times \SAB{2} \times \SAB{3}$
- \item In the prime factorization of $4!$, how many $2$'s are there?
- \Switch{\Ans{3}}{}
- \item In the prime factorization of $100!$, how many $2$'s are there? (Hint: Do
- not write out the entire prime factorization! Which numbers in the product are
- composite? How many of those composite numbers contain a prime factor of $2$?
- Which of those contain more than one $2$ in their prime factorization?)
- \Switch{\Ans{97}}{}
-\end{enumerate}
-
+\begin{problem}{Challenge II}
+ \begin{enumerate}
+  \item How many positive factors does \(1\) have? \Switch{\Ans{1}}{}
+  \item How many positive factors does \(2\) have? \Switch{\Ans{2}}{}
+  \item How many positive factors does \(4\) have? \Switch{\Ans{3}}{}
+  \item How many positive factors does \(8\) have? \Switch{\Ans{4}}{}
+  \item The notation \(2^{10}\) means \(\underbrace{ 2\times2\times2\times
+  \ldots\times2}_{10\text{ twos}}\); that is, \(10\) twos multiplied together.
+  \(2^{10}=1024\). How many positive factors does \(1024\) have?
+  \Switch{\Ans{11}}{}
+ \end{enumerate}
 \end{problem}
 
 \end{document}

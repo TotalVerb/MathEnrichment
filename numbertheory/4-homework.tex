@@ -6,8 +6,8 @@
 % \answerstrue % turn on for answers
 \defauthor
 
-\title{The Greatest Common Divisor}
-\date{April 1, 2017}
+\title{Prime Numbers \& FTA}
+\date{March 11, 2017}
 
 \begin{document}
 
@@ -15,89 +15,98 @@
 
 \thispagestyle{empty}
 
-Here is a list of all prime numbers less than $100$: $2$, $3$, $5$, $7$, $11$,
-$13$, $17$, $19$, $23$, $29$, $31$, $37$, $41$, $43$, $47$, $53$, $59$, $61$,
-$67$, $71$, $73$, $79$, $83$, $89$ and $97$.
+For reference, here is a list of all prime numbers less than $100$: $2$, $3$,
+$5$, $7$, $11$, $13$, $17$, $19$, $23$, $29$, $31$, $37$, $41$, $43$, $47$,
+$53$, $59$, $61$, $67$, $71$, $73$, $79$, $83$, $89$ and $97$.
 
-\begin{problem}{Factorize}
+\begin{problem}{Find the Primes}
+ Fill in the blanks with prime numbers. (There might be more than one correct
+ solution.)
+
+ \begin{itemize}
+  \item \(\SAC{5} + \SAC{47} = 52\)
+  \item \(\SAC{3} + \SAC{3} + \SAC{67} = 73\)
+ \end{itemize}
+\end{problem}
+
+\begin{problem}{Prime Factor}
+ Find just one prime factor for each number. Do not try to find more.
+
+ \begin{itemize}
+  \item $15838$ \hfill Factor: \SAB{2}
+  \item $19385$ \hfill Factor: \SAB{5}
+  \item $21849$ \hfill Factor: \SAB{3}
+ \end{itemize}
+\end{problem}
+
+\begin{problem}{Factorize, Part 1}
  Find the unique prime factorization of each number.
 
  \begin{itemize}
-  \item $20$ \hfill $\SAB{2} \times \SAB{2} \times \SAB{5}$
-  \item $4$ \hfill $\SAB{2} \times \SAB{2}$
-  \item $81$ \hfill $\SAB{3} \times \SAB{3} \times \SAB{3} \times \SAB{3}$
-  \item $84$ \hfill $\SAB{2} \times \SAB{2} \times \SAB{3} \times \SAB{7}$
+  \item $18$ \hfill $\SAB{2} \times \SAB{3} \times \SAB{3}$
+  \item $57$ \hfill $\SAB{3} \times \SAB{19}$
+  \item $100$ \hfill $\SAB{2} \times \SAB{2} \times \SAB{5} \times \SAB{5}$
+  \item $80$ \hfill $\SAB{2} \times \SAB{2} \times \SAB{2} \times \SAB{2}
+  \times \SAB{5}$
  \end{itemize}
 \end{problem}
 
-\begin{problem}{Find the GCD I}
- Find the GCD of each pair of numbers.
+\begin{problem}{Factorize, Part Two}
+  A computer has found that \(123456789 = 3803 \times 3607 \times \SAC{3}
+  \times \SAC{3}\), where \(3803\) and \(3607\) are prime numbers, and the two
+  blanks are prime numbers that I forgot to write down! What goes in the
+  blanks?
 
- \begin{itemize}
-  \item $\gcd(1, 7) = \SAB{1}$
-  \item $\gcd(2, 4) = \SAB{2}$
-  \item $\gcd(8, 12) = \SAB{4}$
-  \item $\gcd(0, 12) = \SAB{12}$
-  \item $\gcd(60, 30) = \SAB{30}$
-  \item $\gcd(1000, 100000) = \SAD{1000}$
- \end{itemize}
-\end{problem}
-
-\begin{problem}{Find the GCD II}
- Find the GCD of each triplet of numbers.
-
- \begin{itemize}
-  \item $\gcd(9, 21, 15) = \SAB{3}$
-  \item $\gcd(30, 40, 50) = \SAB{10}$
- \end{itemize}
-\end{problem}
-
-\begin{problem}{Find the GCD IIII}
- Use the Euclidean algorithm to find the GCD.
-
- \begin{itemize}
-  \item $\gcd(1270, 1940) = \SAB{10}$
-  \item $\gcd(2447, 1480) = \SAB{1}$
- \end{itemize}
-\end{problem}
-
-\begin{problem}{Challenge I}
- A \emph{palindrome} is a number that reads the same forwards and backwards in
- decimal notation. For example, $12321$ is a palindrome, as is $7227$ or
- $888888$.
-
- \begin{itemize}
-  \item What five-digit palindrome starts with $728$? \SAE{72827}
-  \item $11$ and $55$ are two examples of two-digit palindromes.
-  How many two-digit palindromes are there? ($00=0$ does not have two digits.)
-  \Switch{\Ans{9}}{}
-  \item What two numbers are factors of all two-digit palindromes?
-  \Switch{\Ans{1, 11}}{}
-  \item $1221$ and $9999$ are two examples of four-digit palindromes. How many
-  four-digit palindromes are there? (Do not include palindromes starting with
-  $0$.) \Switch{\Ans{90}}{}
-  \item How many four-digit palindromes are even? \Switch{\Ans{45}}{}
-  \item How many four-digit palindromes are divisible by $11$?
-  \Switch{\Ans{90}}{}
- \end{itemize}
-\end{problem}
-
-\begin{problem}{Challenge II}
- A \emph{semiprime} number is a number which is the product of exactly two prime
- numbers. For example, $9=3\times3$ is semiprime, as is $38=2\times19$. Say
- $9409$ and $8633$ are two semiprime numbers that share a prime factor. Find
- their shared prime factor. \Switch{\Ans{97}}{}
+  Hint: Don't do a full calculation---a good estimate may be good enough.
 \end{problem}
 
 \begin{problem}{True or False}
-  \begin{itemize}
-    \item For any integers \(a\) and \(b\), \(\gcd(a, b)
-    \operatorname{lcm}(a, b) = ab\). \hfill \TFTrue
-    \item For any integers \(a\) and \(b\), \(\gcd(ab, 10) = \gcd(a, 10)
-    \gcd(b, 10)\). \hfill \TFFalse
-    \item If \(p\) is prime and \(q\) is an integer, and \(p \nmid q\), then
-    \(\gcd(p, q) = 1\). \hfill \TFTrue
-  \end{itemize}
+Select True or False for each statement.
+
+\begin{itemize}
+  \item $5$ is prime \hfill \TFTrue
+  \item $97$ is prime \hfill \TFTrue
+  \item $10000000000$ is prime \hfill \TFFalse
+  \item Let \(k\) be an integer; if \(k>1\) then $7k$ is composite \hfill
+  \TFTrue
+  \item All composite numbers have at least \(4\) positive factors
+  \hfill \TFFalse
+  \item For all positive prime numbers \(p\), \(p^2\) has \(3\) positive factors
+  \hfill \TFTrue
+  \item Some composite numbers cannot be factored into primes
+  \hfill \TFFalse
+  \item Let \(p\) be a prime number; then \(p\) cannot be written as the
+  product of two primes \hfill \TFTrue
+  \item All composite numbers can be written as the product of two primes
+  \hfill \TFFalse
+  \item For all primes \(p\), \(p^2 + 1\) is prime \hfill \TFFalse
+  \item For all positive integers \(n\), \(n^2 + n\) is composite \hfill
+  \TFFalse
+  \item For all positive integers \(n\), \(n^2 + 3n\) is composite \hfill
+  \TFTrue
+ \end{itemize}
+
+\end{problem}
+
+\begin{problem}{Challenge}
+
+The notation $5!$ (pronounced ``five factorial'') means the product of all
+integers from $1$ to $5$; that is, $1 \times 2 \times 3 \times 4 \times 5$.
+Similarly, $3! = 1 \times 2 \times 3$ and $100! = 1 \times 2 \times 3
+\times\dots\times 99 \times 100$.
+
+\begin{enumerate}
+ \item Find the prime factorization of $4!$. \hfill
+ $\SAB{2} \times \SAB{2} \times \SAB{2} \times \SAB{3}$
+ \item In the prime factorization of $4!$, how many $2$'s are there?
+ \Switch{\Ans{3}}{}
+ \item In the prime factorization of $100!$, how many $2$'s are there? (Hint: Do
+ not write out the entire prime factorization! Which numbers in the product are
+ composite? How many of those composite numbers contain a prime factor of $2$?
+ Which of those contain more than one $2$ in their prime factorization?)
+ \Switch{\Ans{97}}{}
+\end{enumerate}
+
 \end{problem}
 
 \end{document}

@@ -6,8 +6,8 @@
 % \answerstrue % turn on for answers
 \defauthor
 
-\title{Parity}
-\date{February 25, 2017}
+\title{Negative Numbers}
+\date{September 23, 2017}
 
 \begin{document}
 
@@ -15,88 +15,52 @@
 
 \thispagestyle{empty}
 
-\begin{problem}{Odd or Even}
-For each of the following numbers, circle ``Odd'' or ``Even''.
-\begin{enumerate}
- \item $17$ \hfill \MCSelect{Odd} \hspace{1em} Even
- \item $49494$ \hfill Odd \hspace{1em} \MCSelect{Even}
- \item $41 + 29 + 302$ \hfill Odd \hspace{1em} \MCSelect{Even}
- \item $621203 - 192935$ \hfill Odd \hspace{1em} \MCSelect{Even}
- \item $621203 \times 192935$ \hfill \MCSelect{Odd} \hspace{1em} Even
- \item $41 \times 29 \times 302$ \hfill Odd \hspace{1em} \MCSelect{Even}
-\end{enumerate}
+\begin{problem}{Addition}
+  Compute.
+
+  \begin{itemize}
+    \begin{multicols}{2}
+      \item \(1 + 1 = \SAC{2}\)
+      \item \(1 + (-1) = \SAC{0}\)
+      \item \(-1 + 1 = \SAC{0}\)
+      \item \(-1 + (-1) = \SAC{-2}\)
+      \item \(0 + (-0) = \SAC{0}\)
+      \item \(7 + (-3) = \SAC{4}\)
+      \item \((-3) + 7 = \SAC{4}\)
+      \item \(1437530 + (-1437530) = \SAC{0}\)
+    \end{multicols}
+  \end{itemize}
+\end{problem}
+
+\begin{problem}{Subtraction}
+  Compute.
+
+  \begin{itemize}
+    \begin{multicols}{2}
+      \item \(1 - 1 = \SAC{0}\)
+      \item \(1 - (-1) = \SAC{2}\)
+      \item \(-1 - 1 = \SAC{-2}\)
+      \item \(-1 - (-1) = \SAC{0}\)
+      \item \(-7 - 3 = \SAC{-10}\)
+      \item \(-3 - 7 = \SAC{-10}\)
+      \item \(1437530 - 1437530 = \SAC{0}\)
+      \item \((-1437530) - (-1437530) = \SAC{0}\)
+    \end{multicols}
+  \end{itemize}
 \end{problem}
 
 \begin{problem}{True or False}
   Decide whether each statement is true or false.
 
   \begin{enumerate}
-    \item Suppose there are an even number of students, an odd number of
-    teachers, and $17$ other staff members at an elementary school. Then the
-    total number of students, teachers, and other staff members must be even.
+    \item \(17 - 15\) is positive. \hfill \TFTrue
+    \item The sum of any two integers is a positive number. \hfill \TFFalse
+    \item The sum of any two positive integers is a positive number.
     \hfill \TFTrue
-    \item It is possible to divide \(21\) chocolates fairly among \(2\) people.
-    \hfill \TFFalse
-    \item \(0\) is an even number. \hfill \TFTrue
-    \item \(-7\) is an odd number. \hfill \TFTrue
-    \item All even numbers are divisible by \(4\). \hfill \TFFalse
-    \item All odd numbers are divisible by \(3\). \hfill \TFFalse
-    \item Suppose \(n\) is an even number and \(m\) is an odd number. Then \(mn -
-    m\) must be odd. \hfill \TFTrue
-    \item Suppose \(n\) is an even number. Then there is an odd number \(m\),
-    such that \(n = 2m\). \hfill \TFFalse
-    \item Suppose \(n\) is an integer. Then \(6n\) must be even. \hfill \TFTrue
-    \item Suppose \(n\) is an integer. Then \(5n\) must be odd. \hfill \TFFalse
+    \item For all integers \(n\), \(n - n = 0\) \hfill \TFTrue
+    \item For all integers \(n\), \(n + n > n\) \hfill \TFFalse
   \end{enumerate}
 \end{problem}
 
-\begin{problem}{Rectangle}
- Look at the diagram below. In terms of the small squares,
-
- \begin{center}
- \begin{tikzpicture}
-  \draw[step=0.7] (0,0) grid (7,3.5);
- \end{tikzpicture}
- \end{center}
-
- \begin{enumerate}
-  \item What are the dimensions of the rectangle? \hfill
-  \(\Switch{\Ans{5}}{\blankB}\times\Switch{\Ans{10}}{\blankB}\)
-  \item Is the width of the rectangle even or odd?
-  \hfill Odd \hspace{1em} \MCSelect{Even}
-  \item Is the height of the rectangle even or odd?
-  \hfill \MCSelect{Odd} \hspace{1em} Even
-  \item Is the number of small squares even or odd?
-  \hfill Odd \hspace{1em} \MCSelect{Even}
- \end{enumerate}
-\end{problem}
-
-\begin{problem}{Challenge}
- Recall that for any number $n$, we define $n^2$ ($n$ squared) to mean
- $n\times n$. For example, $2^2=2\times2=4$, and $10^2=10\times10=100$.
-
- \begin{enumerate}
-  \item Calculate $1^2$, $3^2$, $5^2$, $7^2$, and $9^2$.
-  \Switch{\Ans{1, 9, 25, 49, 81}}{}
-  \item Without calculating $741^2$, \emph{hypothesize} (that is, make an
-  educated guess) whether it is odd or even.
-  \Switch{\AnsT{Odd}}{}
-  \item Use a calculator to check whether your hypothesis was correct.
-  \Switch{\Ans{741^2=549081}}{}
-  \item Calculate \(2^2\), $4^2$, $6^2$, and $8^2$.
-  \Switch{\Ans{16, 36, 64}}{}
-  \item Without calculating $742^2$, hypothesize whether it is odd or even.
-  \Switch{\AnsT{Even}}{}
-  \item Use a calculator to check whether your hypothesis was correct.
-  \Switch{\Ans{742^2=550564}}{}
-  \item Hypothesize an answer for the following questions:
-  When is the square of a number even? When is it odd?
-  \Switch{\AnsT{The square of a number is even if and only if the number is
-  even.}}{}
-  \item Why do you think that is the case?
-  \Switch{\AnsT{Product of even numbers is even; product of odd numbers is
-  odd.}}{}
- \end{enumerate}
-\end{problem}
 
 \end{document}

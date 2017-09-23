@@ -6,8 +6,8 @@
 % \answerstrue % turn on for answers
 \defauthor
 
-\title{Modular Arithmetic}
-\date{April 22, 2017}
+\title{Euclidean Algorithm}
+\date{April 8, 2017}
 
 \begin{document}
 
@@ -15,88 +15,55 @@
 
 \thispagestyle{empty}
 
-\begin{problem}{Remainders}
- Find the remainder.
+Here is a list of all prime numbers less than $100$: $2$, $3$, $5$, $7$, $11$,
+$13$, $17$, $19$, $23$, $29$, $31$, $37$, $41$, $43$, $47$, $53$, $59$, $61$,
+$67$, $71$, $73$, $79$, $83$, $89$ and $97$.
 
- \begin{itemize}
-  \begin{multicols}{2}
-   \item \(10 \bmod 3 = \SAB{1}\)
-   \item \(17 \bmod 12 = \SAB{5}\)
-   \item \(0 \bmod 10 = \SAB{0}\)
-   \item \(119 \bmod 10 = \SAB{9}\)
-   \item \((33 + 99) \bmod 3 = \SAB{0}\)
-   \item \((36 + 9) \bmod 12 = \SAB{9}\)
-   \item \((19 + 71) \bmod 10 = \SAB{0}\)
-   \item \((100 + 99) \bmod 2 = \SAB{1}\)
-   \item \((33 \times 99) \bmod 3 = \SAB{0}\)
-   \item \((36 \times 9) \bmod 12 = \SAB{0}\)
-   \item \((19 \times 71) \bmod 10 = \SAB{9}\)
-   \item \((100 \times 99) \bmod 2 = \SAB{0}\)
-  \end{multicols}
- \end{itemize}
-\end{problem}
-
-\begin{problem}{Congruences}
- For each congruence, determine whether it is true or false.
-
- \begin{itemize}
-   \item \(7 \equiv 19 \pmod {12}\) \hfill \TFTrue
-   \item \(-2 \equiv 2 \pmod {2}\) \hfill \TFTrue
-   \item \(99 \equiv 145 \pmod {10}\) \hfill \TFFalse
-   \item \(7 \equiv -1 \pmod {3}\) \hfill \TFFalse
- \end{itemize}
-\end{problem}
-
-\begin{problem}{Applied Problems}
-
- \begin{itemize}
-  \item It is 7:00 AM. Dora has an appointment in \(243\) hours. At what time of
-  day is Dora's appointment? \Switch{\AnsT{10:00 AM}}{}
-  \item It is Monday. Ethan leaves for vacation in \(18\) days. On what day of the
-  week does Ethan leave? \Switch{\AnsT{Friday}}{}
-  \item It is 7:00 AM on Monday. Flora is planning to move into her new home in
-  \(700\) hours. At what time on what day of the week does Flora move into her new
-  home? \Switch{\AnsT{11:00 AM on Tuesday}}{}
- \end{itemize}
+\begin{problem}{Factor sum}
+ The sum of all positive factors of $28$ is
+ $\SAB{1} +
+ \SAB{2} +
+ \SAB{4} +
+ \SAB{7} +
+ \SAC{14} +
+ \SAC{28} = \SAC{56}$
 \end{problem}
 
 \begin{problem}{Challenge I}
- Recall the notation used for repeated multiplication. When we write \(7^4\), we
- mean \(7 \times 7 \times 7 \times 7\), and there are \(4\) sevens. What would it
- mean to multiply no sevens? That is, \(7^0\)? That would be the same as taking
- \(7\) and dividing out the \(7\). So we define \(7^0=1\).
+ There is a very interesting property of the GCD called B\'ezout's Lemma. It
+ says that if $a$ and $b$ are integers, and $\gcd(a, b) = d$, then there are
+ some other integers $x$ and $y$ so that $ax + by = d$. Here are two examples.
 
- Determine the units (ones') digit for each of the following integers. Hint:
- use modular arithmetic to simplify the multiplications.
-
- \begin{itemize}
-  \item \(7^0 = 1\) \hfill \SAB{1}
-  \item \(7^1 = 7\) \hfill \SAB{7}
-  \item \(7^2 = 7 \times 7 = 49\) \hfill \SAB{9}
-  \item \(7^3 = 7 \times 7 \times 7\) \hfill \SAB{3}
-  \item \(7^4\) \hfill \SAB{1}
-  \item \(7^5\) \hfill \SAB{7}
-  \item \(7^6\) \hfill \SAB{9}
-  \item \(7^7\) \hfill \SAB{3}
- \end{itemize}
+ \begin{enumerate}
+  \item Compute $\gcd(18, 16) = \SAB{2}$
+  \item Fill in the blanks with integers so that the following equation is true:
+  \[ 18 \times \SAB{1} + 16 \times (- \SAB{1}) = 2 \]
+  (Recall that a positive number times a negative number is negative.)
+  \item Compute $\gcd(20, 28) = \SAB{4}$
+  \item Fill in the blanks with integers so that the following equation is true:
+  \[ 20 \times \SAB{3} + 28 \times (- \SAB{2}) = 4 \]
+ \end{enumerate}
 \end{problem}
 
 \begin{problem}{Challenge II}
 
- \begin{itemize}
-  \item How many numbers between \(1\) and \(1000\), including both \(1\) and \(1000\),
-  yield a remainder of \(2\) when divided by \(9\)? \Switch{\Ans{110}}{}
-  \item How many numbers between \(1\) and \(1000\), including both \(1\) and \(1000\),
-  yield a remainder of \(2\) when divided by \(9\) and a remainder of \(0\) when
-  divided by \(2\)? \Switch{\Ans{55}}{}
-  \item How many numbers between \(1\) and \(100000\) (including both endpoints) are
-  there that yield a remainder of \(1\) when divided by \(2\), \(3\), \(4\), \(5\), \(6\),
-  \(7\), and \(8\)? \Switch{\Ans{119}}{}
- \end{itemize}
+ We say that two numbers $a$ and $b$ are relatively prime (or co-prime for
+ short) if $\gcd(a, b) = 1$. That is, if two numbers have no common factors
+ except $1$, then they are co-prime.
 
- These kinds of problems involve solving so-called \emph{linear congruences}.
- You will see them often on math competitions.
-
+ \begin{enumerate}
+  \item Are $3$ and $6$ co-prime?  \hfill Yes~~\MCSelect{No}
+  \item Are $8$ and $13$ co-prime? \hfill \MCSelect{Yes}~~No
+  \item Are $9$ and $16$ co-prime? \hfill \MCSelect{Yes}~~No
+  \item Fill in the blanks with integers so that the following equation is true:
+  \[ 9 \times \SAB{9} + 16 \times (-\SAB{5}) = 1 \]
+  \item Fill in the blanks with integers so that the following equation is true:
+  \[ 22331115 \times 9 \times \SAB{9} + 22331115 \times 16 \times (-\SAB{5}) =
+  22331115 \]
+  \item Let's say that $9 \mid 16\times22331115$. Using the above equation,
+  does $9\mid22331115$? \Switch{\AnsT{Yes}}{}
+ \end{enumerate}
 \end{problem}
+
 
 \end{document}

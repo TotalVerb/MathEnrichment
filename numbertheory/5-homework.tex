@@ -6,8 +6,8 @@
 % \answerstrue % turn on for answers
 \defauthor
 
-\title{Euclidean Algorithm}
-\date{April 8, 2017}
+\title{The Greatest Common Divisor}
+\date{April 1, 2017}
 
 \begin{document}
 
@@ -19,51 +19,85 @@ Here is a list of all prime numbers less than $100$: $2$, $3$, $5$, $7$, $11$,
 $13$, $17$, $19$, $23$, $29$, $31$, $37$, $41$, $43$, $47$, $53$, $59$, $61$,
 $67$, $71$, $73$, $79$, $83$, $89$ and $97$.
 
-\begin{problem}{Factor sum}
- The sum of all positive factors of $28$ is
- $\SAB{1} +
- \SAB{2} +
- \SAB{4} +
- \SAB{7} +
- \SAC{14} +
- \SAC{28} = \SAC{56}$
+\begin{problem}{Factorize}
+ Find the unique prime factorization of each number.
+
+ \begin{itemize}
+  \item $20$ \hfill $\SAB{2} \times \SAB{2} \times \SAB{5}$
+  \item $4$ \hfill $\SAB{2} \times \SAB{2}$
+  \item $81$ \hfill $\SAB{3} \times \SAB{3} \times \SAB{3} \times \SAB{3}$
+  \item $84$ \hfill $\SAB{2} \times \SAB{2} \times \SAB{3} \times \SAB{7}$
+ \end{itemize}
+\end{problem}
+
+\begin{problem}{Find the GCD I}
+ Find the GCD of each pair of numbers.
+
+ \begin{itemize}
+  \item $\gcd(1, 7) = \SAB{1}$
+  \item $\gcd(2, 4) = \SAB{2}$
+  \item $\gcd(8, 12) = \SAB{4}$
+  \item $\gcd(0, 12) = \SAB{12}$
+  \item $\gcd(60, 30) = \SAB{30}$
+  \item $\gcd(1000, 100000) = \SAD{1000}$
+ \end{itemize}
+\end{problem}
+
+\begin{problem}{Find the GCD II}
+ Find the GCD of each triplet of numbers.
+
+ \begin{itemize}
+  \item $\gcd(9, 21, 15) = \SAB{3}$
+  \item $\gcd(30, 40, 50) = \SAB{10}$
+ \end{itemize}
+\end{problem}
+
+\begin{problem}{Find the GCD IIII}
+ Use the Euclidean algorithm to find the GCD.
+
+ \begin{itemize}
+  \item $\gcd(1270, 1940) = \SAB{10}$
+  \item $\gcd(2447, 1480) = \SAB{1}$
+ \end{itemize}
 \end{problem}
 
 \begin{problem}{Challenge I}
- There is a very interesting property of the GCD called B\'ezout's Lemma. It
- says that if $a$ and $b$ are integers, and $\gcd(a, b) = d$, then there are
- some other integers $x$ and $y$ so that $ax + by = d$. Here are two examples.
+ A \emph{palindrome} is a number that reads the same forwards and backwards in
+ decimal notation. For example, $12321$ is a palindrome, as is $7227$ or
+ $888888$.
 
- \begin{enumerate}
-  \item Compute $\gcd(18, 16) = \SAB{2}$
-  \item Fill in the blanks with integers so that the following equation is true:
-  \[ 18 \times \SAB{1} + 16 \times (- \SAB{1}) = 2 \]
-  (Recall that a positive number times a negative number is negative.)
-  \item Compute $\gcd(20, 28) = \SAB{4}$
-  \item Fill in the blanks with integers so that the following equation is true:
-  \[ 20 \times \SAB{3} + 28 \times (- \SAB{2}) = 4 \]
- \end{enumerate}
+ \begin{itemize}
+  \item What five-digit palindrome starts with $728$? \SAE{72827}
+  \item $11$ and $55$ are two examples of two-digit palindromes.
+  How many two-digit palindromes are there? ($00=0$ does not have two digits.)
+  \Switch{\Ans{9}}{}
+  \item What two numbers are factors of all two-digit palindromes?
+  \Switch{\Ans{1, 11}}{}
+  \item $1221$ and $9999$ are two examples of four-digit palindromes. How many
+  four-digit palindromes are there? (Do not include palindromes starting with
+  $0$.) \Switch{\Ans{90}}{}
+  \item How many four-digit palindromes are even? \Switch{\Ans{45}}{}
+  \item How many four-digit palindromes are divisible by $11$?
+  \Switch{\Ans{90}}{}
+ \end{itemize}
 \end{problem}
 
 \begin{problem}{Challenge II}
-
- We say that two numbers $a$ and $b$ are relatively prime (or co-prime for
- short) if $\gcd(a, b) = 1$. That is, if two numbers have no common factors
- except $1$, then they are co-prime.
-
- \begin{enumerate}
-  \item Are $3$ and $6$ co-prime?  \hfill Yes~~\MCSelect{No}
-  \item Are $8$ and $13$ co-prime? \hfill \MCSelect{Yes}~~No
-  \item Are $9$ and $16$ co-prime? \hfill \MCSelect{Yes}~~No
-  \item Fill in the blanks with integers so that the following equation is true:
-  \[ 9 \times \SAB{9} + 16 \times (-\SAB{5}) = 1 \]
-  \item Fill in the blanks with integers so that the following equation is true:
-  \[ 22331115 \times 9 \times \SAB{9} + 22331115 \times 16 \times (-\SAB{5}) =
-  22331115 \]
-  \item Let's say that $9 \mid 16\times22331115$. Using the above equation,
-  does $9\mid22331115$? \Switch{\AnsT{Yes}}{}
- \end{enumerate}
+ A \emph{semiprime} number is a number which is the product of exactly two prime
+ numbers. For example, $9=3\times3$ is semiprime, as is $38=2\times19$. Say
+ $9409$ and $8633$ are two semiprime numbers that share a prime factor. Find
+ their shared prime factor. \Switch{\Ans{97}}{}
 \end{problem}
 
+\begin{problem}{True or False}
+  \begin{itemize}
+    \item For any integers \(a\) and \(b\), \(\gcd(a, b)
+    \operatorname{lcm}(a, b) = ab\). \hfill \TFTrue
+    \item For any integers \(a\) and \(b\), \(\gcd(ab, 10) = \gcd(a, 10)
+    \gcd(b, 10)\). \hfill \TFFalse
+    \item If \(p\) is prime and \(q\) is an integer, and \(p \nmid q\), then
+    \(\gcd(p, q) = 1\). \hfill \TFTrue
+  \end{itemize}
+\end{problem}
 
 \end{document}
