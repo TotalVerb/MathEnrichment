@@ -41,7 +41,7 @@ familiar to the students. They require explanation.
 
 \tableofcontents
 
-\chapter{Introduction}
+\chapter{The Integers}
 
 Number Theory is the study of \glspl{integer} and problems based on the
 integers. Firstly, what is an integer? We are familiar with the whole numbers,
@@ -76,7 +76,7 @@ compute these operations on integers. That will not be the focus of this class.
 Instead, we will investigate these operations and their properties in more
 detail.
 
-\section{Addition \& Subtraction}
+\section{Addition with Negative Integers}
 
 Each integer has a so-called \gls{additive inverse}. This is the number on the
 opposite side of the number line; that is, if you reflect the number across
@@ -112,14 +112,45 @@ When we add a negative number, we move to the left on the number line. We can
 compute \(4 + (-2)\) by starting at \(4\), then moving two spaces to the left,
 ending at \(2\).
 
-Subtraction is about reversing addition. What \(8 - 3\) means is, roughly
-speaking, ``what number must be added to \(3\) to make \(8\)''? It turns out
-that for integers, we can see subtraction as equivalently the addition of a
-number's additive inverse. That is, for \(a\) and \(b\) integers:
+\section{Subtraction with Negative Integers}
+
+Subtraction is about reversing addition. What \(8 - 3\) means is, roughly speaking, ``what
+number must be added to \(3\) to make \(8\)''? When we write \(8 - 3 = 5\), this means the
+same thing as \(3 + 5 = 8\): the number \(5\) must be added to \(3\) to make \(8\).
+
+It turns out that for integers, we can calculate subtraction the same way as the addition of
+a number's additive inverse. That is, for \(a\) and \(b\) integers:
 
 \begin{equation}
   a - b = a + (-b)
+  \label{nt-int:sum-is-add-inv}
 \end{equation}
+
+In the example above, we can calculate \(8 - 3 = 8 + (-3)\), and then apply the same number
+line rule as with addition. That is, we move three spaces to the left of the \(8\) on the
+number line, getting \(5\).
+
+Since we are usually more familiar with adding and subtracting whole numbers than negative
+numbers, it is convenient to rewrite sums and differences involving negative numbers using
+the rule~\ref{nt-int:sum-is-add-inv} above. Consider the following examples.
+
+\begin{problem}{Sums and Differences}
+  Compute each sum or difference.
+
+  \begin{itemize}
+    \item \(1 + (-4)\)
+    \item \(1 - (-4)\)
+  \end{itemize}
+
+  \begin{solution}
+    \begin{itemize}
+      \item For \(1 + (-4)\), we start at \(1\) and move \(4\) spaces to the left on the
+      number line, reaching \(-3\). So \(1 + (-4) = \Ans{-3}\).
+      \item For \(1 - (-4)\), we use the rule discussed above to rewrite this as a sum.
+      Since \(4\) is the additive inverse of \(-4\), we have \(1 - (-4) = 1 + 4 = \Ans{5}\).
+    \end{itemize}
+  \end{solution}
+\end{problem}
 
 \section{Multiplication \& Division}
 
