@@ -3,8 +3,9 @@
 \newcommand{\IncludePath}{../include}
 \input{\IncludePath/hmwk-template.tex}
 
+\answerstrue % turn on for answers
+\defauthor
 \title{Assorted Problems I}
-\author{Name: \underline{\hspace{5cm}}}
 \date{September 23, 2017}
 
 \begin{document}
@@ -21,7 +22,7 @@
 
  Note that this magnification factor applies to length. Since area is magnified
  in multiple dimensions, the effect of the magnifying glass will be greater on
- area than it is on length.
+ area than it is on length. \Switch{\Ans{\SI{36}{\centi\metre\squared}}}{}
 \end{problem}
 
 \begin{problem}{Difference of Squares}
@@ -30,8 +31,8 @@
  where $n$ is any number.
 
  \begin{enumerate}[\hspace{1cm}a.]
-  \item Find $100^2 - 99^2 = \blankF$.
-  \item Find $101^2 - 100^2 = \blankF$.
+  \item Find $100^2 - 99^2 = \SAF{199}$.
+  \item Find $101^2 - 100^2 = \SAF{201}$.
  \end{enumerate}
 \end{problem}
 
@@ -42,8 +43,8 @@
  fourth floor, all $8$ people left on the elevator exit.
 
  \begin{enumerate}[\hspace{1cm}a.]
-  \item How many people exited at the third floor? \hfill \blankF
-  \item How many people entered the elevator at the first floor? \hfill \blankF
+  \item How many people exited at the third floor? \hfill \SAF{8}
+  \item How many people entered the elevator at the first floor? \hfill \SAF{11}
  \end{enumerate}
 \end{problem}
 
@@ -52,27 +53,29 @@
  ways to arrange the three letters A, B, and C include: ABC, ACB, and BCA. How
  many unique ways are there in total to arrange those three letters? (Include
  the three listed in the total. Repeating letters is not allowed.)
+ \Switch{\Ans{6}}{}
 \end{problem}
 
 \begin{problem}{Equal Areas}
  A rectangle and a square have the same area. The rectangle's longer side (the
  length) is twice the square's side length. If the square's side length is
  \SI{20}{\centi\metre}, calculate the perimeter of the rectangle.
+ \Switch{\Ans{\SI{100}{\centi\metre}}}{}
 \end{problem}
 
 \begin{problem}{Complete the Pattern}
  Figure out the pattern; then write the next two terms.
 
  \begin{enumerate}[\hspace{1cm}a.]
-  \item 1, 1, 1, 1\ldots
-  \item A, B, C, D, E\ldots
-  \item 2, 4, 6, 8\ldots
-  \item 3, 9, 27, 81\ldots
-  \item $\uparrow$, $\leftarrow$, $\downarrow$, $\rightarrow$, $\uparrow$,
-  $\leftarrow$ \ldots
-  \item O, T, T, F, F, S, S, E\ldots
-  \item 1, 2, 6, 24, 120, 720\ldots
-  \item 0, 1, 1, 2, 3, 5, 8, 13, 21\ldots
+   \item 1, 1, 1, 1, \SAC{1}, \SAC{1}
+   \item A, B, C, D, E, \STC{F}, \STC{G}
+   \item 2, 4, 6, 8, \SAC{10}, \SAC{12}
+   \item 3, 9, 27, 81, \SAC{243}, \SAC{729}
+   \item $\uparrow$, $\leftarrow$, $\downarrow$, $\rightarrow$, $\uparrow$,
+   $\leftarrow$, \SAC{\downarrow}, \SAC{\rightarrow}
+   \item O, T, T, F, F, S, S, E, \STC{N}, \STC{T}
+   \item 1, 2, 6, 24, 120, 720, \SAC{5040}, \SAC{40320}
+   \item 0, 1, 1, 2, 3, 5, 8, 13, 21, \SAC{34}, \SAC{55}
  \end{enumerate}
 \end{problem}
 
