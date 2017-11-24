@@ -392,6 +392,22 @@ odd number, we obtain an odd number, but if we add it to an even number, then
 we obtain an even number. Therefore, just by looking at the last digit, we can
 figure out whether a number is odd or even.
 
+\begin{problem}{Rectangle Parity}
+ Look at the diagram below. All measurements are made in terms of small squares.
+
+ \begin{center}
+ \begin{tikzpicture}
+  \draw[step=0.5] (0,0) grid (3,1.5);
+ \end{tikzpicture}
+ \end{center}
+
+ \begin{enumerate}
+  \item What are the dimensions of the rectangle? Don't worry about the order.
+  \hfill \(\Ans{3}\times\Ans{6}\)
+  \item Is the number of small squares even or odd? \AnsT{Even}
+ \end{enumerate}
+\end{problem}
+
 \section{Divisibility}
 
 We will begin today's topic with a few definitions.
@@ -1035,7 +1051,16 @@ cross off multiples, which is easier to do than find remainders.
   \item \(999993\) \hfill Factor: \Ans{3}
   \item \(999995\) \hfill Factor: \Ans{5}
  \end{itemize}
+\end{problem}
 
+\begin{problem}{Small Prime Factors III}
+ Find one prime factor for each number. Do not try to find additional factors.
+
+ \begin{itemize}
+  \item \(208790602\) \hfill Factor: \Ans{2}
+  \item \(249898465\) \hfill Factor: \Ans{5}
+  \item \(299999967\) \hfill Factor: \Ans{3}
+ \end{itemize}
 \end{problem}
 
 \begin{problem}{Prime Factorization II}
@@ -1067,11 +1092,24 @@ instance, the factors of \(24\) are \(1\), \(2\), \(3\), \(4\), \(6\), \(8\),
 \(6\), \(9\), \(12\), \(18\), \(36\). The greatest factor that these have in
 common is \(12\). Therefore we denote \[ \gcd(24, 36) = 12 \]
 
-\begin{problem}{Examples}
+\begin{problem}{Examples of GCD I}
+  Find the GCD of each pair of numbers.
+
  \begin{itemize}
   \item \(\gcd(10, 20) = \Ans{10}\)
   \item \(\gcd(15, 25) = \Ans{5}\)
   \item \(\gcd(7, 11) = \Ans{1}\)
+ \end{itemize}
+\end{problem}
+
+\begin{problem}{Examples of GCD II}
+ Find the GCD of each pair of numbers.
+
+ \begin{itemize}
+   \item \(\gcd(25, 25) = \Ans{25}\)
+   \item \(\gcd(1, 19) = \Ans{1}\)
+   \item \(\gcd(60, 80) = \Ans{20}\)
+   \item \(\gcd(0, 128) = \Ans{128}\)
  \end{itemize}
 \end{problem}
 
@@ -1094,6 +1132,17 @@ future: \begin{equation}
 
 Roughly speaking, this identity says that the product of two numbers is the
 same as the product of their GCD and their LCM.
+
+\begin{problem}{Examples of LCM}
+ Find the LCM of each pair of numbers.
+
+ \begin{itemize}
+   \item \(\operatorname{lcm}(10, 20) = \Ans{20}\)
+   \item \(\operatorname{lcm}(7, 11) = \Ans{77}\)
+   \item \(\operatorname{lcm}(1, 19) = \Ans{19}\)
+   \item \(\operatorname{lcm}(60, 80) = \Ans{240}\)
+ \end{itemize}
+\end{problem}
 
 \section{Application to Rational Numbers}
 

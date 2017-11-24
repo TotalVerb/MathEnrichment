@@ -5,23 +5,20 @@
 
 \title{Quiz: Number Theory}
 \author{Name: \underline{\hspace{5cm}} Mark: $\displaystyle \frac{\hspace{3em}}{50}$}
-\date{April 22, 2016}
+\date{November 25, 2017}
 
 \begin{document}
 
 \maketitle
 
-Please write your \emph{first and last} name. Each part of your name is worth
-one bonus mark. Two additional bonus marks are available (Problem 6). Note that
-the first question is worth $25$ marks (one per table cell), so please be
-careful when doing that question!
+Please write your \emph{full} name. The quiz has a maximum mark of 50.
 
 \thispagestyle{empty}
 
-\begin{problem}{Sieve of Eratosthenes}
- Follow the given instructions to create a list of all prime numbers from $1$
- to $25$. The algorithm described here is known as the Sieve of Eratosthenes,
- and it is one of the fastest known ways to generate prime numbers.
+\begin{problem}{Sieve of Eratosthenes\hfill/25}
+ Follow the given instructions to create a list of all prime numbers from \(1\) to \(25\).
+ The algorithm described here is known as the Sieve of Eratosthenes, and it is one of the
+ fastest known ways to generate all prime numbers in an interval.
 
  \begin{enumerate}
   \item Cross off $1$. It is not prime.
@@ -53,18 +50,13 @@ careful when doing that question!
  Check your work! There should be $9$ prime numbers circled.
 \end{problem}
 
-\begin{problem}{Prime Factor}
- Find one prime factor for each number. Do not try to find additional factors.
-
- \begin{itemize}
-  \item $208790602$ \hfill Factor: \blankB
-  \item $249898465$ \hfill Factor: \blankB
-  \item $299999967$ \hfill Factor: \blankB
- \end{itemize}
-
+\begin{problem}{Learning Summary\hfill/5}
+  Write one sentence to describe one concept you learned this unit. You should write about
+  one of these topics: prime numbers, the divisibility lattice, GCD, LCM, Euclidean
+  algorithm.
 \end{problem}
 
-\begin{problem}{Factorize}
+\begin{problem}{Prime Factorization\hfill/12}
  Find the unique prime factorization of each number.
 
  \begin{itemize}
@@ -75,44 +67,53 @@ careful when doing that question!
  \end{itemize}
 \end{problem}
 
-\begin{problem}{GCD}
- Find the GCD of each pair of numbers.
+\begin{problem}{Euclidean Algorithm\hfill/20}
+  We can find \(\gcd(1234, 5678)\) using the Euclidean Algorithm. Read the steps and answer
+  the following questions. As an example, the first question is answered for you. Each
+  question is worth 4 marks.
 
- \begin{itemize}
-  \begin{multicols}{2}
-   \item $\gcd(10, 20) = \blankC$
-   \item $\gcd(7, 11) = \blankC$
-   \item $\gcd(25, 25) = \blankC$
-   \item $\gcd(1, 19) = \blankC$
-   \item $\gcd(60, 80) = \blankC$
-   \item $\gcd(0, 128) = \blankC$
-  \end{multicols}
- \end{itemize}
-\end{problem}
+  \begin{align}
+    \label{subtract-three}
+    \gcd(1234, 5678) &= \gcd(1234, 5678 - 1234 \times 3) \\
+    &= \gcd(1234, 742) \\
+    \label{switch-order}
+    &= \gcd(742, 1234) \\
+    \label{another-step}
+    &= \gcd(742, 492) \\
+    &= \gcd(492, 742) \\
+    &= \gcd(250, 492) \\
+    &= \gcd(242, 250) \\
+    &= \gcd(8, 242) \\
+    \label{last-simplify}
+    &= \gcd(2, 8) \\
+    &= 2
+  \end{align}
 
-\begin{problem}{LCM}
- Find the LCM of each pair of numbers.
+  \begin{itemize}
+    \item Explain (one sentence) why we can substract \(1234 \times 3\) from \(5678\) in
+    step~\ref{subtract-three}.
 
- \begin{itemize}
-  \begin{multicols}{2}
-   \item $\operatorname{lcm}(10, 20) = \blankC$
-   \item $\operatorname{lcm}(7, 11) = \blankC$
-   \item $\operatorname{lcm}(1, 19) = \blankC$
-   \item $\operatorname{lcm}(60, 80) = \blankC$
-  \end{multicols}
- \end{itemize}
-\end{problem}
+    {\fontfamily{augie}\selectfont Because the GCD stays the same if we subtract one number
+    from the other.}
 
-\begin{problem}{Bonus}
- \begin{itemize}
-  \item Use the Euclidean algorithm to find \[
-   \gcd(1234, 5678) = \blankC
-  \]
+    \item Explain (one sentence) why we can switch the order of \(742\) and \(1234\) in
+    step~\ref{switch-order}.
 
-  \item Note that $1234 \times 5678 = 7006652$. Now use the fact that
-  $\gcd(a, b) \times \operatorname{lcm}(a, b) = a \times b$ to find \[
-   \operatorname{lcm}(1234, 5678) = \blankF
-  \]
+    \vspace{1.5em}
+
+    \item Explain (one sentence) what we did to \(1234\) to turn it into \(492\) in
+    step~\ref{another-step}.
+
+    \vspace{1.5em}
+
+    \item Explain (one sentence) what we did to \(8\) and \(242\) to get to \(2\) and \(8\)
+    in step~\ref{last-simplify}.
+
+    \vspace{1.5em}
+
+    \item Now use the fact that \(\gcd(a, b) \times \operatorname{lcm}(a, b) = a \times b\)
+    to find \[ \operatorname{lcm}(1234, 5678) = \blankF. \] You might find it helpful that
+    \(1234 \times 5678 = 7006652\).
  \end{itemize}
 \end{problem}
 
