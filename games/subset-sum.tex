@@ -71,7 +71,7 @@ because we can't do this in any fewer than $7$ letters.
 
 \vspace{2em}
 
-We define the \textsc{Hamming Distance} between two strings to be the minimum
+We define the \textsc{Levenstein Distance} between two strings to be the minimum
 number of edits we need to turn one string into another. One edit is either:
 \begin{itemize}
  \item adding a character
@@ -79,16 +79,16 @@ number of edits we need to turn one string into another. One edit is either:
  \item turning a character into another
 \end{itemize}
 
-As an example, the Hamming Distance between HELLO and MELON is $3$. We may,
+As an example, the Levenshtein Distance between HELLO and MELON is $3$. We may,
 for example, change H to M, then delete one L, and then add an N. There are
 other ways of achieving the same result, but the best we can do is $3$ edits.
 
-\begin{problem}{Hamming Distance I}
- Find the Hamming Distance between OLYMPIC and MATH.
+\begin{problem}{Levenshtein Distance I}
+ Find the Levenshtein Distance between OLYMPIC and MATH.
 \end{problem}
 
-\begin{problem}{Hamming Distance II}
- Find the Hamming Distance between HAMMING and DISTANCE.
+\begin{problem}{Levenshtein Distance II}
+ Find the Levenshtein Distance between LEVENSHTEIN and DISTANCE.
 \end{problem}
 
 \end{document}

@@ -1,0 +1,123 @@
+\documentclass[12pt,letterpaper]{article}
+
+\newcommand{\IncludePath}{../include}
+\input{\IncludePath/hmwk-template.tex}
+\usepackage{tikz}
+\usetikzlibrary{arrows, decorations.markings}
+
+\tikzset{
+vertex/.style={
+  circle,
+  draw,
+  inner sep=0pt,
+  minimum size=15pt
+  }
+}
+
+% \answerstrue % turn on for answers
+\defauthor
+
+\title{Functions}
+\date{September 29, 2018}
+
+\begin{document}
+\thispagestyle{empty}
+
+\maketitle
+
+\noindent Recall:
+
+\noindent
+\(\mathbf{N} = \{0, 1, 2, \dots\}\) is the set of natural numbers.
+
+\noindent
+\(\mathbf{Z} = \{\dots, -2, 1, 0, 1, 2, \dots\}\) is the set of integers (whole numbers).
+
+\noindent
+\(\mathbf{Q} = \operatorname{Quot}(\mathbf{Z})\) is the set of rational numbers (fractions).
+
+\noindent
+\(\mathbf{R} = \overline{\mathbf{Q}}\) is the set of real numbers.
+
+\begin{problem}{Find the Solutions}
+  Find all possible values for \(x\) given each of the constraint sets below.
+
+  \begin{itemize}
+    \item \(x \in \mathbf{Z}\), \(x^2 = 9\). \hfill \(x \in \{\ESAB{-3}, \ESAB{3}\}\).
+    \item \(x \in \mathbf{R}\), \(3x = 2\). \hfill \(x \in \Big\{\ESAB{\frac{2}{3}}\Big\}\).
+    \item \(x \in \mathbf{N}\), \(x + 3 \in \{2, 4\}\). \hfill \(x \in \{\ESAB{1}\}\).
+  \end{itemize}
+\end{problem}
+
+\begin{problem}{A Function on the Real Numbers}
+  Let \(f: \mathbf{R} \to \mathbf{R}\) be defined by \(f(x) = 1 + 3x\).
+
+  \begin{itemize}
+    \item Evaluate \(f(f(3)) = \SAB{31}\).
+    \item What is the domain of \(f\)? \hfill \SAB{\mathbf{R}}
+    \item What is the codomain of \(f\)? \hfill \SAB{\mathbf{R}}
+    \item What is the range of \(f\)? Is it the same as the codomain? Why or why not?
+    \Switch{The range is the same as the codomain because we can get every possible real
+    number \(y\) by using the input \(x = -1 + y/3\).}{\vspace{4em}}
+    \item Draw a small graph for \(f\) with \(x\) values from \(-3\) to \(3\). Make sure you
+    label your axes!
+  \end{itemize}
+\end{problem}
+
+\begin{problem}{Challenge: Higher Order Functions}
+  Recall that \(A \to B\) is the type of all functions with domain \(A\) and codomain \(B\).
+
+  \noindent Consider \(\operatorname{applytwice}: (\mathbf{N} \to \mathbf{N}) \to
+  (\mathbf{N} \to \mathbf{N})\) given by
+  \(\operatorname{applytwice}(f) = x \mapsto f(f(x))\).
+  That is, \(\operatorname{applytwice}\) takes as input a function on the natural numbers,
+  and returns as output a new function which applys the original function twice.
+
+  \begin{itemize}
+    \item Evaluate \(\operatorname{applytwice}(x\mapsto 1+x)(0)\).
+    \item Evaluate \(\operatorname{applytwice}(x\mapsto 1+x)(10)\).
+    \item Let \(g = \operatorname{applytwice}(x\mapsto 1+x): \mathbf{N} \to \mathbf{N}\).
+    What does \(g\) do? Write \(g(x) = \SAC{2+x}\) directly in terms of \(x\) without using
+    \(\operatorname{applytwice}\).
+  \end{itemize}
+\end{problem}
+
+\begin{problem}{Challenge: Graph Reachability}
+  The picture below shows a map of several cities and some one-way roads connecting them.
+  (The road between B and D is an exception, as it goes both ways.)
+
+  \begin{center}
+  \begin{tikzpicture}
+  \node[vertex] (A) at (0, 2) [label = left:\(A\)] {};
+  \node[vertex] (B) at (10, 4) [label = right:\(B\)] {};
+  \node[vertex] (C) at (5, 1) [label = below:\(C\)] {};
+  \node[vertex] (D) at (8, 2) [label = below:\(D\)] {};
+  \node[vertex] (E) at (3, 5) [label = above:\(E\)] {};
+  \node[vertex] (F) at (6, 5) [label = right:\(F\)] {};
+
+  \draw[->, line width=1.5mm] (A) -- (C);
+  \draw[->, line width=1.5mm] (C) -- (D);
+  \draw[->, line width=1.5mm] (C) -- (E);
+  \draw[<->, line width=1.5mm] (B) -- (D);
+  \draw[->, line width=1.5mm] (D) -- (B);
+  \draw[->, line width=1.5mm] (E) -- (A);
+  \draw[->, line width=1.5mm] (F) -- (E);
+
+  \end{tikzpicture}
+  \end{center}
+
+  \begin{itemize}
+    \item If I am in city \(A\), can I reach (get to) city \(B\)? \Switch{\AnsT{Yes}}{}
+    \item If I am in city \(B\), can I reach city \(A\)? \Switch{\AnsT{No}}{}
+    \item Starting at city \(C\), which cities can I reach? Which cities are impossible for
+    me to reach? \Switch{\Ans{A,C,E,D,B}}{}
+    \item Which city is able to reach every city? (Starting from this city, you can get to
+    any other city.) \Switch{\Ans{F}}{}
+    \item Which cities are reachable from every city? (Starting from any city, you can get
+    to these cities.) \Switch{\Ans{B, D}}{}
+    \item Can you add a new one-way road so that it is possible to reach any city from any
+    other city? \Switch{\AnsT{Yes, from B or D to F.}}{}
+  \end{itemize}
+\end{problem}
+
+\end{document}

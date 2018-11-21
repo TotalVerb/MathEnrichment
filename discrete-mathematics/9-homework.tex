@@ -1,0 +1,101 @@
+\documentclass[12pt,letterpaper]{article}
+
+\newcommand{\IncludePath}{../include}
+\input{\IncludePath/hmwk-template.tex}
+
+\title{Events \& Expected Value}
+\author{Name: \underline{\hspace{5cm}}}
+\date{October 4, 2014}
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{empty}
+
+\begin{problem}{Independent Events}
+ Select the pairs of events that are independent. Remember that events are
+ independent if the outcome of one does not affect the other.
+
+ \begin{enumerate}[\hspace{.5cm}a.]
+  \item I draw a card from a deck of cards. Then I draw another card from the
+  same deck, without replacement.
+  \item I roll a four-sided die. Then I roll a six-sided die.
+  \item I have a bag of red and blue balls. I draw a ball, then put it back into
+  the bag. Then I draw another ball.
+ \end{enumerate}
+\end{problem}
+
+\begin{problem}{Joint Probability}
+I roll a four-sided die $D_4$, then a six-sided die $D_6$, and then flip a coin
+$C$. All are fair. Find the probability of:
+
+\begin{enumerate}[\hspace{.5cm}a.]
+\item $D_4$ is even and $C$ shows heads.
+\item $D_4=2$, $D_6=6$, and $C$ shows tails.
+\item $D_4 + D_6 = 10$
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{Coin Flips}
+A fair coin is flipped $5$ times. What's the probability that they're all heads?
+\end{problem}
+
+\begin{problem}{Marbles}
+A bag contains $2$ blue marbles and $3$ red marbles. I take a marble out of the
+bag at random, then put it back in. I do this until I have taken out (and
+returned) $3$ marbles. What's the probability that they're all red?
+\end{problem}
+
+\begin{problem}{The Sum Rule}
+ I roll a fair 4-sided die and a fair 6-sided die. What's the probability that I
+ will see a $3$ on one die, and any odd number on the other? (It doesn't matter
+ which die shows the odd number and which shows the $3$.)
+
+ To solve the question, you need to use the sum rule:
+
+ \begin{equation*}
+  \underbrace{P(A \cup B)}_\text{A or B happens}
+  = \underbrace{P(A)}_\text{A happens} + \underbrace{P(B) -
+  P(A \cap B)}_\text{B happens but A does not}
+ \end{equation*}
+
+ To calculate the probability of $A$ or $B$ happening, we can add the cases that
+ $A$ happens, and the cases where $B$ happens but $A$ doesn't also happen. (We
+ can't just add $P(A)$ and $P(B)$ because then we'd be double-counting the cases
+ where both $A$ and $B$ happen!)
+\end{problem}
+
+\begin{problem}{Dependent Events}
+
+ A bag contains $2$ blue marbles and $3$ red marbles. Two marbles are drawn from
+ the bag, without replacing marbles after they are drawn. Find the probability
+ that:
+
+ \begin{enumerate}[\hspace{.5cm}a.]
+  \item Both marbles are red.
+  \item Both marbles are blue.
+  \item One marble is red and one marble is blue. (The order of marbles does not
+  matter.)
+ \end{enumerate}
+
+ \emph{Careful---since we aren't replacing marbles, the colours of the two
+ marbles are not independent!}
+\end{problem}
+
+\begin{problem}{Challenge}
+ If I roll a fair six-sided die $4$ times, what's the probability that at least
+ one will show $6$?
+\end{problem}
+
+\begin{problem}{Expected Value}
+Calculate the expected value (optional):
+
+ \begin{enumerate}[\hspace{.5cm}a.]
+  \item If I roll a six-sided die ($1$ to $6$).
+  \item If I roll a six-sided die, but the face with $6$ is edited to $9$.
+  \item If I roll $8$ six-sided dice and add the results.
+ \end{enumerate}
+\end{problem}
+
+\end{document}
