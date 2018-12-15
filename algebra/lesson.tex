@@ -1,18 +1,26 @@
 \documentclass[12pt,a4paper]{report}
 
-\newcommand{\IncludePath}{../../include}
+\newcommand{\IncludePath}{../include}
 \newcommand{\ProjectName}{Enrichment Math}
 \input{\IncludePath/book-template.tex}
 
 \title{Operations}
-\author{Name: \underline{\hspace{6cm}}}
-\date{March 24, 2016}
+\author{Fengyang Wang}
+\date{December 14, 2018}
+\newcommand{\im}{i}
+
+\usepackage{amsthm}
+\newtheorem{bigidea}{Big Idea}
 
 \begin{document}
 
 \maketitle
 
-\chapter{Algebra}
+\tableofcontents
+
+\chapter{Real Numbers}
+
+\section{From Natural To Real}
 
 Various forms of numbers arise from the desire to solve algebraic equations. But
 contrary to popular belief, this desire was not to be able to solve equations
@@ -51,68 +59,104 @@ have a number for that. The number of students could also remain unchanged. We
 don't need a number to express lack of change. Finally, the number of students
 could \emph{decrease} by $4$. We already have a number for that.
 
-So to express a change in a quantity, we must convey several pieces of
-information: firstly, whether there is a change at all; secondly, in what
-direction is the change; and thirdly, by how much the quantity is changed. This
-seems quite complicated. It would be simpler to introduce a new kind of
-quantity that could represent these changes more conveniently and more
-compactly.
+So to express a change in a quantity, we must convey several pieces of information: firstly,
+whether there is a change at all; secondly, in what direction is the change; and thirdly, by
+how much the quantity is changed. This seems quite complicated. It would be simpler to
+introduce a new kind of quantity that could represent these changes more conveniently and
+more compactly. This, of course, is the motivation for negative numbers.
+
+\begin{bigidea}[Negative numbers]
+  Negative numbers do not ``exist'' in the real world. We cannot have a negative number of
+  people in a class. But they provide an easy way to talk about \textbf{change}: if positive
+  numbers represent \textbf{increase}, then negative numbers represent \textbf{decrease}.
+\end{bigidea}
+
+The introduction of \(0\) and negative numbers allows us to expand our set of mathematical
+objects to the \textbf{integers}, \(\dots, -3, -2, -1, 0, 1, 2, 3, \dots\). The integers are
+very well-behaved with respect to two fundamental operations: addition and multiplication.
+
+TK (talk about division, rationals)
+
+TK (talk about limits, reals)
 
 \section{Exponents}
+
+Recall that a positive exponent represents repeated multiplication, much like how a positive
+multiplier represents repeated addition. We can express this rule recursively using the
+following identity: \[
+  x^{n+1} = xx^n
+\] which says that if you increase the exponent by \(1\) it is the same as multiply one more
+copy of the base.
 
 \begin{problem}{Discrete Exponents}
  Evaluate each expression. Write your answer as an integer in simplest form
  using the place value system.
 
  \begin{enumerate}[\hspace{.5cm}a.]
-  \item $2^4=$ \hfill\blankC
-  \item $3^2=$ \hfill\blankC
-  \item $10^6=$ \hfill\blankF
+  \item \(2^4=\Ans{16}\)
+  \item \(3^2=\Ans{9}\)
+  \item \(10^6=\Ans{1000000}\)
  \end{enumerate}
 \end{problem}
 
-\begin{problem}{Scientific Notation}
- Express in scientific notation.
-
- \begin{enumerate}[\hspace{.5cm}a.]
-  \item $1234=$ \hfill\blankF
-  \item $0.000987=$ \hfill\blankF
- \end{enumerate}
-\end{problem}
-
-\begin{problem}{Fractions, Exponents \& Radicals}
- Evaluate each expression. Write your answer in simplest form as a fraction, or
- as an integer using the place value system.
-
- \begin{enumerate}[\hspace{.5cm}a.]
-  \item $4^{\frac{1}{2}}=$ \hfill\blankC
-  \item $9^{\frac{3}{2}}=$ \hfill\blankC
-  \item ${\left(\frac{2}{3}\right)}^3=$ \hfill\blankC
-  \item $\sqrt{\frac{16}{25}}=$ \hfill\blankC
-  \item $\sqrt[4]{\frac{256}{81}}=$ \hfill\blankC
- \end{enumerate}
-\end{problem}
-
-\begin{problem}{Irrational Numbers}
- Classify each number as rational or irrational.
-
- \begin{enumerate}[\hspace{.5cm}a.]
-  \item $8.25$ \hfill Rational~~Irrational
-  \item $\sqrt{2}$ \hfill Rational~~Irrational
-  \item $\sqrt{9}$ \hfill Rational~~Irrational
-  \item $\pi$ \hfill Rational~~Irrational
- \end{enumerate}
-\end{problem}
+It is frequently useful to extend the system of exponents to non-positive numbers, which can
+be done by applying the recursive rule in the other direction. Thus we can derive that \(x^0
+= 1\) and that \(x^{-1} = \frac{1}{x}\) for all non-zero values of \(x\).
 
 \begin{problem}{Negative and Zero Exponents}
  Evaluate each expression. Write your answer in simplest form as a fraction, or
  as an integer using the place value system.
 
  \begin{enumerate}[\hspace{.5cm}a.]
-  \item ${-1}^{-1}=$ \hfill\blankC
-  \item $4^{-2}=$ \hfill\blankC
-  \item ${999}^0=$ \hfill\blankC
-  \item ${\left(\frac{-17}{4}\right)}^0=$ \hfill\blankC
+  \item \({-1}^{-1}=\Ans{-1}\)
+  \item \(4^{-2}=\Ans{\frac{1}{16}}\)
+  \item \({999}^0=\Ans{1}\)
+  \item \({\left(\frac{-17}{4}\right)}^0=\Ans{1}\)
+ \end{enumerate}
+\end{problem}
+
+A useful application of exponents is in shrinking large numbers to an more humanly
+understandable format. Indeed, we have a poor conception of how large certain numbers are.
+In science, it's common to see numbers way too large to count or way too small to visualize.
+Scientists have developed notation using exponents to make comparing such numbers easier. In
+scientific notation, a number \(x\) is written as \(y\times 10^n\), where \(y\) is a number
+with exactly one non-zero decimal digit before the decimal point, and \(n\) is a (positive,
+negative, or zero) exponent.
+
+\begin{problem}{Scientific Notation}
+ Express in scientific notation.
+
+ \begin{enumerate}[\hspace{.5cm}a.]
+  \item \(1234=\Ans{1.234\times 10^3}\)
+  \item \(0.000987= \Ans{9.87\times 10^{-4}}\)
+ \end{enumerate}
+\end{problem}
+
+With rational exponents, TK (we generalize a different law)
+
+\begin{problem}{Fractions, Exponents \& Radicals}
+ Evaluate each expression. Write your answer in simplest form as a fraction, or
+ as an integer using the place value system.
+
+ \begin{enumerate}[\hspace{.5cm}a.]
+  \item \(4^{\frac{1}{2}}=\Ans{2}\)
+  \item \(9^{\frac{3}{2}}=\Ans{27}\)
+  \item \({\left(\frac{2}{3}\right)}^3=\Ans{\frac{8}{27}}\)
+  \item \(\sqrt{\frac{16}{25}}=\Ans{\frac{4}{5}}\)
+  \item \(\sqrt[4]{\frac{256}{81}}=\Ans{\frac{4}{3}}\)
+ \end{enumerate}
+\end{problem}
+
+Of course, as we saw above (TK) some numbers are not rational
+
+\begin{problem}{Irrational Numbers}
+ Classify each number as rational or irrational.
+
+ \begin{enumerate}[\hspace{.5cm}a.]
+  \item $8.25$ \hfill \AnsT{Rational}~~Irrational
+  \item $\sqrt{2}$ \hfill Rational~~\AnsT{Irrational}
+  \item $\sqrt{9}$ \hfill \AnsT{Rational}~~Irrational
+  \item $\pi$ \hfill Rational~~\AnsT{Irrational}
  \end{enumerate}
 \end{problem}
 
@@ -123,10 +167,10 @@ compactly.
 
  \begin{enumerate}[\hspace{.5cm}a.]
   \item \emph{Apropos} (with regard to) positive integers, is $+$ associative?
-  (That is, is $(a+b)+c=a+(b+c)$ for all $a$, $b$ and $c$?)
-  \item Apropos positive integers, is $\times$ associative?
+  (That is, is $(a+b)+c=a+(b+c)$ for all $a$, $b$ and $c$?) \AnsT{Yes}
+  \item Apropos positive integers, is $\times$ associative? \AnsT{Yes}
   \item Let $\uparrow$ represent exponentiation; that is, $2\uparrow4=2^4=16$.
-  Apropos positive integers, is $\uparrow$ associative?
+  Apropos positive integers, is $\uparrow$ associative? \AnsT{No}
  \end{enumerate}
 \end{problem}
 
@@ -135,13 +179,13 @@ compactly.
  $b$: $a \blacksquare b = b \blacksquare a$.
 
  \begin{enumerate}[\hspace{.5cm}a.]
-  \item Apropos positive integers, is $+$ commutative?
-  \item Apropos positive integers, is $\times$ commutative?
-  \item Apropos positive integers, is $\uparrow$ commutative?
+  \item Apropos positive integers, is $+$ commutative? \AnsT{Yes}
+  \item Apropos positive integers, is $\times$ commutative? \AnsT{Yes}
+  \item Apropos positive integers, is $\uparrow$ commutative? \AnsT{No}
  \end{enumerate}
 \end{problem}
 
-\chapter{Sums}
+\section{Sums}
 
 Adding things is a very important part of mathematics. When we have a large
 number of things to add, it helps to use algebra to simplify the problem. The
@@ -152,7 +196,7 @@ series, but we will use this term with caution, as it is often used to denote
 infinite sums, which we will not cover. The numbers themselves, $(a_1, a_2,
 \dots a_n)$, form an $n$-tuple.
 
-\section{Arithmetic Series}
+\subsection{Arithmetic Series}
 
 The first kind of series is a called an arithmetic series, in which the
 $n$-tuple satisfies the property that all consecutive pairwise differences are
@@ -172,7 +216,7 @@ Hence, the formula for the sum of an arithmetic series \begin{equation}
  \sum_{k=1}^n a_k = \frac{n}{2} (a_1 + a_n)
 \end{equation}
 
-\section{Geometric Series}
+\subsection{Geometric Series}
 
 The second kind of series is called a geometric series, in which the $n$-tuple
 satisfies the property that all consecutive pairwise ratios are equal. This is,
@@ -193,5 +237,29 @@ with common ratio $r$,
 \begin{equation}
  \sum_{k=1}^n a_n = a_1 \frac{1 - r^n}{1 - r}
 \end{equation}
+
+\chapter{Complex Numbers}
+
+\begin{problem}{Polar Form}
+  \begin{enumerate}[\hspace{.5cm}a.]
+    \item \(1 = \exp\left(\blankB + \blankB\im\right)\)
+    \item \(\sqrt{2}-\sqrt{2}\im = \blankB\exp\blankC\im\)
+    \item \(\sqrt{2}\exp\frac{\im\pi}{4} = \blankB + \blankB\im\)
+  \end{enumerate}
+\end{problem}
+
+\begin{problem}{Collinearity of Points}
+  Let \(a, b, c\in\mathbf{C}\) represent points \(A, B, C\) in the 2D Euclidean
+  plane, all distinct.
+
+  \begin{enumerate}[\hspace{.5cm}a.]
+    \item When are these three points collinear (that is, they lie on the same
+    line)? Again, express your answer as a single equation involving complex
+    numbers \(a, b, c, d\), and free parameter \(t\in\mathbf{R}\).
+    \item Hence, derive that a condition for \(A, B, C\) collinear is \[
+      \frac{c-a}{c-b} = \overline{\left(\frac{c-a}{c-b}\right)}
+    \]
+  \end{enumerate}
+\end{problem}
 
 \end{document}

@@ -30,8 +30,7 @@ expansion is planned.
 ### Discrete Mathematics (Grade 7/8)
 
 This subject covers an introduction to mathematical objects, especially functions, and an
-introduction to probability. It is the latest subject I’ve taught and hence currently quite short and unorganized and currently rough around the edges. It is
-being decommissioned and eventually will be absorbed into Discrete Math.
+introduction to probability. It is the latest subject I’ve taught and hence currently quite short and unorganized and currently rough around the edges.
 
 ### Measurement (Grade 4)
 
@@ -46,21 +45,14 @@ mostly complete but somewhat rough on the edges.
 
 ## Future Subjects
 
+### Algebra (Grade 7/8)
+
+This subject is ported over from high school math content, and contains an introduction to
+algebraic ideas, even beyond those taught in Ontario secondary schools. The worksheets are
+still targeted toward high school students and will need to be revised for the grade 7/8
+audience.
+
 ### Games (Grade 4)
 
 This subject currently contains a single fun homework sheet on verbal
 arithmetic.
-
-## To Be Moved
-
-### Operations (High School)
-
-This subject is planned to be a gentle introduction to analysis, covering basic concepts
-such as rational exponents at a non-rigorous level but also introducing some rigorous
-concepts. It currently contains only one worksheet (with answers) on numbers and operations.
-It is aimed at about the Grade 6 level.
-
-### Proof (High School)
-
-This subject is planned to introduce techniques for mathematical proof, and is aimed at the
-high school level. It currently contains only one worksheet on proof by cases.
