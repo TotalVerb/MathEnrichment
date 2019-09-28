@@ -22,6 +22,13 @@
   \end{tikzpicture}}
 
 \usepackage[toc]{glossaries}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
 \makeglossaries
 
 \newcounter{exampleproblem}[chapter]
@@ -61,3 +68,5 @@
 \input{\IncludePath/answers.tex}
 \input{\IncludePath/blanks.tex}
 \input{\IncludePath/figures.tex}
+
+\answerstrue  % answers always on for book

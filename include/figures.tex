@@ -199,3 +199,54 @@ arc ({\tt * \s + \sp}:{\tt * (\s + 1) - \sp}:\r);
   \draw[line width=.5mm] (A) -- (B) -- (C) -- (D) -- (A) -- (B);
   \draw[line width=.5mm] (C) -- (A);
 \end{tikzpicture}}
+
+\newcommand{\mapBoardwalkRcss}{
+\begin{tikzpicture}
+  \node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=0.9\textwidth]{\IncludePath/boardwalk-rcss.png}};
+  \begin{scope}[x={(image.south east)},y={(image.north west)}]
+    \node[circle,anchor=south,fill=white,draw=black]
+      (a) at (0.17, 0.24) {A};
+    \node[circle,anchor=south,fill=white,draw=black]
+      (b) at (0.93, 0.53) {B};
+    \node[text=red]
+      (route-1-label) at (0.58, 0.75) {\textbf{Route 1}};
+    \node[text=blue]
+      (route-2-label) at (0.60, 0.20) {\textbf{Route 2}};
+
+    \coordinate (iraneedles-at-boardwalk) at (0.235, 0.40);
+    \coordinate (iraneedles-at-thorndale) at (0.12, 0.70);
+    \coordinate (thorndale-at-westfield) at (0.23, 0.80);
+    \coordinate (westvale-at-thorndale) at (0.355, 0.93);
+    \coordinate (westvale-at-oakvale) at (0.365, 0.83);
+    \coordinate (westvale-at-cardiff) at (0.44, 0.68);
+    \coordinate (westvale-at-portsmouth) at (0.59, 0.55);
+    \coordinate (westvale-at-haldane) at (0.67, 0.67);
+    \coordinate (westvale-at-resurrection) at (0.81, 0.63);
+    \coordinate (university-at-resurrection) at (0.83, 0.56);
+
+    \coordinate (university-at-boardwalk) at (0.28, 0.03);
+    \coordinate (iraneedles-at-university) at (0.35, 0.14);
+
+    \draw[->, line width=0.8mm, draw=red]
+      (a) -- (iraneedles-at-boardwalk)
+          -- (iraneedles-at-thorndale)
+          to [bend left=10] (thorndale-at-westfield)
+          to [bend left=10] (westvale-at-thorndale)
+          to [bend right=30] (westvale-at-oakvale)
+          to [bend right=10] (westvale-at-cardiff)
+          to [bend left=15] (0.53, 0.60)
+          to [bend right=30] (westvale-at-portsmouth)
+          -- (westvale-at-haldane)
+          to [bend left=30] (0.74, 0.65)
+          to [bend right=40] (westvale-at-resurrection)
+          -- (university-at-resurrection)
+          -- (b);
+
+    \draw[->, line width=0.8mm, draw=blue, dashed]
+      (a) -- (university-at-boardwalk)
+          -- (iraneedles-at-university)
+          -- (university-at-resurrection)
+          -- (b);
+  \end{scope}
+\end{tikzpicture}\\
+{\tiny Map tiles by \href{http://stamen.com}{Stamen Design}, under \href{https://creativecommons.org/licenses/by/3.0/}{CC BY 3.0}. Data by \href{https://openstreetmap.org}{OpenStreetMap}, under \href{https://www.openstreetmap.org/copyright}{ODbL}.}}

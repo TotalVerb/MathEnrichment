@@ -6,8 +6,8 @@
 % \answerstrue % turn on for answers
 \defauthor
 
-\title{Ordered Pairs, Fractions, and Rational Numbers}
-\date{September 22, 2018}
+\title{Vectors}
+\date{September 28, 2019}
 
 \begin{document}
 
@@ -15,95 +15,27 @@
 
 \thispagestyle{empty}
 
-\newcommand{\fracans}[2]{
-\frac{\Switch{#1}{\hspace{2em}}}{\Switch{#2}{\hspace{2em}}}}
+\begin{problem}{Scalar Multiplication}
+  Recall \(\mathbf{Q}\) is the set of rational numbers.
 
-\begin{problem}{Equivalent Fractions}
-
- Find the equivalent fraction with the smallest denominator. (In other words,
- simplify the fraction.)
-
- \begin{enumerate}[\hspace{.5cm}a.]
-  \item \[ \frac{2}{4} = \fracans{1}{2} \]
-  \item \[ \frac{3}{12} = \fracans{1}{4} \]
-  \item \[ \frac{10}{15} = \fracans{2}{3} \]
- \end{enumerate}
-\end{problem}
-
-\begin{problem}{Multiplying Fractions}
-Find the product:
-
-\begin{enumerate}[\hspace{.5cm}a.]
-\item \[ \frac{1}{2} \times \frac{2}{3} = \fracans{1}{3} \]
-\item \[ \frac{3}{8} \times \frac{5}{9} = \fracans{5}{24} \]
-\item \[ \frac{1}{2} \times \frac{1}{2} \times \frac{1}{2} \times \frac{1}{2}
-= \fracans{1}{16} \]
-\end{enumerate}
-\end{problem}
-
-\begin{problem}{True or False}
-  \begin{enumerate}
-    \item The sum of two rational numbers is always a rational number.
-    (Remember, integers are rational numbers too!) \hfill \TFTrue
-    \item The product of two rational numbers is always a rational number.
-    \hfill \TFTrue
-    \item There are multiple ways to write every rational number as a fraction.
-    \hfill \TFTrue
-    \item For all integers \(a, b, c, d\), if \(b \ne 0 \ne d\), \[
-      \frac{a}{b} + \frac{c}{d} = \frac{ac}{bd}
-    \] \hfill \TFFalse
-  \end{enumerate}
-\end{problem}
-
-\begin{problem}{Integral Root Theorem}
-  The \textbf{integral root theorem} says that if \(x: \mathbf{Z}\) is an integer satisfying
-  a \textbf{polynomial equation} constraint \[
-    a_0 + a_1 x + \dots + a_{n-1} x^{n-1} + x^n = 0
-  \] where \(n\) is a positive integer and each \(a_0, a_1, \dots, a_{n-1}\) is an integer,
-  then \(x\) is a (positive or negative) factor of \(a_0\).  For example, if \(3 - 4x + x^2 =
-  0\), the only possible solutions for \(x\) are the factors of \(3\): \(-3\), \(-1\),
-  \(1\), and \(3\). We can check that \(1\) and \(3\) are solutions for \(x\) that satisfy
-  the constraint, while \(-1\) and \(-3\) do not work.
-
-  Using the integral root theorem, determine the integer solutions \(x\) to the polynomial
-  equation: \[
-    -5 - x + 5x^2 + x^3 = 0
-  \]
-
-  Answer: \(x \in \{\SAB{-5}, \SAB{-1}, \SAB{1}\}\).
-\end{problem}
-
-\begin{problem}{Challenge I}
- Find the product:
- \[
-  \frac{1}{2} \times \frac{2}{3} \times \frac{3}{4} \times
-  \dots \times \frac{99}{100} = \fracans{1}{100}
- \]
-\end{problem}
-
-\begin{problem}{Challenge II}
- Find the sum:
- \[
-  \frac{1}{1 \times 2} + \frac{1}{2 \times 3} + \frac{1}{3 \times 4}
-  + \dots + \frac{1}{99 \times 100} = \fracans{99}{100}
- \]
-\end{problem}
-
-\begin{problem}{Challenge III}
-  If \(\mathbf{v} = [x, y]\) is a vector, then we
+  If \(\mathbf{v} = [x, y]\) is a vector, and \(q\in\mathbf{Q}\), then we
   define \[
-    2\mathbf{v} = \mathbf{v} + \mathbf{v} = [x + x, y + y] = [2x, 2y]
+    q\mathbf{v} = [qx, qy]
   \] and for sake of example, if \(\mathbf{w} = [3, 4]\), then
-  \(2\mathbf{w} = [6, 8]\).
+  \(2\mathbf{w} = [2\times3, 2\times4] = [6, 8]\). (This is called \emph{scalar
+  multiplication}, because we're multiplying a vector by a scalar [non-vector] number.)
 
-  We can also define multiplying vectors by fractions in a similar way: if
-  \(\mathbf{v} = [x, y]\) is a vector then \[
-    \frac{a}{b} \mathbf{v} = \left[\frac{a}{b}x, \frac{a}{b}y\right]
-  \]
-
-  Compute \[
-    \frac{7}{12} [60, 72] = \SAF{35, 45}
-  \]
+  \begin{enumerate}
+    \item For any vector \([x, y]\), \(0[x, y] = [0, 0]\). \hfill \TFTrue
+    \item For any vector \([x, y]\), \(1[x, y] = [x, y]\). \hfill \TFTrue
+    \item For any vector \([x, y]\), and rational numbers \(a\) and \(b\),
+    \(a[x, y] + b[x, y] = (a+b)[x, y]\). \hfill \TFTrue
+    \item For any rational numbers \(a\), \(x\), and \(y\),
+    \(a[x, x] + a[y, y] = a[x, y]\). \hfill \TFFalse
+    \item Compute \[
+      \frac{7}{12} [60, 72] = \SAF{35, 45}
+    \]
+  \end{enumerate}
 \end{problem}
 
 \end{document}

@@ -1,12 +1,16 @@
-\documentclass[12pt,a4paper]{report}
+\documentclass[a4paper,10pt]{report}
 
 \newcommand{\IncludePath}{../include}
-\newcommand{\ProjectName}{Enrichment Math}
+\newcommand{\ProjectName}{Grade 7/8 Olympic Math}
 \input{\IncludePath/book-template.tex}
 
-\title{Operations}
+% use glossaries for this document
+\input{\IncludePath/gloss-g4.tex}
+\makeglossaries
+
+\title{Algebra}
 \author{Fengyang Wang}
-\date{December 14, 2018}
+\date{November 21, 2018}
 \newcommand{\im}{i}
 
 \usepackage{amsthm}
@@ -17,6 +21,261 @@
 \maketitle
 
 \tableofcontents
+
+\chapter{Modelling with Mathemtical Objects}
+
+What is a mathematical object? We are familiar with everyday objects: things we can see,
+feel, or otherwise interact with. Mathematical objects are like those, but more abstract.
+For instance, a number is a mathematical object. In the real world, a mathematical object
+might correspond to a quantity, a location, a process, or any number of other things. A
+particular object might be known, or it might not be known. In mathematics, we want to use
+the simplest possible objects to model the real problem we are trying to solve.
+
+When we make a mathematical computation, or a mathematical argument, we often need to refer
+to mathematical objects, sometimes known and sometimes not. While these are not the only
+ways to refer to mathematical objects, three common ways are:
+
+\begin{itemize}
+  \item A ``literal'': for example, just a number, like \(123\).
+  \item A ``variable'': a letter that we understand the meaning of, but we may or may not
+  know the value of, like \(x\).
+  \item An ``expression'': a combination of literals, variables, and operations, like \(x -
+  123\).
+\end{itemize}
+
+For instance, a real world problem is as follows:
+
+\begin{problem}{More Lumber Is Required}
+  Yahui and Zhen want to build a wooden treehouse. \(100\) planks are required. Yahui has
+  \(33\) in her shed, and Zhen has \(25\) in his shed. How many additional planks must they
+  buy to complete the treehouse?
+
+  \begin{solution}
+    We can use whole numbers to model this problem. Let \(y\) be the number of planks that
+    Yahui has, \(z\) be the number of planks that Zhen has, \(r\) be the total number of
+    planks required, and \(x\) be the number of additional planks they must buy. The
+    equation is: \[
+      y + z + x = r
+    \]
+
+    This equation is the \emph{governing equation} of our \emph{model}. We are given the
+    values of \(y\), \(z\), and \(r\), and we're asked to find the value of \(x\). (This is
+    not always possible!) To do so, we can substitute the known values: \[
+      33 + 25 + x = 100
+    \]
+
+    To find the unknown value we must add to \(33 + 25 = 58\) to arrive at \(100\), we can
+    use subtraction. That is, \[
+      x = 100 - 58 = \Ans{42}
+    \]
+  \end{solution}
+\end{problem}
+
+In this example, all of the variables we used represent specific mathematical objects. Three
+of them were immediately given to us in the question. The other, \(x\), still represented a
+specific mathematical object, but we had to figure it out.
+
+It is not always the case that variables represent specific mathematical objects ---
+sometimes, we can attach a \emph{quantifier} to a variable, to say that a statement is true
+of all mathematical objects of a certain type at once.
+
+\begin{problem}{Properties of Whole Number Addition}
+  Give a concrete example for each of the following properties of addition of whole numbers:
+
+  \begin{enumerate}
+    \item For all integers \(a\), \(a + 0 = a\).
+    \item For all integers \(a\) and \(b\), \(a + b = b + a\).
+    \item For all integers \(a\), \(b\) and \(c\), \((a + b) + c = a + (b + c)\).
+  \end{enumerate}
+
+  \begin{solution}
+    Solutions may vary.
+
+    \begin{enumerate}
+      \item \(2 + 0 = 2\)
+      \item \(3 + 7 = 10 = 7 + 3\)
+      \item \((1 + 2) + 3 = 3 + 3 = 6 = 1 + 5 = 1 + (2 + 3)\)
+    \end{enumerate}
+  \end{solution}
+\end{problem}
+
+Note that these concrete examples are applications of, not justifications for, the
+properties in question. It can be difficult to give a formal justification for true
+properties that involve quantifiers. However, if a statement is false, it is often much
+easier: we can simply give a single concrete example which does not satisfy the statement.
+
+\begin{problem}{Counterexamples}
+  Give a counterexample for each of the following incorrect statements about whole numbers:
+
+  \begin{enumerate}
+    \item For all integers \(a\), \(a + a > a\).
+    \item For all integers \(a\) and \(b\), \(a - b = b - a\).
+    \item For all integers \(a\), \(b\) and \(c\), \(a + b = a + c\).
+  \end{enumerate}
+
+  \begin{solution}
+    Solutions may vary.
+
+    \begin{enumerate}
+      \item Take \(a = 0\). Then \(a + a = 0 + 0 = 0 \not > 0 = a\).
+      \item Take \(a = 1\) and \(b = 0\). Then \(a - b = 1 - 0 = 1 \ne -1 = 0 - 1 = b - a\).
+      \item Take \(a = 0\), \(b = 0\), and \(c = 1\). Then \(a + b = 0 + 0 = 0 \ne 1 = 0 + 1
+      = a + c\).
+    \end{enumerate}
+  \end{solution}
+\end{problem}
+
+Note that even though each of the statements is false, they all have certain cases where
+they do hold. In the future, we will see techniques to find out exactly which cases the
+statement is true in.
+
+\section{Pairs}
+
+An \gls{ordered pair} is two things written in an order. For example, \((3, 4)\) is an
+ordered pair of numbers. Ordered pairs frequently represent a single concept that is made of
+two components --- though keep in mind that these components are not always written as in
+this example.
+
+A simple ordered pair like \((3, 4)\) does not itself have much meaning, aside from being a
+collection of two numbers. However, we may assign an interpretation to particular ordered
+pairs to give them a meaning.
+
+\section{Sets and Variables}
+
+A set is an unordered collection of mathematical objects. For our purposes, we will use sets
+as a convenient notation to describe the concept of ``one of these kinds of things''.
+
+A variable is a letter that represents a mathematical object whose value may be unknown. We
+say ``may be unknown'' because it is possible we do know the value of a variable. For
+instance, if I write \(x := 1\), this means that I define the variable \(x\) to refer to the
+number \(1\). But I might also say ``Let \(x\) be an integer (whole number).''; here, we do
+not know the exact value of \(x\), but we have a constraint on it: it must be a whole
+number.
+
+We can express certain kinds of constraint with set-membership notation, as in
+Constraint~\ref{mmo:setmember}, which states that the value of \(x\) must be \(1\) or \(4\)
+or \(100\):
+\begin{equation}
+  x \in \{1, 4, 100\}
+  \label{mmo:setmember}
+\end{equation}
+
+How would we express the idea that \(x\) is an integer with this notation? We obviously
+cannot list out all the integers, since there are infinitely many. Instead we will adopt a
+notation for an infinite set of all whole numbers: \(\mathbf{Z}\) (a boldface Z). The reason
+for the choice of the letter Z comes from the German word Zahlen, which means ``number''.
+Thus we can express the constraint ``\(x\) is an integer'' using the notation of
+Constraint~\ref{mmo:isinteger}.
+\begin{equation}
+  x \in \mathbf{Z}
+  \label{mmo:isinteger}
+\end{equation}
+
+Another kind of constraint we often see is an equation. A series of constraints is seen in
+Constraints~\ref{mmo:equation1} and \ref{mmo:equation2}, where we are given that \(x\) is a
+real number (a positive or negative number that can be a fraction or can even be an
+irrational number), and further that \(x^2 = 4\). This series of constraints is actually
+equivalent to \(x \in \{-2, 2\}\), since these are the only two real numbers whose square
+is \(4\).
+\begin{align}
+  x &\in \mathbf{R}
+  \label{mmo:equation1}
+  \\
+  x^2 &= 4
+  \label{mmo:equation2}
+\end{align}
+
+We have notation for some important sets that we see frequently:
+
+\begin{itemize}
+  \item \(\mathbf{N} = \{0, 1, 2, \dots\}\) is the set of natural numbers.
+  \item \(\mathbf{Z} = \{\dots, -2, 1, 0, 1, 2, \dots\}\) is the set of integers (whole
+  numbers).
+  \item \(\mathbf{Q} = \operatorname{Quot}(\mathbf{Z})\) is the set of rational numbers
+  (fractions), which we will discuss in a later section.
+  \item \(\mathbf{R} = \overline{\mathbf{Q}}\) is the set of real numbers, which we will
+  discuss in a later section.
+\end{itemize}
+
+\section{Two-Dimensional Vector Spaces}
+
+Another interpretation of ordered pairs is as vectors in a two-dimensional plane. The
+components of the vector \([a, b]\) represent the displacement in two directions. For
+example, the first component might represent displacement to the right, and the second
+component displacement toward top of the page. (Such an interpretation is called a
+\emph{vector space}, and the choices of directions are collectively called a \emph{basis}.)
+
+We have notation for the set of two-dimensional vectors where both components are real
+numbers: \(\mathbf{R}^2\). The superscript \(^2\) denotes that the vector space is two
+dimensional, i.e. has two components.
+
+\chapter{Rational Numbers}
+
+\section{Fractions}
+
+\Glspl{fraction} are a common example of ordered pairs with an assigned interpretation. The
+fraction \(\frac{a}{b}\) is itself an ordered pair \((a, b)\), with the first element of
+this ordered pair representing the number of fractional pieces, and the second element
+representing the size of a whole relative to a single fractional piece.
+
+\begin{problem}{Fractions}
+ Compute each of the following:
+
+ \[
+         \frac{3}{8} \times \frac{2}{7} = \frac{6}{56} =
+         \Ans{\displaystyle\frac{3}{28}}
+        \]
+ \[
+  \frac{5}{9} \times \frac{2}{5} = \frac{10}{45} =
+  \Ans{\displaystyle\frac{2}{9}}
+  \]
+\end{problem}
+
+It happens to be the case with fractions that distinct ordered pairs might represent the
+same quantity. For instance, \(\frac{3}{6}\) and \(\frac{7}{14}\) are different pairs of
+numbers, but they represent the same fraction: one half. All the fractions that represent
+the same particular quantity form a so-called \emph{equivalence class}. All numbers that can
+be formed from fractions of integers are called \glspl{rational number}.
+
+How can we decide whether two fractions represent the same quantity? That is, suppose that
+\(\frac{a}{b}\) and \(\frac{c}{d}\) are rational numbers. Are they equal? In the case where
+the denominator is the same, this is easy to answer: just compare the numerators. Rational
+numbers with the same denominator are equal if and only if the numerators are equal.
+
+If the denominators are different, one technique is to rewrite the fractions with a common
+denominator. We see that \(\frac{a}{b} = \frac{a\times d}{b\times d}\) and \(\frac{c}{d} =
+\frac{c\times b}{b\times d}\). Now we can compare the numerators. Thus, in general, we
+obtain the result Equation~\ref{rat:fractionequalityalgorithm}. Visually, we are multiplying
+the top-left with the bottom-right, and the top-right with the bottom-left. This makes a
+cross shape, so one way to remember this technique is that it is often called
+``cross-multiplication''.
+
+\begin{equation}
+  \frac{a}{b} = \frac{c}{d} \iff a\times d = b\times c
+  \label{rat:fractionequalityalgorithm}
+\end{equation}
+
+Here is a fun example of fraction multiplication:
+
+\begin{problem}{A Telescoping Product}
+  Find the product:
+  \[
+    \frac{1}{2} \times \frac{2}{3} \times \frac{3}{4} \times
+    \dots \times \frac{99}{100}
+   \]
+
+  \begin{solution}
+    Each fraction in this product, except for the last one, has a numerator which is the
+    same as the denominator of the following fraction. These will cancel out if we multiply
+    the fractions. For instance, \(\frac{1}{2} \times \frac{2}{3} = \frac{1\times 2}{2
+    \times 3}\), and we can divide \(2\) from both the numerator and the denominator to get
+    \(\frac{1}{3}\).
+
+    In this manner, all the numbers except for the first \(1\) in the numerator and the last
+    \(100\) in the denominator will get cancelled out. So we are left with
+    \Ans{\displaystyle \frac{1}{100}}.
+  \end{solution}
+\end{problem}
 
 \chapter{Real Numbers}
 

@@ -10,7 +10,7 @@
 
 \title{Discrete Mathematics}
 \author{Fengyang Wang}
-\date{November 21, 2018}
+\date{September 27, 2019}
 
 \begin{document}
 
@@ -27,6 +27,8 @@
  Although the notes are intended to be presented to a young audience, they are written for a
  teacher and not for a student. Many of the terms used will not be familiar to the students,
  and will need to be explained differently.
+
+ This unit is intended to be taught after the algebraic foundations unit.
 \end{abstract}
 
 \maketitle
@@ -34,117 +36,6 @@
 \tableofcontents
 
 \chapter{Functions of One Variable}
-
-\section{Mathematical Objects}
-
-What is a mathematical object? We are familiar with everyday objects: things we can feel.
-Mathematical objects are like those, but more abstract. For instance, a number is a
-mathematical object.
-
-\subsection{Pairs}
-
-An \gls{ordered pair} is two things written in an order. For example, \((3,
-4)\) is an ordered pair of numbers. Ordered pairs frequently represent a single
-concept that is made of two components.
-
-A simple ordered pair like \((3, 4)\) does not itself have much meaning, aside
-from being a collection of two numbers. However, we may assign an
-interpretation to particular ordered pairs to give them a meaning.
-
-\subsection{Fractions}
-
-\Glspl{fraction} are a common example of ordered pairs with an assigned
-interpretation. The fraction \(\frac{a}{b}\) is itself an ordered pair \((a,
-b)\), with the first element of this ordered pair representing the number to
-divide, and the second element representing the number to be divided by.
-
-\begin{problem}{Fractions}
- Compute each of the following:
-
- \[
-         \frac{3}{8} \times \frac{2}{7} = \frac{6}{56} =
-         \Ans{\displaystyle\frac{3}{28}}
-        \]
- \[
-  \frac{5}{9} \times \frac{2}{5} = \frac{10}{45} =
-  \Ans{\displaystyle\frac{2}{9}}
-  \]
-\end{problem}
-
-It happens to be the case with fractions that distinct ordered pairs might
-represent the same quantity. For instance, \(\frac{3}{6}\) and \(\frac{7}{14}\)
-are different pairs of numbers, but they represent the same fraction: one half.
-All the fractions that represent a particular quantity form a so-called
-\emph{equivalence class}. All numbers that can be formed from fractions of
-integers are called \glspl{rational number}.
-
-\subsection{Sets and Variables}
-
-A set is an unordered collection of mathematical objects. For our purposes, we will use sets
-as a convenient notation to describe the concept of ``one of these kinds of things''.
-
-A variable is a letter that represents a mathematical object whose value may be unknown. We
-say ``may be unknown'' because it is possible we do know the value of a variable. For
-instance, if I write \(x := 1\), this means that I define the variable \(x\) to refer to the
-number \(1\). But I might also say ``Let \(x\) be an integer (whole number).''; here, we do
-not know the exact value of \(x\), but we have a constraint on it: it must be a whole
-number.
-
-We can express certain kinds of constraint with set-membership notation, as in
-Constraint~\ref{fov:setmember}, which states that the value of \(x\) must be \(1\) or \(4\)
-or \(100\):
-\begin{equation}
-  x \in \{1, 4, 100\}
-  \label{fov:setmember}
-\end{equation}
-
-How would we express the idea that \(x\) is an integer with this notation? We obviously
-cannot list out all the integers, since there are infinitely many. Instead we will adopt a
-notation for an infinite set of all whole numbers: \(\mathbf{Z}\) (a boldface Z). The reason
-for the choice of the letter Z comes from the German word Zahlen, which means ``number''.
-Thus we can express the constraint ``\(x\) is an integer'' using the notation of
-Constraint~\ref{fov:isinteger}.
-\begin{equation}
-  x \in \mathbf{Z}
-  \label{fov:isinteger}
-\end{equation}
-
-Another kind of constraint we often see is an equation. A series of constraints is seen in
-Constraints~\ref{fov:equation1} and \ref{fov:equation2}, where we are given that \(x\) is a
-real number (a positive or negative number that can be a fraction or can even be an
-irrational number), and further that \(x^2 = 4\). This series of constraints is actually
-equivalent to \(x \in \{-2, 2\}\), since these are the only two real numbers whose square
-is \(4\).
-\begin{align}
-  x &\in \mathbf{R}
-  \label{fov:equation1}
-  \\
-  x^2 &= 4
-  \label{fov:equation2}
-\end{align}
-
-We have notation for some important sets that we see frequently:
-
-\begin{itemize}
-  \item \(\mathbf{N} = \{0, 1, 2, \dots\}\) is the set of natural numbers.
-  \item \(\mathbf{Z} = \{\dots, -2, 1, 0, 1, 2, \dots\}\) is the set of integers (whole
-  numbers).
-  \item \(\mathbf{Q} = \operatorname{Quot}(\mathbf{Z})\) is the set of rational numbers
-  (fractions).
-  \item \(\mathbf{R} = \overline{\mathbf{Q}}\) is the set of real numbers.
-\end{itemize}
-
-\subsection{Two-Dimensional Vector Spaces}
-
-Another interpretation of ordered pairs is as vectors in a two-dimensional plane. The
-components of the vector \([a, b]\) represent the displacement in two directions. For
-example, the first component might represent displacement to the right, and the second
-component displacement toward top of the page. (Such an interpretation is called a
-\emph{vector space}, and the choices of directions are collectively called a \emph{basis}.)
-
-We have notation for the set of two-dimensional vectors where both components are real
-numbers: \(\mathbf{R}^2\). The superscript \(^2\) denotes that the vector space is two
-dimensional, i.e. has two components.
 
 \section{Introduction}
 
@@ -357,7 +248,8 @@ Probability is the study of how likely various events are to occur.
 
 Many of you have heard of probability and have some intuition on what it means and why it is
 important. Before we can soundly speak of probability, we should reconcile this intuition
-with some philosophical justification for what and why we are studying this subject.
+with some philosophical justification for what probability is and why we are studying this
+subject.
 
 \section{Philosophy of Probability}
 
@@ -522,6 +414,14 @@ value of rolling a six-sided die is $3.5$.
 
 \chapter{Logic}
 
+\section{Informal Logic}
+
+TK informal discussion of logic
+
+\section{Logic via Probability}
+
+TK project conditional probability onto logic using 1/0
+
 \begin{problem}{true}
   If Alice starts her homework, she will finish it. If Alice finishes her homework, she will
   receive a good mark.
@@ -547,6 +447,9 @@ value of rolling a six-sided die is $3.5$.
   (Write ``true'' or ``false'' on the blank.)
 \end{problem}
 
+\section{Logic via Lambda Calculus}
+
+TK: use the lambda calculus to develop theory of proofs
 
 Logical thinking is the kind of reasoning necessary to make logical and correct
 conclusions from givens. Much of logic can be thought of as building up
@@ -726,6 +629,47 @@ These are not rules:
 \end{itemize}
 
 \chapter{Optimization}
+
+\section{Modelling}
+
+\subsection{Objective Functions}
+
+In many real-world problems, we are faced with a variety of choices which each lead to some
+kind of outcome. The role of optimization is to determine what the best choice is.
+
+For instance, consider the common problem of deciding how to travel from point A  to point
+B. The map shown in Figure~\ref{opt:pathfinding} depicts two alternative routes to travel
+from The Boardwalk (labelled A) to Resurrection Catholic Secondary School (labelled B).
+Which route is better?
+
+\begin{figure}
+  \mapBoardwalkRcss
+
+  \caption{Two possible routes from The Boardwalk (A) to Resurrection Secondary School (B)}
+  \label{opt:pathfinding}
+\end{figure}
+
+This is a bit of a trick question, of course, since we haven't pinned down what the meaning
+of better is. Nevertheless, many of us would have instintively preferred option~1 to
+option~2. Suppose we wanted to more formally specify \emph{why} we like option~1. We would
+have an \gls{objective}, for instance, distance travelled or time required (or maybe a
+combination of both). Mathematically, we can describe the objective as a function whose
+domain is our possible choices, and whose codomain is some kind of numerical measurement of
+how ``good'' the choice is.
+
+In real problems, the true objective function may be very complicated, and in mathematics we
+prefer a simpler function if possible. The (sometimes very hard) problem of turning a real
+world complex system into a simple and solvable mathematical formulation is part of a
+process called modelling. In applications of mathematics, it equally important to have a
+good model as it is to correctly solve the mathematical problems suggested by the model.
+
+\subsection{Search Spaces}
+
+TK: search spaces
+
+\section{General Form of Optimization Problems}
+
+TK: classification
 
 \begin{problem}{3}
   Ashley is a treasure hunter! She is on the island of Fidra off the Scottish coast. She

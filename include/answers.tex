@@ -23,3 +23,5 @@
 \newcommand{\MCSelect}[1]{\Switch{\AnsT{#1}}{#1}}
 \newcommand{\TFTrue}{\MCSelect{True}~~False}
 \newcommand{\TFFalse}{True~~\MCSelect{False}}
+\newcommand{\fracans}[2]{
+\frac{\Switch{#1}{\hspace{2em}}}{\Switch{#2}{\hspace{2em}}}}
