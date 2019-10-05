@@ -1,0 +1,119 @@
+\documentclass[12pt,letterpaper]{article}
+
+\newcommand{\IncludePath}{../include}
+\input{\IncludePath/hmwk-template.tex}
+
+% \answerstrue % turn on for answers
+\defauthor
+
+\title{Linear Equations}
+\date{October 5, 2019}
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{empty}
+
+\Switch{}{For answers see class website: \url{https://grcs.uwseminars.com/}}
+
+\begin{problem}{Linear Equations with a Unique Solution}
+  Using division, determine the unique possible value of \(x\). Express any fractions in
+  simplest form.
+
+  \begin{multicols}{2}
+  \begin{enumerate}[\hspace{.5cm}a.]
+    \item \( 2x = 6 \)     \hfill \(x = \SAB{3}\)
+    \item \( -3x = 12 \)   \hfill \(x = \SAB{-4}\)
+    \item \( \displaystyle \frac{1}{2}x = \frac{1}{4} \)
+    \hfill \(x = \SAB{\frac{1}{2}}\)
+    \item \( 5x = 3 \)     \hfill \(x = \SAB{\frac{3}{5}}\)
+  \end{enumerate}
+  \end{multicols}
+\end{problem}
+
+\begin{problem}{All Roads Lead To Rome}
+  Khulan, Alessa, and Clara are on vacation in Italy. Read Khulan's journal. For each
+  question, decide whether we have enough information to answer it. If we do, use a linear
+  equation or otherwise to solve the problem.
+
+  \textit{Rome is the capital of Italy. I arrived in Venice,~Italy and took the train to
+  Rome. Alessa and Clara arrived in Naples,~Italy and also took the train to Rome. The train
+  from Venice takes \(4\) times as long as the train from Naples. Clara told me she spent
+  \(40\)€ on her train ticket. If you add up the amount of time that each of us spent on the
+  train, we spent a total of \(6\) hours combined, which is not bad considering the
+  distance! Naples is \SI{185}{\kilo\metre} away from Rome. For comparison, Paris and Rome
+  are \SI{1100}{\kilo\meter}) apart. While in Rome, we tried a lot of coffee. Alessa spent
+  twice as much on coffee as me, and Clara spent twice as much on coffee as Alessa! We spent
+  a total of \(14\)€ on coffee.}
+
+  \begin{enumerate}
+    \item How much time does the Naples--Rome train take?
+    \Switch{Yes. \(t + t + 4t = \SI{6}{\hour} \Rightarrow t = \SI{1}{\hour}\)}{}
+    \item How much time does the Venice--Rome train take? (Did we have to write a new linear
+    equation to solve this problem?)
+    \Switch{Yes. We can just use \(4t = \SI{4}{\hour}\).}
+    \item How much time does the Paris--Rome train take?
+    \Switch{No. While we know the ratio of distances, we cannot assume that trains travel at
+    the same speed.}{}
+    \item How much did Alessa spend on coffee?
+    \Switch{Yes. \(c + 2c + 4c = 14 \Rightarrow c = 2\), so Alessa spent \(2\)€ on coffee.}{}
+    \item How much does a cup of coffee cost in Italy?
+    \Switch{No. We do not know how many units of coffee any of them consumed.}{}
+    \item How much money did Alessa spend on her train ticket?
+    \Switch{No. While we know the ratio of times, we cannot assume that train ticket cost is
+    only based on time.}{}
+  \end{enumerate}
+\end{problem}
+
+\begin{problem}{Number of Solutions to a Linear Equation}
+  Suppose that \(a\) and \(b\) are known rational numbers. Which of the below statements
+  about the number of rational solutions to \(ax = b\) are true?
+
+  \begin{enumerate}
+    \item If \(a=0\), then \(ax = b\) always has no rational solutions.
+    \hfill \TFFalse
+    \item If \(a\ne 0\), then \(ax = b\) always has a unique rational solution.
+    \hfill \TFTrue
+    \item If \(b=0\), then \(ax = b\) always has multiple rational solutions.
+    \hfill \TFFalse
+    \item If \(a=b=0\), then \(ax = b\) always has multiple rational solutions.
+    \hfill \TFTrue
+    \item If \(a\ne0\) but \(b=0\), then \(ax = b\) always has no rational solutions.
+    \hfill \TFFalse
+    \item If \(a=0\) but \(b\ne0\), then \(ax = b\) always has no rational solutions.
+    \hfill \TFTrue
+  \end{enumerate}
+\end{problem}
+
+\begin{problem}{Extra Known Variables}
+  Suppose that \(a\), \(b\), and \(c\) are known rational numbers, with \(a \ne b\). Find an
+  expression that gives \(x\) in terms of these known rational numbers, if \(ax = bx + c\).
+  Is the solution unique?
+\end{problem}
+
+\begin{problem}{A Homogeneous Linear System}
+  Up until now, we have been focusing on a single unknown value, \(x\). Consider the
+  following system of equations (that is, all the equations are true):
+
+  \begin{align*}
+    x + y + z &= 0 \\
+    x + 2y + 3z &= 0 \\
+  \end{align*}
+
+  where \(x\), \(y\), \(z\) are unknown rational numbers.
+
+  \Switch{\textbf{Answers may vary for this problem.}}{}
+
+  \begin{enumerate}
+    \item Find one solution. \hfill \(x_1 = \SAB{0}\), \(y_1 = \SAB{0}\), \(z_1 = \SAB{0}\)
+    \item Find a different solution. \hfill \(x_2 = \SAB{-1}\), \(y_2 = \SAB{-1}\), \(z_2 = \SAB{1}\)
+    \item Take your solutions and add them together. That is, let \(x := x_1 + x_2\), \(y :=
+    y_1 + y_2\), \(z := z_1 + z_2\). Is this again a solution? Why or why not?
+    \Switch{It is also a solution. This is because we can add the equations for \(x_1\),
+    \(y_1\), and \(z_1\) together with the equations for \(x_2\), \(y_2\) and \(z_2\). Since
+    the right hand sides are \(0\), this results in the same system!}{}
+  \end{enumerate}
+\end{problem}
+
+\end{document}
