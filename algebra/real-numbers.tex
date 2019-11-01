@@ -1,0 +1,140 @@
+\documentclass[12pt,letterpaper]{article}
+
+\newcommand{\IncludePath}{../include}
+\input{\IncludePath/hmwk-template.tex}
+
+% \answerstrue % turn on for answers
+\defauthor
+
+\title{Real Numbers}
+\date{October 25, 2019}
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{empty}
+
+\Switch{}{For answers see class website: \url{https://grcs.uwseminars.com/}}
+
+\begin{problem}{Graphing a Function}
+  In this problem, we will draw a graph for the function \(y = (x-1)(x+1)\). First, fill out
+  this table of values. The first few entries are filled out for you.
+
+  \begin{center}
+    \begin{tabular}{|c|c|l|}
+      \hline
+      $x$ & $y = (x-1)(x+1)$ & Rough work \\
+      \hline
+      $-2$ & $3$ & $(-2-1) \times (-2+1) = -3 \times (-1) = 3$ \\
+      $-1$ & $0$ & $(-1-1) \times (-1+1) = -1 \times 0 = 0$ \\
+      $0$ & \Switch{\Ans{-1}}{} & \\
+      $1$ & \Switch{\Ans{0}}{} & \\
+      $2$ & \Switch{\Ans{3}}{} & \\
+      \hline
+    \end{tabular}
+  \end{center}
+
+  On the grid paper below, axes have been drawn for you. Draw the five points above onto the
+  grid. Again, the first two points are already done for you.
+
+  \begin{center}
+    \begin{tikzpicture}[x=1cm, y=1cm]
+      \draw[line width=1mm, black, ->] (4, 0) -- (4, 8);
+      \node[above] at (4, 8) {$y$};
+      \node[below left] at (4, 0) {$-2$};
+      \node[below left] at (4, 1) {$-1$};
+      \node[below left] at (4, 3) {$1$};
+      \node[below left] at (4, 4) {$2$};
+      \node[below left] at (4, 5) {$3$};
+      \node[below left] at (4, 6) {$4$};
+      \node[below left] at (4, 7) {$5$};
+      \node[below left] at (4, 8) {$6$};
+      \draw[line width=1mm, black, ->] (0, 2) -- (8, 2);
+      \node[right] at (8, 2) {$x$};
+      \node[below left] at (0, 2) {$-4$};
+      \node[below left] at (1, 2) {$-3$};
+      \node[below left] at (2, 2) {$-2$};
+      \node[below left] at (3, 2) {$-1$};
+      \node[below left] at (4, 2) {$0$};
+      \node[below left] at (5, 2) {$1$};
+      \node[below left] at (6, 2) {$2$};
+      \node[below left] at (7, 2) {$3$};
+      \node[below left] at (8, 2) {$4$};
+      \draw[step=1cm, line width=0.2mm, black] (0,0) grid (8cm, 8cm);
+
+      \node[fill=black] at (2, 5) {};
+      \node[fill=black] at (3, 2) {};
+      \Switch{
+      \node[fill=black] at (4, 1) {};
+      \node[fill=black] at (5, 2) {};
+      \node[fill=black] at (6, 5) {};
+      \draw(1.5,7.25) parabola bend(4,1)(6.5,7.25);}{}
+    \end{tikzpicture}
+  \end{center}
+
+  Now try to connect the five points using a smooth curve. Extrapolate (guess how the curve
+  will continue) past $-2$ and $2$. You can calculate the correct values of $y$ for $x=-3$
+  or $x=3$ if this helps you guess how the curve will continue. Answer the following
+  questions using your graph:
+
+  \begin{enumerate}
+    \item What does the minimum value of $y$ look like? \SAB{-1}
+    \item If $x$ becomes very large (say, $x > 10$), what happens to $y$? \Switch{\AnsT{It
+    becomes very large!}}{}
+    \item If $x$ becomes very small (say, $x < -10$), what happens to $y$? \Switch{\AnsT{It
+    becomes very large!}}{}
+    \item If $y = 3$, what are the possible values of $x$? \SAB{-2}, \SAB{2}
+    \item If $y = 4$, is it possible for $x$ to be an integer? Do you think $x$ could be a
+    rational number? Why or why not? \Switch{\AnsT{No, it is not possible for $x$ to be an
+    integer. $x$ cannot be a rational number either because if $4 = (x-1)(x+1) = x^2-1$,
+    then $x^2 = 3$, and we have noted that $\sqrt{3}$ is not rational.}}{}
+  \end{enumerate}
+\end{problem}
+
+\begin{problem}{Linear Equations with a Unique Solution}
+  Using division, determine the unique possible value of \(x\). Simplify your answers if
+  possible.
+
+  \begin{multicols}{2}
+  \begin{enumerate}[\hspace{.5cm}a.]
+    \item \( \sqrt{3}x = 3 \)           \hfill \(x = \SAB{\sqrt{3}}\)
+    \item \( \sqrt{2}x = \sqrt{8} \)    \hfill \(x = \SAB{2}\)
+    \item \( \displaystyle \frac{1}{2}x = \frac{1}{\sqrt{2}} \)
+    \hfill \(x = \SAB{\sqrt{2}}\)
+    \item \( \sqrt{12}x = -2\sqrt{3} \) \hfill \(x = \SAB{-1}\)
+  \end{enumerate}
+  \end{multicols}
+\end{problem}
+
+\begin{problem}{Exponentiation}
+  Simplify as much as possible. Classify the answer as an integer, rational number, and/or
+  real number. (Remember that integers are still rational numbers, and rational numbers ar
+  still real numbers, so be sure to circle all the correct answers.)
+
+  \begin{enumerate}
+    \item \({\left(\sqrt{2}^3\right)}^2 = \SAB{8}\)
+    \hfill \MCSelect{Integer} ~~ \MCSelect{Rational} ~~ \MCSelect{Real}
+    \item \(\sqrt[3]{3^9} = \SAB{27}\)
+    \hfill \MCSelect{Integer} ~~ \MCSelect{Rational} ~~ \MCSelect{Real}
+    \item \(\sqrt{\frac{2}{98}} = \SAB{\frac{1}{7}}\)
+    \hfill Integer ~~ \MCSelect{Rational} ~~ \MCSelect{Real}
+    \item \(\sqrt{\frac{1 + \sqrt{2}}{\sqrt{2} - 1} - \sqrt{8}} = \SAB{\sqrt{3}}\)
+    \hfill Integer ~~ Rational ~~ \MCSelect{Real}
+  \end{enumerate}
+\end{problem}
+
+\begin{problem}{Real Problems}
+  In class, we saw that some real numbers can be obtained through using rational exponents
+  (radicals), and adding, subtracting, and multiplying these numbers.
+
+  In 1824, Niels Henrick Abel proved that these numbers are not even enough to describe all
+  real solutions to polynomials. An example of such a polynomial is $x^5 - x + 1 = 0$. We
+  say that this polynomial does not have a solution in radicals.
+
+  Show that the polynomial $x^5 - x + 30 = 0$, by contrast, does have a solution in
+  radicals. This is in fact the unique real solution for this polynomial. \Switch{\AnsT{The
+  solution is $-2$. This is an integer, and so is a solution in radicals of course.}}{}
+\end{problem}
+
+\end{document}
