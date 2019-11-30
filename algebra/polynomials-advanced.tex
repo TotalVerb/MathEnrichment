@@ -1,0 +1,72 @@
+\documentclass[12pt,letterpaper]{article}
+
+\newcommand{\IncludePath}{../include}
+\input{\IncludePath/hmwk-template.tex}
+
+% \answerstrue % turn on for answers
+\defauthor
+
+\title{Polynomials (Advanced Questions)}
+\date{November 2, 2019}
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{empty}
+
+\Switch{}{For answers see class website: \url{https://grcs.uwseminars.com/}}
+\begin{problem}{Factorials}
+  Let \(n! = 1 \cdot 2 \cdot \dots \cdot (n-1) \cdot n\) be the \textbf{factorial} of \(n\),
+  which is the product of all integers from \(1\) to \(n\). For example, \(3! = 1 \times 2
+  \times 3 = 6\). For convenience, say that \(0! = 1\).
+
+  \begin{enumerate}
+    \item Calculate the value of \[
+      \frac{1}{0!} + \frac{1}{1!} + \frac{1}{2!} + \frac{1}{3!} = \fracans{8}{3}
+    \]
+    \item Consider the polynomial \[
+      f(x) = \frac{1}{0!} + \frac{1}{1!}x + \frac{1}{2!}x^2 + \frac{1}{3!}x^3
+    \]
+  \end{enumerate}
+\end{problem}
+
+\begin{problem}{Binomial Coefficients}
+  Recall that \(n! = 1\cdot2 \cdot \dots \cdot (n-1) \cdot n\) is the product
+  of all integers from \(1\) to \(n\).
+
+  \begin{enumerate}
+    \item Define \[
+      \binom{x}{n} := \frac{x\cdot(x-1)\cdot\dots\cdot(x-n+1)}{n!}
+    \]
+
+    Find the constant term of \(\binom{x}{n}\).
+    \item Find the leading coefficient (that is, the coefficient of the \(x^n\)
+    term) of \(\binom{x}{n}\).
+    \item Compute each of the following. \[
+      \binom{5}{2} = \hspace{4ex}
+      \binom{-1}{10} = \hspace{4ex}
+      \binom{1/2}{3} = \hspace{4ex}
+    \]
+    \item Is it true that \[
+      \binom{n}{n} = \binom{n}{0} = 1
+    \]
+  \end{enumerate}
+\end{problem}
+
+TK
+
+\begin{problem}{\(q\)-analogs of Binomial Coefficients}
+  \begin{enumerate}
+    \item Define for non-negative integers \(n > m\) \[
+      \binom{n}{m}_x := \prod_{k=1}^{m} \frac{1-x^{n-k-1}}{1-x^{k}}
+    \]
+
+    Prove that \(\binom{n}{m}_x\) is a polynomial in \(x\).
+    \item Show that \[
+      \binom{n+1}{m}_x = x^m \binom{n}{m}_x + \binom{n}{m-1}_x
+    \]
+  \end{enumerate}
+\end{problem}
+
+\end{document}

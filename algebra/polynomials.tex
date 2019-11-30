@@ -7,7 +7,7 @@
 \defauthor
 
 \title{Polynomials}
-\date{November 2, 2019}
+\date{November 30, 2019}
 
 \begin{document}
 
@@ -17,91 +17,93 @@
 
 \Switch{}{For answers see class website: \url{https://grcs.uwseminars.com/}}
 
-\begin{problem}{Factorization in \(\mathbf{Z}[x]\)}
-  Define \(\mathbf{Z}[x]\) to be the set of polynomials with integer
-  coefficients. In \(\mathbf{Z}[x]\), fully factor the following.
+\begin{problem}{Degrees, Leading Coefficients, and Constant Terms}
+  \textbf{Recall}: The degree of a polynomial is the highest exponent of $x$ with a non-zero
+  coefficient. The leading coefficient is the coefficient of the highest exponent term. The
+  constant term is the coefficient of the $x^0$ term, i.e. the monomial which does not
+  depend on $x$ (hence, constant).
+
+  \vspace{1em}
+  \noindent Find the degree, leading coefficient, and constant term for each of the
+  following polynomials.
+
+  \vspace{1em}
+  \noindent
+  Hint: The polynomials in this homework are not written in the same order as we did in
+  class. Don't let that confuse you! The leading coefficient is always in the term with the
+  highest exponent, regardless of what order it is written in.
 
   \begin{enumerate}
-    \item \(16 - x^2\)
-    \item \(2 + 5x + 3x^2\)
-    \item \(1 + 6x + 12x^2 + 8x^3\)
-    \item \(1 - 4x + 6x^2 - 4x^3 + x^4\)
-    \item \(1 - x^4\)
+    \item \(-12 + x + x^2\)
+    \hfill Degree: \SAC{2}~~Leading coefficient: \SAC{1}~~Constant term: \SAC{-12}
+    \item \(-x^2 + x^{11} - x^{17} + x^{26}\)
+    \hfill Degree: \SAC{26}~~Leading coefficient: \SAC{1}~~Constant term: \SAC{0}
+  \end{enumerate}
+\end{problem}
+
+\begin{problem}{Long Division}
+  Use long division to find the following quotients.
+
+  \begin{enumerate}
+    \item \(\displaystyle\frac{-12 + x + x^2}{4 + x} = \SAF{-3 + x}\)
+    \item \(\displaystyle\frac{-x^2 + x^{11} - x^{17} + x^{26}}{-1 + x^9} = \SAF{x^2 +
+    x^17}\) \end{enumerate}
+\end{problem}
+
+\begin{problem}{Factorization in \(\mathbf{Q}[x]\) with Integer Coefficients}
+  Define \(\mathbf{Q}[x]\) to be the set of polynomials with rational coefficients. In
+  \(\mathbf{Q}[x]\), fully factor the following. Use the rational root theorem, which states
+  that any rational root $\frac{m}{n}$ (in lowest terms) must have $m$ be a factor the
+  constant term and $n$ be a factor of the leading coefficient. You may use the fact that
+  any degree $2$ or $3$ rational polynomial with no rational root is irreducible.
+
+  \begin{enumerate}
+    \item \(16 - x^2 = \SAF{(4 + x)(-4 + x)}\)
+    \item \(-x + 2x^2 = \SAF{x(-1 + 2x)}\)
+    \item \(2 + 5x + 3x^2 = \SAF{(2 + 3x)(1 + x)}\)
+    \item \(1 + 6x + 12x^2 + 8x^3 = \SAF{(1 + 4x + 4x^2)(1 + 2x)}\)
+    \item \(1 - 4x + 6x^2 - 4x^3 + x^4 = \SAF{(-1 + x)^4}\)
+    \item \(1 - x^4 = \SAF{(1 - x)(1 + x)(1 + x^2)}\)
   \end{enumerate}
 \end{problem}
 
 \begin{problem}{Factorization in \(\mathbf{Q}[x]\)}
-  Define \(\mathbf{Q}[x]\) to be the set of polynomials with rational
-  coefficients. In \(\mathbf{Q}[x]\), fully factor the following.
+  Define \(\mathbf{Q}[x]\) to be the set of polynomials with rational coefficients. In
+  \(\mathbf{Q}[x]\), fully factor the following.
+
+  \vspace{1em}
+  \noindent
+  Hint: The rational root theorem requires all the coefficients to be integers. To get the
+  polynomials to have integer coefficients, first factor out an appropriate fraction, e.g.
+  $\frac{1}{2}x + \frac{3}{2} = \frac{1}{2}(x + 3)$. Then use the rational root theorem
+  ignoring the fraction you factored out. Any root of $p(x)$ is still a root of $q p(x)$,
+  where $q$ is any non-zero rational number!
 
   \begin{enumerate}
-    \item \(\frac{1}{4} + x + x^2\)
-    \item \(\frac{4}{9} - \frac{4}{9}x + \frac{1}{9}x^2\)
-    \item \(-x + 2x^2\)
+    \item \(\frac{1}{4} + x + x^2 = \SAF{\frac{1}{4}{(1 + 2x)}^2}\)
+    \item \(\frac{4}{9} - \frac{4}{9}x + \frac{1}{9}x^2 = \SAF{\frac{1}{9}{(-2 + x)}^2}\)
   \end{enumerate}
 \end{problem}
 
 \begin{problem}{Finite Geometric Series}
   \begin{enumerate}
-    \item Expand \(\frac{1-x^2}{1-x}\) as a polynomial.
+    \item Expand \(\frac{1-x^2}{1-x}\) as a polynomial. Hint: Use long division.
+    \Switch{\Ans{\frac{1-x^2}{1-x} = 1 + x}}{}
     \item Expand \(\frac{1-x^5}{1-x}\) as a polynomial.
-    \item Find a fraction of the form \(\frac{p(x)}{q(x)}\), where \(p\) and
-    \(q\) are polynomials, such that \[
-      \frac{p(x)}{q(x)} = \sum_{k=0}^n x^k = 1 + x + \dots + x^n
-    \]
-  \end{enumerate}
-\end{problem}
-
-\begin{problem}{Factorials}
-  Let \(n! = 1 \cdot 2 \cdot \dots \cdot (n-1) \cdot n\) be the \textbf{factorial} of \(n\),
-  which is the product of all integers from \(1\) to \(n\). For example, \(3! = 1 \times 2
-  \times 3 = 6\). For convenience, say that \(0! = 1\).
-
-  \begin{enumerate}
-    \item Calculate the value of \[
-      \frac{1}{0!} + \frac{1}{1!} + \frac{1}{2!} + \frac{1}{3!} = \fracans{8}{3}
-    \]
-    \item Consider the polynomial \[
-      f(x) = \frac{1}{0!} + \frac{1}{1!}x + \frac{1}{2!}x^2 + \frac{1}{3!}x^3
-    \]
-  \end{enumerate}
-\end{problem}
-
-\begin{problem}{Binomial Coefficients}
-  Recall that \(n! = 1\cdot2 \cdot \dots \cdot (n-1) \cdot n\) is the product
-  of all integers from \(1\) to \(n\).
-
-  \begin{enumerate}
+    \Switch{\Ans{\frac{1-x^5}{1-x} = 1 + x + x^2 + x^3 + x^4}}{}
     \item Define \[
-      \binom{x}{n} := \frac{x\cdot(x-1)\cdot\dots\cdot(x-n+1)}{n!}
+      \sum_{k=0}^n x^k := 1 + x + \dots + x^n
+    \] (this is just a shorthand notation; you can read it as the ``sum with $k$ ranging
+    from $0$ to $n$ of $x^k$). Find a fraction of the form \(\frac{p(x)}{q(x)}\), where
+    \(p\) and \(q\) are polynomials, such that \[
+      \frac{p(x)}{q(x)} = \sum_{k=0}^n x^k
+    \]
+    \Switch{\Ans{\frac{1 - x^{k+1}}{1 - x}}}{}
+    \item Calculate \[
+      \sum_{k=0}^{20} 2^k := 1 + 2 + 2^2 + \dots + 2^{20} = \SAF{2097151}
     \]
 
-    Find the constant term of \(\binom{x}{n}\).
-    \item Find the leading coefficient (that is, the coefficient of the \(x^n\)
-    term) of \(\binom{x}{n}\).
-    \item Compute each of the following. \[
-      \binom{5}{2} = \hspace{4ex}
-      \binom{-1}{10} = \hspace{4ex}
-      \binom{1/2}{3} = \hspace{4ex}
-    \]
-    \item Is it true that \[
-      \binom{n}{n} = \binom{n}{0} = 1
-    \]
-  \end{enumerate}
-\end{problem}
-
-TK
-
-\begin{problem}{\(q\)-analogs of Binomial Coefficients}
-  \begin{enumerate}
-    \item Define for non-negative integers \(n > m\) \[
-      \binom{n}{m}_x := \prod_{k=1}^{m} \frac{1-x^{n-k-1}}{1-x^{k}}
-    \]
-
-    Prove that \(\binom{n}{m}_x\) is a polynomial in \(x\).
-    \item Show that \[
-      \binom{n+1}{m}_x = x^m \binom{n}{m}_x + \binom{n}{m-1}_x
-    \]
+    You may use the fact that $2^{21} = 2097152$.
   \end{enumerate}
 \end{problem}
 
